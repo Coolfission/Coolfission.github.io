@@ -21,7 +21,7 @@ h2
 	font-family: Centaur;
 	text-align: center;
 	margin: auto;
-	color: #00FFFF;
+	color: #FFFFFF;
 }
 h1
 {
@@ -31,8 +31,8 @@ div
 {
    height: 200px;
    width: 1500px;
-   border-color: #000000;
-   background-color: #1E90FF;
+   border: #000000;
+   background-color: #00FFFF;
    border-radius: 15px;
    margin: auto;
    text-align: center
