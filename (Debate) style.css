@@ -20,6 +20,16 @@ h1
 {
 	font-family: Arial;
 }
+div
+{
+   height: 1000px;
+   width: 1000px;
+   border-color: #000000;
+   background-color: #1E90FF;
+   border-radius: 15px;
+   margin: auto;
+   text-align: center
+}
 strong
 {
 	font-family: Arial;
