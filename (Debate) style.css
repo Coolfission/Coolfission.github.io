@@ -2,6 +2,12 @@ p
 {
 	font-family: Calibri;
 }
+h5
+{
+	font-family: Calibri;
+	text-align: center;
+	margin: auto;
+}
 h4
 {
 	font-family: Times New Roman;
@@ -14,6 +20,7 @@ h2
 {
 	font-family: Centaur;
 	text-align: center;
+	margin: auto;
 	color: #00FFFF;
 }
 h1
@@ -43,6 +50,7 @@ a
 	text-decoration: none;
 	color:#FFA500;
 	text-align: center;
+	margin: auto;
 	font-family: Calibri;
 	font-size: 20px;
 }
