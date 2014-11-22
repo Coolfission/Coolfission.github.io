@@ -1,10 +1,26 @@
-body
+p
 {
 	font-family: Calibri;
+}
+h4
+{
+	font-family: Times New Roman;
 }
 h3
 {
     background-color: #00FFFF;
+}
+h2
+{
+	font-family: Arial;
+}
+h1
+{
+	font-family: Centaur;
+}
+strong
+{
+	font-family: Arial;
 }
 span
 {
