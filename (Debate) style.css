@@ -13,6 +13,7 @@ h3
 h2
 {
 	font-family: Centaur;
+	text-align: center;
 }
 h1
 {
@@ -25,4 +26,12 @@ strong
 span
 {
 	background-color: #FFFF00;
+}
+a 
+{
+	text-decoration: none;
+	color:#FFA500;
+	text-align: center;
+	font-family: Calibri;
+	font-size: 30px;
 }
