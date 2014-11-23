@@ -1,20 +1,6 @@
-p
-{
-	font-family: Calibri;
-}
 h5
 {
 	font-family: Calibri;
-	text-align: center;
-	margin: auto;
-}
-h4
-{
-	font-family: Times New Roman;
-}
-h3
-{
-    background-color: #00FFFF;
 }
 h2
 {
@@ -36,14 +22,6 @@ div
    border-radius: 15px;
    margin: auto;
    text-align: center
-}
-strong
-{
-	font-family: Arial;
-}
-span
-{
-	background-color: #FFFF00;
 }
 a 
 {
