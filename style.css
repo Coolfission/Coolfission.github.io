@@ -2,3 +2,6 @@
 html {
 	background-color: #FFFAF0;
 }
+div {
+	border-radius: 10px;
+}
