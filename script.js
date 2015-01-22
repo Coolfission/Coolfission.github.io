@@ -22,7 +22,7 @@ var user = prompt("Hello, I would like to meet you. What is your name?").toUpper
 		case'BABA':
 		var baba = prompt("You have entered Baba, is that correct? (YES or NO)").toUpperCase();
 		if(baba === 'YES') {
-			confirm("Hi");
+			confirm("Enjoy some more Wada Pav");
 		}
 		else {
 			confirm("You must have written the wrong name then. Restart this website and try again.");
