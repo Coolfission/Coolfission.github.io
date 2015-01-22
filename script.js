@@ -10,6 +10,15 @@ var user = prompt("Hello, I would like to meet you. What is your name?").toUpper
 			console.log("You must have written the wrong name then. Restart this website and try again.");
 		}
 		break;
+		case'Nikhil':
+		var nikhil = prompt("You have entered Nikhil, is that correct? (YES or NO)").toUpperCase();
+		if(nikhil === 'YES') {
+			console.log("Hi Nikhil")
+		}
+		else {
+			console.log("You must have written the wrong name then. Restart this website and try again.");
+		}
+		break;
 		case'TAEWOO':
 		var taewoo = prompt("You have entered Taewoo, is that correct? (YES or NO)").toUpperCase();
 		if(taewoo === 'YES') {
