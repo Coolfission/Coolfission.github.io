@@ -20,7 +20,7 @@ var user = prompt("Hello, I would like to meet you. What is your name?").toUpper
 		}
 		break;
 		case'BABA':
-		var baba = prompt("You have entered Baba, is that correct?").toUpperCase();
+		var baba = prompt("You have entered Baba, is that correct? (YES or NO)").toUpperCase();
 		if(baba === 'YES') {
 			confirm("Hi");
 		}
