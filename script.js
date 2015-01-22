@@ -11,6 +11,4 @@ var user = prompt("Hello, I would like to meet you. What is your name?").toUpper
 		break;
 		case'Jack':
 		var Jack = console.log("There is two of you!")
-		default:
-		console.log("I do not understand your choice. Please restart the webpage and start again.");
 }
