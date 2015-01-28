@@ -3,6 +3,12 @@ var user = prompt("Hello, I would like to meet you. What is your name?").toUpper
 	switch(user) {
 		case'AMIT':
 		var amit = confirm("Hey, that's me!?!?").toUpperCase();
+		if(amit === 'YES') {
+			confirm("Hey, that's me!?!?");
+		}
+		else {
+			confirm("You must have written the wrong name then. Restart this website and try again.");
+		}
 		break;
 		case'NIKHIL':
 		var nikhil = prompt("You have entered Nikhil, is that correct? (YES or NO)").toUpperCase();
