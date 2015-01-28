@@ -47,12 +47,15 @@ var user = prompt("Hello, I would like to meet you. What is your name?").toUpper
 		}
 		break;
 		case'JACK':
-		var jack = prompt("You have entered Jack, is that correct? (YES or NO)").toUpperCase();
-		if(jack === 'YES') {
-		    confirm("There is two of you! I don't know which one is asking!");
+		var jack = prompt("Are you JACK C or JACK K?").toUpperCase();
+		if(jack === 'JACK C') {
+		    confirm("Can you ask me some sports questions?");
+		}
+		else if(jack === 'JACK K') {
+			confirm("Ohh...Baby a triple");
 		}
 		else {
-		    confirm("You must have entered the wrong name. Restart this website and try again");
+		    confirm("I have not understood your choice. Restart the web and try again.");
 		}
 		break;
 		default:
