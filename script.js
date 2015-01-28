@@ -2,18 +2,21 @@ var user = prompt("Hello, I would like to meet you. What is your name?").toUpper
 
 	switch(user) {
 		case'AMIT':
-		confirm("Hey, that's me!?!?");
+			confirm("Hey, that's me!?!?");
 		break;
 		case'NIKHIL':
-		confirm("You have entered Nikhil, is that correct? (YES or NO)");
+			confirm("Congradulations");
+		break;
+		case'AAI':
+			confirm("I hope you made some Varan Bhat.");
 		break;
 		case'BABA':
-		confirm("You have entered Baba, is that correct? (YES or NO)");
+			confirm("You have entered Baba, is that correct? (YES or NO)");
 		break;
 		case'TAEWOO':
-		confirm("You have entered Taewoo, is that correct? (YES or NO)");
+			confirm("You have entered Taewoo, is that correct? (YES or NO)");
 		case'ALEX':
-		confirm("Can you ask me some sports questions?");
+			confirm("Can you ask me some sports questions?");
 		break;
 		case'JACK':
 		var jack = prompt("Are you JACK C or JACK K?").toUpperCase();
@@ -28,5 +31,5 @@ var user = prompt("Hello, I would like to meet you. What is your name?").toUpper
 		}
 		break;
 		default:
-			confirm("I do not understand your choice. Please restart the webpage and start again.");
+			confirm("I do not understand your choice. Please restart the web and start again.");
 }
