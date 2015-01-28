@@ -13,11 +13,12 @@ var user = prompt("Hello, I would like to meet you. What is your name?").toUpper
 		case'TAEWOO':
 		confirm("You have entered Taewoo, is that correct? (YES or NO)");
 		case'ALEX':
-		confirm("Can you ask me some sports questions");
+		confirm("Can you ask me some sports questions?");
 		break;
 		case'JACK':
 		var jack = prompt("Are you JACK C or JACK K?").toUpperCase();
 		if(jack === 'JACK C') {
+			confirm("Can you ask me some sports questions?");
 		}
 		else if(jack === 'JACK K') {
 			confirm("Ohh...Baby a triple");
