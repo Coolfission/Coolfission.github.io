@@ -15,6 +15,7 @@ var user = prompt("Hello, I would like to meet you. What is your name?").toUpper
 		break;
 		case'TAEWOO':
 			confirm("Hello Trumpet Buddy");
+		break;
 		case'ALEX':
 			confirm("Can you ask me some sports questions?");
 		break;
