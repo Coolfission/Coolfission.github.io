@@ -11,10 +11,10 @@ var user = prompt("Hello, I would like to meet you. What is your name?").toUpper
 			confirm("I hope you made some Varan Bhat.");
 		break;
 		case'BABA':
-			confirm("You have entered Baba, is that correct? (YES or NO)");
+			confirm("Enjoy some more Wada Pav");
 		break;
 		case'TAEWOO':
-			confirm("You have entered Taewoo, is that correct? (YES or NO)");
+			confirm("Hello Trumpet Buddy");
 		case'ALEX':
 			confirm("Can you ask me some sports questions?");
 		break;
