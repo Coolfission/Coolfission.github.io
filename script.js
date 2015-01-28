@@ -5,36 +5,15 @@ var user = prompt("Hello, I would like to meet you. What is your name?").toUpper
 		confirm("Hey, that's me!?!?");
 		break;
 		case'NIKHIL':
-		var nikhil = prompt("You have entered Nikhil, is that correct? (YES or NO)").toUpperCase();
-		if(nikhil === 'YES') {
-			confirm("Congradulations");
-		}
-		else {
-			confirm("You must have written the wrong name then. Restart this website and try again.");
-		}
+		confirm("You have entered Nikhil, is that correct? (YES or NO)");
 		break;
 		case'BABA':
-		var baba = prompt("You have entered Baba, is that correct? (YES or NO)").toUpperCase();
-		if(baba === 'YES') {
-			confirm("Enjoy some more Wada Pav");
-		}
-		else {
-			confirm("You must have written the wrong name then. Restart this website and try again.");
-		}
+		confirm("You have entered Baba, is that correct? (YES or NO)");
 		break;
 		case'TAEWOO':
-		var taewoo = prompt("You have entered Taewoo, is that correct? (YES or NO)").toUpperCase();
-		if(taewoo === 'YES') {
-		    confirm("Hello Trumpet Buddy");
-		}
-		else {
-		}
+		confirm("You have entered Taewoo, is that correct? (YES or NO)");
 		case'ALEX':
-		if(alex === 'YES') {
-		    confirm("Can you ask me some sports questions?");
-		}
-		else {
-		}
+		confirm("Can you ask me some sports questions");
 		break;
 		case'JACK':
 		var jack = prompt("Are you JACK C or JACK K?").toUpperCase();
