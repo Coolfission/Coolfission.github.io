@@ -37,6 +37,9 @@ var user = prompt("Hello, I would like to meet you. What is your name?").toUpper
 		    confirm("I have not understood your choice. Restart the web and try again.");
 		}
 		break;
+		case'':
+			confirm("You didn't put a name. Restart the web and write one.");
+		break;
 		default:
 			confirm("I do not understand your choice. Please restart the web and start again.");
 }
