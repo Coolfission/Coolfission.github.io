@@ -25,7 +25,7 @@ var user = prompt("Hello, I would like to meet you. What is your name?").toUpper
 		case'AASIM':
 			confirm("Bonjour");
 		break;
-		case'SANDEEP KAKA'
+		case'SANDEEP KAKA':
 			confirm("I can't wait t'ill I visit the windy city!");
 		break;
 		case'JACK':
