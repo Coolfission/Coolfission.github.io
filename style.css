@@ -4,6 +4,6 @@ html {
 body {
 	background-color: #F8F8F8;
 }
-a hover {
+a:hover {
 	color:#B8860B;
 }	
