@@ -1,6 +1,9 @@
 html {
-  background-color: #FFFAFA;
+  	background-color: #FFFAFA;
 }
 body {
-  background-color: #F8F8F8;
+	background-color: #F8F8F8;
 }
+a hover {
+	color:#B8860B;
+}	
