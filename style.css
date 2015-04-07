@@ -1,16 +1,15 @@
 html {
-  	background-color: #FFFAFA;
+    background-color: #FFFAFA;
 }
 a:hover {
-	color:#B8860B;
-}	
+    color:#B8860B;
+}   
 div {
-    height: 60px;
+    height: 100px;
     width: 100px;
     border-radius: 5px;
-    background-color: #69D2E7;
+    background-color: #0000FF;
     text-align: center;
-    color: #FFFFFF;
-    font-family: Verdana, Arial, Sans-Serif;
-    opacity: 0.5;
+    color: #0000FF;
+    font-family: Arial;
 }
