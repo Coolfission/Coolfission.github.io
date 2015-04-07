@@ -1,4 +1,7 @@
-var user = prompt("Hello, I would like to meet you. What is your name?").toUpperCase();
+//Javascipt
+//Use this code if you want to.
+
+/*var user = prompt("Hello, I would like to meet you. What is your name?").toUpperCase();
 
 	switch(user) {
 		case'AMIT':
@@ -45,4 +48,6 @@ var user = prompt("Hello, I would like to meet you. What is your name?").toUpper
 		break;
 		default:
 			confirm("I do not understand your choice. Please restart the web and start again.");
-}
+}*/
+
+//jQuery
