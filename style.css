@@ -4,3 +4,9 @@ html {
 a:hover {
 	color:#B8860B;
 }	
+#header {
+	height: 140px;
+	width: 140px ;
+	color: #0000FF;
+
+}

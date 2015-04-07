@@ -51,3 +51,8 @@
 }*/
 
 //jQuery
+$(document).ready(function() {
+	$('#header').mouseenter(function() {
+		$('#header').fadeOut("fast");
+	});
+});
