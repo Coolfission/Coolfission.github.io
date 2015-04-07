@@ -51,8 +51,8 @@
 }*/
 
 //jQuery
-/*$(document).ready(function() {
+$(document).ready(function() {
 	$('#header').click(function() {
-		$('#header').fadeOut("fast");
+		$('#header').fadeOut('fast');
 	});
 });
