@@ -1,6 +1,6 @@
 //Javascipt
 //Use this code if you want to.                                                                  jQuery
-		//																							|																					
+confirm("This jQuery code is supposed to fade the div (the blue box) but it isn't working. I tried it on Codecademy and it worked");																							|																					
 /*var user = prompt("Hello, I would like to meet you. What is your name?").toUpperCase();			|
 																									|
 	switch(user) {																					|
