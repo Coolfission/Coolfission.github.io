@@ -33,11 +33,11 @@
 }*/
 
 //jQuery
-$(document).ready(function() {
-	$('div').click(function() {
-		$('div').fadeOut('fast');
-	$('div').mouseleave(function() {
-	    $('div').fadeIn('fast');
+$(document).ready(function () {
+	$('div').click(function () {
+	$('div').fadeOut('fast');
+	$('div').mouseleave(function () {
+	$('div').fadeIn('fast');
 	});
 });
 });
