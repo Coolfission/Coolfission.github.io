@@ -22,27 +22,9 @@
 		case'ROY':
 			confirm("Hi");
 		break;
-		case'ALEX':
-			confirm("Can you ask me some sports questions?");
-		break;
-		case'AASIM':
-			confirm("Bonjour");
-		break;
 		case'SANDEEP KAKA':
-			confirm("I can't wait t'ill I visit the windy city!");
-		break;
-		case'JACK':
-		var jack = prompt("Are you JACK C or JACK K?").toUpperCase();
-		if(jack === 'JACK C') {
-			confirm("Can you ask me some sports questions?");
-		}
-		else if(jack === 'JACK K') {
-			confirm("Ohh...Baby a triple");
-		}
-		else {
-		    confirm("I have not understood your choice. Restart the web and try again.");
-		}
-		break;
+			confirm("I can't wait t'ill I visit the windy city!");                                                 jQuery
+		break;	
 		case'':
 			confirm("You didn't put a name. Restart the web and write one.");
 		break;
