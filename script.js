@@ -42,6 +42,8 @@ $(document).ready(function () {
 });
 });
 
+
+//Another jQuery code
 /*$(document).ready(function(){
   $('div').hover(function(){
         $(this).toggleClass('active');
