@@ -33,17 +33,17 @@ confirm("This jQuery code is supposed to fade the div (the blue box) but it isn'
 }*/
 
 //jQuery
-/*$(document).ready(function () {
+$(document).ready(function () {
 	$('div').click(function () {
 	$('div').fadeOut('fast');
 	$('div').mouseleave(function () {
 	$('div').fadeIn('fast');
 	});
 });
-});*/
+});
 
-$(document).ready(function(){
+/*$(document).ready(function(){
   $('div').hover(function(){
         $(this).toggleClass('active');
     });
-});
+});*/
