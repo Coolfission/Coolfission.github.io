@@ -52,7 +52,7 @@
 
 //jQuery
 $(document).ready(function() {
-	$('#header').click(function() {
-		$('#header').fadeOut('fast');
+	$('div').click(function() {
+		$('div').fadeOut('fast');
 	});
 });

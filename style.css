@@ -4,7 +4,7 @@ html {
 a:hover {
 	color:#B8860B;
 }	
-#header {
+div {
 	height: 140px;
 	width: 140px;
 	background-color: #0000FF;
