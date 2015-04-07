@@ -12,4 +12,5 @@ div {
     text-align: center;
     color: #FFFFFF;
     font-family: Arial;
+    position: fixed;
 }
