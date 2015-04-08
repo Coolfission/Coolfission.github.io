@@ -31,20 +31,3 @@ confirm("This jQuery code is supposed to fade the div (the blue box) but it isn'
 		default:
 			confirm("I do not understand your choice. Please restart the web and start again.");
 }*/
-//jQuery
-$(document).ready(function () {
-	$('div').click(function () {
-	$('div').fadeOut('fast');
-	$('div').mouseleave(function () {
-	$('div').fadeIn('fast');
-	});
-});
-});
-
-
-//Another jQuery code
-/*$(document).ready(function(){
-  $('div').hover(function(){
-        $(this).toggleClass('active');
-    });
-});*/
