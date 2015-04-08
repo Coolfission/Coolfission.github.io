@@ -31,7 +31,6 @@ confirm("This jQuery code is supposed to fade the div (the blue box) but it isn'
 		default:
 			confirm("I do not understand your choice. Please restart the web and start again.");
 }*/
-
 //jQuery
 $(document).ready(function () {
 	$('div').click(function () {
