@@ -14,11 +14,11 @@
   </body>
 <!--jQuery and javascript-->
   <script type="text/javascript">
-    confirm("This jQuery code is supposed to fade the div (the blue box) but it isn't working. I tried it on Codecademy and it worked. Scroll down to see the code from script.js.");
+ //   confirm("This jQuery code is supposed to fade the div (the blue box) but it isn't working. I tried it on Codecademy and it worked. Scroll down to see the code from script.js.");
     $(document).ready(function () {
-      $('div').mouseenter(function () {
+      $('div').click(function () {
        $('div').fadeOut('fast');
-      $('div').mouseleave(function () {
+      $('div').dblclick(function () {
         $('div').fadeIn('fast');
         });
       });
