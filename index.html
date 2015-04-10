@@ -3,9 +3,9 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
-    <script type='text/javascript' src='script.js'></script>
-    <script type='text/javascript' src='app.js'></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!--     // <script type='text/javascript' src='script.js'></script>
+    // <script type='text/javascript' src='app.js'></script> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <title style="text-align:center">
         Amit Kulkarni
       </title>
@@ -13,7 +13,7 @@
   <body>
       <h1 style="font-family: Arial"><strong>Amit Kulkarni</strong></h1>
       <div>You can never erase me!</div>   
-      <h2><strong>Here is the Jquery code:</strong></h2>
+<!--       <h2><strong>Here is the Jquery code:</strong></h2>
       <p>$(document).ready(function () { </p>
           <p>$('div').click(function () { </p>
           <p>$('div').fadeOut('fast');</p>
@@ -21,8 +21,20 @@
           <p>$('div').fadeIn('fast'); </p>
           <p>});</p>
           <p>});</p>
-          <p>});</p>
+          <p>});</p> -->
   </body>
+
+  <script type="text/javascript">
+    confirm("This jQuery code is supposed to fade the div (the blue box) but it isn't working. I tried it on Codecademy and it worked. Scroll down to see the code from script.js.");
+    $(document).ready(function () {
+      $('div').mouseenter(function () {
+       $('div').fadeOut('fast');
+      $('div').mouseleave(function () {
+        $('div').fadeIn('fast');
+        });
+      });
+    });
+  </script>
 </html>
 
 
