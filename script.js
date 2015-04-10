@@ -1,8 +1,5 @@
 /*Javascipt
-//Use this code if you want to.*/ //                
-var script = document.createElement('script');
-script.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
-script.type = 'text/javascript'                                              
+//Use this code if you want to.*/ //                                                              
 confirm("This jQuery code is supposed to fade the div (the blue box) but it isn't working. I tried it on Codecademy and it worked. Scroll down to see the code from script.js.");	
 /*var user = prompt("Hello, I would like to meet you. What is your name?").toUpperCase();			
 																									
