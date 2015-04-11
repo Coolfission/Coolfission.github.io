@@ -17,11 +17,13 @@
   <script type="text/javascript">
  //   confirm("This jQuery code is supposed to fade the div (the blue box) but it isn't working. I tried it on Codecademy and it worked. Scroll down to see the code from script.js.");
     $(document).ready(function () {
-      $('div').hover(function () {
-        $(this).toggleClass('active');
-
-      });
+    $('div').mouseenter(function() {
+        $(this).fadeTo('fast', 1);
     });
+    $('div').mouseleave(function() {
+        $(this).fadeTo('fast', 0.5);
+});
+});
   </script>
 
   <style>
@@ -35,14 +37,10 @@
       height: 100px;
       width: 100px;
       border-radius: 5px;
-      background-color: #ABCDEF;
+      background-color: #00FFFF;
       text-align: center;
       color: #000000;
       font-family: Arial;
-  }
-  .active {
-      background-color: #556677;
-      display: none;
   }
   </style>
 </html>
