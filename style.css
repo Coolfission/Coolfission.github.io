@@ -2,14 +2,17 @@ html {
     background-color: #FFFAFA;
 }
 div:hover {
-    color:#B8860B;
+    color: white;
 }  
 div {
     height: 100px;
     width: 100px;
     border-radius: 5px;
-    background-color: #0000FF;
+    background-color: #ABCDEF;
     text-align: center;
     color: #FFFFFF;
     font-family: Arial;
+}
+.active {
+
 }
