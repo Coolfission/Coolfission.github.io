@@ -9,18 +9,15 @@
       </title>
   </head>
   <body>
-      <h1 style="font-family: Arial"><strong><em>Amit Kulkarni</em></strong></h1>
+      <h1 style="font-family: Arial"><strong>Amit Kulkarni</strong></h1>
       <div>You can never erase me!</div>   
   </body>
 <!--jQuery and javascript-->
   <script type="text/javascript">
  //   confirm("This jQuery code is supposed to fade the div (the blue box) but it isn't working. I tried it on Codecademy and it worked. Scroll down to see the code from script.js.");
     $(document).ready(function () {
-      $('div').click(function () {
+      $('div').slidetoggle(function () {
        $('div').fadeOut('fast');
-      $('div').dblclick(function () {
-        $('div').fadeIn('fast');
-        });
       });
     });
   </script>
