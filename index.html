@@ -2,27 +2,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="style.css">
       <title style="text-align:center">
         Amit Kulkarni
       </title>
   </head>
   <body>
-      <h1 style="font-family: Arial"><strong>Amit Kulkarni</strong></h1>
-      
-      <div>You can never erase me!</div>   
+     <div class="header">
+     <ul id="pull-left"><li><strong><em>Amit Kulkarni</em></strong></li></ul>
+     <ul id="pull-right"><li>Write something here</li></ul>
+     </div>
+     <div id="haha">You can never erase me!</div>   
 
   </body>
 <!--jQuery and javascript-->
   <script type="text/javascript">
     $(document).ready(function () {
-    $('div').mouseenter(function() {
-        $(this).fadeTo('fast', 1);
-    });
-    $('div').mouseleave(function() {
-        $(this).fadeTo('fast', 0.5);
-    $('div').click(function() {
+    $('#haha').click(function() {
         $(this).fadeOut('fast');
+    
 });
 });
   </script>
@@ -30,40 +27,46 @@
   <style>
   html {
       background-color: #FFFAFA;
-  }
-  div:hover {
-      color: white;
-      cursor: pointer;
-  }  
-  div {
+  } 
+  #haha {
       height: 100px;
       width: 100px;
-      border-radius: 5px;
+      border-radius: 10px;
       background-color: #ABCDEF;
       text-align: center;
       color: #000000;
       font-family: Arial;
+      font-weight: bold;
+  }
+  #haha:hover {
+      color: white;
+      cursor: pointer;
+      background-color: blue;
+  } 
+  .header {
+      background-color: #191970;
+      display: inline
+      border-radius: 100px;
+      height: 40px;
+  }
+
+  .header li {
+      font-family: Arial;
+      font-size: 25px;
+      color: gray;
+      text-decoration: none;
+      list-style-type: none; 
+  }
+  .header:hover {
+      background-color: black;
+  }
+  .header li:hover {
+      color: white;
   }
   </style>
 </html>
-
-
-
-    <!--<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">-->
-
-    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
-    <!--<div class="col-md-6 col-md-offset-3">
-        <div class="jumbotron">-->
-
-          <!--<p>
-            <a href="https://www.gmail.com/intl/en/mail/help/about.html" class="btn btn-primary btn-lg">Email</a>
-          </p>
-          <p>
-            <a class="btn btn-primary btn-lg" href="https://github.com/Coolfission" role="button">Github</a>
-          </p>
-        </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>-->
+<!--Helpful links
+    - (Make an interactive website) http://www.codecademy.com/courses/web-beginner-en-zmn0b/0/8?content_from=make-an-interactive-website%3Ayour-first-program
+    - (Make a website) http://www.codecademy.com/courses/web-beginner-en-yjvdd/1/5?content_from=make-a-website%3Abootstrap-components
+    - (Html and CSS) http://www.codecademy.com/courses/web-beginner-en-WF0CF/1/1?curriculum_id=50579fb998b470000202dc8b
+    - (jQuery) http://www.codecademy.com/courses/web-beginner-en-bay3D/2/5?curriculum_id=50a3fad8c7a770b5fd0007a1 -->
