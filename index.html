@@ -2,27 +2,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title style="text-align:center">
+      <title>
         Amit Kulkarni
       </title>
+              <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
   </head>
   <body>
      <div class="header">
-     <ul id="pull-left"><li><strong><em>Amit Kulkarni</em></strong></li></ul>
-     <ul id="pull-right"><li>Write something here</li></ul>
+     <p style="font-size: 25px"><strong><em>Amit Kulkarni</em></strong></p>
+     <p style="font-size: 20px; margin-right: px">Write something here</p></div>
      </div>
-     <div id="haha">You can never erase me!</div>   
+     <div id="haha"><h3>Drag me!</h3></div>   
 
   </body>
 <!--jQuery and javascript-->
   <script type="text/javascript">
-    $(document).ready(function () {
-    $('#haha').click(function() {
-        $(this).fadeOut('fast');
-    
+    $(document).ready(function() {
+    $('#haha').draggable({ containment: 'window' });
+    $('#haha').dblclick(function() {
+        $(this).fadeOut(10000);
 });
 });
   </script>
+
 <!--style.css-->
   <style>
   html {
@@ -37,30 +39,24 @@
       color: #000000;
       font-family: Arial;
       font-weight: bold;
+      margin-top: 100px;
   }
-  #haha:hover {
+ #haha:hover {
       color: white;
       cursor: pointer;
       background-color: blue;
-  } 
+  }
   .header {
       background-color: #191970;
-      display: inline
-      border-radius: 100px;
+      border-radius: 5px;
       height: 40px;
   }
-
-  .header li {
+  .header p {
       font-family: Arial;
-      font-size: 25px;
       color: gray;
-      text-decoration: none;
-      list-style-type: none; 
+      display: inline;
   }
-  .header:hover {
-      background-color: black;
-  }
-  .header li:hover {
+  .header p:hover {
       color: white;
   }
   </style>
