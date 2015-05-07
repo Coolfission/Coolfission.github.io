@@ -1,5 +1,4 @@
 <!--html-->
-<!DOCTYPE html>
 <html>
   <head>
       <title>
@@ -9,13 +8,11 @@
   </head>
   <body>
      <div class="header">
-     <p style="font-size: 25px; margin-left: 10"><strong><em>Amit Kulkarni</em></strong></p>
-     <p style="font-size: 20px; margin-left: 1600px">Home</p>
-     <p style="font-size: 20px; margin-left: 900px">Resume</p>
+     <p style="font-size: 25px; float: left"><strong><em>Amit Kulkarni</em></strong></p>
+     <p style="font-size: 20px; float: right">Home</p>
+     <p style="font-size: 20px; float: right">Resume</p>
      </div>
-     <div id="haha"><h3>Drag me!</h3></div>   
-
-  </body>
+     <div id="haha"><h3 style="margin-top: 100px">Drag me!</h3></div>   
 <!--jQuery and JavaScript-->
   <script type="text/javascript">
     $(document).ready(function() {
@@ -25,7 +22,6 @@
 });
 });
   </script>
-
 <!--style.css-->
   <style>
   html {
@@ -55,11 +51,12 @@
   .header p {
       font-family: Arial;
       color: gray;
-      display: inline;
+      display: inline-block;
   }
   .header p:hover {
       color: white;
-      cursor: pointer
+      cursor: pointer;
   }
   </style>
+</body>
 </html>
