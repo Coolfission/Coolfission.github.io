@@ -8,9 +8,13 @@
   </head>
   <body>
      <div class="header">
-     <p style="font-size: 25px; float: left; font-family: Grand Hotel"><strong><em>Amit Kulkarni</em></strong></p>
-     <p style="font-size: 20px; float: right">Home</p>
-     <p style="font-size: 20px; float: right">Resume</p>
+      <ul class="pull-right">
+       <li style="font-size: 25px; float: left; font-family: Grand Hotel"><strong><em>Amit Kulkarni</em></strong></li>
+      </ul>
+      <ul class="pull-left">
+     <li style="font-size: 20px; float: right" hover="color: white; cursor: pointer">Home</li>
+     <li style="font-size: 20px; float: right" hover="color: white; cursor: pointer">Resume</li>
+      </ul>
      </div>
      <div id="haha"><h3 style="margin-top: 100px">Drag me!</h3></div>   
 <!--jQuery and JavaScript-->
@@ -47,12 +51,12 @@
       border-radius: 5px;
       height: 40px;
   }
-  .header p {
+  .header li {
       font-family: Arial;
       color: gray;
       display: inline-block;
   }
-  .header p:hover {
+  .header li:hover {
       color: white;
       cursor: pointer;
   }
