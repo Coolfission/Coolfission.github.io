@@ -13,16 +13,24 @@
   
      <div class="header">
       <ul class="pull-right">
-       <li style="font-size: 25px; font-family: Calibri"><strong><em><a style=" color: white; text-decoration: none; color: white"href="#">Amit Kulkarni</a></em></strong></li>
+      <a href="#" style="color: white; text-decoration: none; cursor: pointer">
+       <li style="font-size: 25px; font-family: Calibri" hover="color: orange"><strong><em>Amit Kulkarni</em></strong></li></a>
       </ul>
       
+      <form style="margin-top: -40px">
+      <input placeholder="Write something here" style="margin-left: 200px; margin-top: -42px; width: 150px; font-size: 15px" type="text" hover="cursor: text"></input>
+      <input type="submit" value="Submit" hover="pointer: cursor" style="margin-top: -50px">
+      </form>
+      
       <ul class="pull-right" style="text-transform: uppercase; font-size: 15px; color: #F0F0F0" hover="color: white; cursor: pointer; font-weight: bold">
-         <li style="margin-top: -40px; margin-left: 1300px">About</li>
-         <li style="margin-top: -40px; margin-left: 1200px">Resume</li>
-         <li style="margin-top: -40px; margin-left: 1100px">Home</li>
+         <li style="margin-top: -69px; margin-left: 1300px">About</li>
+         <li style="margin-top: -69px; margin-left: 1200px">Resume</li>
+         <li style="margin-top: -69px; margin-left: 1100px">Home</li>
       </ul>
      </div>
-     <div id="haha"><h3 style="margin-top: 100px">Drag me!</h3></div> 
+     <div id="haha"></div> 
+     <a href="#">
+     <img style="height: 40px; width: 40px; margin-top: -243px" src="http://images.clipartpanda.com/red-brick-house-clipart-red-house.svg"/> </a>
      
 <!-- <div class="main" style="background-image: url('images/video_bg.jpg')">
         <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0"> 
@@ -54,6 +62,7 @@
       -o-background-size: cover;
       background-size: cover;
       position: fixed;
+      width: 100%
   }
   #haha {
       height: 100px;
@@ -61,9 +70,6 @@
       border-radius: 10px;
       background-color: #ABCDEF;
       text-align: center;
-      display: block;
-      margin: auto;
-      position: absolute;
       color: #000000;
       font-family: Arial;
       font-weight: bold;
@@ -78,15 +84,12 @@
       background-color: #191970;
       border-radius: 5px;
       height: 40px;
+      
   }
   .header li {
       font-family: Arial;
-      display: inline-block;
+      /*display: inline-block; */
       list-style-type: none;
-  }
-  .header li:hover {
-      color: white;
-      cursor: pointer;
   }
    /* #video_background {
     position: fixed;
