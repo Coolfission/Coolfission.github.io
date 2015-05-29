@@ -73,19 +73,6 @@
     $('#calculator').draggable({containment: "window"});
   });
   //Calculator JS
-                              $(document).ready(function() {
-                                    $('a').mouseenter(function() {
-                                        $(this).fadeTo(function() {
-                                            $(this).css('background-color', 'gray'; 'color', 'white'); 
-                                    $(this).mouseleave(function() {
-                                        $(this).fadeTo(function() {
-                                            $(this).css('background-color', '#EDEDED'; 'color', 'black');
-                                            
-                                });
-                                });
-                                });
-                                });
-                                });
                                 $(document).ready(function(){
                                   var testNumLength = function(number) {
                                         if (number.length > 9) {
@@ -258,7 +245,10 @@
                                               border-radius: 10px;
                                               color: black;
                                           }
-
+                                          #calculator a:hover {
+                                              color: white;
+                                              background-color: gray;
+                                          }
                                           #numbers, #operators {
                                             margin: auto; 
                                           }
