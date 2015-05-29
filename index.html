@@ -69,9 +69,9 @@
       <!-- End of Calculator HTML -->
 <!--jQuery and JavaScript-->
   <script type="text/javascript">
-  $(function() {
+  /*$(function() {
     $('#calculator').draggable({containment: "window"});
-  });
+  }); */
   //Calculator JS
                                 $(document).ready(function(){
                                   var testNumLength = function(number) {
@@ -233,6 +233,7 @@
                                             height: 460px;
                                             border: 3px black solid;
                                             cursor: pointer;
+                                            margin: 10px auto;
                                             padding: 5px;
                                             border-radius: 10px;
                                             background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQeut_wOzhNCh1D5fKg42scc6ojdbGJSTZiLFRJjKg49EYNi2U2");
@@ -269,6 +270,7 @@
                                             padding: 2px;
                                             margin: 5px 6px;
                                             background-color: #808080;
+                                            font-weight: bold;
                                           }
                                           #operators a:hover {
                                             color: white;
@@ -294,11 +296,11 @@
                                           a#equals {
                                             padding-top: 50px;
                                             height: 100px;
-                                            background-color: #FFDEAD
+                                            background-color: #FFDEAD;
                                           }
                                           a#equals:hover {
                                             color: white;
-                                            background-color: #FFA500
+                                            background-color: #FFA500;
                                           }
                                           #total {
                                               height: 70px;
