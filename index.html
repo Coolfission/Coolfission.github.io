@@ -10,31 +10,12 @@
           <script src="https://raw.githubusercontent.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.js"></script> 
   </head>
   <body>
-  
-     <div class="header">
-      <ul class="pull-right">
-       <li style="font-size: 25px; font-family: Calibri"><strong><em> <a href="#" style="color: white; text-decoration: none; cursor: pointer">Amit Kulkarni</a></em></strong></li>
-      </ul>
-      
-      <form style="margin-top: -40px">
-      <input placeholder="Search Something" style="margin-left: 200px; margin-top: -42px; width: 150px; font-size: 15px" type="text" hover="cursor: text"></input>
-      <input type="submit" value="Search" style="margin-top: -50px; border-radius: 10px"></input>
-      </form>
-      
-      <ul class="pull-right" style="text-transform: uppercase; font-size: 15px; color: #F0F0F0">
-         <li style="margin-top: -35px; margin-left: 1000px">About</li>
-         <li style="margin-top: -17px; margin-left: 1100px">Resume</li>
-         <li style="margin-top: -17px; margin-left: 1200px">Contact</li>
-      </ul>
-     </div>
-     <!--<a href="#">
-     <img style="height: 40px; width: 40px; margin-top: -300px" alt="Home" src="http://images.clipartpanda.com/red-brick-house-clipart-red-house.svg"/> </a> -->
-     
-<!-- <div class="main" style="background-image: url('images/video_bg.jpg')">
-        <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0"> 
-           <source src="file:///C:/Users/Rahul/Downloads/IMG_2160_1_.webm" type="video/webm"> 
-            <source src="http://coming-sssoon.paperplane.io/video/time.mp4" type="video/mp4"> 
-        </video>-->
+    <div class="header" style="background-color: navy; height: 40px; list-style-type: none">
+    <li style="font-size: 30px; padding: 20px; color: white; cursor: pointer"><em>Amit Kulkarni</em></li>
+    <li style="margin-left: 800px">About <span></span></li><span>|</span>
+    <li> Contact </li><span>|</span>
+    <li> Resume</li>
+    </div>    
       <!--Calculator HTML -->
                           <div id="calculator">
                               <div id="total">
@@ -67,7 +48,28 @@
                               </div>
                           </div>
       <!-- End of Calculator HTML -->
+  <!--  <table border="1px"style="margin: auto; font-family: Arial; text-align: center; height: 300px; width: 500px; border: 2px solid black">
+    <thead>
+        <td colspan="3" style="text-align: center; background-color: orange"><strong>Projects</strong></td>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: center; font-weight: bold">#</td>
+            <td style="text-align: center; font-weight: bold">Name</td>
+            <td style="text-align: center; font-weight: bold">Description</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><a style="cursor: pointer">Calculator</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+           
+        </tr>
+    </tbody>
+    </table> -->
 <!--jQuery and JavaScript-->
+
   <script type="text/javascript">
   /*$(function() {
     $('#calculator').draggable({containment: "window"});
@@ -161,7 +163,7 @@
   
 <!--style.css-->
   <style>
-  html {
+ html {
      /*background: url("http://fc01.deviantart.net/fs51/f/2009/325/d/9/Future_Cities_by_bobstardoe.jpg");
       -webkit-background-size: cover;
       -moz-background-size: cover;
@@ -170,35 +172,28 @@
       position: fixed; */
   }
   body {
-    margin: 0;
-    padding: 0;
-  }
-  #haha {
-      height: 100px;
-      width: 100px;
-      border-radius: 10px;
-      background-color: #ABCDEF;
-      text-align: center;
-      color: #000000;
-      font-family: Arial;
-      font-weight: bold;
-      margin-top: 100px;
-  }
- #haha:hover {
-      color: white;
-      cursor: pointer;
-      background-color: blue;
-  }
-  .header {
-      background-color: #191970;
-      border-radius: 5px;
-      height: 40px;
       margin: 0;
+      padding: 0;
+  }
+  .header > li {
+      display: inline;
   }
   .header li {
       font-family: Arial;
-      /*display: inline-block; */
-      list-style-type: none;
+      color: gray;
+      cursor: pointer;
+  }
+  .header li:hover {
+      color: white;
+  }
+  .header li:active {
+      text-decoration: underline;  
+  }
+  .header span {
+      color: gray;
+  }
+  .header span:active {
+      text-decoration: none;  
   }
    /* #video_background {
     position: fixed;
