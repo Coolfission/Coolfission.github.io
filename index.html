@@ -1,11 +1,14 @@
 <!--html-->
 <!DOCTYPE html>
 <html>
+
   <head>
       <title>
         Amit Kulkarni
       </title>
-          <link rel="stylesheet" type="text/css" href="style.css">
+          <link rel="stylesheet" type="text/css" href="stylesheet.css">
+          <script src="script.js"></script>
+         
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
           <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
           <script src="https://raw.githubusercontent.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.js"></script> 
@@ -19,11 +22,6 @@
     <li>Contact</li><span> <!--empty--></span><span>|</span>
     <li>Resume</li>
     </div>    
-    
-    <div class="In1">
-    <h1>The Calculator</h1>
-    <p>The calculator, which is shown to the right, solves mathematical equations based on the users input. The calculator was made by using <em>HTML</em>, <em>CSS</em>, <em>JavaScript</em>, and <em>jQuery</em>. It solves addition, division, subtraction, multiplication, square, and square root problems.</p>
-    </div>
     
     <table class="share" border="5px">
     <tbody>
@@ -55,6 +53,10 @@
     
       <!--Calculator HTML -->
               <div class="slide active-slide">
+                  <div class="In1">
+    <h1>The Calculator</h1>
+    <p>The calculator, which is shown to the right, solves mathematical equations based on the users input. The calculator was made by using <em>HTML</em>, <em>CSS</em>, <em>JavaScript</em>, and <em>jQuery</em>. It solves addition, division, subtraction, multiplication, square, and square root problems.</p>
+    </div>
                           <div id="calculator">
                               <div id="total">
                               </div>
@@ -100,13 +102,6 @@
     <a href="#" class="for-arr"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"/></a>
     </div>
 </body>
-
-
-
-
-
-
-
 <script>
  var main = function() {
   $('.for-arr').click(function() {
@@ -237,6 +232,4 @@ $(document).ready(main);
                                         
                                 });
 </script>
-
-
 </html>
