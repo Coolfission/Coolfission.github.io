@@ -1,4 +1,4 @@
- var main = function() {
+ /*var main = function() {
   $('.for-arr').click(function() {
     var currentSlide = $('.active-slide');
     var nextSlide = currentSlide.next();
@@ -41,9 +41,9 @@
 $(document).ready(main);
   /*$(function() {
     $('#calculator').draggable({containment: "window"});
-  }); */
+  }); /*
   //Calculator JS
-                                $(document).ready(function(){
+                               /* $(document).ready(function(){
                                   var testNumLength = function(number) {
                                         if (number.length > 9) {
                                             totaldiv.text(number.substr(number.length-9,9));
@@ -125,4 +125,4 @@ $(document).ready(main);
                                         testNumLength(number);
                                     });
                                         
-                                });
+                                }); */
