@@ -140,7 +140,6 @@
       background-image: url('../images/video_bg.png');
       background-position: center center;
       background-size: cover;
-      overflow: auto;
   }
   #video_pattern {
       position: fixed;
