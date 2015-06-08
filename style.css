@@ -1,27 +1,46 @@
+  /*html {
+    background: url("http://cdn.luxedb.com/wp-content/uploads/2013/04/Hong_Kong_Skyline_-_Dec_20071-1024x408.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+  }*/
   body {
-      margin: 0;
-      padding: 0;
+    margin: 0;
+    padding: 0;
   }
   .header {
-      background-color: navy; 
-      height: 40px; 
-      list-style-type: none;  
-      position: fixed;
-      margin-top: -100px;
-      width: 100%;
+    background-color: navy; 
+    height: 40px; 
+    list-style-type: none;  
+    position: fixed;
+    margin-top: -100px;
+    width: 100%;
   }
   .header > li {
-      display: inline;
+    display: inline;
   }
   .header li a {
-      font-family: Arial;
-      color: gray;
-      text-decoration: none;
-      padding: 10px;
+    font-family: Arial;
+    color: gray;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+  }
+  .header #name {
+    font-size: 30px; 
+    padding: 20px;
+    color: white;
+    text-transform: none;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: text;
+  }
+  .header #name:hover {
+      background: none;
   }
   .header li a:hover {
       color: white;
       font-weight: bold;
+      background-color: #000033;
   }
   .header li a:active {
       text-decoration: underline;
@@ -107,6 +126,10 @@
       
   }
   .slide2 {
+      text-align: center;
+      color: white;
+      font-family: Calibri;
+      font-weight: bold;
   }
   .slide3 {
       text-align: center;
@@ -123,7 +146,7 @@
       height: 300px;
       margin-bottom: -100px;
   }
-  .slide h2 {
+  .slide3 h2 {
       margin-right: 1300px;
       font-size: 35px;
       color: aqua;
@@ -140,6 +163,7 @@
       background-image: url('../images/video_bg.png');
       background-position: center center;
       background-size: cover;
+      overflow: auto;
   }
   #video_pattern {
       position: fixed;
