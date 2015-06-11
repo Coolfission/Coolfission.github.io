@@ -36,9 +36,9 @@
       <!-- Menu -->
       <ul>
         <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Help</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="mailto:amitkulkarni181@gmail.com">Contact</a></li>
+        <li><a href="https://docs.google.com/document/d/1T_N8XCb1DhQ1rKQNro3cA4tYmSrtNbMQGSWkO-s0DV4/edit" target="_blank">Resume</a></li>
+        <li id="create">Created by Amit Kulkarni</li>
       </ul>
     </div>
 
@@ -50,8 +50,6 @@
         Menu
       </div>
     
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="app.js"></script>
     <table class="share" border="5px">
     <tbody>
         <tr>
@@ -80,9 +78,10 @@
             <source src="http://coming-sssoon.paperplane.io/video/time.mp4" type="video/mp4"> 
         </video> 
         
-    <audio id="audio" preload="auto" autoplay="true" loop="loop" controls="controls">
+    <audio id="audio" preload="auto" autoplay="true" loop="loop" controls="controls" muted="muted" volume="0">
       <source src="http://www.forelise.com/media/fur_elise_valentina_lisitsa.mp3" type="audio/mpeg">
     </audio>
+    
       <!--Calculator HTML -->
       <div class="slider">
               <div class="slide active-slide">
@@ -144,8 +143,8 @@
         </ul>
     <a href="#" class="for-arr"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"/></a>
     </div>
-<script>
-var menu = function() {
+    <script>
+    var menu = function() {
     $('.icon-menu').click(function() {
         $('.menu').animate({left: '0px'}, 100);
         $('body').animate({left: '285px'}, 100);
@@ -284,8 +283,6 @@ $(document).ready(main);
                                         
                                 });
 
-
-
-</script>
+    </script>
 </body>
 </html>
