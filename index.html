@@ -1,30 +1,57 @@
 <!--html-->
 <!DOCTYPE html>
 <html>
-
   <head>
       <title>
         Amit Kulkarni
       </title>
           <link rel="stylesheet" type="text/css" href="style.css">
-          <script type="text/javascript" src="script.js"></script>
-         
-          <link rel="shortcut icon" href="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSlYVqkozFQj2EuKZq2RtGKM6EKG8_y-EsCEB4HkVLaIFuWimJXvg">
-
+          <script src="script.js"></script>
+    
+              <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">    
+    
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
           <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
           <script src="https://raw.githubusercontent.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.js"></script> 
   </head>
   
   <body>
-  
     <div class="header">
-    <li><a href="#" id="name" style="font-size: 30px; padding: 20px; color: white"><em>Amit Kulkarni</em></a></li>
-    <li><a href="#" style="margin-left: 800px">About</a></li><span>|</span>
-    <li><a href="mailto: amitkulkarni181@gmail.com" target="_blank">Email</a></li><span>|</span>
-    <li><a href="https://docs.google.com/document/d/1T_N8XCb1DhQ1rKQNro3cA4tYmSrtNbMQGSWkO-s0DV4/edit?usp=sharing" target="_blank">Resume</a></li>
-    </div>    
+    <li><a href="coolfission.github.io" id="name"><em>Amit Kulkarni</em></a></li>
+    <li><a id="description">Your free and interactive survey builder</a></li>
+    <li><a id="log_in">Log in</a></li> <spam style="color: white; font-weight: bold"> /</spam> 
+    <li><a id="sign_up">Sign up</a></li>
     
+        <li><input class="input" type="text" placeholder="Username"></input></li>
+        <li><input class="input" type="password" placeholder="Password"></input></li>
+        
+    </div>    
+        <div class="menu">
+      
+      <!-- Menu icon -->
+      <div class="icon-close">
+        <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+      </div>
+
+      <!-- Menu -->
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Main body -->
+    <div class="jumbotron">
+
+      <div class="icon-menu">
+        <i class="fa fa-bars"></i>
+        Menu
+      </div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="app.js"></script>
     <table class="share" border="5px">
     <tbody>
         <tr>
@@ -52,7 +79,10 @@
             <source src="http://coming-sssoon.paperplane.io/video/time.webm" type="video/webm"> 
             <source src="http://coming-sssoon.paperplane.io/video/time.mp4" type="video/mp4"> 
         </video> 
-    
+        
+    <audio id="audio" preload="auto" autoplay="true" loop="loop" controls="controls">
+      <source src="http://www.forelise.com/media/fur_elise_valentina_lisitsa.mp3" type="audio/mpeg">
+    </audio>
       <!--Calculator HTML -->
       <div class="slider">
               <div class="slide active-slide">
@@ -114,8 +144,20 @@
         </ul>
     <a href="#" class="for-arr"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"/></a>
     </div>
-    <script>
-     var main = function() {
+<script>
+var menu = function() {
+    $('.icon-menu').click(function() {
+        $('.menu').animate({left: '0px'}, 500);
+        $('body').animate({left: '285px'}, 500);
+});
+    $('.icon-close').click(function() {
+        $('.menu').animate({left: '-285px'}, 500);
+        $('body').animate({left: '-0px'}, 500);
+});
+};
+$(document).ready(menu);
+
+ var main = function() {
   $('.for-arr').click(function() {
     var currentSlide = $('.active-slide');
     var nextSlide = currentSlide.next();
@@ -156,9 +198,7 @@
   });
 }
 $(document).ready(main);
-  /*$(function() {
-    $('#calculator').draggable({containment: "window"});
-  }); */
+
   //Calculator JS
                                 $(document).ready(function(){
                                   var testNumLength = function(number) {
@@ -243,6 +283,9 @@ $(document).ready(main);
                                     });
                                         
                                 });
-    </script>
+
+
+
+</script>
 </body>
 </html>

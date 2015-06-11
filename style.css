@@ -1,18 +1,20 @@
-  /*html {
+  html { /*
     background: url("http://cdn.luxedb.com/wp-content/uploads/2013/04/Hong_Kong_Skyline_-_Dec_20071-1024x408.jpg");
     background-size: 100% 100%;
-    background-repeat: no-repeat; 
-  }*/
+    background-repeat: no-repeat;  */
+    height: 100%;
+  }
   body {
     margin: 0;
     padding: 0;
+    position: relative;
+    overflow: hidden;
   }
   .header {
     background-color: navy; 
     height: 40px; 
     list-style-type: none;  
     position: fixed;
-    margin-top: -100px;
     width: 100%;
   }
   .header > li {
@@ -23,16 +25,19 @@
     color: gray;
     text-decoration: none;
     padding: 10px;
-    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .header .input {
+     width: 150px; 
   }
   .header #name {
-    font-size: 30px; 
-    padding: 20px;
     color: white;
-    text-transform: none;
     font-weight: bold;
     text-decoration: underline;
     cursor: text;
+    font-size: 30px; 
+    padding: 20px;
+    margin-right: 200px;
   }
   .header #name:hover {
       background: none;
@@ -45,10 +50,77 @@
   .header li a:active {
       text-decoration: underline;
   }
+  .header li #description {
+     color: white;
+     font-family: Arial;
+     cursor: text;
+     margin-right: 100px;
+  }
+  .header li #description:hover {
+     background: none;
+     font-weight: normal;
+  }
   .header span {
       color: white;
       font-weight: bold;
   }
+  
+.menu {
+      background-color: #000000;
+      left: -285px;  /* start off behind the scenes */
+      height: 100%;
+      position: fixed;
+      margin-top: -0px;
+      width: 285px;
+      z-index: 10;
+}
+
+/* Basic styling */
+.menu ul {
+  border-top: 1px solid #636366;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #636366;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-top: 3px;
+}
+
+.menu a {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-close {
+  cursor: pointer;
+  padding-left: 10px;
+  padding-top: 10px;
+  z-index: 1;
+}
+
+.icon-menu {
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-top: 75px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-menu i {
+  margin-right: 5px;
+}
   .share {
        font-family: Arial; 
        text-align: center; 
@@ -119,11 +191,9 @@
       height: 600px;
       background-color: black;
       z-index: -1;
-      margin-top: 100px;
       overflow: auto;
-  }
-  .active-slide {
-      
+      position: relative;
+      margin-top: 20px;
   }
   .slide2 {
       text-align: center;
@@ -174,8 +244,13 @@
       width: 100%;
       height: 100%;
   }  
+  #audio {
+      display: block;
+      margin: auto;
+      margin-top: -45px;
+      position: relative;
+  }
 /*Calculator Style*/
-                                          
   #calculator {
       opacity: 1;
       z-index: 1;
