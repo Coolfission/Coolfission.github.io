@@ -117,7 +117,9 @@
   text-decoration: none;
   text-transform: uppercase;
 }
-
+.icon-menu:hover {
+  font-weight: bold;
+}
 .icon-menu i {
   margin-right: 5px;
 }
@@ -127,7 +129,7 @@
        position: fixed;
        background-color: white;
        margin-top: 100px;
-       z-index: 1;
+       z-index: 2;
        background-color: white;
   }
   .share img {
@@ -190,7 +192,7 @@
       opacity: 0.9;
       height: 600px;
       background-color: black;
-      z-index: -1;
+      z-index: 1;
       overflow: auto;
       position: relative;
       margin-top: 20px;
@@ -268,7 +270,7 @@
   }
   #calculator a {
       opacity: 1;
-      z-index: 1;
+      z-index: 2;
       display: block;
       float: left;
       cursor: pointer;
