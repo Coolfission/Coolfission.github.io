@@ -35,6 +35,7 @@
     background-color: orange;
     color: white;
     border-radius: 15px;
+    border: 10px solid #000000;
   }
   .header #name {
     color: white;
