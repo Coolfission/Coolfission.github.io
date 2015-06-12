@@ -35,7 +35,11 @@
     background-color: orange;
     color: white;
     border-radius: 15px;
-    border: 10px solid #000000;
+    border: 2px solid #000000;
+  }
+  .header #submit:active {
+    background-color: #ff4500;
+    border: 2px solid aqua;
   }
   .header #name {
     color: white;
