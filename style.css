@@ -30,6 +30,12 @@
   .header .input {
      width: 150px; 
   }
+  .header #submit {
+    width: 75px;
+    background-color: orange;
+    color: white;
+    border-radius: 15px;
+  }
   .header #name {
     color: white;
     font-weight: bold;
