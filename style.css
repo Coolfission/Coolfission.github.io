@@ -30,18 +30,6 @@
   .header .input {
      width: 150px; 
   }
-  .header #submit {
-    width: 75px;
-    background-color: orange;
-    color: white;
-    border-radius: 15px;
-    border: 2px solid #000000;
-    cursor: pointer;
-  }
-  .header #submit:active {
-    background-color: #ff4500;
-    border: 2px solid aqua;
-  }
   .header #name {
     color: white;
     font-weight: bold;
@@ -143,7 +131,7 @@
 }
 .icon-menu:hover {
   font-weight: bold;
-  color: #67C8FF;
+  color: cyan;
 }
 .icon-menu i {
   margin-right: 5px;
