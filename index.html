@@ -18,13 +18,12 @@
   <body>
     <div class="header">
     <li><a href="coolfission.github.io" id="name"><em>Amit Kulkarni</em></a></li>
-    <li><a id="description">Your free and interactive survey builder</a></li>
-    <li><a id="log_in">Log in</a></li> <spam style="color: white; font-weight: bold"> /</spam> 
-    <li><a id="sign_up">Sign up</a></li>
+    <li><a id="description">Your free and interactive search engine</a></li>
+    <li><a id="log_in">Log in</a></li>
     
         <li><input class="input" type="text" placeholder="Username"></input></li>
         <li><input class="input" type="password" placeholder="Password"></input></li>
-        
+        <li><input class="submit" type="submit" placeholder="Submit"></input>
     </div>    
         <div class="menu">
       
@@ -126,7 +125,6 @@
         <div class="slide">
             <div class="slide3">
             <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/matte-grey-square-icons-alphanumeric/118432-matte-grey-square-icon-alphanumeric-information.png" />
-            <h2>&#8592;Share</h2>
             <h3>Stay tuned for further updates</h3>
             <p>Created by Amit Kulkarni</p>
             </div>
@@ -145,9 +143,9 @@
     </div>
 
     <script>
-    var menu = function() {
+      var menu = function() {
     $('.icon-menu').click(function() {
-        $('.menu').animate({left: '0px'}, 1000);
+        $('.menu').animate({left: '0px'}, 1000);                   
 });
     $('.icon-close').click(function() {
         $('.menu').animate({left: '-285px'}, 1000);
@@ -197,103 +195,105 @@ $(document).ready(menu);
 }
 $(document).ready(main);
 
-  //Calculator JS
-                                $(document).ready(function(){
-                                  var testNumLength = function(number) {
-                                        if (number.length > 9) {
-                                            totaldiv.text(number.substr(number.length-9,9));
-                                            if (number.length > 15) {
-                                                number = "";
-                                                totaldiv.text("Err");
-                                            }
-                                        } 
-                                    };
-                                  var number = "";
-                                    var newnumber = "";
-                                    var operator = "";
-                                    var totaldiv = $("#total");
-                                    totaldiv.text("0");
-                                    $("#numbers a").not("#clear,#clearall").click(function(){
-                                    number += $(this).text();
-                                    totaldiv.text(number);
-                                    testNumLength(number);
-                                    });
-                                    $("#operators a").not("#equals").click(function(){
-                                    operator = $(this).text();
-                                    newnumber = number;
-                                    number = "";
-                                    totaldiv.text("0");
-                                    });
-                                    $("#clear,#clearall").click(function(){
-                                    number = "";
-                                    totaldiv.text("0");
-                                    if ($(this).attr("id") === "clearall") {
-                                      newnumber = "";
-                                    }
-                                    });
-                                    $("#equals").click(function(){
-                                      if (operator === "+"){
-                                        number = (parseInt(number, 10) + parseInt(newnumber,10)).toString(10         );
-                                      }
-                                      else if (operator === "-"){
-                                        number = (parseInt(newnumber, 10) - parseInt(number,10)).toString(10 );
-                                      }
-                                      else if (operator === "÷"){
-                                        number = (parseInt(newnumber, 10) / parseInt(number,10)).toString(10);
-                                      }
-                                      else if (operator === "×"){
-                                        number = (parseInt(newnumber, 10) * parseInt(number,10)).toString(10);
-                                      }
-                                      else if (operator === "sqrt") {
-                                          number = Math.sqrt(parseFloat(number,10)).toString(10);
-                                            totaldiv.text(number);  
-                                      }
-                                      else if (operator === "^") {
-                                          newnumber = Math.pow(newnumber, number);
-                                          number =(parseInt(newnumber, 10)).toString(10); 
-                                      }
-                                      totaldiv.text(number);
-                                      testNumLength(number);
-                                      number = "";
-                                      newnumber = "";
-                                    });
-                                    $('#operators a, #side a').not('#decimal').click(function() {
-                                        if ($(this).attr("id") === "sqrt")  {
-                                            operator = "sqrt";
-                                            $("#equals").click();
-                                            return;
-                                        }   
-                                    });    
-                                        $("#decimal").click(function(){
-                                        var numOfDecs = 0;
-                                        for (i=0;i<number.length;i++){
-                                        if (number[i] === "."){
-                                            numOfDecs++;
-                                        }}
-                                        if (numOfDecs > 0) {
-                                            number = number;
-                                            totaldiv.text(number);
-                                        } else {
-                                            number += ".";
-                                            totaldiv.text(number);
-                                        }
-                                        testNumLength(number);
-                                    });
-                                        
-                                });
+$(document).ready(function(){
+  var testNumLength = function(number) {
+        if (number.length > 9) {
+            totaldiv.text(number.substr(number.length-9,9));
+            if (number.length > 15) {
+                number = "";
+                totaldiv.text("Err");
+            }
+        } 
+    };
+  var number = "";
+    var newnumber = "";
+    var operator = "";
+    var totaldiv = $("#total");
+    totaldiv.text("0");
+    $("#numbers a").not("#clear,#clearall").click(function(){
+    number += $(this).text();
+    totaldiv.text(number);
+    testNumLength(number);
+    });
+    $("#operators a").not("#equals").click(function(){
+    operator = $(this).text();
+    newnumber = number;
+    number = "";
+    totaldiv.text("0");
+    });
+    $("#clear,#clearall").click(function(){
+    number = "";
+    totaldiv.text("0");
+    if ($(this).attr("id") === "clearall") {
+      newnumber = "";
+    }
+    });
+    $("#equals").click(function(){
+      if (operator === "+"){
+        number = (parseInt(number, 10) + parseInt(newnumber,10)).toString(10         );
+      }
+      else if (operator === "-"){
+        number = (parseInt(newnumber, 10) - parseInt(number,10)).toString(10 );
+      }
+      else if (operator === "÷"){
+        number = (parseInt(newnumber, 10) / parseInt(number,10)).toString(10);
+      }
+      else if (operator === "×"){
+        number = (parseInt(newnumber, 10) * parseInt(number,10)).toString(10);
+      }
+      else if (operator === "sqrt") {
+          number = Math.sqrt(parseFloat(number,10)).toString(10);
+            totaldiv.text(number);  
+      }
+      else if (operator === "^") {
+          newnumber = Math.pow(newnumber, number);
+          number =(parseInt(newnumber, 10)).toString(10); 
+      }
+      totaldiv.text(number);
+      testNumLength(number);
+      number = "";
+      newnumber = "";
+    });
+    $('#operators a, #side a').not('#decimal').click(function() {
+        if ($(this).attr("id") === "sqrt")  {
+            operator = "sqrt";
+            $("#equals").click();
+            return;
+        }   
+    });    
+        $("#decimal").click(function(){
+        var numOfDecs = 0;
+        for (i=0;i<number.length;i++){
+        if (number[i] === "."){
+            numOfDecs++;
+        }}
+        if (numOfDecs > 0) {
+            number = number;
+            totaldiv.text(number);
+        }
+        else {
+            number += ".";
+            totaldiv.text(number);
+        }
+        testNumLength(number);
+    });
+        
+});
 var video = function() {
   document.getElementById("video_background").defaultPlaybackRate = 1.0;
   document.getElementById("video_background").play();
 
-  document.getElementById("video_background").playbackRate = 3.0; 
+  document.getElementById("video_background").playbackRate = 0.5; 
 };    
 $(document).ready(video);
     
-    
-    
-    
-    
+var audio = function() {
+  document.getElementById("audio").defaultPlaybackRate = 1.0;
+  document.getElementById("audio").play();
 
+  document.getElementById("audio").playbackRate = 1.5; 
+};
+$(document).ready(audio);
     </script>
 
 </body>
