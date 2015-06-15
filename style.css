@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-    overflow: hidden;
+    overflow: scroll;
 }
 .header {
     background-color: navy; 
@@ -16,6 +16,7 @@ body {
     list-style-type: none;  
     position: fixed;
     width: 100%;
+    z-index: 2;
 }
 .header > li {
     display: inline;
@@ -30,6 +31,11 @@ body {
 .header .input {
     width: 150px; 
 }
+::-webkit-input-placeholder {
+   color: #ABCDEF;
+   padding-right: 50px;
+}
+
 .header .submit {
     border: 3px solid #000000;
     background-color: orange;
@@ -70,6 +76,9 @@ body {
 .header li #description:hover {
     background: none;
     font-weight: normal;
+}
+.header li #description:active {
+    text-decoration: none;
 }
 .header span {
     color: white;
@@ -144,32 +153,6 @@ body {
 .icon-menu i {
     margin-right: 5px;
 }
-.share {
-    font-family: Arial; 
-    text-align: center; 
-    position: fixed;
-    background-color: white;
-    margin-top: 100px;
-    z-index: 2;
-    background-color: white;
-}
-.share img {
-    height: 50px; 
-    width: 50px;
-    display: block;
-}
-.share td:hover {
-    background-color: #FF6600;
-}
-.share td:active {
-    background-color: cyan; 
-}
-#top {
-    font-weight: bold;
-}
-#top:hover {
-    background-color: white;
-}
 .slide-move {
     margin: auto; 
     text-align: center;
@@ -214,7 +197,7 @@ body {
     height: 600px;
     background-color: black;
     z-index: 1;
-    overflow: auto;
+    overflow: hidden;
     position: relative;
     margin-top: 20px;
 }
@@ -277,13 +260,17 @@ body {
     width: 310px;
     height: 460px;
     border: 3px black solid;
-    padding: 5px;
-    position: relative;    
+    padding: 10px;
+    position: relative; 
     margin-top: -250px;
     margin-left: 900px;
     border-radius: 10px;
+    box-shadow: 0px 10px url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSwn7Bc_e5TO-_UEKCs32E2NWK8YGX1Pk1fQt5zzrv96j8wIn3FhQ") , 0px 10px 15px rgba(0, 0, 0, 0.2);
     background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQeut_wOzhNCh1D5fKg42scc6ojdbGJSTZiLFRJjKg49EYNi2U2");
     font-family: Arial;
+    -webkit-user-select: none;         
+    -moz-user-select: none; 
+    -ms-user-select: none;    
 }
 #calculator a {
     opacity: 1;
@@ -298,13 +285,21 @@ body {
     color: black;
     font-weight: bold;
 }
+#calculator a:hover {
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease; 
+}
 #calculator a:active {
     top: 4px;
     position: relative;
-    box-shadow: 0px 0px white;
-}
-#numbers, #operators {
-    margin: auto; 
+    -webkit-transition: all 0ms ease;
+    -moz-transition: all 0ms ease;
+    -ms-transition: all 0ms ease;
+    -o-transition: all 0ms ease;
+    transition: all 0ms ease; 
 }
 #numbers a {
     width: 50px;
@@ -376,6 +371,12 @@ a#equals:active {
     box-shadow: 0px 0px #FFFFFF;
     top: 4px; 
 }      
+a#clear, a#clearall {
+    background-color: rgb(0, 0, 178);
+}
+a#clear:hover, a#clearall:hover {
+    background-color: #000080;
+}
 #total {
     height: 70px;
     width: 290px;
@@ -385,5 +386,21 @@ a#equals:active {
     text-align: right;
     font-size: 60px;
     padding: 0px 5px;
+    border-radius: 4px;
+    overflow-x: scroll;
+    overflow-y: hidden;
     background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSsTIciUf-hD1tA2bUpm3WUZuURN77sS36gLbAVmh6dgY04LxBG");
+}
+#total::-webkit-scrollbar{
+    cursor: pointer;
+    border-radius: 10px;
+    height: 10px;
+} 
+#total::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    width: 10px;
+    cursor: pointer;
+    position: relative;
 }
