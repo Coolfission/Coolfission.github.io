@@ -3,6 +3,39 @@ html { /*
     background-size: 100% 100%;
     background-repeat: no-repeat;  */
     height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;    
+}
+html::-webkit-scrollbar{
+    cursor: pointer;
+    border-radius: 10px;
+    height: 17px;
+    width: 17px;
+    -webkit-transition: all 1000ms ease;
+    -moz-transition: all 1000ms ease;
+    -ms-transition: all 1000ms ease;
+    -o-transition: all 1000ms ease;
+    transition: all 1000ms ease; 
+} 
+html::-webkit-scrollbar-track-piece {
+    background-color: #C3E4ED;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border: 4px solid #fff;
+    border-radius: 10px;
+    width: 10px;
+    cursor: pointer;
+    position: relative;
+    height: 10px;
+} 
+html::-webkit-scrollbar-button {
+    background-color: DarkCyan;
+}
+html::-webkit-scrollbar-corner{
+    background-color: #7f0000;
+    border-radius: 0px;
 }
 body {
     margin: 0;
@@ -139,19 +172,26 @@ body {
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    padding-bottom: 25px;
+    padding-bottom: 35px;
     padding-left: 25px;
     padding-top: 75px;
     text-decoration: none;
     text-transform: uppercase;
-    width: 80px;
+    width: 100px;
+    height: 100px;
 }
-.icon-menu:hover {
-    font-weight: bold;
-    color: cyan;
+.icon-menu i img:hover {
+    background-color: cyan;
+    border: 3px solid #fff;
 }
-.icon-menu i {
-    margin-right: 5px;
+.icon-menu i img {
+    margin-right: -1px;
+    margin-top: 1px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 2px solid #FFFFFF;
 }
 .slide-move {
     margin: auto; 
@@ -189,9 +229,13 @@ body {
     margin-top: 100px;
     margin-left: 450px;
     color: white;
-    font-family: Calibri;
+    font-family: sans-serif;
     overflow: auto;
 } 
+.In2 {
+    color: white;
+    font-family: sans-serif;
+}
 .slider {
     opacity: 0.9;
     height: 600px;
@@ -250,7 +294,7 @@ body {
 #audio {
     display: block;
     margin: auto;
-    margin-top: -45px;
+    margin-top: -120px;
     position: relative;
 }
 #calculator {
@@ -265,7 +309,6 @@ body {
     margin-top: -250px;
     margin-left: 900px;
     border-radius: 10px;
-    box-shadow: 0px 10px url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSwn7Bc_e5TO-_UEKCs32E2NWK8YGX1Pk1fQt5zzrv96j8wIn3FhQ") , 0px 10px 15px rgba(0, 0, 0, 0.2);
     background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQeut_wOzhNCh1D5fKg42scc6ojdbGJSTZiLFRJjKg49EYNi2U2");
     font-family: Arial;
     -webkit-user-select: none;         
@@ -403,4 +446,23 @@ a#clear:hover, a#clearall:hover {
     width: 10px;
     cursor: pointer;
     position: relative;
+}
+.footer {
+    height: 300px;
+    position: relative;
+    float: bottom;
+    z-index: 2;
+    background-color: Beige;
+    width: 100%;
+}
+.footer a {
+    z-index: 3;
+    display: inline-block;
+    margin: auto;
+    margin-top: 100px;
+}
+.footer img#linkedin {
+   height: 10px;
+   width: 1px;
+   position: absolute;
 }
