@@ -5,16 +5,16 @@
       <title>
         Amit Kulkarni
       </title>
-          <link rel="stylesheet" type="text/css" href="style.css" />
-          <script src="script.js"></script>
+         <link rel="stylesheet" type="text/css" href="style.css" />
+         <script src="script.js"></script>
     
-    
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-          <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
           <!--<script src="https://raw.githubusercontent.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.js"></script> --> 
   </head>
   
   <body>
+  <div id="scroll-up">
     <div class="header">
     <li><a href="coolfission.github.io" id="name"><em>Amit Kulkarni</em></a></li>
     <li><a id="description">The free and interactive search engine</a></li>
@@ -48,8 +48,10 @@
       </div>
     
      <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0"> 
-            <source src="http://coming-sssoon.paperplane.io/video/time.webm" type="video/webm"> 
-            <source src="http://coming-sssoon.paperplane.io/video/time.mp4" type="video/mp4"> 
+            <source src="https://lvl3.vimeocdn.com/video/22439234/46823154.mp4?expires=1434813208&token=0282d76b2577b06f1657f" type="video/webm">
+            
+            <!--<source src="http://coming-sssoon.paperplane.io/video/time.webm" type="video/webm"> 
+            <source src="http://coming-sssoon.paperplane.io/video/time.mp4" type="video/mp4"> --> 
         </video> 
         
     <audio id="audio" preload="auto" autoplay="true" loop="loop" controls="controls">
@@ -122,15 +124,44 @@
         </ul>
     <a href="#" class="for-arr"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"/></a>
     </div>
-    <div class="footer">
-        <a id="pinterest" href="https://www.pinterest.com" target="_blank"><img src="//assets.edmodo.com/images_v2/marketing/shared/social-pinterest.png" /></a>
-        <a id="google" href="https://www.plus.google.com" target="_blank"><img src="https://assets.edmodo.com/images_v2/marketing/shared/social-google.png" /></a>
-        <a id="facebook" href="https://www.facebook.com" target="_blank"><img src="//assets.edmodo.com/images_v2/marketing/shared/social-facebook.png" /></a>
-        <a id="twitter" href="https://www.twitter.com" target="_blank"><img src="//assets.edmodo.com/images_v2/marketing/shared/social-twitter.png" /></a>
-        <a id="linkedin" href="https://www.linkedin.com" target="_blank"><img height= "100px" width="100px" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSAuWgVwIcUw2zUIByj00vuO7TXOlq9-c5406hurc_gZifbIB_o_g" /></a>
+    </div>
+    <div id="footer">
+    <p>Share your experience...</p>
+        <li id="space" ></li>
+        <li><a id="pinterest" href="https://www.pinterest.com" target="_blank"><img src="//assets.edmodo.com/images_v2/marketing/shared/social-pinterest.png" /></a></li>
+        <li><a id="google" href="https://www.plus.google.com" target="_blank"><img src="https://assets.edmodo.com/images_v2/marketing/shared/social-google.png" /></a></li>
+        <li><a id="facebook" href="https://www.facebook.com" target="_blank"><img src="//assets.edmodo.com/images_v2/marketing/shared/social-facebook.png" /></a></li>
+        <li><a id="twitter" href="https://www.twitter.com" target="_blank"><img src="//assets.edmodo.com/images_v2/marketing/shared/social-twitter.png" /></a></li>
+        
+    <p style="float: right; position: relative; margin-top: -52px;">Need help?</p>    
+    <p style="margin-right: -500px; font-weight: normal">
+       <em> Contact me: </em>
+            <a style="text-decoration: none; color: black" href="mailto:amitkulkarni181@gmail.com">amitkulkarni181@gmail.com             </a>
+        <br> 
+        <spam style="font-weight: bold">or</spam><br>
+        <spam style="margin-right: 130px;"><em>Call me: </em>123-456-7890</spam>
+    </p>    
+    <p style="font-family: arial; font-size: 10px">&#169; 2016 Technology Fair || Made by Amit Kulkarni</p>
     </div>
 
-    <script>
+<script>
+var ovf, slider;
+
+$(function(){
+    ovf = this.getElementById("footer");
+    slider = this.getElementById("scroll-up");
+    winResize();
+    $(window).bind({resize: winResize, scroll: winScroll});
+});
+
+function winResize(){   
+    ovf.style.top = slider.offsetHeight + "px";
+}
+
+function winScroll(){
+    var op = 1 - (window.pageYOffset / slider.offsetHeight);
+    slider.style.opacity = op; 
+}
 
   if (screen.width <= 800) {
       confirm("The website is not meant to be used by mobile devices. Click OK to proceed anyway.");
@@ -405,7 +436,7 @@ var video = function() {
   document.getElementById("video_background").defaultPlaybackRate = 1.0;
   document.getElementById("video_background").play();
 
-  document.getElementById("video_background").playbackRate = 0.2; 
+  document.getElementById("video_background").playbackRate = 1.0; 
 };    
 $(document).ready(video);
     
@@ -413,10 +444,10 @@ var audio = function() {
   document.getElementById("audio").defaultPlaybackRate = 1.0;
   document.getElementById("audio").play();
 
-  document.getElementById("audio").playbackRate = 1.5; 
+  document.getElementById("audio").playbackRate = 1.0; 
 };
 $(document).ready(audio);
-    </script>
+</script>
 
 </body>
 </html>
