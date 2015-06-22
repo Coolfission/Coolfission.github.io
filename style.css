@@ -194,6 +194,11 @@ body {
     font-weight: bold;
     margin-top: 50px;
     position: relative;
+    background-color: #4c4c4c;
+    opacity: 0.9;
+    border: 1px solid #000;
+    border-radius: 10px;
+    width: 200px;
 }
 .slide-move .slider-dots {
     list-style-type: none; 
@@ -240,6 +245,8 @@ body {
     position: relative;
     margin-top: 20px;
     width: 100%;
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;
 }
 .slide2 {
     text-align: center;
