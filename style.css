@@ -115,12 +115,13 @@ body {
 }
 .menu {
     background-color: #000000;
-    left: -285px;  /* start off behind the scenes */
+    left: -290px;  
     height: 100%;
     position: fixed;
     margin-top: -0px;
     width: 285px;
     z-index: 10;
+    border-right: 1px solid gray;
 }
 .menu ul {
     border-top: 1px solid #636366;
@@ -196,7 +197,7 @@ body {
     position: relative;
     background-color: #4c4c4c;
     opacity: 0.9;
-    border: 1px solid #000;
+    border: 1px solid #fff;
     border-radius: 10px;
     width: 200px;
 }

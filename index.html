@@ -1,6 +1,6 @@
 <!--html-->
 <!DOCTYPE html>
-<html onload="onload()">
+<html>
   <head>
       <title>
         Amit Kulkarni
@@ -48,15 +48,15 @@
       </div>
      <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
      
-            <source src="https://avvimeo-a.akamaihd.net/75249/558/43398346.mp4?token2=1434934511_e86b618c8eea8eaa72c24a1481c79f15&aksessionid=c3972396053f8a9c&ns=4" type="video/webm">
-            <source src="https://avvimeo-a.akamaihd.net/75249/558/43398346.mp4?token2=1434934511_e86b618c8eea8eaa72c24a1481c79f15&aksessionid=c3972396053f8a9c&ns=4" type="video/mp4">
-            <!--<source src="http://coming-sssoon.paperplane.io/video/time.webm" type="video/webm"> 
-            <source src="http://coming-sssoon.paperplane.io/video/time.mp4" type="video/mp4"> --> 
+            <source src="file:///C:/Users/Rahul/Downloads/The_aurora.webm" type="video/webm">
+            <source src="http://coming-sssoon.paperplane.io/video/time.webm" type="video/webm"> 
+            <source src="http://coming-sssoon.paperplane.io/video/time.mp4" type="video/mp4"> 
        
         </video> 
         
     <audio id="audio" preload="auto" autoplay="true" loop="loop" controls="controls">
-      <source src="http://www.forelise.com/media/fur_elise_valentina_lisitsa.mp3" type="audio/mpeg">
+    <!--  <source src="http://www.forelise.com/media/fur_elise_valentina_lisitsa.mp3" type="audio/mpeg"> -->
+    <source src="http://www.archive.org/download/MoonlightSonata_755/Beethoven-MoonlightSonata.mp3" type="audio/mpeg">
     </audio>
     
       <div class="slider">
@@ -146,9 +146,6 @@
     </div>
 
 <script>
-function onload() {
-    alert("This is a test.")
-}
 var ovf, slider;
 
 $(function(){
@@ -175,7 +172,7 @@ function winScroll(){
           $('.menu').animate({left: '0px'}, 2000);                   
   });
       $('.icon-close').click(function() {
-          $('.menu').animate({left: '-285px'}, 2000);
+          $('.menu').animate({left: '-290px'}, 2000);
   });
   };
   $(document).ready(menu);
@@ -440,7 +437,7 @@ var video = function() {
   document.getElementById("video_background").defaultPlaybackRate = 1.0;
   document.getElementById("video_background").play();
 
-  document.getElementById("video_background").playbackRate = 1.0; 
+  document.getElementById("video_background").playbackRate = 0.5; 
 };    
 $(document).ready(video);
     
@@ -448,7 +445,7 @@ var audio = function() {
   document.getElementById("audio").defaultPlaybackRate = 1.0;
   document.getElementById("audio").play();
 
-  document.getElementById("audio").playbackRate = 1.5; 
+  document.getElementById("audio").playbackRate = 1.0; 
 };
 $(document).ready(audio);
 </script>
