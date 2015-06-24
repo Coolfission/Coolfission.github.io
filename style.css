@@ -62,7 +62,7 @@ body {
 }
 ::-webkit-input-placeholder {
    color: #ABCDEF;
-   padding-right: 50px;
+   right: -50px;
 }
 
 .header .submit {
@@ -248,6 +248,9 @@ body {
     width: 100%;
     border-bottom: 1px solid lightgray;
     border-top: 1px solid lightgray;
+    -webkit-user-select: none;         
+    -moz-user-select: none; 
+    -ms-user-select: none;   
 }
 .slide2 {
     text-align: center;
@@ -459,28 +462,48 @@ a#clear:hover, a#clearall:hover {
     position: absolute;
     float: bottom;
     z-index: 2;
-    background-color: white;
+    background-color: beige;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-top: 1px solid #000;
 }
 #footer > li {
     display: inline;
 }
-#footer #space {
-    padding: 398px;
-    position: relative;
-}
-
 #footer p {
     font-family: Arial;
-    text-align: center;
     font-weight: bold;
+    position: relative;
+}
+#footer p:first-child {
+    right: -300px;
+}
+#footer .link {
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    color: black;
+    padding-top: -20px;
+    right: -320px;
+    font-family: Georgia;
+}
+#footer .link:hover {
+    color: purple;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease; 
+}
+#footer .link:active {
+    text-decoration: underline;
 }
 #footer li a img {
     position: relative; 
     height: 20px;
     width: 20px;
-    margin: auto;
+    right: -780px;
 }
 #footer li a img:hover {
     border: 1px solid black;
