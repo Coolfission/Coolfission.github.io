@@ -150,27 +150,28 @@
     </div>
     
 <script>
-var ovf, slider;
+  var ovf, slider;
 
-$(function(){
-    ovf = this.getElementById("footer");
-    slider = this.getElementById("scroll-up");
-    winResize();
-    $(window).bind({resize: winResize, scroll: winScroll}); 
-});
+    $(function(){
+        ovf = this.getElementById("footer");
+        slider = this.getElementById("scroll-up");
+        winResize();
+        $(window).bind({resize: winResize, scroll: winScroll}); 
+    });
 
-function winResize(){   
-    ovf.style.top = slider.offsetHeight + "px";
-}
+    function winResize(){   
+        ovf.style.top = slider.offsetHeight + "px";
+    }
 
-function winScroll(){
-    var op = 1 - (window.pageYOffset / slider.offsetHeight);
-    slider.style.opacity = op; 
-}
-
-  if (screen.width <= 800) {
-      confirm("The website is not meant to be used by mobile devices. Click OK to proceed anyway.");
-  }
+    function winScroll(){
+        var op = 1 - (window.pageYOffset / slider.offsetHeight);
+        slider.style.opacity = op; 
+    }
+  var width = function() {}
+    if (screen.width <= 800) {
+        confirm("The website is not meant to be used by mobile devices. Click OK to proceed anyway.");
+    $("#calculator").css("margin-right", "1000px");
+    }
   var menu = function() {
       $('.icon-menu').click(function() {
           $('.menu').animate({left: '0px'}, 2000);                   
