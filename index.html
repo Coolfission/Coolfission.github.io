@@ -167,11 +167,15 @@
         var op = 1 - (window.pageYOffset / slider.offsetHeight);
         slider.style.opacity = op; 
     }
-  var width = function() {}
+
+  var checkWidth = function() {
     if (screen.width <= 800) {
         confirm("The website is not meant to be used by mobile devices. Click OK to proceed anyway.");
-    $("#calculator").css("margin-right", "1000px");
+      $("#calculator").css("margin-right": "1000px");
     }
+  }
+  $(document).ready(checkWidth);
+  
   var menu = function() {
       $('.icon-menu').click(function() {
           $('.menu').animate({left: '0px'}, 2000);                   
