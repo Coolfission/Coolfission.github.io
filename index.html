@@ -150,6 +150,23 @@
     </div>
     
 <script>
+   var ovf, slider;
+
+    $(function() {
+        ovf = this.getElementById("footer");
+        slider = this.getElementById("scroll-up");
+        winResize();
+        $(window).bind({resize: winResize, scroll: winScroll}); 
+    });
+
+    function winResize() {   
+        ovf.style.top = slider.offsetHeight + "px";
+    }
+
+    function winScroll(){
+        var op = 1 - (window.pageYOffset / slider.offsetHeight);
+        slider.style.opacity = op; 
+    }
   var checkWidth = function() {
     if (screen.width <= 800) {
         confirm("The website is not meant to be used by mobile devices. Click OK to proceed anyway.");
