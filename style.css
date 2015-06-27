@@ -456,7 +456,7 @@ a#clear:hover, a#clearall:hover {
 }
 #scroll-up {}
 #footer {
-    top: 20px;
+    top: 0;
     height: 300px;
     margin-top: 20px;
     position: absolute;
