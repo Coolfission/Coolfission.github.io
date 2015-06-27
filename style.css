@@ -458,7 +458,7 @@ a#clear:hover, a#clearall:hover {
 #footer {
     top: 0;
     height: 300px;
-    margin-top: 20px;
+    margin-top: 40px;
     position: absolute;
     float: bottom;
     z-index: 2;
