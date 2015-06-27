@@ -155,7 +155,13 @@
     $(function() {
         ovf = this.getElementById("footer");
         slider = this.getElementById("scroll-up");
+        winResize();
     });
+
+    function winResize() {   
+        ovf.style.top = slider.offsetHeight + "px";
+    }
+
     function winScroll(){
         var op = 1 - (window.pageYOffset / slider.offsetHeight);
         slider.style.opacity = op; 
