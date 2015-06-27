@@ -234,12 +234,13 @@ $(document).ready(main);
         return str.substr(0,index) + chr + str.substr(index+1);
     }
     if (text.length > pos) {
-        for (i=1;i<text.length;i++){
+        for (i = 1; i < text.length; i++){
             if (text[i] === ".") {
                 i = text.length;
                 if (parseFloat(text[pos],10) >= 5) {
                     text = (setCharAt(text,pos-1,((parseFloat(text[pos-1],10))+1).toString(10))).substr(0,pos);
-                } else {
+                } 
+                else {
                     text = text.substr(0,pos);
                 }
             } 
@@ -338,9 +339,10 @@ $(function() {
         testNumLength(number);
     });
     $("#zero").click(function(){
-        if (number === ""){
+        if (number === "") {
             number = "";
-        } else {
+        } 
+        else {
             number += "0";
         } 
         
@@ -356,7 +358,7 @@ $(function() {
         newnumber = number;
         number = "";
         operator = "+";
-        totaldiv.text("0");
+        //totaldiv.text("0"); 
     });
     $("#minus").click(function(){
         newnumber = number;
