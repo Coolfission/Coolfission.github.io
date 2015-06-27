@@ -462,7 +462,7 @@ a#clear:hover, a#clearall:hover {
     position: absolute;
     float: bottom;
     z-index: 2;
-    background-color: beige;
+    background: url("http://kitchentop.weebly.com/uploads/2/7/6/8/27684713/5346534.jpg") repeat top-right;
     width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
