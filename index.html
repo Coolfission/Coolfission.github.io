@@ -152,14 +152,14 @@
 <script>
   var ovf, slider;
 
-    $(function(){
+    $(function() {
         ovf = this.getElementById("footer");
         slider = this.getElementById("scroll-up");
         winResize();
         $(window).bind({resize: winResize, scroll: winScroll}); 
     });
 
-    function winResize(){   
+    function winResize() {   
         ovf.style.top = slider.offsetHeight + "px";
     }
 
