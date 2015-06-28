@@ -362,9 +362,10 @@ $(function() {
         number = "";
         operator = "-";
     });
-    $("#times").click(function() {
+    $("#times").click(function(){
+        newnumber = number;
+        number = "";
         operator = "x";
-        totaldiv.text("x");
     });
     $("#divide").click(function(){
         newnumber = number;
