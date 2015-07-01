@@ -63,7 +63,7 @@
               <div class="slide active-slide">
                   <div class="In1">
     <h1>The Calculator</h1>
-    <p>The calculator, which is shown to the right, solves mathematical equations based on the users input. The calculator was made by using <em>HTML</em>, <em>CSS</em>, <em>JavaScript</em>, and <em>jQuery</em>. It solves addition, division, subtraction, multiplication, exponent, and square root problems. This calculator, unlike other calculators, solves mathematical equations with up to <spam style="font-weight: bold;">9 </spam> numbers.</p>
+    <p>The calculator, which is shown to the right, solves mathematical equations based on the users input. The calculator was made by using <em>HTML</em>, <em>CSS</em>, <em>JavaScript</em>, and <em>jQuery</em>. It solves addition, division, subtraction, multiplication, exponent, and square root problems. This calculator, unlike other calculators, solves mathematical equations with up to <spam style="font-weight: bold;">∞ </spam> numbers.</p>
     </div>
     <div id="calculator">
         <div id="total"></div>
@@ -253,16 +253,6 @@ $(function() {
     var operator = "";
     var memory = "0";
     var cleared = 0;
-    var slid = 0;
-    var testNumLength = function(number) {
-        if (number.length > 15) {
-            totaldiv.text(number.substr(number.length-9,9));
-            if (number.length > 15) {
-                number = "";
-                totaldiv.text("Too many");
-            }
-        } 
-    };
     var totaldiv = $("#total");
     totaldiv.text("0");
     $("#one").click(function(){
