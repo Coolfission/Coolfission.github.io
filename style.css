@@ -308,7 +308,7 @@ body {
     z-index: 1;
     background-color: #FFE4B5;
     width: 310px;
-    height: 465px;
+    height: 445px;
     border: 3px black solid;
     padding: 10px;
     position: relative; 
@@ -427,7 +427,7 @@ a#clear:hover, a#clearall:hover {
     background-color: #000080;
 }
 #total {
-    height: 50px;
+    height: 60px;
     width: 290px;
     margin: auto;
     background-color: white;
