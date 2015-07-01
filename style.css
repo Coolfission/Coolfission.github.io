@@ -427,7 +427,7 @@ a#clear:hover, a#clearall:hover {
     background-color: #000080;
 }
 #total {
-    height: 80px;
+    height: 50px;
     width: 290px;
     margin: auto;
     background-color: white;

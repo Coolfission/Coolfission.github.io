@@ -255,11 +255,11 @@ $(function() {
     var cleared = 0;
     var slid = 0;
     var testNumLength = function(number) {
-        if (number.length > 9) {
+        if (number.length > 15) {
             totaldiv.text(number.substr(number.length-9,9));
-            if (number.length > 9) {
+            if (number.length > 15) {
                 number = "";
-                totaldiv.text("Err");
+                totaldiv.text("To many numbers");
             }
         } 
     };
