@@ -32,6 +32,12 @@ html::-webkit-scrollbar-corner{
     background-color: #000;
     border-radius: 0px;
 }
+::-moz-selection { 
+    background-color: darkGray; 
+}
+::selection {
+    background-color: darkGray;
+}
 body {
     margin: 0;
     padding: 0;
