@@ -16,7 +16,8 @@
   <body>
   <div id="scroll-up">
     <div class="header">
-    <li><a href="coolfission.github.io" id="name"><em>Amit Kulkarni</em></a></li>
+    <li><a href="coolfission.github.io" id="name">Amit Kulkarni</a></li>
+    <input id="print" type="submit" value="Print"></input>
     <li><a id="description">The free and interactive search engine</a></li>
     <li><a id="log_in">Log in</a></li>
     
@@ -147,33 +148,10 @@
         <spam style="margin-right: 130px;"><em>Call me: </em>123-456-7890</spam>
     </p>    
     <p style="font-family: arial; font-size: 10px; text-align: center; top: 200px">&#169; 2016 Technology Fair || Made by Amit Kulkarni</p>
+    <p style="font-family: arial; font-size: 10px; text-align: center; top: 200px">All rights reserved</p>
     </div>
-    
+
 <script>
-   var ovf, slider;
-
-    $(function() {
-        ovf = this.getElementById("footer");
-        slider = this.getElementById("scroll-up");
-        winResize();
-    });
-
-    function winResize() {   
-        ovf.style.top = slider.offsetHeight + "px";
-    }
-
-    function winScroll(){
-        var op = 1 - (window.pageYOffset / slider.offsetHeight);
-        slider.style.opacity = op; 
-    }
-  var checkWidth = function() {
-    if (screen.width <= 800) {
-        confirm("The website is not meant to be used by mobile devices. Click OK to proceed anyway.");
-        $("#calculator").css({"right": "300px"})
-    }
-  }
-  $(document).ready(checkWidth);
-
   var menu = function() {
       $('.icon-menu').click(function() {
           $('.menu').animate({left: '0px'}, 2000);                   
@@ -427,11 +405,39 @@ $(function() {
         } 
     });
 });
+
+var time = function() {
+    var today = new Date();
+    var hourNow = today.getHours();
+    var greeting;
+    if(hourNow > 18) {
+        greeting = "Good Evening!";
+    }
+    else if(hourNow > 12) {
+        greeting = "Good Afternoon!";
+    }
+    else if(hourNow > 0) {
+        greeting = "Good Morning!";
+    }
+    else {
+        greeting = "Welcome!";
+    }
+    var changeTime = document.getElementById("name");
+    changeTime.innerHTML = greeting;
+};
+$(document).ready(time);
+
+$(document).ready(function() {
+    $("#print").click(function() {
+        window.print();
+    });
+});
+
 var video = function() {
   document.getElementById("video_background").defaultPlaybackRate = 1.0;
   document.getElementById("video_background").play();
 
-  document.getElementById("video_background").playbackRate = 0.5; 
+  document.getElementById("video_background").playbackRate = 0.3; 
 };    
 $(document).ready(video);
     

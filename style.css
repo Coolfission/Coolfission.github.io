@@ -33,10 +33,10 @@ html::-webkit-scrollbar-corner{
     border-radius: 0px;
 }
 ::-moz-selection { 
-    background-color: darkGray; 
+    background-color: #f4a460; 
 }
 ::selection {
-    background-color: darkGray;
+    background-color: #f4a460;
 }
 body {
     margin: 0;
@@ -57,7 +57,7 @@ body {
 }
 .header li a {
     font-family: Arial;
-    color: gray;
+    color: white;
     text-decoration: none;
     padding: 10px;
     cursor: pointer;
@@ -69,7 +69,6 @@ body {
    color: #ABCDEF;
    right: -50px;
 }
-
 .header .submit {
     border: 3px solid #000000;
     background-color: orange;
@@ -84,22 +83,32 @@ body {
 .header #name {
     color: white;
     font-weight: bold;
+    font-style: italic;
     text-decoration: underline;
     cursor: text;
     font-size: 30px; 
     padding: 20px;
-    margin-right: 200px;
+    margin-right: 80px;
 }
 .header #name:hover {
     background: none;
 }
-.header li a:hover {
+.header #print {
+    margin-right: 80px;
+    border: none;
     color: white;
-    font-weight: bold;
-    background-color: #000033;
+    border-radius: 10px;
+    padding: 3px 10px;
+    cursor: pointer;
+    background-color: darkGray;
 }
-.header li a:active {
-    text-decoration: underline;
+.header #print:hover {
+    background-color: lightGray;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease; 
 }
 .header li #description {
     color: white;
@@ -113,6 +122,24 @@ body {
 }
 .header li #description:active {
     text-decoration: none;
+}
+.header input {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 3px 10px;
+    -webkit-transition: all 1000ms ease;
+    -moz-transition: all 1000ms ease;
+    -ms-transition: all 1000ms ease;
+    -o-transition: all 1000ms ease;
+    transition: all 1000ms ease; 
+}
+.header input:focus {
+    border: 2px solid red;
+    -webkit-transition: all 1500ms ease;
+    -moz-transition: all 1500ms ease;
+    -ms-transition: all 1500ms ease;
+    -o-transition: all 1500ms ease;
+    transition: all 1500ms ease; 
 }
 .header span {
     color: white;
@@ -204,7 +231,7 @@ body {
     opacity: 0.9;
     border: 1px solid #fff;
     border-radius: 10px;
-    width: 200px;
+    width: 210px;
 }
 .slide-move .slider-dots {
     list-style-type: none; 
@@ -463,7 +490,7 @@ a#clear:hover, a#clearall:hover {
 #footer {
     top: 0;
     height: 300px;
-    margin-top: 20px;
+    margin-top: 900px;
     position: absolute;
     float: bottom;
     z-index: 2;
