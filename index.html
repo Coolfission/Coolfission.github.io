@@ -19,7 +19,7 @@
     <li><a href="coolfission.github.io" id="name">Amit Kulkarni</a></li>
     <input id="print" type="submit" value="Print"></input>
     <li><a id="description">The free and interactive search engine</a></li>
-    <li><a id="log_in">Log in</a></li>
+    <li><a id="log_in">Log in:</a></li>
     
         <li><input class="input" type="text" placeholder="Username"></input></li>
         <li><input class="input" type="password" placeholder="Password"></input></li>
@@ -64,7 +64,7 @@
               <div class="slide active-slide">
                   <div class="In1">
     <h1>The Calculator</h1>
-    <p>The calculator, which is shown to the right, solves mathematical equations based on the users input. The calculator was made by using <em>HTML</em>, <em>CSS</em>, <em>JavaScript</em>, and <em>jQuery</em>. It solves addition, division, subtraction, multiplication, exponent, and square root problems. This calculator, unlike other calculators, solves mathematical equations with up to <spam style="font-weight: bold;">∞ </spam> numbers.</p>
+    <p>The calculator, which is shown to the right, solves mathematical equations based on the users input. The calculator was made by using <em>HTML</em>, <em>CSS</em>, <em>JavaScript</em>, and <em>jQuery</em>. It solves addition, division, subtraction, multiplication, exponent, and square root problems. This calculator, unlike other calculators, solves mathematical equations with as many numbers you would desire.</p>
     </div>
     <div id="calculator">
         <div id="total"></div>
@@ -102,9 +102,51 @@
         <div class="slide">
             <div class="slide2">
                 <div class="In2">
-                The Solar System <br/>
-                The solar system
+    <h1>The converter</h1>
+    <p>It is important to have the proper conversions or measurements of certain products or designs in life. However, there is hardly any conversions online to do this for you. It is also hard to memorize the formulas associated with the certain conversion. That is why I created the converter to make it easier to do these things. You can expirement and test it on the right.</p>
                 </div>
+    <div id="converter">
+            <fieldset>
+    <h1>The free online english to metric system converter</h1>
+    <legend>Converter</legend>
+    <div id="converter_main">
+        <select>
+            <option>Temperature</option>
+            <option>Length</option>
+            <option>Mass</option>
+            <optihttp://jsfiddle.net/TechnoForced/62a6wd6y/1/#runon>Speed</option>
+            <option>Volume</option>
+            <option>Area</option>
+            <option>Fuel Consumption</option>
+            <option>Time</option>
+            <option>Digital Storage</option>
+        </select>
+    </div>
+    <div id="en">
+        <select>
+            <option>Mile</option>
+            <option>Yard</option>
+            <option>Foot</option>
+            <option>Inch</option>
+        </select>
+    </div>
+    <div id="kg">
+        <select>
+            <option>Kilometer</option>
+            <option>Hectometer</option>
+            <option>Dekameter</option>
+            <option>Meter</option>
+            <option>Decimeter</option>
+            <option>Centimeter</option>
+            <option>Millimeter</option>
+        </select>
+    </div>
+    <input type="number"></input>
+<h3>&#8594;</h3>
+<input type="number"></input>
+<p><strong>Rule:</strong> 1 mile = 1.60934 kilometers</p>
+</fieldset>
+</div>
             </div>
         </div>
         <div class="slide">
@@ -175,8 +217,8 @@
       nextDot = $('.dot').first();
     }
 
-    currentSlide.fadeOut(600).removeClass('active-slide');
-    nextSlide.fadeIn(600).addClass('active-slide');
+    currentSlide.fadeOut(400).removeClass('active-slide');
+    nextSlide.fadeIn(400).addClass('active-slide');
 
     currentDot.removeClass('active-dot');
     nextDot.addClass('active-dot');
@@ -195,8 +237,8 @@
       prevDot = $('.dot').last();
     }
     
-    currentSlide.fadeOut(600).removeClass('active-slide');
-    prevSlide.fadeIn(600).addClass('active-slide');
+    currentSlide.fadeOut(400).removeClass('active-slide');
+    prevSlide.fadeIn(400).addClass('active-slide');
 
     currentDot.removeClass('active-dot');
     prevDot.addClass('active-dot');
@@ -437,7 +479,7 @@ var video = function() {
   document.getElementById("video_background").defaultPlaybackRate = 1.0;
   document.getElementById("video_background").play();
 
-  document.getElementById("video_background").playbackRate = 0.3; 
+  document.getElementById("video_background").playbackRate = 0.01; 
 };    
 $(document).ready(video);
     

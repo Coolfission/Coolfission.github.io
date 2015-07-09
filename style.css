@@ -215,7 +215,7 @@ body {
 .icon-menu i img {
     margin-right: -1px;
     margin-top: 1px;
-    background-color: #FFFFFF;
+    background-color: #FFF;
     border-radius: 10px;
     height: 50px;
     width: 50px;
@@ -266,8 +266,12 @@ body {
     overflow: auto;
 } 
 .In2 {
+    width: 400px;
+    margin-top: 100px;
+    margin-left: 450px;
     color: white;
     font-family: sans-serif;
+    overflow: auto;
 }
 .slider {
     opacity: 0.9;
@@ -284,16 +288,21 @@ body {
     -moz-user-select: none; 
     -ms-user-select: none;   
 }
+.active-slide {
+    display: block;
+    padding-bottom: 1000px;
+}
 .slide2 {
-    text-align: center;
     color: white;
     font-family: Calibri;
     font-weight: bold;
+    padding-bottom: 1000px;
 }
 .slide3 {
     text-align: center;
     color: white;
     font-family: Calibri;
+    padding-bottom: 1000px;
 }
 .slide3 h3 {
    font-size: 50px; 
@@ -486,6 +495,100 @@ a#clear:hover, a#clearall:hover {
     cursor: pointer;
     position: relative;
 }
+#converter {
+    text-align: center;
+    color: white;
+    margin-top: -250px;
+    margin-left: 600px;
+    position: relative;
+    font-family: calibri;
+}
+#converter fieldset {
+    width: 500px;
+    margin: auto;
+    border-color: #00FF00;
+    border-radius: 20px;
+}
+#converter fieldset legend {
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0px 15px;
+    background-color: #ddd;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+#converter h3 {
+    font-size: 50px;
+    white-space: nowrap;
+    display: none;
+} 
+#converter select {
+    background-color: lightgray;
+    width: 100px;
+    border-radius: 15px;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease; 
+}
+#converter select:hover {
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: darkgray;
+    color: white;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease; 
+}
+#converter select:focus {
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: darkgray;
+    color: white;
+}
+#converter select * {
+    background-color: black;
+    cursor: pointer;
+}
+#converter input {
+    width: 102px;
+    color: Navy;
+    text-indent: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid #000;
+    font-family: calibri;
+    -webkit-transition: all 1500ms ease;
+    -moz-transition: all 1500ms ease;
+    -ms-transition: all 1500ms ease;
+    -o-transition: all 1500ms ease;
+    transition: all 1500ms ease; 
+}
+#converter input:focus {
+    border-color: cyan;   
+    -webkit-transition: all 1500ms ease;
+    -moz-transition: all 1500ms ease;
+    -ms-transition: all 1500ms ease;
+    -o-transition: all 1500ms ease;
+    transition: all 1500ms ease; 
+}
+#converter_main {
+    padding: 20px;
+}
+#converter_main select {
+    width: 205px;
+}
+#en {
+    margin-right: 105px;
+}
+#kg {
+    margin-right: -105px;
+    margin-top: -19px;
+} 
 #scroll-up {}
 #footer {
     top: 0;
