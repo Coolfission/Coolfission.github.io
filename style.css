@@ -59,7 +59,7 @@ body {
     font-family: Arial;
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px;
     cursor: pointer;
 }
 .header .input {
@@ -81,12 +81,12 @@ body {
     border: 3px solid aqua;
 }
 .header #name {
-    color: white;
+    color: #ddd;
     font-weight: bold;
     font-style: italic;
     text-decoration: underline;
     cursor: text;
-    font-size: 30px; 
+    font-size: 30px;
     padding: 20px;
     margin-right: 80px;
 }
@@ -589,21 +589,144 @@ a#clear:hover, a#clearall:hover {
     margin-right: -105px;
     margin-top: -19px;
 } 
-#scroll-up {}
-#footer {
-    top: 0;
+#content {
+    border-top: 1px solid black;
+    width: 100%;
+    height: 2100px;
+    background-color: beige;
+    margin-top: 50px;
+    font-family: cursive;
+}
+#content1 {
+    border-top: 50px solid green;
+    border-bottom: 50px solid green;
+    background-color: lightGreen;
+    height: 600px;
+}
+#content1 img {
     height: 300px;
-    margin-top: 900px;
-    position: absolute;
-    float: bottom;
+    width: 300px;
+    padding: 0px 0px 0px 500px;
+    bottom: 100px;
+}
+#content1 h1 {
+    padding: 0px 0px 0px 1000px;
+}
+#content1 p {
+    text-align: left;
+    padding: 0px 0px 0px 1000px; 
+    height: 10px;
+    width: 500px;
+    font-size: 20px;
+}
+#content1 p:first-line {
+    font-weight: bold;
+}
+#content2 {
+    border-top: 50px solid lightgray;
+    border-bottom: 50px solid lightgray;
+    background-color: #ddd;
+    height: 600px;
+    padding: 0px 600px;
+}
+#accordion section {
+    border-radius: 10px;
+    display: block;
+}
+#accordion section h1 {
+    cursor: pointer;
+    margin: auto;
+    background-color: darkGray;
+    color: white;
+    height: 25px;
+    width: 500px;
+    border-radius: 10px;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease; 
+}
+#accordion {
+    width: 500px;
+}
+#accordion section h1:hover {
+    background-color: orange;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease; 
+}
+#accordion section h1:active {
+    background-color: red;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease; 
+}
+#accordion section, #accordion .pointer, #accordion h1 {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+#accordion h1 {
+  line-height:1.2;
+  font-size:20px;
+  background-color:rgba(255,0,0,0.3);
+  margin:0;
+  padding: 10px 10px 10px 30px;
+}
+#accordion section {
+  overflow:hidden;
+  height:220px;
+  border:1px #333 solid;
+}
+#accordion p {
+  padding:0 10px;
+  color:black;
+}
+#accordion section.ac_hidden p:not(.pointer) {
+  color:#fff;
+}
+
+#accordion section.ac_hidden {
+  height:44px;
+}
+#accordion .pointer {
+  padding:0;
+  margin:10px 0 0 6px;
+  line-height:20px;
+  width:13px;
+  position:absolute;
+}
+#accordion section:not(.ac_hidden) .pointer {
+  -webkit-transform:rotate(90deg);
+  -moz-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
+  transform:rotate(90deg);
+  padding:0;
+}
+#content3 {
+    height: 600px;
+    background-color: #ABCDEF;
+    border-top: 50px solid skyBlue;
+    border-bottom: 50px solid skyBlue;
+}
+#footer {
+    position: relative;
+    bottom: 0;
     z-index: 2;
+    height: 300px;
     background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTjCmsc6KznFgV_AX-alAUxZRD9q0nujUD9lB30r-ACqs2o7caQ");
     background-repeat: no-repeat;
     background-size: 100%;
     width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
-    border-top: 1px solid #000;
+    border-top: 1px solid #000; 
 }
 #footer > li {
     display: inline;
