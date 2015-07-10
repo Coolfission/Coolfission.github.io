@@ -606,7 +606,7 @@ a#clear:hover, a#clearall:hover {
 #content1 img {
     height: 300px;
     width: 300px;
-    padding: 0px 0px 0px 500px;
+    padding: 0px 0px 100px 500px;
     bottom: 100px;
 }
 #content1 h1 {
