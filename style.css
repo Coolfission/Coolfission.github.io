@@ -607,8 +607,8 @@ a#clear:hover, a#clearall:hover {
     height: 300px;
     width: 300px;
     padding: 0px 0px 100px 500px;
-    margin-bottom: 100px;
-    bottom: 200px;
+    position: relative;
+    bottom: 80px;
 }
 #content1 h1 {
     padding: 100px 0px 0px 1000px;
