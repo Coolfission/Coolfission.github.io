@@ -611,11 +611,11 @@ a#clear:hover, a#clearall:hover {
     bottom: 80px;
 }
 #content1 h1 {
-    padding: 100px 0px 0px 1000px;
+    padding: 100px 0px 0px 950px;
 }
 #content1 p {
     text-align: left;
-    padding: 0px 0px 0px 1000px; 
+    padding: 0px 0px 0px 950px; 
     height: 10px;
     width: 500px;
     font-size: 20px;
