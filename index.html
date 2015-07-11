@@ -15,7 +15,7 @@
   
   <body>
     <div class="header">
-    <li><a href="coolfission.github.io" id="name">Amit Kulkarni</a></li>
+    <li><a id="name">Amit Kulkarni</a></li>
     <input id="print" type="submit" value="Print"></input>
     <li><a id="description">The free and interactive search engine</a></li>
     <li><a id="log_in">Log in:</a></li>
@@ -54,7 +54,7 @@
        
         </video> 
         
-    <audio id="audio" preload="auto" autoplay="true" loop="loop" controls="controls">
+    <audio id="audio" loop="loop" controls="controls" preload="auto" muted="muted" volume="0">
     <!--  <source src="http://www.forelise.com/media/fur_elise_valentina_lisitsa.mp3" type="audio/mpeg"> -->
         <source src="https://ia700406.us.archive.org/13/items/MoonlightSonata_277/MoonlighSonata.mp3" type="audio/mpeg">
     </audio>
@@ -168,6 +168,9 @@
     <a href="#" class="for-arr"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"/></a>
     </div>
     
+    <div id="color-changer">
+    </div>
+    
     <div id="content">
         <div id="content1">
             <h1>About</h1>
@@ -191,7 +194,18 @@
         </div>
         <div id="content3">
             <h1>Wonderful Moments</h1>
-            <p>No moments have been posted yet...</p>
+            <p>Sorry, no moments have been posted yet...</p>
+            <div class="box-prev"></div>
+            <div class="box-prev"></div>
+            <div class="box-prev"></div>
+            
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            
+            <div class="box-af"></div>
+            <div class="box-af"></div>
+            <div class="box-af"></div>
         </div>
     </div>
     
@@ -505,7 +519,6 @@ $(document).ready(function() {
   $("#accordion section h1").click(function(e) {
     $(this).parents().siblings("section").addClass("ac_hidden");
     $(this).parents("section").removeClass("ac_hidden");
-
     e.preventDefault();
   });
 });
@@ -514,7 +527,7 @@ var video = function() {
   document.getElementById("video_background").defaultPlaybackRate = 1.0;
   document.getElementById("video_background").play();
 
-  document.getElementById("video_background").playbackRate = 0.01; 
+  document.getElementById("video_background").playbackRate = 0.3; 
 };    
 $(document).ready(video);
     
@@ -529,3 +542,14 @@ $(document).ready(audio);
 
 </body>
 </html>
+<!--Things to still do on my website:
+        Create a mobile version of the website using jQuery
+        Create a CSS animation to fadeUp the divs when you scroll down. 
+        Fix double cilck the operator on the calculator
+        Do JavaScript part on the converter
+        Make the webpage look better on different screen sizes
+        Make div's on content3 explode when clicked
+        Create a button that will go all the way up a page if clicked
+        Organize all of your code
+        Transfer code on desktop before going to TF
+-->
