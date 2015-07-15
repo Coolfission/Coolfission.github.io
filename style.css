@@ -704,6 +704,9 @@ a#clear:hover, a#clearall:hover {
 }
 .accordion section:target p {
     width: 100px;
+    -webkit-user-select: none;         
+    -moz-user-select: none; 
+    -ms-user-select: none;    
 }
 .accordion section h1 a {
     padding:8px 10px;
@@ -726,7 +729,7 @@ a#clear:hover, a#clearall:hover {
 }
 .accordion section p {
     display: none;
-    color: #000;
+    color: #000; 
 }
 .accordion section:after {
     position:relative;
