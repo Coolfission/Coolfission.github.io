@@ -715,6 +715,23 @@ $(document).ready(function() {
         window.print();
     });
 });
+var detectIOS = function() {
+var standalone = window.navigator.standalone,
+    userAgent = window.navigator.userAgent.toLowerCase(),
+    safari = /safari/.test( userAgent ),
+    ios = /iphone|ipod|ipad/.test( userAgent );
+
+if( ios ) {
+    if ( !standalone && safari ) {
+        $("#content").css({"font-family": "Arial"});
+    } else if ( standalone && !safari ) {
+        $("#content").css({"font-family": "Arial"});
+    } else if ( !standalone && !safari ) {
+        $("#content").css({"font-family": "Arial"});
+    };
+} 
+};
+$(document).ready(detectIOS);
 
 $(function() {
     $(".place_scroll").on("click", function(e) {
