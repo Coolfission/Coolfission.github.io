@@ -724,7 +724,6 @@ var standalone = window.navigator.standalone,
     userAgent = window.navigator.userAgent.toLowerCase(),
     safari = /safari/.test( userAgent ),
     ios = /iphone|ipod|ipad/.test( userAgent );
-
 if( ios ) {
     if ( !standalone && safari ) {
         $("#content").css({"font-family": "Arial"});
@@ -736,6 +735,16 @@ if( ios ) {
 } 
 };
 $(document).ready(detectIOS);
+
+var mobile = function() {
+  if (screen.width < 800) {
+      
+  }
+  else if(screen.width > 1280) {
+      alert("Zoom out to 75% for better view and experience of the website.");
+  }
+}
+$(document).ready(mobile);
 
 $(function() {
     $(".place_scroll").on("click", function(e) {
@@ -772,10 +781,11 @@ $(document).ready(audio); */
         Create a mobile version of the website using jQuery
         Fix double cilck the operator on the calculator
         Do JavaScript part on the converter
-        Make the webpage look better on different screen sizes
+        Alert to zoom out to 75% if acessed by a larger screen size than this laptop
         Create a button that will go all the way up a page if clicked
         Organize all of your code
         Transfer code on desktop before going to TF
-        Go to about section when clicked on the option in the sliding bar on the right screen 
-        Create a dvorak keyboard learner
+-->
+<!--Projects I can do
+        Create a proper dvorak keyboard
 -->
