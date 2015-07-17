@@ -781,6 +781,8 @@ a#clear:hover, a#clearall:hover {
     background-color: #ABCDEF;
     border-top: 50px solid skyBlue;
     border-bottom: 50px solid skyBlue;
+    margin-top: 75px;
+    font-family: Arial;
 }
 #content3 h1 {
     text-align: center;
