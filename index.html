@@ -773,7 +773,9 @@ var audio = function() {
       audio.addEventListener("ended", function() {
       audio.src= "https://ia902702.us.archive.org/10/items/Karl_Westerberg_Recordings/wmoz-ps16-1.mp3";
       audio.play(2000);
-      audio.addEventListener("ended");
+      audio.addEventListener("ended", function() {
+      audio.play(0);
+      });
     });
   });
 };
