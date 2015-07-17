@@ -766,15 +766,16 @@ var audio = function() {
 
   document.getElementById("audio").playbackRate = 1.0; 
   
-  var audio = document.getElementById("audio");
-    audio.addEventListener("ended", function() {
-    audio.src = "https://ia700406.us.archive.org/13/items/MoonlightSonata_277/MoonlighSonata.mp3";
-    audio.play(5000);
-    audio.addEventListener("ended", function() {
-    audio.src= "https://ia902702.us.archive.org/10/items/Karl_Westerberg_Recordings/wmoz-ps16-1.mp3";
-    audio.play(2000);
-  });
+    var audio = document.getElementById("audio");
+      audio.addEventListener("ended", function() {
+      audio.src = "https://ia700406.us.archive.org/13/items/MoonlightSonata_277/MoonlighSonata.mp3";
+      audio.play(5000);
+      audio.addEventListener("ended", function() {
+      audio.src= "https://ia902702.us.archive.org/10/items/Karl_Westerberg_Recordings/wmoz-ps16-1.mp3";
+      audio.play(2000);
+      audio.addEventListener("ended");
     });
+  });
 };
 $(document).ready(audio); 
 </script>
