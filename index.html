@@ -724,12 +724,12 @@ var detectIOS = function() {
     userAgent = window.navigator.userAgent.toLowerCase(),
     safari = /safari/.test(userAgent),
     ios = /iphone|ipod|ipad/.test(userAgent);
-if(ios) {
-    if (!standalone && safari ) {
-        $("#content").css({"font-family": "Arial"});
+    if(ios) {
+        if (!standalone && safari ) {
+            $("#content").css({"font-family": "Arial"});
+        }
     }
-};
-};
+});
 $(document).ready(detectIOS);
 
 $(function() {
