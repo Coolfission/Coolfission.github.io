@@ -482,6 +482,8 @@ a#clear:hover, a#clearall:hover {
     overflow-x: scroll;
     overflow-y: hidden;
     background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSsTIciUf-hD1tA2bUpm3WUZuURN77sS36gLbAVmh6dgY04LxBG");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #total::-webkit-scrollbar{
     cursor: pointer;
