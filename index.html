@@ -22,7 +22,7 @@
     
         <li><input class="input" type="text" placeholder="Username"></input></li>
         <li><input class="input" type="password" placeholder="Password"></input></li>
-        <li><input class="submit" type="submit" placeholder="Submit"></input>
+        <li><input class="submit" type="submit" placeholder="Submit"></input></li>
     </div>    
         <div class="menu">
       
@@ -328,16 +328,16 @@ tabindex="0"&gtcss&lt;/h1&gt; &ltp&gt; &ltpre&gt; &lt;/pre&gt; &lt;/p&gt;
 &lt;/section&gt; &ltsection id="item3" class="ac_hidden"&gt; &lth1
 tabindex="0"&gtjavascript&lt;/h1&gt; &ltp&gt; &ltpre&gt; &lt;/pre&gt;
 &lt;/p&gt; &lt;/section&gt; &lt;/div&gt; &lt;/div&gt; &ltdiv
-id="content3"&gt; &lth1&gtwonderful moments&lt;/h1&gt; &ltp&gtsorry, no
+id="content3"&gt; &lt;h1&gt;wonderful moments&lt;/h1&gt; &ltp&gtsorry, no
 moments have been posted yet...&lt;/p&gt; &ltdiv
 class="box-prev"&gt;&lt;/div&gt; &ltdiv class="box-prev"&gt;&lt;/div&gt;
-&ltdiv class="box-prev"&gt;&lt;/div&gt; &ltdiv class="box"&gt;&lt;/div&gt;
-&ltdiv class="box"&gt;&lt;/div&gt; &ltdiv class="box"&gt;&lt;/div&gt;
-&ltdiv class="box-af"&gt;&lt;/div&gt; &ltdiv class="box-af"&gt;&lt;/div&gt;
-&ltdiv class="box-af"&gt;&lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &ltdiv
-id="footer"&gt; &ltp&gthelpful links:&lt;/p&gt; &lta class="link"
-href="https://www.edmodo.com" target="_blank"&gtedmodo&ltbr/&gt;&lt;/a&gt;
-&lta class="link" href="https://www.gmail.com"
+&lt;div class="box-prev"&gt;&lt;/div&gt; &ltdiv class="box"&gt;&lt;/div&gt;
+&lt;div class="box"&gt;&lt;/div&gt; &ltdiv class="box"&gt;&lt;/div&gt;
+&lt;div class="box-af"&gt;&lt;/div&gt; &lt;div class="box-af"&gt;&lt;/div&gt;
+&lt;div class="box-af"&gt;&lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &ltdiv
+id="footer"&gt; &lt;p&gt;helpful links:&lt;/p&gt; &lt;a class="link"
+href="https://www.edmodo.com" target="_blank"&gt;edmodo&lt;br/&gt;&lt;/a&gt;
+&lt;a class="link" href="https://www.gmail.com"
 target="_blank"&gt;gmail&lt;br/&gt;&lt;/a&gt; &lt;a class="link"
 href="https://www.github.com" target="_blank"&gt;github&lt;/a&gt; &lt;p
 style="text-align: center; margin-top: -96px"&gt;share your
@@ -739,6 +739,13 @@ var detectIOS = function() {
       } 
 };
 $(document).ready(detectIOS);
+
+var phone = function() {
+  if(screen.width < 800) {
+    $(body).css({"width": "800px"});
+  }
+};
+$(document).ready(phone);
 
 $(function() {
     $(".place_scroll").on("click", function(e) {
