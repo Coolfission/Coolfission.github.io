@@ -743,6 +743,7 @@ $(document).ready(detectIOS);
 var phone = function() {
   if(screen.width < 800) {
     $(body).css({"width": "100%"});
+    alert("body {width: 100%;}");
   }
 };
 $(document).ready(phone);
