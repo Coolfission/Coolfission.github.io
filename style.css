@@ -962,14 +962,6 @@ a#clear:hover, a#clearall:hover {
 #mobile {
     display: none;
 }
-body {
-   width: 800px; /*Set width to 800px later*/
-   margin: 0;
-   padding: 0;
-   position: relative;
-   background-color: beige;
-   overflow: scroll;
-}
 #mobile #header_main {
     background-color: blue;
     height: 100px;
