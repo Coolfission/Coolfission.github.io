@@ -773,20 +773,18 @@ var audio = function() {
   document.getElementById("audio").playbackRate = 1.0; 
   
     var audio = document.getElementById("audio");
-    for(i = 0; i < 2; i++) {
-      audio.addEventListener("ended", function() {
-      audio.src = "http://www.forelise.com/media/fur_elise_valentina_lisitsa.mp3";
-      audio.play(2000);
       audio.addEventListener("ended", function() {
       audio.src = "https://ia700406.us.archive.org/13/items/MoonlightSonata_277/MoonlighSonata.mp3";
-      audio.play(2000);
+      audio.play(5000);
       audio.addEventListener("ended", function() {
       audio.src = "https://ia902702.us.archive.org/10/items/Karl_Westerberg_Recordings/wmoz-ps16-1.mp3";
       audio.play(2000);
+      audio.addEventListener("ended", function() {
+      audio.src = "about:blank";
+      audio.play(2000);
       });
-      });
-      });
-    }
+    });
+  });
 };
 $(document).ready(audio); 
 </script>
