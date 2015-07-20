@@ -959,20 +959,21 @@ a#clear:hover, a#clearall:hover {
     height: 18px;
     width: 18px;
 }
+
 #mobile {
     display: none;
 }
-#mobile #header_main {
+#header_main {
     background-color: blue;
     height: 100px;
 }
-#mobile #header_main img {
+#header_main img {
     height: 70px;
     width: 70px;
     padding: 10px 10px;
     border-radius: 30px;
 }
-#mobile #header_main h1 {
+#header_main h1 {
     font-family: calibri;
     color: white;
     margin-top: -80px;
@@ -980,10 +981,10 @@ a#clear:hover, a#clearall:hover {
     padding-bottom: 25px;
     margin-bottom: -50px;
 }
-#mobile #header_main spam {
+#header_main spam {
     padding-right: 550px;
 }
-#mobile #header_main a {
+#header_main a {
     font-family: Arial;
     color: white;
     font-size: 15px;
@@ -996,7 +997,7 @@ a#clear:hover, a#clearall:hover {
     -o-transition: all 300ms ease;
     transition: all 300ms ease; 
 }
-#mobile #header_main a:hover {
+#header_main a:hover {
     color: #333;
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
@@ -1004,67 +1005,67 @@ a#clear:hover, a#clearall:hover {
     -o-transition: all 300ms ease;
     transition: all 300ms ease; 
 }
-#mobile .stick {
+.stick {
     position: fixed;
     top: 0;
     bottom: 0;
     z-index: 100;
 }
-#mobile #sticky {
+#sticky {
     height: 50px;  
     background: linear-gradient(lightGray, darkGray);
     position: fixed;
     width: 800px;
 }
-#mobile #sticky spam {
+#sticky spam {
     margin-right: 100px;
 }
-#mobile #sticky input:first-child {
+#sticky input:first-child {
     margin-right: 270px;
 }
-#mobile #sticky input[placeholder] {
+#sticky input[placeholder] {
     border-radius: 10px;
     padding: 2px 10px;
     margin-top: 15px;
     border-style: solid;
 }
-#mobile #sticky input[placeholder]:focus {
+#sticky input[placeholder]:focus {
     border: 2px solid red;
 }
-#mobile #sticky input[value] {
+#sticky input[value] {
     border-radius: 5px;
     border-style: solid;
     cursor: pointer;
 }
-#mobile #sticky input[value="Print"] {
+#sticky input[value="Print"] {
     padding: 0px 10px;
 }
-#mobile #sticky input[value="Print"]:hover {
+#sticky input[value="Print"]:hover {
     background-color: darkgray;
     border-style: solid;
 }
-#mobile #sticky input[value="Submit"] {
+#sticky input[value="Submit"] {
     background-color: orange;
     border-color: lightGray;
 }
-#mobile #space {
+#space {
     display: none;
 }
-#mobile #audio {
+#audio {
     margin: auto;
     display: block;
     padding-top: 60px;
     margin-top: 50px;
     padding-bottom: 50px;
 }
-#mobile #slide1 {
+#slide1 {
     padding: 10px 0px;
     padding-bottom: 20px;
     margin-top: 10px;
     height: 790px;
     background: repeating-radial-gradient(circle, gray, darkgray, gray 100px, black 10px);
 }
-#mobile #slide1 h1, p {
+#slide1 h1, p {
     margin: auto;
     margin-top: 20px;
     text-align: center;
@@ -1072,7 +1073,7 @@ a#clear:hover, a#clearall:hover {
     font-family: Arial;
     color: #fff;
 }
-#mobile #calculator {
+#calculator {
     opacity: 1;
     z-index: 1;
     background-color: #FFE4B5;
@@ -1090,7 +1091,7 @@ a#clear:hover, a#clearall:hover {
     -moz-user-select: none; 
     -ms-user-select: none;    
 }
-#mobile #calculator a {
+#calculator a {
     opacity: 1;
     z-index: 2;
     display: block;
@@ -1103,14 +1104,14 @@ a#clear:hover, a#clearall:hover {
     color: black;
     font-weight: bold;
 }
-#mobile #calculator a:hover {
+#calculator a:hover {
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
     -ms-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease; 
 }
-#mobile #calculator a:active {
+#calculator a:active {
     top: 4px;
     position: relative;
     -webkit-transition: all 0ms ease;
@@ -1119,7 +1120,7 @@ a#clear:hover, a#clearall:hover {
     -o-transition: all 0ms ease;
     transition: all 0ms ease; 
 }
-#mobile #calculator #numbers a {
+#numbers a {
     width: 50px;
     height: 50px;
     font-size: 32px;
@@ -1127,16 +1128,16 @@ a#clear:hover, a#clearall:hover {
     margin: 5px;
     background-color: #EDEDED;
 }
-#mobile #calculator #numbers a:hover {
+#numbers a:hover {
     color: white;
     background-color: #87CEEB;
     box-shadow: 0px 4px blue, 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
-#mobile #calculator #numbers a:active {
+#numbers a:active {
     box-shadow: 0px 0px #FFFFFF;
     top: 4px;
 }
-#mobile #calculator #operators a {
+#operators a {
     width: 44px;
     height: 45px;
     font-size: 39px;
@@ -1144,20 +1145,20 @@ a#clear:hover, a#clearall:hover {
     margin: 5px 6px;
     background-color: #808080;
 }
-#mobile #calculator #operators a:hover {
+#operators a:hover {
     color: white;
     background-color: #696969;
     box-shadow: 0px 4px #282828 , 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
-#mobile #calculator #operators a:active {
+#operators a:active {
     box-shadow: 0px 0px #FFFFFF;
     top: 4px;
 }
-#mobile #calculator #side {
+#side {
     width: 49px;
     float: right;
 }
-#mobile #calculator #side a {
+#side a {
     width: 40px;
     height: 40px;
     float: right;
@@ -1166,39 +1167,39 @@ a#clear:hover, a#clearall:hover {
     margin: 5px;
     background-color: #808080;
 }
-#mobile #calculator #side a:hover {
+#side a:hover {
     color: white;
     background-color: #696969;
     box-shadow: 0px 4px #282828 , 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
-#mobile #calculator #side a:active {
+#side a:active {
     box-shadow: 0px 0px #FFFFFF;
     top: 4px;
 }
-#mobile #calculator a#equals {
+a#equals {
     padding-top: 50px;
     height: 100px;
     background-color: #FFDEAD;
 }
-#mobile #calculator a#equals:hover {
+a#equals:hover {
     color: white;
     background-color: #FFA500;
     box-shadow: 0px 4px #FF4500 , 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
-#mobile #calculator a#equals:active {
+a#equals:active {
     box-shadow: 0px 0px #FFFFFF;
     top: 4px; 
 }      
-#mobile #calculator a#clear {
+a#clear {
     background-color: rgb(0, 0, 178);
 }
-#mobile #calculator a#clearall {
+a#clearall {
     background-color: rgb(0, 0, 178);
 }
-#mobile #calculator a#clear:hover, a#clearall:hover {
+a#clear:hover, a#clearall:hover {
     background-color: #000080;
 }
-#mobile #calculator #total {
+#total {
     height: 60px;
     width: 290px;
     margin: auto;
@@ -1214,12 +1215,12 @@ a#clear:hover, a#clearall:hover {
     background-repeat: no-repeat;
     background-size: cover;
 }
-#mobile #calculator #total::-webkit-scrollbar{
+#total::-webkit-scrollbar{
     cursor: pointer;
     border-radius: 10px;
     height: 10px;
 } 
-#mobile #calculator #total::-webkit-scrollbar-thumb {
+#total::-webkit-scrollbar-thumb {
     background-color: lightgray;
     border: 2px solid #000000;
     border-radius: 10px;
@@ -1227,13 +1228,13 @@ a#clear:hover, a#clearall:hover {
     cursor: pointer;
     position: relative;
 }
-#mobile #slide2 {
+#slide2 {
     background-color: black;
     height: 790px;
     margin-top: 200px;
     padding-top: 100px;
 }
-#mobile #converter {
+#converter {
     text-align: center;
     color: white;
     margin-top: 250px;
@@ -1241,13 +1242,13 @@ a#clear:hover, a#clearall:hover {
     position: relative;
     font-family: calibri;
 }
-#mobile #converter fieldset {
+#converter fieldset {
     width: 500px;
     margin: auto;
     border-color: #00FF00;
     border-radius: 20px;
 }
-#mobile #converter fieldset legend {
+#converter fieldset legend {
     color: #000;
     font-size: 20px;
     font-weight: bold;
@@ -1256,12 +1257,12 @@ a#clear:hover, a#clearall:hover {
     border-radius: 10px;
     font-family: sans-serif;
 }
-#mobile #converter h3 {
+#converter h3 {
     font-size: 50px;
     white-space: nowrap;
     display: none;
 } 
-#mobile #converter select {
+#converter select {
     background-color: lightgray;
     width: 100px;
     border-radius: 15px;
@@ -1271,7 +1272,7 @@ a#clear:hover, a#clearall:hover {
     -o-transition: all 300ms ease;
     transition: all 300ms ease; 
 }
-#mobile #converter select:hover {
+#converter select:hover {
     border-radius: 2px;
     cursor: pointer;
     background-color: darkgray;
@@ -1282,17 +1283,17 @@ a#clear:hover, a#clearall:hover {
     -o-transition: all 300ms ease;
     transition: all 300ms ease; 
 }
-#mobile #converter select:focus {
+#converter select:focus {
     border-radius: 2px;
     cursor: pointer;
     background-color: darkgray;
     color: white;
 }
-#mobile #converter select * {
+#converter select * {
     background-color: black;
     cursor: pointer;
 }
-#mobile #converter input {
+#converter input {
     width: 102px;
     color: Navy;
     text-indent: 10px;
@@ -1306,7 +1307,7 @@ a#clear:hover, a#clearall:hover {
     -o-transition: all 1500ms ease;
     transition: all 1500ms ease; 
 }
-#mobile #converter input:focus {
+#converter input:focus {
     border-color: cyan;   
     -webkit-transition: all 1500ms ease;
     -moz-transition: all 1500ms ease;
@@ -1314,20 +1315,20 @@ a#clear:hover, a#clearall:hover {
     -o-transition: all 1500ms ease;
     transition: all 1500ms ease; 
 }
-#mobile #converter_main {
+#converter_main {
     padding: 20px;
 }
-#mobile #converter_main select {
+#converter_main select {
     width: 205px;
 }
-#mobile #en {
+#en {
     margin-right: 105px;
 }
-#mobile #kg {
+#kg {
     margin-right: -105px;
     margin-top: -19px;
 } 
-#mobile #slide3 {
+#slide3 {
     height: 790px;
     color: white;
     font-family: Arial Black;
