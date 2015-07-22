@@ -1063,7 +1063,7 @@ a#clear:hover, a#clearall:hover {
 
 
 #mobile {
-    display: auto;
+    display: none;
 }
 #header_main {
     background-color: blue;
