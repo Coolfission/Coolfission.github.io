@@ -1055,3 +1055,147 @@ a#clear:hover, a#clearall:hover {
   -o-transition: all 300ms ease;
   transition: all 300ms ease; 
 }
+
+
+
+
+
+
+
+#mobile {
+    display: auto;
+}
+#header_main {
+    background-color: blue;
+    height: 100px;
+    text-align: center;
+}
+#header_main img {
+    height: 70px;
+    width: 70px;
+    margin-right: 500px;
+    padding: 10px 10px;
+    border-radius: 30px;
+}
+#header_main h1 {
+    font-family: calibri;
+    color: white;
+    margin-top: -80px;
+    padding: 20px 250px;
+    padding-bottom: 25px;
+    margin-bottom: -50px;
+}
+#header_main spam {
+    padding-right: 550px;
+}
+#header_main a {
+    font-family: Arial;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease; 
+}
+#header_main a:hover {
+    color: #333;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease; 
+}
+.stick {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+}
+#sticky {
+    height: 50px;  
+    background: linear-gradient(lightGray, darkGray);
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+#sticky spam {
+    margin-right: 100px;
+}
+#sticky input:first-child {
+    margin-right: 270px;
+}
+#sticky input[placeholder] {
+    border-radius: 10px;
+    padding: 2px 10px;
+    margin-top: 15px;
+    border-style: solid;
+}
+#sticky input[placeholder]:focus {
+    border: 2px solid red;
+}
+#sticky input[value] {
+    border-radius: 5px;
+    border-style: solid;
+    cursor: pointer;
+}
+#sticky input[value="Print"] {
+    padding: 0px 10px;
+}
+#sticky input[value="Print"]:hover {
+    background-color: darkgray;
+    border-style: solid;
+}
+#sticky input[value="Submit"] {
+    background-color: orange;
+    border-color: lightGray;
+}
+#space {
+    display: none;
+}
+#audio_mobile {
+    margin: auto;
+    display: block;
+    padding-top: 60px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+#slide1_mobile {
+    padding: 10px 0px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+    height: 790px;
+    background-color: #F5DEB3;
+}
+#slide1_mobile h1, p {
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    width: 400px;
+    font-family: Arial;
+    color: #000;
+}
+#slide2_mobile {
+    background-color: black;
+    height: 790px;
+    margin-top: 200px;
+    padding-top: 100px;
+}
+#slide3_mobile {
+    height: 790px;
+    color: white;
+    font-family: Arial Black;
+    text-align: center;
+    margin: auto;
+    background: 
+    repeating-linear-gradient(90deg, transparent, transparent 100px, #ccc 10px, #ccc 20px),
+    linear-gradient(to bottom, #eee, #999);
+}
+footer p {
+    font-family: Calibri;
+    color: black;
+    font-size: 15px;
+}
