@@ -438,13 +438,13 @@ var menu=function(){$('.icon-menu').click(function(){$('.menu').animate({left:'0
   <nav id="context-menu" class="context-menu">
     <ul class="context-menu__items">
       <li class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="View"><i class="fa fa-eye"></i> Select</a>
+        <a href="#" class="context-menu__link" id="context-menu__select" data-action="View"><i class="fa fa-eye"></i> Select</a>
       </li>
       <li class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="Edit"><i class="fa fa-edit"></i> Print</a>
+        <a href="#" class="context-menu__link" id="context-menu__print" data-action="Edit"><i class="fa fa-edit"></i> Print</a>
       </li>
       <li class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="Delete"><i class="fa fa-times"></i> Inspect Element</a>
+        <a href="#" class="context-menu__link" id="context-menu__keyCode" data-action="Delete"><i class="fa fa-times"></i> Inspect Element</a>
       </li>
     </ul>
   </nav>
@@ -731,7 +731,7 @@ $(document).ready(function() {
     $("#print").click(function() {
         window.print();
     });
-    $(".context-menu__link").click(function() {
+    $("context-menu__print").click(function() {
         window.print();
     });
 });
