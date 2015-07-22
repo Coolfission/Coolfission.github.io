@@ -995,6 +995,7 @@ a#clear:hover, a#clearall:hover {
   display: block;
   padding: 4px 12px;
   color: #0066aa;
+  font-family: sans-serif;
   text-decoration: none;
   border-top: 1px dotted #ddd;
   -webkit-transition: all 300ms ease;
