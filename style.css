@@ -1029,6 +1029,7 @@ a#clear:hover, a#clearall:hover {
   font-family: sans-serif;
   text-decoration: none;
   border-top: 1px dotted #ddd;
+  margin-top: -9px;
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
   -ms-transition: all 300ms ease;
