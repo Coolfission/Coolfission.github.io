@@ -14,7 +14,6 @@
   </head>
   
   <body>
-  <div id="web">
     <div class="header">
     <li><a id="name">Amit Kulkarni</a></li>
     <input id="print" type="submit" value="Print"></input>
@@ -449,70 +448,6 @@ var menu=function(){$('.icon-menu').click(function(){$('.menu').animate({left:'0
       </li>
     </ul>
   </nav>
-</div>
-
-
-
-
-<div id="mobile">
-    <div id="header_main">
-        <img src="data:image/x-icon;base64,R0lGODlhEAAQAPECAFFUV////wAAAAAAACH5BAkyAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAEBAQEBAAAAAAEBAAAAAAABAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJMgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" alt="Menu Bar sign" />
-        <h1><em id="greeting">Welcome!</em></h1>
-        <spam></spam>
-            <a href="#">Home</a>
-            <a href="https://docs.google.com/document/d/1T_N8XCb1DhQ1rKQNro3cA4tYmSrtNbMQGSWkO-s0DV4/edit" target="blank">Resume</a>
-            <a href="mailto:amitkulkarni181@gmail.com" target="_blank">Contact</a>
-    </div>
-    <div id="sticky">
-        <spam></spam>
-        <input type="submit" value="Print"></input>
-        <spam style="margin-right: 120px;"></spam>
-        <input type="username" placeholder="Username"></input>
-        <input type="password" placeholder="Password"></input>
-        <input type="submit" value="Submit"></input>
-    </div>
-    <br>
-    <audio id="audio_mobile" src="http://www.forelise.com/media/fur_elise_valentina_lisitsa.mp3" controls="controls" volume="0" muted="muted"></audio>
-    <div id="space_mobile">
-    </div>
-    <div id="slide1_mobile">
-        <br>
-        <br>
-        <br>
-</div>
-<div id="slide2_mobile">
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div id="slide3_mobile">
-            <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/matte-grey-square-icons-alphanumeric/118432-matte-grey-square-icon-alphanumeric-information.png" />                    
-            <h2>Stay tuned for further updates</h2>
-            <p style="color: white;">Created by Amit Kulkarni</p>
-</div>
-
-<footer>
-<p>&copy; 2016 Technology Fair || Created by Amit Kulkarni</p>
-<p>All rights reserved<p>
-</footer>
-</div>
-<br>
-<br>
-</div>
-
-
-
-
-
-
-
-
 
 <script>
   var menu = function() {
@@ -789,17 +724,11 @@ var time = function() {
     }
     var changeTime = document.getElementById("name");
     changeTime.innerHTML = greeting;
-
-    var changeTime = document.getElementById("greeting");
-    changeTime.innerHTML = greeting;
 };
 $(document).ready(time);
 
 $(document).ready(function() {
     $("#print").click(function() {
-        window.print();
-    });
-    $("input[value=Print]").click(function() {
         window.print();
     });
     $("#context-menu__print").click(function() {
@@ -829,9 +758,7 @@ $(document).ready(detectIOS); */
 
 var phone = function() {
   if(screen.width <= 800) {
-    $("body").css({"background-color": "beige"});
-    $("#web").css({"display": "none"});
-    $("#mobile").css({"display": "auto"});
+    
   }
 };
 $(document).ready(phone);
@@ -996,21 +923,6 @@ $(function() {
 
 });
 
-var keepDiv = function() {
-var top = document.getElementById('sticky').offsetTop;
-
-window.onscroll = function() {
-    var y = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-    if (y >= top) {
-        sticky.className = 'stick';
-    }
-    else {
-        sticky.className = '';
-    }
-}
-};
-$(document).ready(keepDiv);
-
 var video = function() {
   document.getElementById("video_background").defaultPlaybackRate = 1.0;
   document.getElementById("video_background").play();
@@ -1040,28 +952,6 @@ var audio = function() {
   });
 };
 $(document).ready(audio); 
-
-var audio_mobile = function() {
-  document.getElementById("audio_mobile").defaultPlaybackRate = 1.0;
-  document.getElementById("audio_mobile").play();
-
-  document.getElementById("audio_mobile").playbackRate = 1.0; 
-  
-    var audio_mobile = document.getElementById("audio_mobile");
-      audio_mobile.addEventListener("ended", function() {
-      audio_mobile.src = "https://ia700406.us.archive.org/13/items/MoonlightSonata_277/MoonlighSonata.mp3";
-      audio_mobile.play(5000);
-      audio_mobile.addEventListener("ended", function() {
-      audio_mobile.src = "https://ia902702.us.archive.org/10/items/Karl_Westerberg_Recordings/wmoz-ps16-1.mp3";
-      audio_mobile.play(2000);
-      audio_mobile.addEventListener("ended", function() {
-      audio_mobile.src = "about:blank";
-      audio_mobile.play(2000);
-      });
-    });
-  });
-};
-$(document).ready(audio_mobile); 
 </script>
 
 </body>
@@ -1071,6 +961,6 @@ $(document).ready(audio_mobile);
         Do JavaScript part on the converter
         Organize all of your code
 -->
-<!--Projects I can do:
+<!--Projects I can do
         Create a dvorak keyboard learner  
 -->
