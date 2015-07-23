@@ -143,9 +143,9 @@
             <option>Millimeter</option>
         </select>
     </div>
-    <input type="number"></input>
+    <input type="number" id="input_en" placeholder="Enter value"></input>
 <h3>&#8594;</h3>
-<input type="number"></input>
+<input type="number" id="input_kg" placeholder="Return value" readonly="readonly"></input>
 <p><strong>Rule:</strong> 1 mile = 1.60934 kilometers</p>
 </fieldset>
 </div>
@@ -705,6 +705,12 @@ $(function() {
         } 
     });
 });
+
+var converter = function() {
+    $('input').on("keyup",function () {
+    $("#input_kg").val(parseInt($("#input_en").val(), 10)*  1.60934);
+});
+};
 
 var time = function() {
     var today = new Date();
