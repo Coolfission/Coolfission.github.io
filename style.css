@@ -666,8 +666,9 @@ a#clear:hover, a#clearall:hover {
     text-align: center;
 }
 .ac-container{
-    width: 400px;
+    width: 800px;
     margin: 10px auto 30px auto;
+    position: relative;
 }
 .ac-container label{
     font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
@@ -746,11 +747,12 @@ a#clear:hover, a#clearall:hover {
     height: 230px;
 
 }
-p {
+.ac-container p {
     overflow-y: scroll;
     overflow-x: hidden;
+    text-align: left;
     height: 100px;
-    width: 380px;
+    width: 800px;
 }   
 
 #content3 {
