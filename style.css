@@ -669,6 +669,9 @@ a#clear:hover, a#clearall:hover {
     width: 800px;
     margin: 10px auto 30px auto;
     position: relative;
+    -webkit-user-select: none;         
+    -moz-user-select: none; 
+    -ms-user-select: none; 
 }
 .ac-container label{
     font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
