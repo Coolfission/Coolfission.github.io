@@ -665,120 +665,94 @@ a#clear:hover, a#clearall:hover {
 #content2 h1 {
     text-align: center;
 }
-.accordion {
-    width:870px;
-    overflow:hidden;
-    margin:10px auto;
-    color:#474747;
+.ac-container{
+    width: 400px;
+    margin: 10px auto 30px auto;
+}
+.ac-container label{
+    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px 20px;
+    position: relative;
+    z-index: 20;
+    display: block;
+    height: 30px;
+    cursor: pointer;
+    color: #fff;
+    line-height: 33px;
+    font-size: 19px;
+    background: linear-gradient(lightgray,  gray);
+    box-shadow: 
+        0px 0px 0px 1px rgba(155,155,155,0.3), 
+        1px 0px 0px 0px rgba(255,255,255,0.9) inset, 
+        0px 2px 2px rgba(0,0,0,0.1);
+}
+.ac-container label:hover{
+    background: #ddd;
+}
+.ac-container input:checked + label,
+.ac-container input:checked + label:hover{
     background: #000;
-    padding: 10px 15px;
-    border-radius: 5px;
-    position: sticky;
+    color: #fff;
+    box-shadow: 
+        0px 0px 0px 1px rgba(155,155,155,0.3), 
+        0px 2px 2px rgba(0,0,0,0.1);
 }
-.accordion section {
-    float:left;
-    overflow: hidden;
-    color: #000;
-    border-radius: 10px;
-    background: #333;
-    margin:3px;
-    -webkit-transition: all 300ms ease;
-    -moz-transition: all 300ms ease;
-    -ms-transition: all 300ms ease;
-    -o-transition: all 300ms ease;
-    transition: all 300ms ease; 
+.ac-container label:hover:after,
+.ac-container input:checked + label:hover:after{
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 13px;
+    top: 7px;
+    background: transparent url(../images/arrow_down.png) no-repeat center center;  
 }
-.accordion section:target {
-    background:#FFF;
-    padding:10px;
+.ac-container input:checked + label:hover:after{
+    background-image: url(../images/arrow_up.png);
 }
-.accordion section:target:hover {
-    background:#FFF;
-}
-.accordion section:target h1 {
-    width:100%;
-}
-.accordion section:target h1 a {
-    color: #333;
-    padding: 0;
-    cursor: default;
-}
-.accordion section:target p {
-    width: 100px;
-}
-.accordion section h1 a {
-    padding:8px 10px;
-    display:block;
-    font-size:16px;
-    font-weight:normal;
-    color:#fff;
-    border-radius: 10px;
-    cursor:pointer;
-    text-decoration:none;    
-    -webkit-transition: all 300ms ease;
-    -moz-transition: all 300ms ease;
-    -ms-transition: all 300ms ease;
-    -o-transition: all 300ms ease;
-    transition: all 300ms ease; 
-}
-.accordion section h1 a:hover {
-    background: #fff;
-    color: #000;
-}
-.accordion section p {
+.ac-container input{
     display: none;
-    color: #000;
 }
-.accordion section:after {
-    position:relative;
-    font-size:24px;
-    color:#000;
-    font-weight:bold;
+.ac-container article{
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: -1px;
+    overflow: hidden;
+    height: 0px;
+    position: relative;
+    z-index: 10;
+    transition: 
+        height 0.3s ease-in-out, 
+        box-shadow 0.6s linear;
 }
-.accordion section:nth-child(1):after {
-    content:'1';
+.ac-container input:checked ~ article{
+    transition: 
+        height 0.5s ease-in-out, 
+        box-shadow 0.1s linear;
+    box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
 }
-.accordion section:nth-child(2):after {
-    content:'2';
+.ac-container article p {
+    line-height: 23px;
+    font-size: 14px;
+    padding: 20px;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
 }
-.accordion section:nth-child(3):after {
-    content:'3';
+.ac-container input:checked ~ article.ac-small{
+    height: 140px;
 }
-.accordion section:nth-child(4):after {
-    content:'4';
+.ac-container input:checked ~ article.ac-medium{
+    height: 180px;
 }
-.accordion section:nth-child(5):after {
-    content:'5';
+.ac-container input:checked ~ article.ac-large{
+    height: 230px;
+
 }
-.vertical section {
-    width:100%;
-    height:40px;
-    -webkit-transition:height 0.2s ease-out;
-    -moz-transition:height 0.2s ease-out;
-    -o-transition:height 0.2s ease-out;
-    -ms-transition:height 0.2s ease-out;
-    transition:height 0.2s ease-out;
-}
-.vertical :target {
-    height:250px;
-    width:97%;
-}
-.vertical section h1 {
-    position:relative;
-    left:0;
-    top:-20px;
-}
-.vertical section:after {
-    top:-60px;
-    left:810px;
+p {
     overflow-y: scroll;
-}
-.vertical section:target:after {
-    left:-9999px;
-}
-section {
-    overflow-y: scroll;
-}
+    overflow-x: hidden;
+    height: 100px;
+    width: 380px;
+}   
+
 #content3 {
     height: 600px;
     background-color: #ABCDEF;
