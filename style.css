@@ -674,6 +674,7 @@ a#clear:hover, a#clearall:hover {
     font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
     padding: 5px 20px;
     position: relative;
+    text-align: center;
     z-index: 20;
     display: block;
     height: 30px;
