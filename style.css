@@ -678,6 +678,8 @@ a#clear:hover, a#clearall:hover {
     z-index: 20;
     display: block;
     height: 30px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     cursor: pointer;
     color: #fff;
     line-height: 33px;
