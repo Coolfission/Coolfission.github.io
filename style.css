@@ -776,6 +776,9 @@ a#clear:hover, a#clearall:hover {
 .vertical section:target:after {
     left:-9999px;
 }
+section {
+    overflow-y: scroll;
+}
 #content3 {
     height: 600px;
     background-color: #ABCDEF;
