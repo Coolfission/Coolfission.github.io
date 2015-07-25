@@ -675,7 +675,7 @@ a#clear:hover, a#clearall:hover {
     padding: 5px 20px;
     position: relative;
     text-align: center;
-    z-index: 20;
+    z-index: 2;
     display: block;
     height: 30px;
     cursor: pointer;
