@@ -48,7 +48,7 @@ body {
     list-style-type: none;  
     position: fixed;
     width: 100%;
-    z-index: 2;
+    z-index: 5;
 }
 .header > li {
     display: inline;
@@ -717,7 +717,7 @@ a#clear:hover, a#clearall:hover {
     overflow: hidden;
     height: 0px;
     position: relative;
-    z-index: 10;
+    z-index: 1;
     transition: 
         height 0.3s ease-in-out, 
         box-shadow 0.6s linear;
