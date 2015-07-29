@@ -741,7 +741,7 @@ a#clear:hover, a#clearall:hover {
     height: 180px;
 }
 .ac-container input:checked ~ article.ac-large{
-    height: 230px;
+    height: 165px;
 
 }
 .ac-container p {
