@@ -950,9 +950,13 @@ var audio = function() {
       audio.src = "https://ia902702.us.archive.org/10/items/Karl_Westerberg_Recordings/wmoz-ps16-1.mp3";
       audio.play(2000);
       audio.addEventListener("ended", function() {
+      audio.src = "https://ia802600.us.archive.org/8/items/DarudeSandstorm_201501/Darude%20-%20Sandstorm.mp3";
+      audio.play(2000);
+      audio.addEventListener("ended", function() {
       audio.src = "about:blank";
       audio.play(2000);
       });
+    });
     });
   });
 };
