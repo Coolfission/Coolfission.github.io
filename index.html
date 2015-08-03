@@ -885,6 +885,16 @@ $(function() {
 
 });
 
+var desktop = function() {
+  if(screen.width === 1680 && screen.height === 1050) {
+    confirm("This worked")
+  }
+  else {
+    confirm("This didn't work")
+  }
+};
+$(document).ready(desktop);
+
 var video = function() {
   document.getElementById("video_background").defaultPlaybackRate = 1.0;
   document.getElementById("video_background").play();
