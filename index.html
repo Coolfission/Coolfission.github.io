@@ -102,7 +102,7 @@
         <div class="slide active-slide" style="display: block;">
             <div class="slide2">
                 
-    <div id="codepen" style="margin: auto; text-align: center; padding-top: 130px;">
+    <div id="codepen" style="margin: auto; text-align: center; padding-top: 130px;" class="task">
           <div><iframe id="cp_embed_VLxqYJ" src="//codepen.io/TechnoForced/embed/VLxqYJ?height=330&amp;theme-id=0&amp;slug-hash=VLxqYJ&amp;default-tab=result&amp;user=TechnoForced" frameborder="0" height="1200" allowfullscreen="true" class="cp_embed_iframe undefined" style="width: 1100px; height: 1200px"></iframe></div>
           <script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
     </div>
@@ -386,7 +386,7 @@ going to tf--&gt;</p>
         <spam style="font-weight: bold">or</spam><br>
         <spam style="margin-right: 130px;"><em>Call me: </em>123-456-7890</spam>
     </p>    
-    <p style="font-family: arial; font-size: 10px; text-align: center; top: 200px">© 2016 Technology Fair || Made by Amit Kulkarni</p>
+    <p id="imp" style="font-family: arial; font-size: 10px; text-align: center; top: 200px">© 2016 Technology Fair || Made by Amit Kulkarni</p>
     <p style="font-family: arial; font-size: 10px; text-align: center; top: 200px">All rights reserved</p>
     </div>
 
@@ -890,7 +890,7 @@ var desktop = function() {
     
   }
   else {
-    $("#content").css({"display": "none"});
+    $("#imp").css({"visibility": "hidden"});
   }
 };
 $(document).ready(desktop);
