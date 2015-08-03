@@ -887,10 +887,10 @@ $(function() {
 
 var desktop = function() {
   if(screen.width === 1680 && screen.height === 1050) {
-    confirm("This worked")
+    
   }
   else {
-    confirm("This didn't work")
+    $("#content").css({"display": "none"});
   }
 };
 $(document).ready(desktop);
