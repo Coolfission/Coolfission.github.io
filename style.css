@@ -673,17 +673,19 @@ a#clear:hover, a#clearall:hover {
     text-align: center;
 }
 .cb-slideshow, .cb-slideshow:after { 
-    top: 0px;
-    left: 0px;
+    margin-top: 800px;
     z-index: 1; 
     margin: auto;
     text-align: center;
+    list-style-type: none;
+    position: relative;
 }
 .cb-slideshow:after { 
     content: '';
 }
 .cb-slideshow li span { 
     width: 500px;
+    margin: auto;
     height: 800px;
     position: absolute;
     top: 0px;
