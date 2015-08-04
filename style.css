@@ -684,9 +684,8 @@ a#clear:hover, a#clearall:hover {
     content: '';
 }
 .cb-slideshow li span { 
-    width: 500px;
-    margin: auto;
-    height: 800px;
+    width: 800px;
+    height: 500px;
     position: absolute;
     top: 0px;
     left: 0px;
