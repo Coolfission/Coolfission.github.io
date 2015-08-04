@@ -1,111 +1,115 @@
 <html>
 <head>
-    <title>Amit Kulkarni</title>
-    <link rel="shortcut icon" href="data:image/x-icon;base64,R0lGODlhEAAQAPECAFFUV////wAAAAAAACH5BAkyAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAEBAQEBAAAAAAEBAAAAAAABAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJMgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" />
+         <title>Amit Kulkarni</title>
+         <link rel="shortcut icon" href="data:image/x-icon;base64,R0lGODlhEAAQAPECAFFUV////wAAAAAAACH5BAkyAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAEBAQEBAAAAAAEBAAAAAAABAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJMgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7">
 
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="script.js"></script>
+         <link rel="stylesheet" type="text/css" href="style.css">
+         <script src="script.js"></script>
     
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-    <!--<script src="//assets.codepen.io/assets/embed/ei.js"></script> -->
-    <!--<script src="https://raw.githubusercontent.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.js"></script> --> 
-</head>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+        <!--<script src="//assets.codepen.io/assets/embed/ei.js"></script> -->
+          <!--<script src="https://raw.githubusercontent.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.js"></script> --> 
+  </head>
   
-<body>
-  <div class="header">
-      <li><a id="name">Good Morning!</a></li>
-      <input id="print" type="submit" value="Print"></input>
-      <li><a id="description">The free and interactive search engine</a></li>
-      <li><a id="log_in">Log in:</a></li>
-  
-      <li><input class="input" type="text" placeholder="Username"></li>
-      <li><input class="input" type="password" placeholder="Password"></li>
-      <li><input class="submit" type="submit" placeholder="Submit"></li>
-  </div>   
-
-  <div class="menu">
-    <div class="icon-close">
-      <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
-    </div>
-
-    <ul>
-      <li><a class="place_scroll" href="#about">About</a></li>
-      <li><a href="mailto:amitkulkarni181@gmail.com" target="_blank">Contact</a></li>
-      <li><a href="https://docs.google.com/document/d/1T_N8XCb1DhQ1rKQNro3cA4tYmSrtNbMQGSWkO-s0DV4/edit" target="_blank">Resume</a></li>
-      <li id="create">Created by Amit Kulkarni</li>
-    </ul>
-  </div>
-
-  <div class="jumbotron">
-    <div class="icon-menu">
-      <i><img src="http://theinnovationenterprise.com/assets/blk-menu-icon.png"></i>
-    </div>
-
-    <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
-      <source src="https://ia801400.us.archive.org/35/items/clouds/clouds_wmv_512kb.mp4" type="video/mp4">
-      <!--source src="http://coming-sssoon.paperplane.io/video/time.webm" type="video/webm"> 
-      <source src="http://coming-sssoon.paperplane.io/video/time.mp4" type="video/mp4"> -->            
-     </video> 
-        
-    <audio id="audio" controls="controls" src="http://www.forelise.com/media/fur_elise_valentina_lisitsa.mp3"></audio>  
-
-    <div class="slider">
-      <div class="slide active-slide" style="display: block;">
-        <div class="In1">
-            <h1>The Calculator</h1>
-            <p>The calculator, which is shown to the right, solves mathematical equations based on the users input. The calculator was made by using <em>HTML</em>, <em>CSS</em>, <em>JavaScript</em>, and <em>jQuery</em>. It solves addition, division, subtraction, multiplication, exponent, and square root problems. This calculator, unlike other calculators, solves mathematical equations with as many numbers you would desire.</p>
-        </div>
-
-        <div id="calculator" class="task">
-
-          <div id="total">0</div>
-
-          <div class="scrollbar" id="scroll"></div>
-
-          <div id="operators">
-              <a href="javascript:void(0)" id="plus" class="operator"> + </a>
-              <a href="javascript:void(0)" id="minus" class="operator"> - </a>
-              <a href="javascript:void(0)" id="divide" class="operator"> ÷ </a>
-              <a href="javascript:void(0)" id="times" class="operator"> × </a>
-          </div>
-
-          <div id="side">
-              <a href="javascript:void(0)" id="sq" class="side"> ^ </a>
-              <a href="javascript:void(0)" id="sqrt" class="side"> √ </a>
-              <a href="javascript:void(0)" id="decimal" class="side"> . </a>
-              <a href="javascript:void(0)" id="equals" class="side"> = </a>
-          </div>
-
-          <div id="numbers">
-            <a href="javascript:void(0)" id="one" class="number"> 1 </a>
-            <a href="javascript:void(0)" id="two" class="number"> 2 </a>
-            <a href="javascript:void(0)" id="three" class="number"> 3 </a>
-            <a href="javascript:void(0)" id="four" class="number"> 4 </a>
-            <a href="javascript:void(0)" id="five" class="number"> 5 </a>
-            <a href="javascript:void(0)" id="six" class="number"> 6 </a>
-            <a href="javascript:void(0)" id="seven" class="number"> 7 </a>
-            <a href="javascript:void(0)" id="eight" class="number"> 8 </a>
-            <a href="javascript:void(0)" id="nine" class="number"> 9 </a>
-            <a href="javascript:void(0)" id="clear" class="number"> C </a>
-            <a href="javascript:void(0)" id="zero" class="number"> 0 </a>
-            <a href="javascript:void(0)" id="clearall" class="number"> AC </a>
-          </div>
-
-        </div>
-</div>
-
-  <div class="slide" style="display: none;">
-    <div class="slide2">
-
-      <div id="codepen" style="margin: auto; text-align: center; padding-top: 130px;" class="task">
-            <div><iframe id="cp_embed_VLxqYJ" src="//codepen.io/TechnoForced/embed/VLxqYJ?height=330&amp;theme-id=0&amp;slug-hash=VLxqYJ&amp;default-tab=result&amp;user=TechnoForced" frameborder="0" height="1200" allowfullscreen="true" class="cp_embed_iframe undefined" style="width: 1100px; height: 1200px"></iframe></div>
+  <body>
+    <div class="header">
+    <li><a id="name">Good Morning!</a></li>
+    <input id="print" type="submit" value="Print">
+    <li><a id="description">The free and interactive search engine</a></li>
+    <li><a id="log_in">Log in:</a></li>
+    
+        <li><input class="input" type="text" placeholder="Username"></li>
+        <li><input class="input" type="password" placeholder="Password"></li>
+        <li><input class="submit" type="submit" placeholder="Submit"></li>
+    </div>    
+        <div class="menu">
+      
+      <!-- Menu icon -->
+      <div class="icon-close">
+        <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
       </div>
-    </div>
-  </div>
 
-  <div class="slide">
-      <div class="slide3">
+      <!-- Menu -->
+      <ul>
+        <li><a class="place_scroll" href="#about">About</a></li>
+        <li><a href="mailto:amitkulkarni181@gmail.com" target="_blank">Contact</a></li>
+        <li><a href="https://docs.google.com/document/d/1T_N8XCb1DhQ1rKQNro3cA4tYmSrtNbMQGSWkO-s0DV4/edit" target="_blank">Resume</a></li>
+        <li id="create">Created by Amit Kulkarni</li>
+      </ul>
+    </div>
+
+    <!-- Main body -->
+    <div class="jumbotron">
+
+      <div class="icon-menu">
+       <i><img src="http://theinnovationenterprise.com/assets/blk-menu-icon.png"></i>
+      </div>
+     <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+     
+            <source src="https://ia801400.us.archive.org/35/items/clouds/clouds_wmv_512kb.mp4" type="video/mp4">
+            <!--source src="http://coming-sssoon.paperplane.io/video/time.webm" type="video/webm"> 
+            <source src="http://coming-sssoon.paperplane.io/video/time.mp4" type="video/mp4"> -->            
+        </video> 
+        
+<audio id="audio" controls="controls" src="http://www.forelise.com/media/fur_elise_valentina_lisitsa.mp3"></audio>
+
+               <!--
+                  1. Fur Elise
+                  2. Moonlight Sonata
+                  3. Piano Sonata no. 5 - Mozart
+               -->
+    
+    
+      <div class="slider">
+              <div class="slide" style="display: none;">
+                  <div class="In1">
+    <h1>The Calculator</h1>
+    <p>The calculator, which is shown to the right, solves mathematical equations based on the users input. The calculator was made by using <em>HTML</em>, <em>CSS</em>, <em>JavaScript</em>, and <em>jQuery</em>. It solves addition, division, subtraction, multiplication, exponent, and square root problems. This calculator, unlike other calculators, solves mathematical equations with as many numbers you would desire.</p>
+    </div>
+    <div id="calculator" class="task">
+        <div id="total">0</div>
+        <div class="scrollbar" id="scroll"></div>
+        <div id="operators">
+            <a href="javascript:void(0)" id="plus" class="operator"> + </a>
+            <a href="javascript:void(0)" id="minus" class="operator"> - </a>
+            <a href="javascript:void(0)" id="divide" class="operator"> ÷ </a>
+            <a href="javascript:void(0)" id="times" class="operator"> × </a>
+        </div>
+        <div id="side">
+            <a href="javascript:void(0)" id="sq" class="side"> ^ </a>
+            <a href="javascript:void(0)" id="sqrt" class="side"> √ </a>
+            <a href="javascript:void(0)" id="decimal" class="side"> . </a>
+            <a href="javascript:void(0)" id="equals" class="side"> = </a>
+
+          </div>
+        <div id="numbers">
+          <a href="javascript:void(0)" id="one" class="number"> 1 </a>
+          <a href="javascript:void(0)" id="two" class="number"> 2 </a>
+          <a href="javascript:void(0)" id="three" class="number"> 3 </a>
+          <a href="javascript:void(0)" id="four" class="number"> 4 </a>
+          <a href="javascript:void(0)" id="five" class="number"> 5 </a>
+          <a href="javascript:void(0)" id="six" class="number"> 6 </a>
+          <a href="javascript:void(0)" id="seven" class="number"> 7 </a>
+          <a href="javascript:void(0)" id="eight" class="number"> 8 </a>
+          <a href="javascript:void(0)" id="nine" class="number"> 9 </a>
+          <a href="javascript:void(0)" id="clear" class="number"> C </a>
+          <a href="javascript:void(0)" id="zero" class="number"> 0 </a>
+          <a href="javascript:void(0)" id="clearall" class="number"> AC </a>
+        
+        </div>
+    </div>
+</div>
+        <div class="slide active-slide" style="display: block;">
+            <div class="slide2">
+                
+    <div id="codepen" style="margin: auto; text-align: center; padding-top: 130px;" class="task">
+          <div><iframe id="cp_embed_VLxqYJ" src="//codepen.io/TechnoForced/embed/VLxqYJ?height=330&amp;theme-id=0&amp;slug-hash=VLxqYJ&amp;default-tab=result&amp;user=TechnoForced" frameborder="0" height="1200" allowfullscreen="true" class="cp_embed_iframe undefined" style="width: 1100px; height: 1200px"></iframe></div>
+    </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slide3">
                 <img class="task" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/matte-grey-square-icons-alphanumeric/118432-matte-grey-square-icon-alphanumeric-information.png">                    
                 <h3>Stay tuned for further updates</h3>
                 <p>Created by Amit Kulkarni</p>
