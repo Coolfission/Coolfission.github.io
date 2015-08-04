@@ -51,27 +51,32 @@
     <audio id="audio" controls="controls" src="http://www.forelise.com/media/fur_elise_valentina_lisitsa.mp3"></audio>  
 
     <div class="slider">
-      <div class="slide active-slide">
+      <div class="slide active-slide" style="display: block;">
         <div class="In1">
             <h1>The Calculator</h1>
             <p>The calculator, which is shown to the right, solves mathematical equations based on the users input. The calculator was made by using <em>HTML</em>, <em>CSS</em>, <em>JavaScript</em>, and <em>jQuery</em>. It solves addition, division, subtraction, multiplication, exponent, and square root problems. This calculator, unlike other calculators, solves mathematical equations with as many numbers you would desire.</p>
         </div>
 
         <div id="calculator" class="task">
+
           <div id="total">0</div>
+
           <div class="scrollbar" id="scroll"></div>
+
           <div id="operators">
               <a href="javascript:void(0)" id="plus" class="operator"> + </a>
               <a href="javascript:void(0)" id="minus" class="operator"> - </a>
               <a href="javascript:void(0)" id="divide" class="operator"> ÷ </a>
               <a href="javascript:void(0)" id="times" class="operator"> × </a>
           </div>
+
           <div id="side">
               <a href="javascript:void(0)" id="sq" class="side"> ^ </a>
               <a href="javascript:void(0)" id="sqrt" class="side"> √ </a>
               <a href="javascript:void(0)" id="decimal" class="side"> . </a>
               <a href="javascript:void(0)" id="equals" class="side"> = </a>
           </div>
+
           <div id="numbers">
             <a href="javascript:void(0)" id="one" class="number"> 1 </a>
             <a href="javascript:void(0)" id="two" class="number"> 2 </a>
@@ -86,11 +91,13 @@
             <a href="javascript:void(0)" id="zero" class="number"> 0 </a>
             <a href="javascript:void(0)" id="clearall" class="number"> AC </a>
           </div>
+
         </div>
 </div>
 
-  <div class="slide">
+  <div class="slide" style="display: none;">
     <div class="slide2">
+
       <div id="codepen" style="margin: auto; text-align: center; padding-top: 130px;" class="task">
             <div><iframe id="cp_embed_VLxqYJ" src="//codepen.io/TechnoForced/embed/VLxqYJ?height=330&amp;theme-id=0&amp;slug-hash=VLxqYJ&amp;default-tab=result&amp;user=TechnoForced" frameborder="0" height="1200" allowfullscreen="true" class="cp_embed_iframe undefined" style="width: 1100px; height: 1200px"></iframe></div>
       </div>
@@ -98,48 +105,44 @@
   </div>
 
   <div class="slide">
-    <div class="slide3">
-      <img class="task" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/matte-grey-square-icons-alphanumeric/118432-matte-grey-square-icon-alphanumeric-information.png">                    
-      <h3>Stay tuned for further updates</h3>
-      <p>Created by Amit Kulkarni</p>
-    </div>
-  </div>
+      <div class="slide3">
+                <img class="task" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/matte-grey-square-icons-alphanumeric/118432-matte-grey-square-icon-alphanumeric-information.png">                    
+                <h3>Stay tuned for further updates</h3>
+                <p>Created by Amit Kulkarni</p>
+            </div>
+        </div>
 </div>
+      <!-- End of Calculator HTML -->
       
-  <div class="slide-move">
-
+    <div class="slide-move">
     <a href="#" class="back-arr"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
-
-    <ul class="slider-dots">
-        <li class="dot">•</li>
-        <li class="dot active-dot" style="">•</li>
-        <li class="dot" style="">•</li>
-    </ul>
-
+        <ul class="slider-dots">
+            <li class="dot">•</li>
+            <li class="dot active-dot" style="">•</li>
+            <li class="dot" style="">•</li>
+        </ul>
     <a href="#" class="for-arr"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
-
-  </div>
-    
-  <div id="color-changer"></div>
-  
-  <div id="content">
-    <div id="content1">
-      <div id="about">
-          <h1>About</h1>
-          <p>Hello, my name is Amit Kulkarni. I have started learning programming in 6<sup>th</sup> grade. The first programming language I have learned is HTML. Today, I also know CSS, JavaScript, jQuery, PHP, and a little bit of Python and Ruby. I like devolping unique websies and projects using my knowledge of programming.</p>
-          <img alt="Computer with coding" src="http://srbrightside.com/media/uploads/zinnia/post1_1.png" />
-      </div>
     </div>
-
+    
+    <div id="color-changer">
+    </div>
+  
+    <div id="content">
+        <div id="content1">
+        <div id="about">
+            <h1>About</h1>
+            <p>Hello, my name is Amit Kulkarni. I have started learning programming in 6<sup>th</sup> grade. The first programming language I have learned is HTML. Today, I also know CSS, JavaScript, jQuery, PHP, and a little bit of Python and Ruby. I like devolping unique websies and projects using my knowledge of programming.</p>
+            <img alt="Computer with coding" src="http://srbrightside.com/media/uploads/zinnia/post1_1.png">
+        </div>
+        </div>
         <div id="content2">
             <h1>The website</h1>
-            <p>I made this website out of three different languages, which are HTML, CSS, and JavaScript. I have included two projects in the website; the calculator, and the converter. Click on the accordion to view the code source.</p>
-
-  <section class="ac-container">
-    <div>
-      <input id="ac-1" name="accordion-1" type="checkbox">
-      <label for="ac-1">HTML</label>
-      <article class="ac-small">
+            <p>I made this website out of three different languages, which are HTML, CSS, and JavaScript. I have included two projects in the website; the calculator, and the converter. Click on the accordion to view the code source.</p><p>
+              </p><section class="ac-container">
+  <div>
+    <input id="ac-1" name="accordion-1" type="checkbox">
+    <label for="ac-1">HTML</label>
+    <article class="ac-small">
       <p>&lt;!--html--&gt;&lt;!doctype html&gt;&lt;html&gt; &lt;head&gt;
 &lt;title&gt;amit kulkarni&lt;/title&gt; &lt;link rel="shortcut icon"
 href="data:image/x-icon;base64,r0lgodlheaaqapecaffuv////waaaaaaach5bakyaaiaif8ltkvuu0nbueuyljadaqaaacwaaaaaeaaqaaac5wqaaaaaaaaaaaaaaaaaaaaaaaaaqbaaaaaaaaaaaaaaqbaeaaaaaaaaaaaaaaaqcaqaaaaaaaaaaaaaaaaibaiaaaaaaaaaaaaaaaaeageaaaaaaaaaaaaaaaacgqaaaaaaaaaaaaaaaaaqebaaaaaaaaaaaaaaaaaqebaaaaaaaaaaaaaaaaaqebaaaaaaaaaaaaaaaaaqebaaaaaaaaaaaaaaaaaqebaaaaaaebaqebaaaaaaebaaaaaaabaqebaqaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaah+qqjmgacacwaaaaaeaaqaaac5wqaaaaaaaaaaaaaaaaaaaaaaaaaqbaaaaaaaaaaaaaaqbaeaaaaaaaaaaaaaaaqcaqaaaaaaaaaaaaaaaaibaiaaaaaaaaaaaaaaaaeageaaaaaaaaaaaaaaaacgqaaaaaaaaaaaaaaaaaqebaaaaaaaaaaaaaaaaaqebaaaaaaaaaaaaaaaaaqebaaaaaaaaaaaaaaaaaqebaaaaaaaaaaaaaaaaaqebaaaaaaaaaaaaaaaaaaebaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaa7"&gt;
@@ -339,45 +342,44 @@ going to tf--&gt;</p>
       </div>
       <div><!--...--></div>
     </section>
-  </div>
-      <p style="text-align: center; margin-top: -100px;"><strong>or </strong>press F12 or ctrl + shift + i to view the encoding</p>
-</div>
-
-  <div id="content3">
-    <h1>Wonderful Moments</h1>
-    <ul class="cb-slideshow" style="border-left: 180px solid #ABCDEF">
-        <li style="margin: auto; text-align: center;"><span>Image 01</span></li>
-        <li style="margin: auto; text-align: center;"><span>Image 02</span></li>
-        <li style="margin: auto; text-align: center;"><span>Image 03</span></li>
-        <li style="margin: auto; text-align: center;"><span>Image 04</span></li>
-        <li style="margin: auto; text-align: center;"><span>Image 05</span></li>
-        <li style="margin: auto; text-align: center;"><span>Image 06</span></li>
-    </ul>
-  </div>
+            </div>
+            <p style="text-align: center; margin-top: -100px;"><strong>or </strong>press F12 or ctrl + shift + i to view the encoding</p>
+        </div>
+        <div id="content3">
+            <h1>Wonderful Moments</h1>
+            <ul class="cb-slideshow" style="border-left: 180px solid #ABCDEF">
+                <li style="margin: auto; text-align: center;"><span>Image 01</span></li>
+                <li style="margin: auto; text-align: center;"><span>Image 02</span></li>
+                <li style="margin: auto; text-align: center;"><span>Image 03</span></li>
+                <li style="margin: auto; text-align: center;"><span>Image 04</span></li>
+                <li style="margin: auto; text-align: center;"><span>Image 05</span></li>
+                <li style="margin: auto; text-align: center;"><span>Image 06</span></li>
+            </ul>
+    </div>
     
-  <div id="footer">
-      <p>Helpful Links:</p>
-          <a class="link" href="https://www.edmodo.com" target="_blank">Edmodo<br></a>
-          <a class="link" href="https://www.gmail.com" target="_blank">Gmail<br></a>
-          <a class="link" href="https://www.github.com" target="_blank">GitHub</a>
+    <div id="footer">
+    <p>Helpful Links:</p>
+        <a class="link" href="https://www.edmodo.com" target="_blank">Edmodo<br></a>
+        <a class="link" href="https://www.gmail.com" target="_blank">Gmail<br></a>
+        <a class="link" href="https://www.github.com" target="_blank">GitHub</a>
         
-      <p style="text-align: center; margin-top: -96px">Share your experience...</p>
-          <li><a id="pinterest" href="https://www.pinterest.com" target="_blank"><img src="//assets.edmodo.com/images_v2/marketing/shared/social-pinterest.png"></a></li>
-          <li><a id="google" href="https://www.plus.google.com" target="_blank"><img src="https://assets.edmodo.com/images_v2/marketing/shared/social-google.png"></a></li>
-          <li><a id="facebook" href="https://www.facebook.com" target="_blank"><img src="//assets.edmodo.com/images_v2/marketing/shared/social-facebook.png"></a></li>
-          <li><a id="twitter" href="https://www.twitter.com" target="_blank"><img src="//assets.edmodo.com/images_v2/marketing/shared/social-twitter.png"></a></li>
+    <p style="text-align: center; margin-top: -96px">Share your experience...</p>
+        <li><a id="pinterest" href="https://www.pinterest.com" target="_blank"><img src="//assets.edmodo.com/images_v2/marketing/shared/social-pinterest.png"></a></li>
+        <li><a id="google" href="https://www.plus.google.com" target="_blank"><img src="https://assets.edmodo.com/images_v2/marketing/shared/social-google.png"></a></li>
+        <li><a id="facebook" href="https://www.facebook.com" target="_blank"><img src="//assets.edmodo.com/images_v2/marketing/shared/social-facebook.png"></a></li>
+        <li><a id="twitter" href="https://www.twitter.com" target="_blank"><img src="//assets.edmodo.com/images_v2/marketing/shared/social-twitter.png"></a></li>
         
-      <p style="text-align: right; padding-right: 300px; margin-top: -58px">Need help?</p>    
-      <p style="margin: 10px 1275px; font-weight: normal; position: absolute">
-         <em> Contact me: </em>
-          <a style="text-decoration: none; color: black" href="mailto:amitkulkarni181@gmail.com" onclick="window.open('https://mail.google.com/mail/?view=cm&amp;tf=1&amp;to=amitkulkarni181@gmail.com&amp;cc=&amp;bcc=&amp;su=&amp;body=','_blank');return false;">amitkulkarni181@gmail.com</a>
-          <br> 
-          <spam style="font-weight: bold">or</spam><br>
-          <spam style="margin-right: 130px;"><em>Call me: </em>123-456-7890</spam>
-      </p>    
-      <p id="imp" style="font-family: arial; font-size: 10px; text-align: center; top: 200px">© 2016 Technology Fair || Made by Amit Kulkarni</p>
-      <p style="font-family: arial; font-size: 10px; text-align: center; top: 200px">All rights reserved</p>
-  </div>
+    <p style="text-align: right; padding-right: 300px; margin-top: -58px">Need help?</p>    
+    <p style="margin: 10px 1275px; font-weight: normal; position: absolute">
+       <em> Contact me: </em>
+        <a style="text-decoration: none; color: black" href="mailto:amitkulkarni181@gmail.com" onclick="window.open('https://mail.google.com/mail/?view=cm&amp;tf=1&amp;to=amitkulkarni181@gmail.com&amp;cc=&amp;bcc=&amp;su=&amp;body=','_blank');return false;">amitkulkarni181@gmail.com</a>
+        <br> 
+        <spam style="font-weight: bold">or</spam><br>
+        <spam style="margin-right: 130px;"><em>Call me: </em>123-456-7890</spam>
+    </p>    
+    <p id="imp" style="font-family: arial; font-size: 10px; text-align: center; top: 200px">© 2016 Technology Fair || Made by Amit Kulkarni</p>
+    <p style="font-family: arial; font-size: 10px; text-align: center; top: 200px">All rights reserved</p>
+    </div>
 
   <nav id="context-menu" class="context-menu">
     <ul class="context-menu__items">
