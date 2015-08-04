@@ -675,7 +675,7 @@ a#clear:hover, a#clearall:hover {
 .cb-slideshow, .cb-slideshow:after { 
     top: 0px;
     left: 0px;
-    z-index: -1; 
+    z-index: 1; 
     margin: auto;
     text-align: center;
 }
