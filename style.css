@@ -520,7 +520,7 @@ a#clear:hover, a#clearall:hover {
 #color-changer {
     width: 100%;
     height: 50px;
-    margin-top: 50px;
+    margin-top: 40px;
     opacity: 0.9;
     border-top: 1px solid #fff;
     background-color: blue;
