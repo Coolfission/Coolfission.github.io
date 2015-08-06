@@ -882,7 +882,10 @@ $(function() {
 
 var desktop = function() {
   if(screen.width === 1680 && screen.height === 1050) {
-    
+
+  }
+  else if (screen.width > 1680) {
+    confirm("Zoom out to 75% for better experience");
   }
   else {
     $("#imp").css({"visibility": "hidden"});
