@@ -160,18 +160,39 @@ body {
     padding: 0;
 }
 .menu li {
-    border-bottom: 1px solid #636366;
+    border-bottom: 1px none #636366;
     font-family: 'Open Sans', sans-serif;
     line-height: 45px;
-    padding-bottom: 3px;
+    border-left: 14px solid #333;
+    padding-bottom: 4px;
     padding-left: 20px;
-    padding-top: 3px;
+    padding-top: 4px;
+    transition: all 400ms ease-in;
+}
+.menu li:nth-child(1) {
+  margin-top: 10px;
+}
+.menu li:hover {
+  cursor: pointer;
+}
+.menu li:nth-child(1):hover {
+  border-left: 20px solid red;
+  transition: all 400ms ease-out;
+}
+.menu li:nth-child(2):hover {
+  border-left: 20px solid green;
+  transition: all 400ms ease-out;
+}
+.menu li:nth-child(3):hover {
+  border-left: 20px solid cyan;
+  transition: all 400ms ease-out;
 }
 .menu a {
     color: #fff;
     font-size: 15px;
     text-decoration: none;
     text-transform: uppercase;
+    font-weight:  bold;
 }
 .menu a:hover {
     font-weight: bold;  
