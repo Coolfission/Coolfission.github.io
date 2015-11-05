@@ -88,46 +88,55 @@ $(function() {
         number += "1";
         number = round(number,9);
         totaldiv.text(number);
+        testNumLength(number);
     });
     $("#two").click(function(){
         number += "2";
         number = round(number,9);
         totaldiv.text(number);
+        testNumLength(number);
     });
     $("#three").click(function(){
         number += "3";
         number = round(number,9);
         totaldiv.text(number);
+        testNumLength(number);
     });
     $("#four").click(function(){
         number += "4";
         number = round(number,9);
         totaldiv.text(number);
+        testNumLength(number);
     });
     $("#five").click(function(){
         number += "5";
         number = round(number,9);
         totaldiv.text(number);
+        testNumLength(number);
     });
     $("#six").click(function(){
         number += "6";
         number = round(number,9);
         totaldiv.text(number);
+        testNumLength(number);
     });
     $("#seven").click(function(){
         number += "7";
         number = round(number,9);
         totaldiv.text(number);
+        testNumLength(number);
     });
     $("#eight").click(function(){
         number += "8";
         number = round(number,9);
         totaldiv.text(number);
+        testNumLength(number);
     });
     $("#nine").click(function(){
         number += "9";
         number = round(number,9);
         totaldiv.text(number);
+        testNumLength(number);
     });
     $("#decimal").click(function() {
         var numOfDecs = 0;
@@ -146,6 +155,7 @@ $(function() {
             number = round(number,9);
             totaldiv.text(number);
         }
+        testNumLength(number);
     });
     $("#zero").click(function(){
         if (number === "") {
@@ -161,6 +171,7 @@ $(function() {
         } else {
             totaldiv.text("0");
         }
+        testNumLength(number);
     });
     $("#plus").click(function() {
         newnumber = number;
@@ -235,6 +246,8 @@ $(function() {
             number = "";
             totaldiv.text("0");
         }
+        var testNumLength;
+        testNumLength(number);
         number = round(number,9);
         totaldiv.text(number);
         number = "";
