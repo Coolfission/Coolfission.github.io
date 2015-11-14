@@ -73,7 +73,7 @@ $(document).ready(main);
 var $ = jQuery.noConflict();
 $(function() {
   function testNumLength() {
-    this.number;
+    
   }
     var number = "";
     var newnumber = ""; 
