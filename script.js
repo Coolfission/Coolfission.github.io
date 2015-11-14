@@ -77,8 +77,11 @@ $(document).ready(main);
 };
 var $ = jQuery.noConflict();
 $(function() {
+  function testNumLength() {
+    this.number;
+  }
     var number = "";
-    var newnumber = "";
+    var newnumber = ""; 
     var operator = "";
     var memory = "0";
     var cleared = 0;
@@ -246,7 +249,6 @@ $(function() {
             number = "";
             totaldiv.text("0");
         }
-        var testNumLength;
         testNumLength(number);
         number = round(number,9);
         totaldiv.text(number);
