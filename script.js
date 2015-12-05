@@ -1,3 +1,10 @@
+  var phone = function() {
+    if(screen.width <= 800) {
+      location.assign("ask.html");
+    }
+  };
+  $(document).ready(phone);
+ 
   var menu = function() {
       $('.icon-menu').click(function() {
           $('.menu').animate({left: '0px'}, 100);                   
@@ -294,13 +301,6 @@ $(document).ready(function() {
     });
 });
 
-var phone = function() {
-  if(screen.width <= 800) {
-    location.assign("ask.html");
-  }
-};
-$(document).ready(phone);
-
 $(function() {
     $(".place_scroll").on("click", function(e) {
      $('.menu').animate({left: '-290px'}, 1500);
@@ -460,19 +460,6 @@ $(function() {
   init();
 
 });
-
-var desktop = function() {
-  if(screen.width === 1680 && screen.height === 1050) {
-
-  }
-  else if (screen.width > 1680) {
-    confirm("Zoom out to 75% for better experience");
-  }
-  else {
-    $("#imp").css({"visibility": "hidden"});
-  }
-};
-$(document).ready(desktop);
 
 var video = function() {
   document.getElementById("video_background").defaultPlaybackRate = 1.0;
