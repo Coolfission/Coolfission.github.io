@@ -295,8 +295,8 @@ $(document).ready(function() {
 });
 
 var phone = function() {
-  if(screen.width > 800) {
-    location.assign("coolfission.github.io/ask.html");
+  if(screen.width <= 800) {
+    location.assign("ask.html");
   }
 };
 $(document).ready(phone);
