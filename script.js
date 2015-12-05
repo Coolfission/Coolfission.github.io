@@ -294,14 +294,13 @@ $(document).ready(function() {
     });
 });
 
-var phone = function() {
+/*var phone = function() {
   if(screen.width > 800) {
     window.location("coolfission.github.io/ask.html");
   }
 };
-
 $(document).ready(phone);
-
+*/
 $(function() {
     $(".place_scroll").on("click", function(e) {
      $('.menu').animate({left: '-290px'}, 1500);
