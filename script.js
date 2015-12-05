@@ -294,31 +294,12 @@ $(document).ready(function() {
     });
 });
 
-/*var detectIOS = function() {
-      var standalone = window.navigator.standalone,
-          userAgent = window.navigator.userAgent.toLowerCase(),
-          safari = /safari/.test( userAgent ),
-          ios = /iphone|ipod|ipad/.test( userAgent );
-
-      if(ios) {
-          if (!standalone && safari) {
-              $("#content").css({"font-family": "Arial"});
-          } 
-          else if (standalone && !safari) {
-              $("#content").css({"font-family": "Arial"});
-          } 
-          else if (!standalone && !safari) {
-              $("#content").css({"font-family": "Airal"});
-          };
-      } 
-};
-$(document).ready(detectIOS); */
-
 var phone = function() {
-  if(screen.width <= 800) {
-    
+  if(screen.width > 800) {
+    window.location("coolfission.github.io/ask.html");
   }
 };
+
 $(document).ready(phone);
 
 $(function() {
