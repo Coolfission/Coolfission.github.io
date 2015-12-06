@@ -7,8 +7,7 @@
     border: 3px black solid;
     padding: 10px;
     position: relative; 
-    margin-top: -250px;
-    margin-left: 900px;
+    margin: auto;
     border-radius: 10px;
     background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQeut_wOzhNCh1D5fKg42scc6ojdbGJSTZiLFRJjKg49EYNi2U2");
     font-family: Arial;
