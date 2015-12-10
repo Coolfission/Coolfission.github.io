@@ -1,7 +1,7 @@
-  var phone = function() {
+  var phone = function(event) {
     if(screen.width <= 800) {
       location.assign("ask.html");
-      e.preventDefault();
+      event.preventDefault();
     }
   };
   $(document).ready(phone);
