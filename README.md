@@ -1,1 +1,1 @@
-Here is my main home page. I hope you like it. I'm a baby!!
+Here is my main home page. I hope you like it. 
