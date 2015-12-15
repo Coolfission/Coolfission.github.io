@@ -1,6 +1,6 @@
   var phone = function() {
     if(screen.width <= 800) {
-      window.location.assign("ask.html");
+      location.assign("ask.html");
     }
   };
   $(document).ready(phone);
