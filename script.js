@@ -4,10 +4,6 @@
     }
   };
   $(document).ready(phone);
-  
-  function disablephone(phone) {
-    phone = false;
-  }
 
   var menu = function() {
       $('.icon-menu').click(function() {
