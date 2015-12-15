@@ -1,10 +1,14 @@
   var phone = function() {
     if(screen.width <= 800) {
-      location.assign("ask.html");
+      window.location.href("ask.html");
     }
   };
   $(document).ready(phone);
- 
+  
+  function disablephone(phone) {
+    phone = false;
+  }
+
   var menu = function() {
       $('.icon-menu').click(function() {
           $('.menu').animate({left: '0px'}, 100);                   
