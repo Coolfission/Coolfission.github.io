@@ -1,4 +1,4 @@
-"use strict";
+
 
   var phone = function() {
     if(screen.width <= 800) {
