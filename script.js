@@ -4,7 +4,6 @@
     if(screen.width <= 800) {
       location.assign("ask.html");
     }
-    return false;
   };
   $(document).ready(phone);
 
