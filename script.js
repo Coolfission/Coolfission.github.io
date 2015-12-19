@@ -1,4 +1,4 @@
-
+/*
 
   var phone = function() {
     if(screen.width <= 800) {
@@ -6,7 +6,7 @@
     }
   };
   $(document).ready(phone);
-
+*/
   var menu = function() {
       $('.icon-menu').click(function() {
           $('.menu').animate({left: '0px'}, 100);                   
