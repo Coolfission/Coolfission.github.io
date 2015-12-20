@@ -2,7 +2,7 @@
     /*if(screen.width <= 800) {
       location.assign("ask.html");
     }*/
-    $("div").attr('', 'blur');
+    $("div").attr('data', 'blur');
   };
   $(document).ready(phone);
 
