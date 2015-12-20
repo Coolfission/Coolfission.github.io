@@ -1,12 +1,11 @@
-/*
-
   var phone = function() {
-    if(screen.width <= 800) {
+    /*if(screen.width <= 800) {
       location.assign("ask.html");
-    }
+    }*/
+    $("div").attr('', 'blur');
   };
   $(document).ready(phone);
-*/
+
   var menu = function() {
       $('.icon-menu').click(function() {
           $('.menu').animate({left: '0px'}, 100);                   
