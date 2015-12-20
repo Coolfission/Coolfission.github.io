@@ -44,7 +44,7 @@ body {
 .header > * {
   display: inline;
 }
-#float-right_for_input {
+#float-right_for_input::before {
     float: right;
     margin-right: 100px;
     margin-top: 0.4%;
@@ -56,7 +56,7 @@ body {
 }
 .header input[type='submit'] {
     border: 3px solid #000;
-    background-color: rgb(200,130,0);
+    background-color: #FFA500;
     border-radius: 15px;
     color: #fff;
     cursor: pointer;
