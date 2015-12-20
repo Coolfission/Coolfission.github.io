@@ -44,11 +44,6 @@ body {
 .header > * {
   display: inline;
 }
-#float-right_for_input::before {
-    float: right;
-    margin-right: 100px;
-    margin-top: 0.4%;
-}
 .header input:not([type="submit"]) {
     padding: 3px 5px;
     border-radius: 3px;
@@ -69,6 +64,11 @@ body {
     font-size: 30px;
     padding: 20px;
     margin-right: 80px;
+}
+.header #name::after {
+    float: right;
+    margin-right: 100px;
+    margin-top: 0.4%;
 }
 .menu {
     background-color: #000000;
