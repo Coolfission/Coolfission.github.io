@@ -1,8 +1,8 @@
   var phone = function() {
-    /*if(screen.width <= 800) {
-      location.assign("ask.html");
-    }*/
+    if(screen.width <= 800) {
     $("div").attr('data', 'blur');
+      //location.assign("ask.html");
+    }
   };
   $(document).ready(phone);
 
