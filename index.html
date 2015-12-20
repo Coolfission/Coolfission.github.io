@@ -5,7 +5,6 @@
      <title>Amit Kulkarni</title>
      <link rel="shortcut icon" href="data:image/x-icon;base64,R0lGODlhEAAQAPECAFFUV////wAAAAAAACH5BAkyAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAEBAQEBAAAAAAEBAAAAAAABAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJMgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" />
 
-    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     
@@ -178,5 +177,26 @@
     </ul>
   </nav>
 </div>
+
+<div data-role="page">
+  <div data-role="header">
+    <h1>Welcome To My Homepage</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Show Popup</a>
+
+    <div data-role="popup" id="myPopup" class="ui-content">
+      <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+      <p>I have a close button at the top right corner.</p>
+      <p><b>Tip:</b> You can also click outside to close me.</p>
+    </div>
+  </div>
+
+  <div data-role="footer">
+    <h1>Footer Text</h1>
+  </div>
+</div> 
+
 </body>
 </html>
