@@ -1,8 +1,14 @@
   var phone = function() {
     if(screen.width <= 800) {
-    $("div").attr('data', 'blur');
-      //location.assign("ask.html");
+      $("div").attr('data', 'blur');
+      location.assign("ask.html");
+      return false;
     }
+    else if(window.history.back() === "ask.html") {
+      location.assign("ask.html")
+      return false;
+    }
+    return true;
   };
   $(document).ready(phone);
 
