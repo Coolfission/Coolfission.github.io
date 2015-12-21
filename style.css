@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
 html::-webkit-scrollbar{
     border-radius: 10px;
 } 
@@ -642,4 +644,48 @@ a#clear:hover, a#clearall:hover {
   -ms-transition: all 300ms ease;
   -o-transition: all 300ms ease;
   transition: all 300ms ease; 
+}
+
+
+
+#ask {
+    zoom: 50%;
+    opacity: 0;
+    text-align: center;
+    font-family: "Montserrat", Arial;
+    background-color: rgb(20,50,140);
+    overflow: hidden;
+    color: #fff;
+    width: 60%;
+    margin: auto;
+    border-radius: 10px;
+}
+.fa-times-circle-o {
+  float: right;
+  margin: 1%;
+  color: red;
+  position: relative;
+  font-size: 50px;
+}
+fieldset {
+    width: 50%;
+    height: 10em;
+    margin: auto;
+    background-color: rgb(250,250,230);
+    padding: 30px 0px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    box-shadow: -0.5px 3px 5px;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(100,100,100);
+}
+h1 {
+    margin: 3% auto; 
+    position: relative;
+    font-size: 3em;
 }
