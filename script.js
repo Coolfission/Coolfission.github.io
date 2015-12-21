@@ -5,7 +5,7 @@
       return false;
     }
     else if(window.history.back() === "ask.html") {
-      location.assign("ask.html")
+      location.assign("index.html")
       return false;
     }
     return true;
