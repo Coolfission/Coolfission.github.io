@@ -651,9 +651,9 @@ a#clear:hover, a#clearall:hover {
 #ask {
     opacity: 0;
     position: absolute;
+    top: 0;
     right: 30%;
-    left: 30%;
-    margin: auto;   
+    left: 30%; 
     z-index: 1;
     -webkit-filter: blur(0px); 
     -moz-filter: blur(0px);

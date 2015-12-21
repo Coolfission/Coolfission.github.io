@@ -1,10 +1,10 @@
   var phone = function() {
     if(screen.width <= 800) {
       $("div").attr('data', 'blur');
-      $("#ask").animate({"opacity": "1"}, 500);
+      $("#ask").animate({"display": "auto"}, 500);
     }
     $(".fa-times-circle-o").click(function() {
-      $("#ask").animate({"opacity": "0"}, 500);
+      $("#ask").animate({"display": "none"}, 500);
     });
   };
   $(document).ready(phone);
