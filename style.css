@@ -33,7 +33,7 @@ body {
     font-family: Arial;
 }
 div[data="blur"] {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.5);
     z-index: -1;
     -webkit-filter: blur(3px); 
     -moz-filter: blur(3px);
@@ -660,8 +660,8 @@ a#clear:hover, a#clearall:hover {
     -o-filter: blur(0px);
     -ms-filter: blur(0px);
     filter: blur(0px);
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vh;
     text-align: center;
     font-family: "Montserrat", Arial;
     background-color: rgb(20,50,140);
