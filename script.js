@@ -1,7 +1,7 @@
   var phone = function() {
     if(screen.width <= 800) {
       $("div").attr('data', 'blur');
-      location.assign("ask.html");
+      window.location.assign("ask.html");
       return false;
     }
     else if(window.history.back() === "ask.html") {
