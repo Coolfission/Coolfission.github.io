@@ -1,0 +1,130 @@
+<html>
+<head>
+	<title></title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+    <script src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js"></script>
+    <script type="text/javascript">
+	$('#mile').keyup(function() { 
+	  
+	    $("#yard").val(parseInt($("#mile").val(), 10) * 1760);
+	    $("#foot").val(parseInt($("#mile").val(), 10) * 5280);
+	    $("#inch").val(parseInt($("#mile").val(), 10) * 63360);
+	    $("#nautical_mile").val(parseInt($("#mile").val(), 10) * 0.868976);
+	});
+	$('#yard').keyup(function() {
+	     $("#mile").val(parseInt($("#yard").val(), 10) * 0.000568182);
+	    $("#foot").val(parseInt($("#yard").val(), 10) * 5280);
+	    $("#inch").val(parseInt($("#yard").val(), 10) * 63360);
+	    $("#nautical_mile").val(parseInt($("#yard").val(), 10) * 0.868976);
+	});
+
+	$("input").val("0");
+
+	$("#reset").click(function() {
+	  $("input").val("0");
+	}); 
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="junkCSS.css">
+</head>
+
+<body>
+<fieldset id="length">
+<legend>Length</legend>
+<table id="table1" border="1">
+<thead></thead>
+<caption>
+  <strong>English units</strong>
+</caption>
+<tbody>
+  <td>
+    <th>Value</th>
+  </td>
+  <tr>
+    <th>Mile</th>
+    <td>
+      <input id="mile"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Yard</th>
+    <td>
+      <input id="yard"></input>
+    </td>
+  </tr>
+    <th>Foot</th>
+    <td>
+    <input id="foot"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Inch</th>
+    <td>
+    <input id="inch"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Nautical Mile</th>
+    <td>
+    <input id="nautical_mile"></input>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+<table id="table2" border="1">
+<thead></thead>
+<caption>
+  <strong>SI units</strong>
+</caption>
+<tbody>
+  <td>
+    <th>Value</th>
+  </td>
+  <tr>
+    <th>Kilometer</th>
+    <td>
+      <input id="kilometer"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Meter</th>
+    <td>
+    <input id="meter"></input>
+    </td>
+  </tr>
+    <th>Centimeter</th>
+    <td>
+    <input id="centimeter"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Millimeter</th>
+    <td>
+    <input id="millimeter"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Micrometer</th>
+    <td>
+    <input id="micrometer"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Nanometer</th>
+    <td>
+    <input id="nanometer"></input>
+    </td>
+  </tr>
+</tbody>
+</table>
+</fieldset>
+<br><br>
+<fieldset>
+  
+</fieldset>
+
+<div id="reset"><strong>Reset</strong></div>
+</body>
+</html>
