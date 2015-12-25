@@ -297,9 +297,6 @@ var time = function() {
 $(document).ready(time);
 
 $(document).ready(function() {
-    $("#print").click(function() {
-        window.print();
-    });
     $("#context-menu__print").click(function() {
         window.print();
     });
