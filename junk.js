@@ -1,4 +1,3 @@
-confirm("test");
 $("input").val("0");
 
 $("#reset").click(function() {
