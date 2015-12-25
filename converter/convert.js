@@ -160,3 +160,63 @@ var length = function() {
     });
 };
 $(document).ready(length);
+
+var mass = function() {
+
+};
+$(document).ready(mass);
+
+var volume = function() {
+
+};
+$(document).ready(volume);
+
+var area = function() {
+
+};
+$(document).ready(area);
+
+var speed = function() {
+
+};
+$(document).ready(speed);
+
+var time = function() {
+
+};
+$(document).ready(time);
+
+var pressure = function() {
+
+};
+$(document).ready(pressure);
+
+var energy = function() {
+
+};
+$(document).ready(energy);
+
+var digital_storage = function() {
+
+};
+$(document).ready(digital_storage);
+
+var frequency = function() {
+
+};
+$(document).ready(frequency);
+
+var fuel_economy = function() {
+
+};
+$(document).ready(fuel_economy);
+
+var plane_angle = function() {
+
+};
+$(document).ready(plane_angle);
+
+var data_transfer_rate = function() {
+
+};
+$(document).ready(data_transfer_rate);
