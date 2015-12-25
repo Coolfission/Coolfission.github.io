@@ -65,7 +65,7 @@ td, th, tr {
   padding: 20px;
   cursor: pointer;
   border-radius: 10px;
-  background-color: black;
+  background: rgba(0,0,0,0.7);
   right: 20px;
   bottom: 20px;
 }

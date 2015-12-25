@@ -1,3 +1,9 @@
+$("input").val("0");
+
+$("#reset").click(function() {
+  $("input").val("0");
+}); 
+
 $('#mile').keyup(function() { 
   
     $("#yard").val(parseInt($("#mile").val(), 10) * 1760);
@@ -11,9 +17,3 @@ $('#yard').keyup(function() {
     $("#inch").val(parseInt($("#yard").val(), 10) * 63360);
     $("#nautical_mile").val(parseInt($("#yard").val(), 10) * 0.868976);
 });
-
-$("input").val("0");
-
-$("#reset").click(function() {
-  $("input").val("0");
-}); 
