@@ -7,7 +7,7 @@ body {
   background-color: #333;
 }
 span {
-  font-size: 6em;
+  font-size: 10em;
   color: #fff;
 }
 fieldset {
@@ -72,5 +72,5 @@ td, th, tr {
   border-radius: 10px;
   background: rgba(0,0,0,0.7);
   right: 1%;
-  bottom: 5%;
+  bottom: 1%;
 }
