@@ -10,6 +10,10 @@ body {
   -o-user-select: none;
   user-select: none;
 }
+span {
+  font-size: 5em;
+  color: #fff;
+}
 fieldset {
   margin: 10px auto;
   text-align: center;
@@ -54,7 +58,7 @@ table {
   margin: 0px 1em;
   border-style: solid;
 }
-#table-move_length {
+#table-move_length, #table-move_mass {
   margin-bottom: 47px;
 }
 td, th, tr {
