@@ -316,7 +316,26 @@ var frequency = function() {
 $(document).ready(frequency);
 
 var fuel_economy = function() {
-
+    $('#usmi-g').keyup(function() { 
+        $("#immi-g").val(parseInt($("#usmi-g").val(), 10) * 1.20095);
+        $("#km-l").val(parseInt($("#usmi-g").val(), 10) * 0.425144);
+        $("#l-100km").val(parseInt($("#usmi-g").val(), 10) * 235.215);
+    });  
+    $("#immi-g").keyup(function() {
+        $("#usmi-g").val(parseInt($("#immi-g").val(), 10) * 0.832674);
+        $("#km-l").val(parseInt($("#immi-g").val(), 10) * 0.354006);
+        $("#l-100km").val(parseInt($("#immi-g").val(), 10) * 282.481);
+    });
+    $('#km-l').keyup(function() { 
+        $("#usmi-g").val(parseInt($("#km-l").val(), 10) * 2.35215);
+        $("#immi-g").val(parseInt($("#km-l").val(), 10) * 2.82481);
+        $("#l-100km").val(parseInt($("#km-l").val(), 10) * 100);
+    });
+    $("#l-100km").keyup(function() {
+        $("#usmi-g").val(parseInt($("#l-100km").val(), 10) * 235.215);
+        $("#immi-g").val(parseInt($("#l-100km").val(), 10) * 282.481);
+        $("#km-l").val(parseInt($("#l-100km").val(), 10) * 100);
+    });
 };
 $(document).ready(fuel_economy);
 
