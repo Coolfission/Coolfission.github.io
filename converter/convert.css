@@ -7,7 +7,7 @@ body {
   background-color: #333;
 }
 span {
-  font-size: 20px;
+  font-size: 5em;
   color: #fff;
 }
 fieldset {
@@ -24,6 +24,7 @@ legend {
   border: 1px solid black;
   border-radius: 3px;
   background-color: #000;
+  font-size: 15px;
   color: #ddd;
   font-weight: bold;
 }
