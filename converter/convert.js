@@ -162,7 +162,116 @@ var length = function() {
 $(document).ready(length);
 
 var mass = function() {
-
+    $('#imperial_ton').keyup(function() { 
+        $("#us_ton").val(parseInt($("#imperial_ton").val(), 10) * 1.12);
+        $("#stone").val(parseInt($("#imperial_ton").val(), 10) * 160);
+        $("#pound").val(parseInt($("#imperial_ton").val(), 10) * 2240);
+        $("#ounce").val(parseInt($("#imperial_ton").val(), 10) * 35840);
+        $("#metric_ton").val(parseInt($("#imperial_ton").val(), 10) * 1.01605);
+        $("#kilogram").val(parseInt($("#imperial_ton").val(), 10) * 1016.05);
+        $("#gram").val(parseInt($("#imperial_ton").val(), 10) * 1.016 * Math.pow(10, 6));
+        $("#milligram").val(parseInt($("#imperial_ton").val(), 10) * 1.016 * Math.pow(10, 9));
+        $("#microgram").val(parseInt($("#imperial_ton").val(), 10) * 1.016 * Math.pow(10, 12));
+    });
+    $('#us_ton').keyup(function() { 
+        $("#imperial_ton").val(parseInt($("#us_ton").val(), 10) * 0.892857);
+        $("#stone").val(parseInt($("#us_ton").val(), 10) * 142.857);
+        $("#pound").val(parseInt($("#us_ton").val(), 10) * 2000);
+        $("#ounce").val(parseInt($("#us_ton").val(), 10) * 32000);
+        $("#metric_ton").val(parseInt($("#us_ton").val(), 10) * 0.907185);
+        $("#kilogram").val(parseInt($("#us_ton").val(), 10) * 907.185);
+        $("#gram").val(parseInt($("#us_ton").val(), 10) * 907185);
+        $("#milligram").val(parseInt($("#us_ton").val(), 10) * 9.072 * Math.pow(10, 8));
+        $("#microgram").val(parseInt($("#us_ton").val(), 10) * 9.072 * Math.pow(10, 11));
+    });
+    $('#stone').keyup(function() { 
+        $("#imperial_ton").val(parseInt($("#stone").val(), 10) * 0.00625);
+        $("#us_ton").val(parseInt($("#stone").val(), 10) * 0.007);
+        $("#pound").val(parseInt($("#stone").val(), 10) * 14);
+        $("#ounce").val(parseInt($("#stone").val(), 10) * 224);
+        $("#metric_ton").val(parseInt($("#stone").val(), 10) * 0.00635029);
+        $("#kilogram").val(parseInt($("#stone").val(), 10) * 6.35029);
+        $("#gram").val(parseInt($("#stone").val(), 10) * 6350.29);
+        $("#milligram").val(parseInt($("#stone").val(), 10) * 6.35 * Math.pow(10, 6));
+        $("#microgram").val(parseInt($("#stone").val(), 10) * 6.35 * Math.pow(10, 9));
+    });
+    $('#pound').keyup(function() { 
+        $("#imperial_ton").val(parseInt($("#pound").val(), 10) * 0.000446429);
+        $("#us_ton").val(parseInt($("#pound").val(), 10) * 0.0005);
+        $("#stone").val(parseInt($("#pound").val(), 10) * 0.0714286);
+        $("#ounce").val(parseInt($("#pound").val(), 10) * 16);
+        $("#metric_ton").val(parseInt($("#pound").val(), 10) * 0.000453592);
+        $("#kilogram").val(parseInt($("#pound").val(), 10) * 0.453592);
+        $("#gram").val(parseInt($("#pound").val(), 10) * 453.592);
+        $("#milligram").val(parseInt($("#pound").val(), 10) * 453592);
+        $("#microgram").val(parseInt($("#pound").val(), 10) * 4.536 * Math.pow(10, 8));
+    });
+    $('#ounce').keyup(function() { 
+        $("#imperial_ton").val(parseInt($("#ounce").val(), 10) * 2.7902 / Math.pow(10, 5));
+        $("#us_ton").val(parseInt($("#ounce").val(), 10) * 3.125 / Math.pow(10, 5));
+        $("#stone").val(parseInt($("#ounce").val(), 10) * 0.00446429);
+        $("#pound").val(parseInt($("#ounce").val(), 10) * 0.0625);
+        $("#metric_ton").val(parseInt($("#ounce").val(), 10) * 2.835 / Math.pow(10, 5));
+        $("#kilogram").val(parseInt($("#ounce").val(), 10) * 0.0283495);
+        $("#gram").val(parseInt($("#ounce").val(), 10) * 28.3495);
+        $("#milligram").val(parseInt($("#ounce").val(), 10) * 28349.5);
+        $("#microgram").val(parseInt($("#ounce").val(), 10) * 2.835 * Math.pow(10, 7));
+    });
+    $('#metric_ton').keyup(function() { 
+        $("#imperial_ton").val(parseInt($("#metric_ton").val(), 10) * 0.984207);
+        $("#us_ton").val(parseInt($("#metric_ton").val(), 10) * 1.10231);
+        $("#stone").val(parseInt($("#metric_ton").val(), 10) * 157.473);
+        $("#pound").val(parseInt($("#metric_ton").val(), 10) * 2204.62);
+        $("#ounce").val(parseInt($("#metric_ton").val(), 10) * 35274);
+        $("#kilogram").val(parseInt($("#metric_ton").val(), 10) * 1000);
+        $("#gram").val(parseInt($("#metric_ton").val(), 10) * 1 * Math.pow(10, 6));
+        $("#milligram").val(parseInt($("#metric_ton").val(), 10) * 1 * Math.pow(10, 9));
+        $("#microgram").val(parseInt($("#metric_ton").val(), 10) * 1 * Math.pow(10, 12));
+    });
+    $('#kilogram').keyup(function() { 
+        $("#imperial_ton").val(parseInt($("#kilogram").val(), 10) * 0.000984207);
+        $("#us_ton").val(parseInt($("#kilogram").val(), 10) * 0.00110231);
+        $("#stone").val(parseInt($("#kilogram").val(), 10) * 0.157473);
+        $("#pound").val(parseInt($("#kilogram").val(), 10) * 2.20462);
+        $("#ounce").val(parseInt($("#kilogram").val(), 10) * 35.274);
+        $("#metric_ton").val(parseInt($("#kilogram").val(), 10) * 0.001);
+        $("#gram").val(parseInt($("#kilogram").val(), 10) * 1000);
+        $("#milligram").val(parseInt($("#kilogram").val(), 10) * 1 * Math.pow(10, 6));
+        $("#microgram").val(parseInt($("#kilogram").val(), 10) * 1 * Math.pow(10, 9));
+    });
+    $('#gram').keyup(function() { 
+        $("#imperial_ton").val(parseInt($("#gram").val(), 10) * 9.8421 / Math.pow(10, 7));
+        $("#us_ton").val(parseInt($("#gram").val(), 10) * 1.1023 / Math.pow(10, 6));
+        $("#stone").val(parseInt($("#gram").val(), 10) * 0.000157473);
+        $("#pound").val(parseInt($("#gram").val(), 10) * 0.00220462);
+        $("#ounce").val(parseInt($("#gram").val(), 10) * 0.035274);
+        $("#metric_ton").val(parseInt($("#gram").val(), 10) * 1 / Math.pow(10, 6));
+        $("#kilogram").val(parseInt($("#gram").val(), 10) * 0.001);
+        $("#milligram").val(parseInt($("#gram").val(), 10) * 1000);
+        $("#microgram").val(parseInt($("#gram").val(), 10) * 1.609 * Math.pow(10, 6));
+    });
+    $('#milligram').keyup(function() { 
+        $("#imperial_ton").val(parseInt($("#milligram").val(), 10) * 9.8421 / Math.pow(10, 10));
+        $("#us_ton").val(parseInt($("#milligram").val(), 10) * 1.1023 / Math.pow(10, 9));
+        $("#stone").val(parseInt($("#milligram").val(), 10) * 1.5747 / Math.pow(10, 7));
+        $("#pound").val(parseInt($("#milligram").val(), 10) * 2.2046 / Math.pow(10, 6));
+        $("#ounce").val(parseInt($("#milligram").val(), 10) * 3.5274 / Math.pow(10, 5));
+        $("#metric_ton").val(parseInt($("#milligram").val(), 10) * 1 / Math.pow(10, 9));
+        $("#kilogram").val(parseInt($("#milligram").val(), 10) * 1 / Math.pow(10, 6));
+        $("#gram").val(parseInt($("#milligram").val(), 10) * 0.001);
+        $("#microgram").val(parseInt($("#milligram").val(), 10) * 1000);
+    });
+    $('#microgram').keyup(function() { 
+        $("#imperial_ton").val(parseInt($("#microgram").val(), 10) * 9.8421 / Math.pow(10, 13));
+        $("#us_ton").val(parseInt($("#microgram").val(), 10) * 1.1023 / Math.pow(10, 12));
+        $("#stone").val(parseInt($("#microgram").val(), 10) * 1.5747 / Math.pow(10, 10));
+        $("#pound").val(parseInt($("#microgram").val(), 10) * 2.2046 / Math.pow(10, 9));
+        $("#ounce").val(parseInt($("#microgram").val(), 10) * 3.5274 / Math.pow(10, 8));
+        $("#metric_ton").val(parseInt($("#microgram").val(), 10) * 1 / Math.pow(10, 12));
+        $("#kilogram").val(parseInt($("#microgram").val(), 10) * 1 / Math.pow(10, 9));
+        $("#gram").val(parseInt($("#microgram").val(), 10) * 1 * Math.pow(10, 6));
+        $("#milligram").val(parseInt($("#microgram").val(), 10) * 0.001);
+    });
 };
 $(document).ready(mass);
 

@@ -58,7 +58,7 @@ table {
   margin: 0px 1em;
   border-style: solid;
 }
-#table-move_length, #table-move_mass {
+#table-move_length {
   margin-bottom: 47px;
 }
 td, th, tr {
