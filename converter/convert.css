@@ -42,7 +42,7 @@ input {
   transition: all 500ms ease;
 }
 input:focus {
-  border-color: #ABCDEF;
+  border-color: #000080;
   -webkit-transition: all 500ms ease;
   -moz-transition: all 500ms ease;
   -o-transition: all 500ms ease;
