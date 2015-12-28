@@ -9,7 +9,7 @@ $(document).ready(basic);
 
 var temperature = function() {
     $("#fahrenheit").keyup(function() {
-        $("#celsius").val(parseInt($("#fahrenheit").val().toFixed(2) - 32, 10) * (5/9));
+        $("#celsius").val(parseInt($("#fahrenheit").val() - 32, 10) * (5/9));
         $("#kelvin").val(parseInt($("#fahrenheit").val() - 32, 10) / 1.8000 + 273.15);
     });
     $("#celsius").keyup(function() {
