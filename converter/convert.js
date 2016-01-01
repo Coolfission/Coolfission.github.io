@@ -1,4 +1,3 @@
-
 var basic = function() {
     $("input").val("0");
 
