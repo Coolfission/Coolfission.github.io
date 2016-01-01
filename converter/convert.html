@@ -1,24 +1,26 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="shortcut icon" href="data:image/x-icon;base64,R0lGODlhEAAQAPECAFFUV////wAAAAAAACH5BAkyAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAEBAQEBAAAAAAEBAAAAAAABAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJMgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" />
-	<title>Amit Kulkarni</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,R0lGODlhEAAQAPECAFFUV////wAAAAAAACH5BAkyAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAEBAQEBAAAAAAEBAAAAAAABAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJMgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" />
+  <title>Amit Kulkarni</title>
 
-	<link rel="stylesheet" type="text/css" href="convert.css">
+  <link rel="stylesheet" type="text/css" href="convert.css">
 
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script src="convert.js"></script>
 </head>
 
 <body>
+<br/><br/>
 <div id="title" style="text-align: center;">
   <span>Converter</span>
 </div>
 <br/><br/>
 <fieldset id="temperature">
 <legend>Temperature</legend>
-<table border="1">
+<table>
 <thead></thead>
 <tbody>
   <td>
@@ -50,7 +52,7 @@
 <!--Length-->
 <fieldset id="length">
 <legend>Length</legend>
-<table id="table-move_length" border="1">
+<table id="table-move_length">
 <thead></thead>
 <caption>
   <strong>US units</strong>
@@ -91,7 +93,7 @@
 </tbody>
 </table>
 
-<table border="1">
+<table>
 <thead></thead>
 <caption>
   <strong>Metric units</strong>
@@ -143,7 +145,7 @@
 <!--Mass-->
 <fieldset id="mass">
 <legend>Mass</legend>
-<table border="1">
+<table>
 <thead></thead>
 <caption>
   <strong>US units</strong>
@@ -152,12 +154,6 @@
   <td>
     <th>Value</th>
   </td>
-  <tr>
-    <th>Imperial Ton</th>
-    <td>
-      <input id="imperial_ton"></input>
-    </td>
-  </tr>
   <tr>
     <th>US Ton</th>
     <td>
@@ -184,7 +180,22 @@
 </tbody>
 </table>
 
-<table border="1">
+<table>
+<thead></thead>
+<caption>
+  <strong>Imperial units</strong>
+</caption>
+<tbody>
+  <tr>
+    <th>Imperial Ton</th>
+    <td>
+      <input id="imperial_ton"></input>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+<table>
 <thead></thead>
 <caption>
   <strong>Metric units</strong>
@@ -227,45 +238,659 @@
 </fieldset>
 <br><br>
 
-<!--Volume-->
-<fieldset id="volume">
-<legend>Volume</legend>  
-</fieldset>
-<br><br>
-
 <!--Area-->
 <fieldset id="area">
 <legend>Area</legend>  
+
+<table>
+<thead></thead>
+<caption>
+<strong>US units</strong>
+</caption>
+<tbody>
+  <td>
+    <th>Value</th>
+  </td>
+  <tr>
+    <th>Square Mile</th>
+    <td>
+      <input id="square-mile"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Square Yard</th>
+    <td>
+      <input id="square-yard"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Square Foot</th>
+    <td>
+      <input id="square-foot"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Square Inch</th>
+    <td>
+      <input id="square-inch"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Acre</th>
+    <td>
+      <input id="acre"></input>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+<table>
+<thead></thead>
+<caption>
+<strong>Metric units</strong>
+</caption>
+<tbody>
+   <td>
+    <th>Value</th>
+  </td>
+  <tr>
+    <th>Square Kilometer</th>
+    <td>
+      <input id="square-kilometer"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Square Meter</th>
+    <td>
+      <input id="square-meter"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Hectare</th>
+    <td>
+      <input id="hectare"></input>
+    </td>
+  </tr>
+</tbody>
+</table>
 </fieldset>
 <br><br>
 
-<!--Spped-->
+<!--Volume-->
+<fieldset id="volume">
+<legend>Volume</legend>  
+<table>
+<thead></thead>
+<caption>
+<strong>US units</strong>
+</caption>
+<tbody>
+  <td>
+    <th>Value</th>
+  </td>
+  <tr>
+    <th>US Liquid Gallon</th>
+    <td>
+      <input id="usl-g"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>US Liquid Quart</th>
+    <td>
+      <input id="usl-q"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>US Liquid Pint</th>
+    <td>
+      <input id="usl-p"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>US Legal Cup</th>
+    <td>
+      <input id="usl-c"></input>
+    </td>
+  </tr>
+ <tr>
+    <th>US Fluid Ounce</th>
+    <td>
+      <input id="us-fo"></input>
+    </td>
+  </tr>
+ <tr>
+    <th>US Tablespoon</th>
+    <td>
+      <input id="us-tb"</input>
+    </td>
+  </tr>
+ <tr>
+    <th>US Teaspoon</th>
+    <td>
+      <input id="us-ts"</input>
+    </td>
+  </tr>
+ <tr>
+    <th>Cubic Foot</th>
+    <td>
+      <input id="cubic-foot"</input>
+    </td>
+  </tr>
+ <tr>
+    <th>Cubic Inch</th>
+    <td>
+      <input id="cubic-inch"</input>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+<table>
+<thead></thead>
+<caption>
+  <strong>Imperial units</strong>
+</caption>l
+<tbody>
+  <tr>
+    <th>Imperial Gallon</th>
+    <td>
+      <input id="im-g"></input>
+    </td>
+  </tr>
+<tr>
+    <th>Imperial Quart</th>
+    <td>
+      <input id="im-q"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Imperial Pint</th>
+    <td>
+      <input id="im-p"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Imperial Cup</th>
+    <td>
+      <input id="im-c"></input>
+    </td>
+  </tr>
+ <tr>
+    <th>Imperial Fluid Ounce</th>
+    <td>
+      <input id="im-fo"></input>
+    </td>
+  </tr>
+ <tr>
+    <th>Imperial Tablespoon</th>
+    <td>
+      <input id="im-tb"</input>
+    </td>
+  </tr>
+ <tr>
+    <th>Imperial Teaspoon</th>
+    <td>
+      <input id="im-ts"</input>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+<table>
+<thead></thead>
+<caption>
+<strong>Metric units</strong>
+</caption>
+<tbody>
+  <td>
+    <th>Value</th>
+  </td>
+  <tr>
+    <th>Kiloliter</th>
+    <td>
+      <input id="kiloliter"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Liter</th>
+    <td>
+      <input id="liter"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Milliliter</th>
+    <td>
+      <input id="milliliter"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Cubic Meter</th>
+    <td>
+      <input id="cubic-meter"></input>
+    </td>
+  </tr>
+</tbody>
+</table>
+</fieldset>
+<br><br>
+
+<!--Speed-->
 <fieldset id="speed">
 <legend>Speed</legend>  
+<table>
+<thead></thead>
+<caption>
+<strong>US units</strong>
+</caption>
+<tbody>
+  <td>
+    <th>Value</th>
+  </td>
+  <tr>
+    <th>Miles per hour</th>
+    <td>
+      <input id="mi-h"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Foot per second</th>
+    <td>
+      <input id="ft-s"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Knot</th>
+    <td>
+      <input id="knot"></input>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+<table>
+<caption>
+   <strong>Metric Units</strong>
+</caption>
+<tbody>
+ <tr>
+    <th>Kilometers per hour</th>
+    <td>
+      <input id="km-h"></input>
+    </td>
+  </tr>
+ <tr>
+    <th>Meters per second</th>
+    <td>
+      <input id="m-s"></input>
+    </td>
+  </tr>
+</tbody>
+</table>
 </fieldset>
 <br><br>
 
 <!--Time-->
 <fieldset id="time">
 <legend>Time</legend>  
+<table>
+<thead></thead>
+<tbody>
+  <td>
+    <th>Value</th>
+  </td>
+  <tr>
+    <th>Nanosecond</th>
+    <td>
+      <input id="nanosecond"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Microsecond</th>
+    <td>
+      <input id="microsecond"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Millisecond</th>
+    <td>
+      <input id="millisecond"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Second</th>
+    <td>
+      <input id="second"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Minute</th>
+    <td>
+      <input id="minute"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Hour</th>
+    <td>
+      <input id="hour"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Day</th>
+    <td>
+      <input id="day"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Week</th>
+    <td>
+      <input id="week"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Month</th>
+    <td>
+      <input id="month"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Year</th>
+    <td>
+      <input id="year"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Decade</th>
+    <td>
+      <input id="decade"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Century</th>
+    <td>
+      <input id="century"></input>
+   </td>
+  </tr>
+</tbody>
+</table>
 </fieldset>
 <br><br>
 
 <!--Pressure-->
 <fieldset id="pressure">
 <legend>Pressure</legend>  
+<table>
+<thead></thead>
+<tbody>
+  <td>
+    <th>Value</th>
+  </td>
+  <tr>
+    <th>Atmosphere</th>
+    <td>
+      <input id="atmosphere"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Bar</th>
+    <td>
+      <input id="bar"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Pascal</th>
+    <td>
+      <input id="millisecond"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Pound-force per square inch</th>
+    <td>
+      <input id="pf-sqin"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Torr</th>
+    <td>
+      <input id="tore"></input>
+   </td>
+  </tr>
+</tbody>
+</table>
 </fieldset>
 <br><br>
 
 <!--Energy-->
 <fieldset id="energy">
 <legend>Energy</legend>  
+<table>
+<thead></thead>
+<tbody>
+  <td>
+    <th>Value</th>
+  </td>
+  <tr>
+    <th>Kilojoule</th>
+    <td>
+      <input id="kilojoule"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Joule</th>
+    <td>
+      <input id="joule"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Kilocalorie</th>
+    <td>
+      <input id="kilocalorie"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Gram Calorie</th>
+    <td>
+      <input id="gram-calorie"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Kilowatt Hour</th>
+    <td>
+      <input id="kilowatt-hour"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Watt Hour</th>
+    <td>
+      <input id="watt-hour"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Electronvolt</th>
+    <td>
+      <input id="electronvolt"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>US Therm</th>
+    <td>
+      <input id="us-therm"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>British Therm Unit</th>
+    <td>
+      <input id="b-tu"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Foot-pound</th>
+    <td>
+      <input id="foot-pound"></input>
+    </td>
+  </tr>
+</tbody>
+</table>
 </fieldset>
 <br><br>
 
 <!--Digital Storage-->
 <fieldset id="digital_storage">
 <legend>Digital Storage</legend>  
+<table>
+<thead></thead>
+<caption>
+   <strong>Bits</strong>
+</caption>
+<tbody>
+  <td>
+    <th>Value</th>
+  </td>
+  <tr>
+    <th>Bit</th>
+    <td>
+      <input id="bit"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Kilobit</th>
+    <td>
+      <input id="kilobit"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Kibibit</th>
+    <td>
+      <input id="kibibit"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Megabit</th>
+    <td>
+      <input id="megibit"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Mebibit</th>
+    <td>
+      <input id="mebibit"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Gigabit</th>
+    <td>
+      <input id="gigabit"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Gibibit</th>
+    <td>
+      <input id="gibibit"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Terabit</th>
+    <td>
+      <input id="terabit"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Tebibit</th>
+    <td>
+      <input id="tebibit"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Petabit</th>
+    <td>
+      <input id="petabit"></input>
+    </td>
+  </tr>
+ <tr>
+    <th>Pebibit</th>
+    <td>
+      <input id="pebibit"></input>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+<table>
+<thead></thead>
+<caption>
+   <strong>Bytes</strong>
+</caption>
+<tbody>
+  <td>
+    <th>Value</th>
+  </td>
+  <tr>
+    <th>Byte</th>
+    <td>
+      <input id="byte"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Kilobyte</th>
+    <td>
+      <input id="kilobyte"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Kibibyte</th>
+    <td>
+      <input id="kibibyte"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Megabyte</th>
+    <td>
+      <input id="megibyte"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Mebibyte</th>
+    <td>
+      <input id="mebibyte"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Gigabyte</th>
+    <td>
+      <input id="gigabyte"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Gibibyte</th>
+    <td>
+      <input id="gibibyte"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Terabyte</th>
+    <td>
+      <input id="terabyte"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Tebibyte</th>
+    <td>
+      <input id="tebibyte"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Petabyte</th>
+    <td>
+      <input id="petabyte"></input>
+    </td>
+  </tr>
+ <tr>
+    <th>Pebibyte</th>
+    <td>
+      <input id="pebibyte"></input>
+    </td>
+  </tr>
+</tbody>
+</table>
 </fieldset>
 <br><br>
 
@@ -278,7 +903,7 @@
 <!--Fuel Economy-->
 <fieldset id="fuel_economy">
 <legend>Fuel Economy</legend>  
-<table border="1">
+<table>
 <thead></thead>
 <caption>
   <strong>US units</strong>
@@ -337,6 +962,12 @@
 <!--Data Transfer Rate-->
 <fieldset id="data_transfer_rate">
 <legend>Data Transfer Rate</legend>  
+</fieldset>
+<br><br>
+
+<!--Currency-->
+<fieldset id="currency">
+<legend>Currency</legend>  
 </fieldset>
 <br><br>
 
