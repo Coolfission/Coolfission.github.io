@@ -68,9 +68,13 @@ td, th, tr {
   width: 100%;
   bottom: 0;
   height: 30px;
+  -webkit-user-select: none;         
+  -moz-user-select: none; 
+  -ms-user-select: none;    
 }
 #bottom * {
   margin-top: 5px;  
+  font-size: 17px;
 }
 #reset {
   right: 1%;
@@ -82,16 +86,21 @@ td, th, tr {
 }
 #bottom em {
   left: 1%;
-  position: absolute; 
-  font-size: 10px;  
-}
-#bottom a {
   font-size: 15px;
+  position: absolute; 
+  margin-top: 6.5px;
+}
+#bottom span {
+  color: #fff;
+}
+#bottom em a { 
+  text-decoration: none;
+  color: #FFA500;
 }
 #bottom a:nth-child(2) {
   cursor: pointer;
   float: right;
-  margin-right: 100px;
+  margin-right: 80px;
 }
 #bottom a:nth-child(3) {
   cursor: pointer;
