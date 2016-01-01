@@ -10,16 +10,16 @@ $(document).ready(basic);
 
 var temperature = function() {
     $("#fahrenheit").keyup(function() {
-        $("#celsius").val(parseInt($("#fahrenheit").val() - 32, 10) * (5/9));
-        $("#kelvin").val(parseInt($("#fahrenheit").val() - 32, 10) / 1.8000 + 273.15);
+        $("#celsius").val(parseInt($("#fahrenheit").val() - 32, 10) * (5/9) + "°");
+        $("#kelvin").val(parseInt($("#fahrenheit").val() - 32, 10) / 1.8000 + 273.15 + "°");
     });
     $("#celsius").keyup(function() {
-        $("#fahrenheit").val(parseInt($("#celsius").val(), 10) * 9/5 + 32);
-        $("#kelvin").val(parseInt($("#celsius").val(), 10) + 273.15);
+        $("#fahrenheit").val(parseInt($("#celsius").val(), 10) * 9/5 + 32 + "°");
+        $("#kelvin").val(parseInt($("#celsius").val(), 10) + 273.15 + "°");
     });
     $("#kelvin").keyup(function() {
-        $("#fahrenheit").val(parseInt($("#kelvin").val(), 10) * 9/5 - 459.67);
-        $("#celsius").val(parseInt($("#kelvin").val(), 10) - 273.15);
+        $("#fahrenheit").val(parseInt($("#kelvin").val(), 10) * 9/5 - 459.67 + "°");
+        $("#celsius").val(parseInt($("#kelvin").val(), 10) - 273.15 + "°");
     });
 };
 $(document).ready(temperature);
