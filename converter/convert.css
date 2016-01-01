@@ -73,14 +73,15 @@ td, th, tr {
   position: absolute; 
   right: 1%;
   margin-top: 5px;
-  font-size: 13px;
+  font-size: 14vm;
   cursor: pointer;
   border-radius: 10px;
   background-color: #888;
   padding: 0px 10px;
 }
-#bottom p {
+#bottom em {
   position: absolute;
   left: 1%;
   margin-top: 5px;
+  font-size: 10vm;  
 }
