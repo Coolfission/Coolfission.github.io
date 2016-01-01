@@ -58,9 +58,6 @@ table {
 table, td, th, tr {
   border: 1px solid #000;
 }
-#table-move_length {
-  margin-bottom: 47px;
-}
 td, th, tr {
   padding: 10px;
 }
