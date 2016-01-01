@@ -61,15 +61,26 @@ table, td, th, tr {
 td, th, tr {
   padding: 10px;
 }
-#reset {
+#bottom {
   position: fixed;
-  color: white;
-  text-align: center;
-  font-size: 10px;
-  padding: 2%;
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  bottom: 0;
+  height: 30px;
+}
+#reset {
+  position: absolute; 
+  right: 1%;
+  margin-top: 5px;
+  font-size: 13px;
   cursor: pointer;
   border-radius: 10px;
-  background: rgba(0,0,0,0.7);
-  right: 1%;
-  bottom: 1%;
+  background-color: #888;
+  padding: 0px 10px;
+}
+#bottom p {
+  position: absolute;
+  left: 1%;
+  margin-top: 5px;
 }
