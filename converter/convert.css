@@ -6,6 +6,7 @@ body {
   padding: 0;
   font-family: "Source Sans Pro", arial;
   background-color: #333;
+  overflow-x: hidden;
 }
 span {
   font-size: 5em;
