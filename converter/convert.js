@@ -4,13 +4,22 @@ var basic = function() {
     $("#reset").click(function() {
       $("input").val("0");
     });
-    document.onkeydown = function (e) {
+    document.onkeydown = function(e) {
         if(e.which == 188){
             return false;
         }
     } 
 };
 $(document).ready(basic);
+
+var index = function() {
+    $(".move").on("click", function(e) {
+    $("body, html").animate({ 
+        scrollTop: $($(this).attr('href')).offset().top 
+    }, 100);
+});
+}
+$(document).ready(index);
 
 var temperature = function() {
     $("#fahrenheit").keyup(function() {
@@ -439,6 +448,166 @@ var volume = function() {
         $("#milliliter").val(parseFloat($("#cubic-foot").val(), 10) * 28316.8);
         $("#cubic-meter").val(parseFloat($("#cubic-foot").val(), 10) * 0.0283168);
     });
+    $('#cubic-inch').keyup(function() { 
+        $("#us-liquid-gallon").val(parseFloat($("#cubic-inch").val(), 10) * 0.004329);
+        $("#us-liquid-quart").val(parseFloat($("#cubic-inch").val(), 10) * 0.017316);
+        $("#us-liquid-pint").val(parseFloat($("#cubic-inch").val(), 10) * 0.034632);
+        $("#us-legal-cup").val(parseFloat($("#cubic-inch").val(), 10) * 0.0682794);
+        $("#us-fluid-ounce").val(parseFloat($("#cubic-inch").val(), 10) * 0.554113);
+        $("#us-tablespoon").val(parseFloat($("#cubic-inch").val(), 10) * 1.10823);
+        $("#us-teaspoon").val(parseFloat($("#cubic-inch").val(), 10) * 3.32468);
+        $("#cubic-foot").val(parseFloat($("#cubic-inch").val(), 10) * 0.000578704);
+        $("#imperial-gallon").val(parseFloat($("#cubic-inch").val(), 10) * 0.00360465);
+        $("#imperial-quart").val(parseFloat($("#cubic-inch").val(), 10) * 0.0144186);
+        $("#imperial-pint").val(parseFloat($("#cubic-inch").val(), 10) * 0.0288372);
+        $("#imperial-cup").val(parseFloat($("#cubic-inch").val(), 10) * 0.0576744);
+        $("#imperial-fluid-ounce").val(parseFloat($("#cubic-inch").val(), 10) * 0.576744);
+        $("#imperial-tablespoon").val(parseFloat($("#cubic-inch").val(), 10) * 0.92279);
+        $("#imperial-teaspoon").val(parseFloat($("#cubic-inch").val(), 10) * 2.76837);
+        $("#liter").val(parseFloat($("#cubic-inch").val(), 10) * 0.0163871);
+        $("#milliliter").val(parseFloat($("#cubic-inch").val(), 10) * 16.3871);
+        $("#cubic-meter").val(parseFloat($("#cubic-inch").val(), 10) * 1.6387 / Math.pow(10,5));
+    });
+    $('#imperial-gallon').keyup(function() { 
+        $("#us-liquid-gallon").val(parseFloat($("#imperial-gallon").val(), 10) * 1.20095);
+        $("#us-liquid-quart").val(parseFloat($("#imperial-gallon").val(), 10) * 4.8038);
+        $("#us-liquid-pint").val(parseFloat($("#imperial-gallon").val(), 10) * 9.6076);
+        $("#us-legal-cup").val(parseFloat($("#imperial-gallon").val(), 10) * 18.942);
+        $("#us-fluid-ounce").val(parseFloat($("#imperial-gallon").val(), 10) * 153.722);
+        $("#us-tablespoon").val(parseFloat($("#imperial-gallon").val(), 10) * 307.443);
+        $("#us-teaspoon").val(parseFloat($("#imperial-gallon").val(), 10) * 922.33);
+        $("#cubic-foot").val(parseFloat($("#imperial-gallon").val(), 10) * 0.160544);
+        $("#cubic-inch").val(parseFloat($("#imperial-gallon").val(), 10) * 277.419);
+        $("#imperial-quart").val(parseFloat($("#imperial-gallon").val(), 10) * 4);
+        $("#imperial-pint").val(parseFloat($("#imperial-gallon").val(), 10) * 8);
+        $("#imperial-cup").val(parseFloat($("#imperial-gallon").val(), 10) * 16);
+        $("#imperial-fluid-ounce").val(parseFloat($("#imperial-gallon").val(), 10) * 160);
+        $("#imperial-tablespoon").val(parseFloat($("#imperial-gallon").val(), 10) * 256);
+        $("#imperial-teaspoon").val(parseFloat($("#imperial-gallon").val(), 10) * 768);
+        $("#liter").val(parseFloat($("#imperial-gallon").val(), 10) * 4.54609);
+        $("#milliliter").val(parseFloat($("#imperial-gallon").val(), 10) * 4546.09);
+        $("#cubic-meter").val(parseFloat($("#imperial-gallon").val(), 10) * 0.00454609);
+    });
+    $('#imperial-quart').keyup(function() { 
+        $("#us-liquid-gallon").val(parseFloat($("#imperial-quart").val(), 10) * 0.300237);
+        $("#us-liquid-quart").val(parseFloat($("#imperial-quart").val(), 10) * 1.20095);
+        $("#us-liquid-pint").val(parseFloat($("#imperial-quart").val(), 10) * 2.4019);
+        $("#us-legal-cup").val(parseFloat($("#imperial-quart").val(), 10) * 4.73551);
+        $("#us-fluid-ounce").val(parseFloat($("#imperial-quart").val(), 10) * 38.4304);
+        $("#us-tablespoon").val(parseFloat($("#imperial-quart").val(), 10) * 76.8608);
+        $("#us-teaspoon").val(parseFloat($("#imperial-quart").val(), 10) * 230.582);
+        $("#cubic-foot").val(parseFloat($("#imperial-quart").val(), 10) * 0.0401359);
+        $("#cubic-inch").val(parseFloat($("#imperial-quart").val(), 10) * 69.3549);
+        $("#imperial-gallon").val(parseFloat($("#imperial-quart").val(), 10) * 0.25);
+        $("#imperial-pint").val(parseFloat($("#imperial-quart").val(), 10) * 2);
+        $("#imperial-cup").val(parseFloat($("#imperial-quart").val(), 10) * 4);
+        $("#imperial-fluid-ounce").val(parseFloat($("#imperial-quart").val(), 10) * 40);
+        $("#imperial-tablespoon").val(parseFloat($("#imperial-quart").val(), 10) * 64);
+        $("#imperial-teaspoon").val(parseFloat($("#imperial-quart").val(), 10) * 192);
+        $("#liter").val(parseFloat($("#imperial-quart").val(), 10) * 1.13652);
+        $("#milliliter").val(parseFloat($("#imperial-quart").val(), 10) * 1136.52);
+        $("#cubic-meter").val(parseFloat($("#imperial-quart").val(), 10) * 0.00113652);
+    });
+    $('#imperial-pint').keyup(function() { 
+        $("#us-liquid-gallon").val(parseFloat($("#imperial-pint").val(), 10) * 0.150119);
+        $("#us-liquid-quart").val(parseFloat($("#imperial-pint").val(), 10) * 0.600475);
+        $("#us-liquid-pint").val(parseFloat($("#imperial-pint").val(), 10) * 2.4019);
+        $("#us-legal-cup").val(parseFloat($("#imperial-pint").val(), 10) * 2.36776);
+        $("#us-fluid-ounce").val(parseFloat($("#imperial-pint").val(), 10) * 19.2152);
+        $("#us-tablespoon").val(parseFloat($("#imperial-pint").val(), 10) * 38.4304);
+        $("#us-teaspoon").val(parseFloat($("#imperial-pint").val(), 10) * 115.291);
+        $("#cubic-foot").val(parseFloat($("#imperial-pint").val(), 10) * 0.020068);
+        $("#cubic-inch").val(parseFloat($("#imperial-pint").val(), 10) * 34.6774);
+        $("#imperial-gallon").val(parseFloat($("#imperial-pint").val(), 10) * 0.125);
+        $("#imperial-quart").val(parseFloat($("#imperial-pint").val(), 10) * 0.5);
+        $("#imperial-cup").val(parseFloat($("#imperial-pint").val(), 10) * 2);
+        $("#imperial-fluid-ounce").val(parseFloat($("#imperial-pint").val(), 10) * 20);
+        $("#imperial-tablespoon").val(parseFloat($("#imperial-pint").val(), 10) * 32);
+        $("#imperial-teaspoon").val(parseFloat($("#imperial-pint").val(), 10) * 96);
+        $("#liter").val(parseFloat($("#imperial-pint").val(), 10) * 0.568261);
+        $("#milliliter").val(parseFloat($("#imperial-pint").val(), 10) * 568.261);
+        $("#cubic-meter").val(parseFloat($("#imperial-pint").val(), 10) * 0.000568261);
+    });
+    $('#imperial-cup').keyup(function() { 
+        $("#us-liquid-gallon").val(parseFloat($("#imperial-cup").val(), 10) * 0.0750594);
+        $("#us-liquid-quart").val(parseFloat($("#imperial-cup").val(), 10) * 0.300237);
+        $("#us-liquid-pint").val(parseFloat($("#imperial-cup").val(), 10) * 0.600475);
+        $("#us-legal-cup").val(parseFloat($("#imperial-cup").val(), 10) * 1.18388);
+        $("#us-fluid-ounce").val(parseFloat($("#imperial-cup").val(), 10) * 9.6076);
+        $("#us-tablespoon").val(parseFloat($("#imperial-cup").val(), 10) * 19.2152);
+        $("#us-teaspoon").val(parseFloat($("#imperial-cup").val(), 10) * 57.6456);
+        $("#cubic-foot").val(parseFloat($("#imperial-cup").val(), 10) * 0.010034);
+        $("#cubic-inch").val(parseFloat($("#imperial-cup").val(), 10) * 17.3387);
+        $("#imperial-gallon").val(parseFloat($("#imperial-cup").val(), 10) * 0.0625);
+        $("#imperial-quart").val(parseFloat($("#imperial-cup").val(), 10) * 0.25);
+        $("#imperial-pint").val(parseFloat($("#imperial-cup").val(), 10) * 0.5);
+        $("#imperial-fluid-ounce").val(parseFloat($("#imperial-cup").val(), 10) * 10);
+        $("#imperial-tablespoon").val(parseFloat($("#imperial-cup").val(), 10) * 16);
+        $("#imperial-teaspoon").val(parseFloat($("#imperial-cup").val(), 10) * 48);
+        $("#liter").val(parseFloat($("#imperial-cup").val(), 10) * 0.284131);
+        $("#milliliter").val(parseFloat($("#imperial-cup").val(), 10) * 284.131);
+        $("#cubic-meter").val(parseFloat($("#imperial-cup").val(), 10) * 0.000284131);
+    });
+    $('#imperial-fluid-ounce').keyup(function() { 
+        $("#us-liquid-gallon").val(parseFloat($("#imperial-fluid-ounce").val(), 10) * 0.00750594);
+        $("#us-liquid-quart").val(parseFloat($("#imperial-fluid-ounce").val(), 10) * 0.0300237);
+        $("#us-liquid-pint").val(parseFloat($("#imperial-fluid-ounce").val(), 10) * 0.0600475);
+        $("#us-legal-cup").val(parseFloat($("#imperial-fluid-ounce").val(), 10) * 0.118388);
+        $("#us-fluid-ounce").val(parseFloat($("#imperial-fluid-ounce").val(), 10) * 0.96076);
+        $("#us-tablespoon").val(parseFloat($("#imperial-fluid-ounce").val(), 10) * 1.92152);
+        $("#us-teaspoon").val(parseFloat($("#imperial-fluid-ounce").val(), 10) * 5.76456);
+        $("#cubic-foot").val(parseFloat($("#imperial-fluid-ounce").val(), 10) * 0.0010034);
+        $("#cubic-inch").val(parseFloat($("#imperial-fluid-ounce").val(), 10) * 1.73387);
+        $("#imperial-gallon").val(parseFloat($("#imperial-fluid-ounce").val(), 10) * 0.00625);
+        $("#imperial-quart").val(parseFloat($("#imperial-fluid-ounce").val(), 10) * 0.025);
+        $("#imperial-pint").val(parseFloat($("#imperial-fluid-ounce").val(), 10) * 0.05);
+        $("#imperial-cup").val(parseFloat($("#imperial-fluid-ounce").val(), 10) * 0.1);
+        $("#imperial-tablespoon").val(parseFloat($("#imperial-fluid-ounce").val(), 10) * 1.6);
+        $("#imperial-teaspoon").val(parseFloat($("#imperial-cfluid-ounce").val(), 10) * 4.8);
+        $("#liter").val(parseFloat($("#imperial-fluid-ounce").val(), 10) * 0.0284131);
+        $("#milliliter").val(parseFloat($("#imperial-fluid-ounce").val(), 10) * 28.4131);
+        $("#cubic-meter").val(parseFloat($("#imperial-fluid-ounce").val(), 10) * 2.8413 / Math.pow(10,5));
+    });
+    $('#imperial-tablespoon').keyup(function() { 
+        $("#us-liquid-gallon").val(parseFloat($("#imperial-tablespoon").val(), 10) * 0.00469121);
+        $("#us-liquid-quart").val(parseFloat($("#imperial-tablespoon").val(), 10) * 0.0187649);
+        $("#us-liquid-pint").val(parseFloat($("#imperial-tablespoon").val(), 10) * 0.0375297);
+        $("#us-legal-cup").val(parseFloat($("#imperial-tablespoon").val(), 10) * 0.0739924);
+        $("#us-fluid-ounce").val(parseFloat($("#imperial-tablespoon").val(), 10) * 0.600475);
+        $("#us-tablespoon").val(parseFloat($("#imperial-tablespoon").val(), 10) * 1.20095);
+        $("#us-teaspoon").val(parseFloat($("#imperial-tablespoon").val(), 10) * 3.60285);
+        $("#cubic-foot").val(parseFloat($("#imperial-tablespoon").val(), 10) * 0.000627124);
+        $("#cubic-inch").val(parseFloat($("#imperial-tablespoon").val(), 10) * 1.08367);
+        $("#imperial-gallon").val(parseFloat($("#imperial-tablespoon").val(), 10) * 0.00390625);
+        $("#imperial-quart").val(parseFloat($("#imperial-tablespoon").val(), 10) * 0.015625);
+        $("#imperial-pint").val(parseFloat($("#imperial-tablespoon").val(), 10) * 0.03125);
+        $("#imperial-cup").val(parseFloat($("#imperial-tablespoon").val(), 10) * 0.0625);
+        $("#imperial-fluid-ounce").val(parseFloat($("#imperial-tablespoon").val(), 10) * 0.625);
+        $("#imperial-teaspoon").val(parseFloat($("#imperial-ctablespoon").val(), 10) * 3);
+        $("#liter").val(parseFloat($("#imperial-tablespoon").val(), 10) * 0.0177582);
+        $("#milliliter").val(parseFloat($("#imperial-tablespoon").val(), 10) * 17.7582);
+        $("#cubic-meter").val(parseFloat($("#imperial-tablespoon").val(), 10) * 1.7758 / Math.pow(10,5));
+    });
+    $('#imperial-teaspoon').keyup(function() { 
+        $("#us-liquid-gallon").val(parseFloat($("#imperial-teaspoon").val(), 10) * 0.00156374);
+        $("#us-liquid-quart").val(parseFloat($("#imperial-teaspoon").val(), 10) * 0.00625495);
+        $("#us-liquid-pint").val(parseFloat($("#imperial-teaspoon").val(), 10) * 0.0125099);
+        $("#us-legal-cup").val(parseFloat($("#imperial-teaspoon").val(), 10) * 0.0246641);
+        $("#us-fluid-ounce").val(parseFloat($("#imperial-teaspoon").val(), 10) * 0.200158);
+        $("#us-tablespoon").val(parseFloat($("#imperial-teaspoon").val(), 10) * 0.400317);
+        $("#us-teaspoon").val(parseFloat($("#imperial-teaspoon").val(), 10) * 1.20095);
+        $("#cubic-foot").val(parseFloat($("#imperial-teaspoon").val(), 10) * 0.000209041);
+        $("#cubic-inch").val(parseFloat($("#imperial-teaspoon").val(), 10) * 0.361223);
+        $("#imperial-gallon").val(parseFloat($("#imperial-teaspoon").val(), 10) * 0.00130208);
+        $("#imperial-quart").val(parseFloat($("#imperial-teaspoon").val(), 10) * 0.00520834);
+        $("#imperial-pint").val(parseFloat($("#imperial-teaspoon").val(), 10) * 0.0104167);
+        $("#imperial-cup").val(parseFloat($("#imperial-teaspoon").val(), 10) * 0.0208333);
+        $("#imperial-fluid-ounce").val(parseFloat($("#imperial-teaspoon").val(), 10) * 0.208333);
+        $("#imperial-tablespoon").val(parseFloat($("#imperial-cteaspoon").val(), 10) * 0.333333);
+        $("#liter").val(parseFloat($("#imperial-teaspoon").val(), 10) * 0.00591939);
+        $("#milliliter").val(parseFloat($("#imperial-teaspoon").val(), 10) * 5.91939);
+        $("#cubic-meter").val(parseFloat($("#imperial-teaspoon").val(), 10) * 5.9194 / Math.pow(10,6));
+    });
 };
 $(document).ready(volume);
 
@@ -478,25 +647,25 @@ var frequency = function() {
 $(document).ready(frequency);
 
 var fuel_economy = function() {
-    $('#usmi-g').keyup(function() { 
-        $("#immi-g").val(parseFloat($("#usmi-g").val(), 10) * 1.20095);
-        $("#km-l").val(parseFloat($("#usmi-g").val(), 10) * 0.425144);
-        $("#l-100km").val(parseFloat($("#usmi-g").val(), 10) * 235.215);
+    $('#us-miles-gallon').keyup(function() { 
+        $("#imperial-miles-gallon").val(parseFloat($("#us-miles-gallon").val(), 10) * 1.20095);
+        $("#kilometers-liter").val(parseFloat($("#us-miles-gallon").val(), 10) * 0.425144);
+        $("#liter-100-kilometers").val(parseFloat($("#us-miles-gallon").val(), 10) * 235.215);
     });  
-    $("#immi-g").keyup(function() {
-        $("#usmi-g").val(parseFloat($("#immi-g").val(), 10) * 0.832674);
-        $("#km-l").val(parseFloat($("#immi-g").val(), 10) * 0.354006);
-        $("#l-100km").val(parseFloat($("#immi-g").val(), 10) * 282.481);
+    $("#imperial-miles-gallon").keyup(function() {
+        $("#us-miles-gallon").val(parseFloat($("#imperial-miles-gallon").val(), 10) * 0.832674);
+        $("#kilometers-liter").val(parseFloat($("#imperial-miles-gallon").val(), 10) * 0.354006);
+        $("#liter-100-kilometers").val(parseFloat($("#imperial-miles-gallon").val(), 10) * 282.481);
     });
-    $('#km-l').keyup(function() { 
-        $("#usmi-g").val(parseFloat($("#km-l").val(), 10) * 2.35215);
-        $("#immi-g").val(parseFloat($("#km-l").val(), 10) * 2.82481);
-        $("#l-100km").val(parseFloat($("#km-l").val(), 10) * 100);
+    $('#kilometers-liter').keyup(function() { 
+        $("#us-miles-gallon").val(parseFloat($("#kilometers-liter").val(), 10) * 2.35215);
+        $("#imperial-miles-gallon").val(parseFloat($("#kilometers-liter").val(), 10) * 2.82481);
+        $("#liter-100-kilometers").val(parseFloat($("#kilometers-liter").val(), 10) * 100);
     });
-    $("#l-100km").keyup(function() {
-        $("#usmi-g").val(parseFloat($("#l-100km").val(), 10) * 235.215);
-        $("#immi-g").val(parseFloat($("#l-100km").val(), 10) * 282.481);
-        $("#km-l").val(parseFloat($("#l-100km").val(), 10) * 100);
+    $("#liter-100-kilometers").keyup(function() {
+        $("#us-miles-gallon").val(parseFloat($("#liter-100-kilometers").val(), 10) * 235.215);
+        $("#imperial-miles-gallon").val(parseFloat($("#liter-100-kilometers").val(), 10) * 282.481);
+        $("#kilometers-liter").val(parseFloat($("#liter-100-kilometers").val(), 10) * 100);
     });
 };
 $(document).ready(fuel_economy);
