@@ -15,7 +15,7 @@ $(document).ready(basic);
 var index = function() {
     $(".move").on("click", function(e) {
     $("body, html").animate({ 
-        scrollBottom: $($(this).attr('href')).offset().top
+        scrollTop: $($(this).attr('href')).offset().top
     }, 1000);
 });
 }
