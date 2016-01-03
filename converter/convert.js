@@ -293,6 +293,19 @@ var mass = function() {
 };
 $(document).ready(mass);
 
+var area = function() {
+    $('#square-mile').keyup(function() { 
+        $("#square-yard").val(parseFloat($("#square-mile").val(), 10) * 3.098 * Math.pow(10, 6));
+        $("#square-foot").val(parseFloat($("#square-mile").val(), 10) * 2.788 * Math.pow(10, 7));
+        $("#square-inch").val(parseFloat($("#square-mile").val(), 10) * 4.014 * Math.pow(10, 9));
+        $("#acre").val(parseFloat($("#square-mile").val(), 10) * 640);
+        $("#square-kilometer").val(parseFloat($("#square-mile").val(), 10) * 2.58999);
+        $("#square-meter").val(parseFloat($("#square-mile").val(), 10) * 2.59 * Math.pow(10, 6));
+        $("#hectare").val(parseFloat($("#square-mile").val(), 10) * 258.999);
+    });
+};
+$(document).ready(area);
+
 var volume = function() {
     $('#us-liquid-gallon').keyup(function() { 
         $("#us-liquid-quart").val(parseFloat($("#us-liquid-gallon").val(), 10) * 4);
@@ -676,11 +689,6 @@ var volume = function() {
     });
 };
 $(document).ready(volume);
-
-var area = function() {
-
-};
-$(document).ready(area);
 
 var speed = function() {
 
