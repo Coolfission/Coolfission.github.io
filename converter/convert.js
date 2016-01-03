@@ -303,6 +303,69 @@ var area = function() {
         $("#square-meter").val(parseFloat($("#square-mile").val(), 10) * 2.59 * Math.pow(10, 6));
         $("#hectare").val(parseFloat($("#square-mile").val(), 10) * 258.999);
     });
+    $('#square-yard').keyup(function() { 
+        $("#square-mile").val(parseFloat($("#square-yard").val(), 10) * 3.22831 / Math.pow(10, 7));
+        $("#square-foot").val(parseFloat($("#square-yard").val(), 10) * 9);
+        $("#square-inch").val(parseFloat($("#square-yard").val(), 10) * 1296);
+        $("#acre").val(parseFloat($("#square-yard").val(), 10) * 0.000206612);
+        $("#square-kilometer").val(parseFloat($("#square-yard").val(), 10) * 8.3613 / Math.pow(10,7));
+        $("#square-meter").val(parseFloat($("#square-yard").val(), 10) * 0.836127);
+        $("#hectare").val(parseFloat($("#square-yard").val(), 10) * 8.3613 / Math.pow(10,5));
+    });
+    $('#square-foot').keyup(function() { 
+        $("#square-mile").val(parseFloat($("#square-foot").val(), 10) * 3.587 / Math.pow(10, 8));
+        $("#square-yard").val(parseFloat($("#square-foot").val(), 10) * 0.111111);
+        $("#square-inch").val(parseFloat($("#square-foot").val(), 10) * 144);
+        $("#acre").val(parseFloat($("#square-foot").val(), 10) * 2.2957 / Math.pow(10,5));
+        $("#square-kilometer").val(parseFloat($("#square-foot").val(), 10) * 9.2903 / Math.pow(10,8));
+        $("#square-meter").val(parseFloat($("#square-foot").val(), 10) * 0.092903);
+        $("#hectare").val(parseFloat($("#square-foot").val(), 10) * 9.2903 / Math.pow(10,6));
+    });
+    $('#square-inch').keyup(function() { 
+        $("#square-mile").val(parseFloat($("#square-inch").val(), 10) * 2.491 / Math.pow(10, 10));
+        $("#square-yard").val(parseFloat($("#square-inch").val(), 10) * 0.000771605);
+        $("#square-foot").val(parseFloat($("#square-inch").val(), 10) * 0.00694444);
+        $("#acre").val(parseFloat($("#square-inch").val(), 10) * 1.5942 / Math.pow(10,7));
+        $("#square-kilometer").val(parseFloat($("#square-inch").val(), 10) * 6.4516 / Math.pow(10,10));
+        $("#square-meter").val(parseFloat($("#square-inch").val(), 10) * 0.00064516);
+        $("#hectare").val(parseFloat($("#square-inch").val(), 10) * 6.4516 / Math.pow(10,8));
+    });
+    $('#acre').keyup(function() { 
+        $("#square-mile").val(parseFloat($("#acre").val(), 10) * 0.0015625);
+        $("#square-yard").val(parseFloat($("#acre").val(), 10) * 4840);
+        $("#square-foot").val(parseFloat($("#acre").val(), 10) * 43560);
+        $("#square-inch").val(parseFloat($("#acre").val(), 10) * 6.273 * Math.pow(10,6));
+        $("#square-kilometer").val(parseFloat($("#acre").val(), 10) * 0.00404686);
+        $("#square-meter").val(parseFloat($("#acre").val(), 10) * 4046.86);
+        $("#hectare").val(parseFloat($("#acre").val(), 10) * 0.404686);
+    });
+    $('#square-kilometer').keyup(function() { 
+        $("#square-mile").val(parseFloat($("#square-kilometer").val(), 10) * 0.386102);
+        $("#square-yard").val(parseFloat($("#square-kilometer").val(), 10) * 1.19599;
+        $("#square-foot").val(parseFloat($("#square-kilometer").val(), 10) * 1.076 * Math.pow(10,7);
+        $("#square-inch").val(parseFloat($("#square-kilometer").val(), 10) * 1.55 * Math.pow(10,9));
+        $("#acre").val(parseFloat($("#square-kilometer").val(), 10) * 247.105);
+        $("#square-meter").val(parseFloat($("#square-kilometer").val(), 10) * 1 * Math.pow(10,6));
+        $("#hectare").val(parseFloat($("#square-kilometer").val(), 10) * 100);
+    });
+    $('#square-meter').keyup(function() { 
+        $("#square-mile").val(parseFloat($("#square-meter").val(), 10) * 3.861 / Math.pow(10,7);
+        $("#square-yard").val(parseFloat($("#square-meter").val(), 10) * 4840);
+        $("#square-foot").val(parseFloat($("#square-meter").val(), 10) * 10.7639);
+        $("#square-inch").val(parseFloat($("#square-meter").val(), 10) * 1550;
+        $("#acre").val(parseFloat($("#square-meter").val(), 10) * 0.000247105);
+        $("#square-kilometer").val(parseFloat($("#square-meter").val(), 10) * 1 / Math.pow(10,6);
+        $("#hectare").val(parseFloat($("#square-meter").val(), 10) * 1 / Math.pow(10,4);
+    });
+    $('#hectare').keyup(function() { 
+        $("#square-mile").val(parseFloat($("#hectare").val(), 10) * 0.00386102);
+        $("#square-yard").val(parseFloat($("#hectare").val(), 10) * 11959.9);
+        $("#square-foot").val(parseFloat($("#hectare").val(), 10) * 107639);
+        $("#square-inch").val(parseFloat($("#hectare").val(), 10) * 1.55 * Math.pow(10,7));
+        $("#acre").val(parseFloat($("#hectare").val(), 10) * 2.47105);
+        $("#square-kilometer").val(parseFloat($("#hectare").val(), 10) * 0.01);
+        $("#square-meter").val(parseFloat($("#hectare").val(), 10) * 10000);
+    });
 };
 $(document).ready(area);
 
