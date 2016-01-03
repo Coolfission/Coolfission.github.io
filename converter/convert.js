@@ -10,11 +10,6 @@ var basic = function() {
             return false;
         }
     } 
-
-    var zoom1 = $("html").css("zoom");
-    if(zoom1 == "200%") {
-        document.write("blahhhhh");
-    }
 };
 $(document).ready(basic);
 
@@ -341,21 +336,21 @@ var area = function() {
     });
     $('#square-kilometer').keyup(function() { 
         $("#square-mile").val(parseFloat($("#square-kilometer").val(), 10) * 0.386102);
-        $("#square-yard").val(parseFloat($("#square-kilometer").val(), 10) * 1.19599;
-        $("#square-foot").val(parseFloat($("#square-kilometer").val(), 10) * 1.076 * Math.pow(10,7);
+        $("#square-yard").val(parseFloat($("#square-kilometer").val(), 10) * 1.19599);
+        $("#square-foot").val(parseFloat($("#square-kilometer").val(), 10) * 1.076 * Math.pow(10,7));
         $("#square-inch").val(parseFloat($("#square-kilometer").val(), 10) * 1.55 * Math.pow(10,9));
         $("#acre").val(parseFloat($("#square-kilometer").val(), 10) * 247.105);
         $("#square-meter").val(parseFloat($("#square-kilometer").val(), 10) * 1 * Math.pow(10,6));
         $("#hectare").val(parseFloat($("#square-kilometer").val(), 10) * 100);
     });
     $('#square-meter').keyup(function() { 
-        $("#square-mile").val(parseFloat($("#square-meter").val(), 10) * 3.861 / Math.pow(10,7);
+        $("#square-mile").val(parseFloat($("#square-meter").val(), 10) * 3.861 / Math.pow(10,7));
         $("#square-yard").val(parseFloat($("#square-meter").val(), 10) * 4840);
         $("#square-foot").val(parseFloat($("#square-meter").val(), 10) * 10.7639);
-        $("#square-inch").val(parseFloat($("#square-meter").val(), 10) * 1550;
+        $("#square-inch").val(parseFloat($("#square-meter").val(), 10) * 1550);
         $("#acre").val(parseFloat($("#square-meter").val(), 10) * 0.000247105);
-        $("#square-kilometer").val(parseFloat($("#square-meter").val(), 10) * 1 / Math.pow(10,6);
-        $("#hectare").val(parseFloat($("#square-meter").val(), 10) * 1 / Math.pow(10,4);
+        $("#square-kilometer").val(parseFloat($("#square-meter").val(), 10) * 1 / Math.pow(10,6));
+        $("#hectare").val(parseFloat($("#square-meter").val(), 10) * 1 / Math.pow(10,4));
     });
     $('#hectare').keyup(function() { 
         $("#square-mile").val(parseFloat($("#hectare").val(), 10) * 0.00386102);
@@ -759,7 +754,19 @@ var speed = function() {
 $(document).ready(speed);
 
 var time = function() {
-
+    $('#century').keyup(function() { 
+        $("#decade").val(parseFloat($("#century").val(), 10) * 0.000264172);
+        $("#year").val(parseFloat($("#century").val(), 10) * 0.00105669);
+        $("#month").val(parseFloat($("#century").val(), 10) * 0.00211338);
+        $("#week").val(parseFloat($("#century").val(), 10) * 0.00416667);
+        $("#day").val(parseFloat($("#century").val(), 10) * 0.033814);
+        $("#hour").val(parseFloat($("#century").val(), 10) * 0.067628);
+        $("#minute").val(parseFloat($("#century").val(), 10) * 0.202884);
+        $("#second").val(parseFloat($("#century").val(), 10) * 3.5315 / Math.pow(10,5));
+        $("#millisecond").val(parseFloat($("#century").val(), 10) * 0.0610237);
+        $("#microsecond").val(parseFloat($("#century").val(), 10) * 0.000219969);
+        $("#nanosecond").val(parseFloat($("#century").val(), 10) * 0.000879877);
+    });
 };
 $(document).ready(time);
 
