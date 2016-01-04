@@ -752,7 +752,36 @@ var volume = function() {
 $(document).ready(volume);
 
 var speed = function() {
-
+    $('#miles-per-hour').keyup(function() { 
+        $("#foot-per-second").val(parseFloat($("#miles-per-hour").val(), 10) * 1.46667);
+        $("#knot").val(parseFloat($("#miles-per-hour").val(), 10) * 0.868976);
+        $("#kilometers-per-hour").val(parseFloat($("#miles-per-hour").val(), 10) * 1.60934);
+        $("#meters-per-second").val(parseFloat($("#miles-per-hour").val(), 10) * 0.44704);
+    });
+    $('#foot-per-second').keyup(function() { 
+        $("#miles-per-hour").val(parseFloat($("#foot-per-second").val(), 10) * 0.681818);
+        $("#knot").val(parseFloat($("#foot-per-second").val(), 10) * 0.592484);
+        $("#kilometers-per-hour").val(parseFloat($("#foot-per-second").val(), 10) * 1.09728);
+        $("#meters-per-second").val(parseFloat($("#foot-per-second").val(), 10) * 0.3048);
+    });
+    $('#knot').keyup(function() { 
+        $("#miles-per-hour").val(parseFloat($("#knot").val(), 10) * 1.15078);
+        $("#foot-per-second").val(parseFloat($("#knot").val(), 10) * 1.68781);
+        $("#kilometers-per-hour").val(parseFloat($("#knot").val(), 10) * 1.852);
+        $("#meters-per-second").val(parseFloat($("#knot").val(), 10) * 0.514444);
+    });
+    $('#kilometers-per-hour').keyup(function() { 
+        $("#miles-per-hour").val(parseFloat($("#kilometers-per-hour").val(), 10) * 0.621371);
+        $("#foot-per-second").val(parseFloat($("#kilometers-per-hour").val(), 10) * 0.911344);
+        $("#knot").val(parseFloat($("#kilometers-per-hour").val(), 10) * 0.539957);
+        $("#meters-per-second").val(parseFloat($("#kilometers-per-hour").val(), 10) * 0.277778);
+    });
+    $('#meters-per-second').keyup(function() { 
+        $("#miles-per-hour").val(parseFloat($("#meters-per-second").val(), 10) * 2.23694);
+        $("#foot-per-second").val(parseFloat($("#meters-per-second").val(), 10) * 3.28084);
+        $("#knot").val(parseFloat($("#meters-per-second").val(), 10) * 1.94384);
+        $("#kilometers-per-hour").val(parseFloat($("#meters-per-second").val(), 10) * 3.6);
+    });
 };
 $(document).ready(speed);
 
@@ -932,7 +961,26 @@ var digital_storage = function() {
 $(document).ready(digital_storage);
 
 var frequency = function() {
-
+    $('#hertz').keyup(function() { 
+        $("#kilohertz").val(parseFloat($("#hertz").val(), 10) * 0.001);
+        $("#megahertz").val(parseFloat($("#hertz").val(), 10) * 1 / Math.pow(10,6));
+        $("#gigahertz").val(parseFloat($("#hertz").val(), 10) * 1 / Math.pow(10,9));
+    });  
+    $('#kilohertz').keyup(function() { 
+        $("#hertz").val(parseFloat($("#kilohertz").val(), 10) * 1000);
+        $("#megahertz").val(parseFloat($("#kilohertz").val(), 10) * 0.001);
+        $("#gigahertz").val(parseFloat($("#kilohertz").val(), 10) * 1 / Math.pow(10,6));
+    });  
+    $('#megahertz').keyup(function() { 
+        $("#hertz").val(parseFloat($("#megahertz").val(), 10) * 1 * Math.pow(10,6));
+        $("#kilohertz").val(parseFloat($("#megahertz").val(), 10) * 1000);
+        $("#gigahertz").val(parseFloat($("#megahertz").val(), 10) * 0.001);
+    });  
+    $('#gigahertz').keyup(function() { 
+        $("#hertz").val(parseFloat($("#gigahertz").val(), 10) * 1 * Math.pow(10,9));
+        $("#kilohertz").val(parseFloat($("#gigahertz").val(), 10) * 1 * Math.pow(10,6));
+        $("#megahertz").val(parseFloat($("#gigahertz").val(), 10) * 1000);
+    });  
 };
 $(document).ready(frequency);
 
