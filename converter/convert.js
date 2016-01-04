@@ -16,11 +16,13 @@ $(document).ready(basic);
 
 var index = function() {
     $(".move").on("click", function(e) {
-    $("body, html").animate({ 
-        scrollTop: $($(this).attr('href')).offset().top
-    }, 1000);
-});
-}
+        e.preventDefault();
+
+        $("body, html").animate({ 
+            scrollTop: $($(this).attr('href')).offset().top
+        }, 1000);
+    });
+};
 $(document).ready(index);
 
 var temperature = function() {
