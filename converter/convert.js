@@ -1,5 +1,10 @@
+
 var basic = function() {
     $("input").val("0");
+
+    if(isNaN("input")) {
+        $("")
+    }
 
     $("#reset").click(function() {
       $("input").val("0");
@@ -755,17 +760,108 @@ $(document).ready(speed);
 
 var time = function() {
     $('#century').keyup(function() { 
-        $("#decade").val(parseFloat($("#century").val(), 10) * 0.000264172);
-        $("#year").val(parseFloat($("#century").val(), 10) * 0.00105669);
-        $("#month").val(parseFloat($("#century").val(), 10) * 0.00211338);
-        $("#week").val(parseFloat($("#century").val(), 10) * 0.00416667);
-        $("#day").val(parseFloat($("#century").val(), 10) * 0.033814);
-        $("#hour").val(parseFloat($("#century").val(), 10) * 0.067628);
-        $("#minute").val(parseFloat($("#century").val(), 10) * 0.202884);
-        $("#second").val(parseFloat($("#century").val(), 10) * 3.5315 / Math.pow(10,5));
-        $("#millisecond").val(parseFloat($("#century").val(), 10) * 0.0610237);
-        $("#microsecond").val(parseFloat($("#century").val(), 10) * 0.000219969);
-        $("#nanosecond").val(parseFloat($("#century").val(), 10) * 0.000879877);
+        $("#decade").val(parseFloat($("#century").val(), 10) * 10);
+        $("#year").val(parseFloat($("#century").val(), 10) * 100);
+        $("#month").val(parseFloat($("#century").val(), 10) * 1200);
+        $("#week").val(parseFloat($("#century").val(), 10) * 5214.29);
+        $("#day").val(parseFloat($("#century").val(), 10) * 36500);
+        $("#hour").val(parseFloat($("#century").val(), 10) * 876000);
+        $("#minute").val(parseFloat($("#century").val(), 10) * 5.256 * Math.pow(10,7));
+        $("#second").val(parseFloat($("#century").val(), 10) * 3.154 * Math.pow(10,9));
+        $("#millisecond").val(parseFloat($("#century").val(), 10) * 3.154 * Math.pow(10,12));
+        $("#microsecond").val(parseFloat($("#century").val(), 10) * 3.154 * Math.pow(10,15));
+        $("#nanosecond").val(parseFloat($("#century").val(), 10) * 3.154 * Math.pow(10,18));
+    });
+    $('#decade').keyup(function() { 
+        $("#century").val(parseFloat($("#decade").val(), 10) * 0.1);
+        $("#year").val(parseFloat($("#decade").val(), 10) * 10);
+        $("#month").val(parseFloat($("#decade").val(), 10) * 120);
+        $("#week").val(parseFloat($("#decade").val(), 10) * 521.429);
+        $("#day").val(parseFloat($("#decade").val(), 10) * 3650);
+        $("#hour").val(parseFloat($("#decade").val(), 10) * 87600);
+        $("#minute").val(parseFloat($("#decade").val(), 10) * 5.256 * Math.pow(10,6));
+        $("#second").val(parseFloat($("#decade").val(), 10) * 3.154 * Math.pow(10,8));
+        $("#millisecond").val(parseFloat($("#decade").val(), 10) * 3.154 * Math.pow(10,11));
+        $("#microsecond").val(parseFloat($("#decade").val(), 10) * 3.154 * Math.pow(10,14));
+        $("#nanosecond").val(parseFloat($("#decade").val(), 10) * 3.154 * Math.pow(10,17));
+    });
+    $('#year').keyup(function() { 
+        $("#century").val(parseFloat($("#year").val(), 10) * 0.01);
+        $("#decade").val(parseFloat($("#year").val(), 10) * 0.1);
+        $("#month").val(parseFloat($("#year").val(), 10) * 12);
+        $("#week").val(parseFloat($("#year").val(), 10) * 52.1429);
+        $("#day").val(parseFloat($("#year").val(), 10) * 365);
+        $("#hour").val(parseFloat($("#year").val(), 10) * 8760);
+        $("#minute").val(parseFloat($("#year").val(), 10) * 525600);
+        $("#second").val(parseFloat($("#year").val(), 10) * 3.154 * Math.pow(10,7));
+        $("#millisecond").val(parseFloat($("#year").val(), 10) * 3.154 * Math.pow(10,10));
+        $("#microsecond").val(parseFloat($("#year").val(), 10) * 3.154 * Math.pow(10,13));
+        $("#nanosecond").val(parseFloat($("#year").val(), 10) * 3.154 * Math.pow(10,16));
+    });
+    $('#month').keyup(function() { 
+        $("#century").val(parseFloat($("#month").val(), 10) * 0.000833334);
+        $("#decade").val(parseFloat($("#month").val(), 10) * 0.00833334);
+        $("#year").val(parseFloat($("#month").val(), 10) * 0.0833334);
+        $("#week").val(parseFloat($("#month").val(), 10) * 4.34524);
+        $("#day").val(parseFloat($("#month").val(), 10) * 30.4167);
+        $("#hour").val(parseFloat($("#month").val(), 10) * 730.001);
+        $("#minute").val(parseFloat($("#month").val(), 10) * 43800);
+        $("#second").val(parseFloat($("#month").val(), 10) * 2.628 * Math.pow(10,6));
+        $("#millisecond").val(parseFloat($("#month").val(), 10) * 2.628  * Math.pow(10,9));
+        $("#microsecond").val(parseFloat($("#month").val(), 10) * 2.628 * Math.pow(10,12));
+        $("#nanosecond").val(parseFloat($("#month").val(), 10) * 2.628 * Math.pow(10,15));
+    });
+    $('#week').keyup(function() { 
+        $("#century").val(parseFloat($("#week").val(), 10) * 0.000191781);
+        $("#decade").val(parseFloat($("#week").val(), 10) * 0.00191781);
+        $("#year").val(parseFloat($("#week").val(), 10) * 0.0191781);
+        $("#month").val(parseFloat($("#week").val(), 10) * 0.230137);
+        $("#day").val(parseFloat($("#week").val(), 10) * 7);
+        $("#hour").val(parseFloat($("#week").val(), 10) * 168);
+        $("#minute").val(parseFloat($("#week").val(), 10) * 10080);
+        $("#second").val(parseFloat($("#week").val(), 10) * 604800);
+        $("#millisecond").val(parseFloat($("#week").val(), 10) * 6.048  * Math.pow(10,8));
+        $("#microsecond").val(parseFloat($("#week").val(), 10) * 6.048 * Math.pow(10,11));
+        $("#nanosecond").val(parseFloat($("#week").val(), 10) * 6.048 * Math.pow(10,14));
+    });
+    $('#day').keyup(function() { 
+        $("#century").val(parseFloat($("#day").val(), 10) * 5.4795 / Math.pow(10,5));
+        $("#decade").val(parseFloat($("#day").val(), 10) * 0.000273973);
+        $("#year").val(parseFloat($("#day").val(), 10) * 0.00273973);
+        $("#month").val(parseFloat($("#day").val(), 10) * 0.0328767);
+        $("#week").val(parseFloat($("#day").val(), 10) * 0.142857);
+        $("#hour").val(parseFloat($("#day").val(), 10) * 24);
+        $("#minute").val(parseFloat($("#day").val(), 10) * 1440);
+        $("#second").val(parseFloat($("#day").val(), 10) * 86400);
+        $("#millisecond").val(parseFloat($("#day").val(), 10) * 8.64  * Math.pow(10,7));
+        $("#microsecond").val(parseFloat($("#day").val(), 10) * 8.64 * Math.pow(10,10));
+        $("#nanosecond").val(parseFloat($("#day").val(), 10) * 8.64 * Math.pow(10,13));
+    });
+    $('#hour').keyup(function() { 
+        $("#century").val(parseFloat($("#hour").val(), 10) * 1.1416 / Math.pow(10,6));
+        $("#decade").val(parseFloat($("#hour").val(), 10) * 1.1416 / Math.pow(10,5));
+        $("#year").val(parseFloat($("#hour").val(), 10) * 0.000114155);
+        $("#month").val(parseFloat($("#hour").val(), 10) * 0.00136986);
+        $("#week").val(parseFloat($("#hour").val(), 10) * 0.00595238);
+        $("#day").val(parseFloat($("#hour").val(), 10) * 0.0416667);
+        $("#minute").val(parseFloat($("#hour").val(), 10) * 60);
+        $("#second").val(parseFloat($("#hour").val(), 10) * 3600);
+        $("#millisecond").val(parseFloat($("#hour").val(), 10) * 3.6 * Math.pow(10,6));
+        $("#microsecond").val(parseFloat($("#hour").val(), 10) * 3.6 * Math.pow(10,9));
+        $("#nanosecond").val(parseFloat($("#hour").val(), 10) * 3.6 * Math.pow(10,12));
+    });
+    $('#minute').keyup(function() { 
+        $("#century").val(parseFloat($("#minute").val(), 10) * 1.9026 / Math.pow(10,8));
+        $("#decade").val(parseFloat($("#minute").val(), 10) * 1.9026 / Math.pow(10,7));
+        $("#year").val(parseFloat($("#minute").val(), 10) * 1.9026 / Math.pow(10,6));
+        $("#month").val(parseFloat($("#minute").val(), 10) * 2.2831 / Math.pow(10,5));
+        $("#week").val(parseFloat($("#minute").val(), 10) * 9.9206 / Math.pow(10,5));
+        $("#day").val(parseFloat($("#minute").val(), 10) * 0.000694444);
+        $("#hour").val(parseFloat($("#minute").val(), 10) * 0.0166667);
+        $("#second").val(parseFloat($("#minute").val(), 10) * 60);
+        $("#millisecond").val(parseFloat($("#minute").val(), 10) * 60000);
+        $("#microsecond").val(parseFloat($("#minute").val(), 10) * 6 * Math.pow(10,7));
+        $("#nanosecond").val(parseFloat($("#minute").val(), 10) * 6 * Math.pow(10,10));
     });
 };
 $(document).ready(time);
