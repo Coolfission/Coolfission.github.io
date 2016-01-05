@@ -1,3 +1,54 @@
+// 
+//
+//
+//  Technology Fair 2016
+//
+//
+//  Created by...
+//
+//
+//   _____   _______  _______ _______                                         _____    _____         _______
+//  |     | |   |   |    |       |            |   /  |     |  |       |   /  |     |  |     | |\   |    |
+//  |_____| |   |   |    |       |            |__/   |     |  |       |__/   |_____|  |_____| | \  |    |
+//  |     | |       |    |       |            |  \   |     |  |       |  \   |     |  | \__   |  \ |    |
+//  |     | |       | ___|___    |            |   \  |_____|  |_____  |   \  |     |  |    \  |   \| ___|___   
+//
+//
+//
+//
+//
+//
+//
+// Syntax for selecting an element after event:
+
+// $("#selector").keyup(function() {
+//                     
+//    do something    
+//                           
+// });  
+
+// Summary: This syntax tests when a key — includes mouse click — is released. 
+// In this case, it works on an input when clicked. The function after the 
+// keyup event specifies the action that the syntax will perform
+
+// Syntax for the action if condition is true
+
+//     $("#the-new-input-value").val(parseFloat($("#input-that-you-clicked-on").val() - 32, 10) * (5/9));
+
+// the "use strict" function scans for any errors in the javascript document and will not perform any javascript function if there is an error. 
+
+// Confusing terms used:
+//    - jQuery = a library that can be added to the javascript language as in the html head section. The jQuery library can extend javascript by allowing better functionality by using less work
+//    - .val() = gets the value of a certain element. the default value is nothing — " " unless a user changes it
+//    - .keyup() = an event that is triggered when a key is released 
+//    - parseFloat() = takes the string
+//    - argument = the "stuff" inside the parenthesis that relate to the action or can change the action output
+//    - $ = a jquery variable
+//    - string = a set of letters or words that are inside quotes — ""
+
+
+
+"use strict";
 
 var basic = function() {
     $("input").val("0");
@@ -1007,6 +1058,10 @@ var fuel_economy = function() {
     });
 };
 $(document).ready(fuel_economy);
+
+
+// Under Development
+
 
 var plane_angle = function() {
 
