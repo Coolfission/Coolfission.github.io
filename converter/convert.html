@@ -1,26 +1,17 @@
 <!DOCTYPE html>
 <!-- 
-
-
-
  Technology Fair 2016
 
 
  Created by...
-
-
   _____   _______  _______ _______                                         _____    _____         _______
  |     | |   |   |    |       |            |   /  |     |  |       |   /  |     |  |     | |\   |    |
  |_____| |   |   |    |       |            |__/   |     |  |       |__/   |_____|  |_____| | \  |    |
  |     | |       |    |       |            |  \   |     |  |       |  \   |     |  | \__   |  \ |    |
  |     | |       | ___|___    |            |   \  |_____|  |_____  |   \  |     |  |    \  |   \| ___|___   
-
-
-
-
-
-
  -->
+
+
 <html>
 <head>
   <link rel="shortcut icon" href="data:image/x-icon;base64,R0lGODlhEAAQAPECAFFUV////wAAAAAAACH5BAkyAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAEBAQEBAAAAAAEBAAAAAAABAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJMgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" />
@@ -30,8 +21,8 @@
   <link rel="stylesheet" type="text/css" href="convert.css">
 
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-    <script src="convert.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="convert.js"></script>
 </head>
 
 <body>
@@ -53,8 +44,8 @@
 <a class="move" href="#time">Time<div class="border-bottom"></div></a>
 <!-- <a class="move" href="#pressure"><del>Pressure</del><div class="border-bottom"></div></a> -->
 <a class="move" href="#energy">Energy<div class="border-bottom"></div></a>
-<a class="move" href="#digital_storage">Digital Storage<div class="border-bottom"></div></a>
-<a class="move" href="#data_transfer_rate">Data Transfer Rate<div class="border-bottom"></div></a>
+<!-- <a class="move" href="#digital_storage"><del>Digital Storage</del><div class="border-bottom"></div></a> -->
+<!-- <a class="move" href="#data_transfer_rate"><del>Data Transfer Rate</del><div class="border-bottom"></div></a> -->
 <a class="move" href="#frequency">Frequency<div class="border-bottom"></div></a>
 <a class="move" href="#fuel_economy">Fuel Economy<div class="border-bottom"></div></a>
 <!-- <a class="move" href="#plane_angle"><del>Plane Angle</del><div class="border-bottom"></div></a> -->
@@ -735,6 +726,146 @@
 </fieldset>
 <br><br>
 
+<!--Frequency-->
+<fieldset id="frequency">
+<legend>Frequency</legend>
+<table valign="top">
+<thead></thead>
+<tbody>
+  <td>
+    <th>Value</th>
+  </td>
+  <tr>
+    <th>Hertz</th>
+    <td>
+      <input id="hertz"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Kilohertz</th>
+    <td>
+      <input id="kilohertz"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Megahertz</th>
+    <td>
+      <input id="megahertz"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Gigahertz</th>
+    <td>
+      <input id="gigahertz"></input>
+    </td>
+  </tr>
+</tbody>
+</table>  
+</fieldset>
+<br><br>
+
+<!--Fuel Economy-->
+<fieldset id="fuel_economy">
+<legend>Fuel Economy</legend>  
+<table valign="top">
+<thead></thead>
+<caption>
+  <strong>US units</strong>
+</caption>
+<tbody>
+  <td>
+    <th>Value</th>
+  </td>
+  <tr>
+    <th>US Miles/Gallon</th>
+    <td>
+      <input id="us-miles-gallon"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Imperial Miles/Gallon</th>
+    <td>
+      <input id="imperial-miles-gallon"></input>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+<table valign="top">
+<thead></thead>
+<caption>
+  <strong>Metric units</strong>
+</caption>
+<tbody>
+  <td>
+    <th>Value</th>
+  </td>
+  <tr>
+    <th>Kilometers/Liter</th>
+    <td>
+      <input id="kilometers-liter"></input>
+    </td>
+  </tr>
+  <tr>
+    <th>Liter/100 Kilometers</th>
+    <td>
+      <input id="liter-100-kilometers"></input>
+    </td>
+  </tr>
+</tbody>
+</table>
+</fieldset>
+<br><br>
+
+<br><br><br><br><br><br><br><br><br><br><br>
+<div id="line"></div>
+<div id="tuned">
+  <br><em>Under Development</em><br><br>
+
+<!--Pressure-->
+<fieldset id="pressure">
+<legend>Pressure</legend>  
+<table valign="top">
+<thead></thead>
+<tbody>
+  <td>
+    <th>Value</th>
+  </td>
+  <tr>
+    <th>Atmosphere</th>
+    <td>
+      <input id="atmosphere"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Bar</th>
+    <td>
+      <input id="bar"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Pascal</th>
+    <td>
+      <input id="millisecond"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Pound-force per square inch</th>
+    <td>
+      <input id="pound-fource-per-square-inch"></input>
+   </td>
+  </tr>
+  <tr>
+    <th>Torr</th>
+    <td>
+      <input id="tore"></input>
+   </td>
+  </tr>
+</tbody>
+</table>
+</fieldset>
+<br><br>
+
 <!--Digital Storage-->
 <fieldset id="digital_storage">
 <legend>Digital Storage</legend>  
@@ -987,147 +1118,6 @@
 </table>
 </fieldset>
 <br><br>
-
-<!--Frequency-->
-<fieldset id="frequency">
-<legend>Frequency</legend>
-<table valign="top">
-<thead></thead>
-<tbody>
-  <td>
-    <th>Value</th>
-  </td>
-  <tr>
-    <th>Hertz</th>
-    <td>
-      <input id="hertz"></input>
-    </td>
-  </tr>
-  <tr>
-    <th>Kilohertz</th>
-    <td>
-      <input id="kilohertz"></input>
-    </td>
-  </tr>
-  <tr>
-    <th>Megahertz</th>
-    <td>
-      <input id="megahertz"></input>
-    </td>
-  </tr>
-  <tr>
-    <th>Gigahertz</th>
-    <td>
-      <input id="gigahertz"></input>
-    </td>
-  </tr>
-</tbody>
-</table>  
-</fieldset>
-<br><br>
-
-<!--Fuel Economy-->
-<fieldset id="fuel_economy">
-<legend>Fuel Economy</legend>  
-<table valign="top">
-<thead></thead>
-<caption>
-  <strong>US units</strong>
-</caption>
-<tbody>
-  <td>
-    <th>Value</th>
-  </td>
-  <tr>
-    <th>US Miles/Gallon</th>
-    <td>
-      <input id="us-miles-gallon"></input>
-    </td>
-  </tr>
-  <tr>
-    <th>Imperial Miles/Gallon</th>
-    <td>
-      <input id="imperial-miles-gallon"></input>
-    </td>
-  </tr>
-</tbody>
-</table>
-
-<table valign="top">
-<thead></thead>
-<caption>
-  <strong>Metric units</strong>
-</caption>
-<tbody>
-  <td>
-    <th>Value</th>
-  </td>
-  <tr>
-    <th>Kilometers/Liter</th>
-    <td>
-      <input id="kilometers-liter"></input>
-    </td>
-  </tr>
-  <tr>
-    <th>Liter/100 Kilometers</th>
-    <td>
-      <input id="liter-100-kilometers"></input>
-    </td>
-  </tr>
-</tbody>
-</table>
-</fieldset>
-<br><br>
-
-<br><br><br><br><br><br><br><br><br><br><br>
-<div id="line"></div>
-<div id="tuned">
-  <br><em>Under Development</em><br><br>
-
-<!--Pressure-->
-<fieldset id="pressure">
-<legend>Pressure</legend>  
-<table valign="top">
-<thead></thead>
-<tbody>
-  <td>
-    <th>Value</th>
-  </td>
-  <tr>
-    <th>Atmosphere</th>
-    <td>
-      <input id="atmosphere"></input>
-   </td>
-  </tr>
-  <tr>
-    <th>Bar</th>
-    <td>
-      <input id="bar"></input>
-   </td>
-  </tr>
-  <tr>
-    <th>Pascal</th>
-    <td>
-      <input id="millisecond"></input>
-   </td>
-  </tr>
-  <tr>
-    <th>Pound-force per square inch</th>
-    <td>
-      <input id="pound-fource-per-square-inch"></input>
-   </td>
-  </tr>
-  <tr>
-    <th>Torr</th>
-    <td>
-      <input id="tore"></input>
-   </td>
-  </tr>
-</tbody>
-</table>
-</fieldset>
-<br><br>
-
 
 <!--Plane Angle-->
 <fieldset id="plane_angle">

@@ -1056,29 +1056,86 @@ var energy = function() {
         $("#british-therm-unit").val(parseFloat($("#gram-calorie").val(), 10) * 0.00396567);
         $("#foot-pound").val(parseFloat($("#gram-calorie").val(), 10) * 3.08596);
     });
-    // continue
     $('#kilowatt-hour').keyup(function() { 
-        $("#kilojoule").val(parseFloat($("#kilowatt-hour").val(), 10) * 0.004184);
-        $("#joule").val(parseFloat($("#kilowatt-hour").val(), 10) * 4.184);
-        $("#kilocalorie").val(parseFloat($("#kilowatt-hour").val(), 10) * 0.001);
-        $("#gram-calorie").val(parseFloat($("#kilowatt-hour").val(), 10) * 1.1622 / Math.pow(10,6));
-        $("#watt-hour").val(parseFloat($("#kilowatt-hour").val(), 10) * 0.00116222);
-        $("#electronvolt").val(parseFloat($("#kilowatt-hour").val(), 10) * 2.611 * Math.pow(10,19));
-        $("#us-therm").val(parseFloat($("#kilowatt-hour").val(), 10) * 3.9666 / Math.pow(10,8));
-        $("#british-therm-unit").val(parseFloat($("#kilowatt-hour").val(), 10) * 0.00396567);
-        $("#foot-pound").val(parseFloat($("#kilowatt-hour").val(), 10) * 3.08596);
+        $("#kilojoule").val(parseFloat($("#kilowatt-hour").val(), 10) * 3600);
+        $("#joule").val(parseFloat($("#kilowatt-hour").val(), 10) * 3.6 * Math.pow(10,6));
+        $("#kilocalorie").val(parseFloat($("#kilowatt-hour").val(), 10) * 860.421);
+        $("#gram-calorie").val(parseFloat($("#kilowatt-hour").val(), 10) * 860421);
+        $("#watt-hour").val(parseFloat($("#kilowatt-hour").val(), 10) * 1000);
+        $("#electronvolt").val(parseFloat($("#kilowatt-hour").val(), 10) * 2.247 * Math.pow(10,25));
+        $("#us-therm").val(parseFloat($("#kilowatt-hour").val(), 10) * 0.0341296);
+        $("#british-therm-unit").val(parseFloat($("#kilowatt-hour").val(), 10) * 3412.14);
+        $("#foot-pound").val(parseFloat($("#kilowatt-hour").val(), 10) * 2.655 * Math.pow(10,6));
+    });
+    $('#watt-hour').keyup(function() { 
+        $("#kilojoule").val(parseFloat($("#watt-hour").val(), 10) * 3.6);
+        $("#joule").val(parseFloat($("#watt-hour").val(), 10) * 3600);
+        $("#kilocalorie").val(parseFloat($("#watt-hour").val(), 10) * 0.860421);
+        $("#gram-calorie").val(parseFloat($("#watt-hour").val(), 10) * 860.421);
+        $("#kilowatt-hour").val(parseFloat($("#watt-hour").val(), 10) * 0.001);
+        $("#electronvolt").val(parseFloat($("#watt-hour").val(), 10) * 2.247 * Math.pow(10,22));
+        $("#us-therm").val(parseFloat($("#watt-hour").val(), 10) * 3.413 / Math.pow(10,5));
+        $("#british-therm-unit").val(parseFloat($("#watt-hour").val(), 10) * 3.41214);
+        $("#foot-pound").val(parseFloat($("#watt-hour").val(), 10) * 2655.22);
+    });
+    $('#electronvolt').keyup(function() { 
+        $("#kilojoule").val(parseFloat($("#electronvolt").val(), 10) * 1.6022 / Math.pow(10,22));
+        $("#joule").val(parseFloat($("#electronvolt").val(), 10) * 1.6022 / Math.pow(10,19));
+        $("#kilocalorie").val(parseFloat($("#electronvolt").val(), 10) * 3.8293 / Math.pow(10,23));
+        $("#gram-calorie").val(parseFloat($("#electronvolt").val(), 10) * 3.8293 / Math.pow(10,20));
+        $("#kilowatt-hour").val(parseFloat($("#electronvolt").val(), 10) * 4.4505 / Math.pow(10,26));
+        $("#watt-hour").val(parseFloat($("#electronvolt").val(), 10) * 2.247 * Math.pow(10,22));
+        $("#us-therm").val(parseFloat($("#electronvolt").val(), 10) * 1.5189 / Math.pow(10,27));
+        $("#british-therm-unit").val(parseFloat($("#electronvolt").val(), 10) * 1.5186 / Math.pow(10,22));
+        $("#foot-pound").val(parseFloat($("#electronvolt").val(), 10) * 1.1817 / Math.pow(10,19));
+    });
+    $('#electronvolt').keyup(function() { 
+        $("#kilojoule").val(parseFloat($("#electronvolt").val(), 10) * 1.6022 / Math.pow(10,22));
+        $("#joule").val(parseFloat($("#electronvolt").val(), 10) * 1.6022 / Math.pow(10,19));
+        $("#kilocalorie").val(parseFloat($("#electronvolt").val(), 10) * 3.8293 / Math.pow(10,23));
+        $("#gram-calorie").val(parseFloat($("#electronvolt").val(), 10) * 3.8293 / Math.pow(10,20));
+        $("#kilowatt-hour").val(parseFloat($("#electronvolt").val(), 10) * 4.4505 / Math.pow(10,26));
+        $("#watt-hour").val(parseFloat($("#electronvolt").val(), 10) * 2.247 * Math.pow(10,22));
+        $("#us-therm").val(parseFloat($("#electronvolt").val(), 10) * 1.5189 / Math.pow(10,27));
+        $("#british-therm-unit").val(parseFloat($("#electronvolt").val(), 10) * 1.5186 / Math.pow(10,22));
+        $("#foot-pound").val(parseFloat($("#electronvolt").val(), 10) * 1.1817 / Math.pow(10,19));
+    });
+    $('#us-therm').keyup(function() { 
+        $("#kilojoule").val(parseFloat($("#us-therm").val(), 10) * 105480);
+        $("#joule").val(parseFloat($("#us-therm").val(), 10) * 1.055 * Math.pow(10,8));
+        $("#kilocalorie").val(parseFloat($("#us-therm").val(), 10) * 25210.4);
+        $("#gram-calorie").val(parseFloat($("#us-therm").val(), 10) * 2.521 * Math.pow(10,7));
+        $("#kilowatt-hour").val(parseFloat($("#us-therm").val(), 10) * 29.3001);
+        $("#watt-hour").val(parseFloat($("#us-therm").val(), 10) * 29300.1);
+        $("#electronvolt").val(parseFloat($("#us-therm").val(), 10) * 6.584 * Math.pow(10,26));
+        $("#british-therm-unit").val(parseFloat($("#us-therm").val(), 10) * 99976.1);
+        $("#foot-pound").val(parseFloat($("#us-therm").val(), 10) * 7.78 * Math.pow(10,7));
+    });
+    $('#british-therm-unit').keyup(function() { 
+        $("#kilojoule").val(parseFloat($("#british-therm-unit").val(), 10) * 1.05506);
+        $("#joule").val(parseFloat($("#british-therm-unit").val(), 10) * 1055.06);
+        $("#kilocalorie").val(parseFloat($("#british-therm-unit").val(), 10) * 0.252164);
+        $("#gram-calorie").val(parseFloat($("#british-therm-unit").val(), 10) * 252.164);
+        $("#kilowatt-hour").val(parseFloat($("#british-therm-unit").val(), 10) * 0.000293071);
+        $("#watt-hour").val(parseFloat($("#british-therm-unit").val(), 10) * 0.293071);
+        $("#electronvolt").val(parseFloat($("#british-therm-unit").val(), 10) * 6.585 * Math.pow(10,22));
+        $("#us-therm").val(parseFloat($("#british-therm-unit").val(), 10) * 1.0002 / Math.pow(10,5));
+        $("#foot-pound").val(parseFloat($("#british-therm-unit").val(), 10) * 778.169);
+    });
+    $('#foot-pound').keyup(function() { 
+        $("#kilojoule").val(parseFloat($("#foot-pound").val(), 10) * 0.00135582);
+        $("#joule").val(parseFloat($("#foot-pound").val(), 10) * 1.35582);
+        $("#kilocalorie").val(parseFloat($("#foot-pound").val(), 10) * 0.000324048);
+        $("#gram-calorie").val(parseFloat($("#foot-pound").val(), 10) * 0.324048);
+        $("#kilowatt-hour").val(parseFloat($("#foot-pound").val(), 10) * 3.7662 / Math.pow(10,7));
+        $("#watt-hour").val(parseFloat($("#foot-pound").val(), 10) * 0.000376616);
+        $("#electronvolt").val(parseFloat($("#foot-pound").val(), 10) * 8.462 * Math.pow(10,18));
+        $("#us-therm").val(parseFloat($("#foot-pound").val(), 10) * 1.2854 / Math.pow(10,8));
+        $("#british-therm-unit").val(parseFloat($("#foot-pound").val(), 10) * 0.00128507);
     });
 };
 $(document).ready(energy);
 
-var digital_storage = function() {
-
-};
-$(document).ready(digital_storage);
-
-var data_transfer_rate = function() {
-
-};
 $(document).ready(data_transfer_rate);
 
 var frequency = function() {
@@ -1142,13 +1199,22 @@ var plane_angle = function() {
 };
 $(document).ready(plane_angle);
 
+var digital_storage = function() {
+
+};
+$(document).ready(digital_storage);
+
+var data_transfer_rate = function() {
+
+};
+
 var favicon = function() {
-    $(".fa-th-large").click(function(){
+    $(".fa-th-large").click(function() {
         $(".fa-th-large").attr("data","check");
         $(".fa-th-list").attr("data","uncheck");
     });
 
-    $(".fa-th-list").click(function(){
+    $(".fa-th-list").click(function() {
         $(".fa-th-list").attr("data","check");
         $(".fa-th-large").attr("data","uncheck");
     });
