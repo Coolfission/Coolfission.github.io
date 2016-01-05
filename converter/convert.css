@@ -1,4 +1,24 @@
+/*
 
+
+ Technology Fair 2016
+
+
+ Created by...
+
+
+  _____   _______  _______ _______                                         _____    _____         _______
+ |     | |   |   |    |       |            |   /  |     |  |       |   /  |     |  |     | |\   |    |
+ |_____| |   |   |    |       |            |__/   |     |  |       |__/   |_____|  |_____| | \  |    |
+ |     | |       |    |       |            |  \   |     |  |       |  \   |     |  | \__   |  \ |    |
+ |     | |       | ___|___    |            |   \  |_____|  |_____  |   \  |     |  |    \  |   \| ___|___   
+
+
+
+
+
+
+*/
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
 body {
@@ -144,4 +164,7 @@ td, th, tr {
   cursor: pointer;
   float: right;
   margin-right: 10px;
+}
+i[data='check'] {
+  color: #8B4513;
 }

@@ -17,34 +17,49 @@
 //
 //
 //
-//
+// JavaScript Explanation:
 //
 // Syntax for selecting an element after event:
-
+// 
 // $("#selector").keyup(function() {
 //                     
 //    do something    
 //                           
 // });  
-
+// 
 // Summary: This syntax tests when a key — includes mouse click — is released. 
 // In this case, it works on an input when clicked. The function after the 
 // keyup event specifies the action that the syntax will perform
-
+// 
+// 
+// 
 // Syntax for the action if condition is true
-
+// 
 //     $("#the-new-input-value").val(parseFloat($("#input-that-you-clicked-on").val() - 32, 10) * (5/9));
-
-// the "use strict" function scans for any errors in the javascript document and will not perform any javascript function if there is an error. 
-
+//     |_______________________|     |_________|  |___________________________|         |________________|
+            // The new value          Returns 1    Gets the value of the selected        The Calculation
+            //                           value     input
+// 
+//  Summary: The syntax equation takes the value of the input you clicked on with parseInt, performs the calculations specified, and returns the new value in the new input
+// 
+// 
+// 
+//  The "use strict" function scans for any errors in the javascript document and will not perform any javascript function if there is an error. 
+// 
 // Confusing terms used:
-//    - jQuery = a library that can be added to the javascript language as in the html head section. The jQuery library can extend javascript by allowing better functionality by using less work
+//    - jQuery = a library that can be added to the javascript language as shown in the html head section. The jQuery library can extend the
+//      javascript language by allowing better functionality -- event handlers -- when writing less code.
 //    - .val() = gets the value of a certain element. the default value is nothing — " " unless a user changes it
 //    - .keyup() = an event that is triggered when a key is released 
-//    - parseFloat() = takes the string
+//    - parseFloat() = takes the string(equation in this case) and returns a value
 //    - argument = the "stuff" inside the parenthesis that relate to the action or can change the action output
 //    - $ = a jquery variable
-//    - string = a set of letters or words that are inside quotes — ""
+//    - string = a set of letters or words that are inside quotes — "". They can usually be seen on an website
+
+// Improvements:
+//    - Finish list view -- accrodion style tables
+//    - Finish all tables including those under development
+//    - 
 
 
 
@@ -996,13 +1011,63 @@ var time = function() {
 };
 $(document).ready(time);
 
-var pressure = function() {
-
-};
-$(document).ready(pressure);
-
 var energy = function() {
-
+    $('#kilojoule').keyup(function() { 
+        $("#joule").val(parseFloat($("#kilojoule").val(), 10) * 3.171 / 1000);
+        $("#kilocalorie").val(parseFloat($("#kilojoule").val(), 10) * 0.239006);
+        $("#gram-calorie").val(parseFloat($("#kilojoule").val(), 10) * 239.006);
+        $("#kilowatt-hour").val(parseFloat($("#kilojoule").val(), 10) * 0.000277778);
+        $("#watt-hour").val(parseFloat($("#kilojoule").val(), 10) * 0.277778);
+        $("#electronvolt").val(parseFloat($("#kilojoule").val(), 10) * 6.242 * Math.pow(10,21));
+        $("#us-therm").val(parseFloat($("#kilojoule").val(), 10) * 9.4804 / Math.pow(10,6));
+        $("#british-therm-unit").val(parseFloat($("#kilojoule").val(), 10) * 0.947817);
+        $("#foot-pound").val(parseFloat($("#kilojoule").val(), 10) * 737.562);
+    });
+    $('#joule').keyup(function() { 
+        $("#kilojoule").val(parseFloat($("#joule").val(), 10) * 0.001);
+        $("#kilocalorie").val(parseFloat($("#joule").val(), 10) * 0.000239006);
+        $("#gram-calorie").val(parseFloat($("#joule").val(), 10) * 0.239006);
+        $("#kilowatt-hour").val(parseFloat($("#joule").val(), 10) * 2.7778 / Math.pow(10,7));
+        $("#watt-hour").val(parseFloat($("#joule").val(), 10) * 0.000277778);
+        $("#electronvolt").val(parseFloat($("#joule").val(), 10) * 6.242 * Math.pow(10,18));
+        $("#us-therm").val(parseFloat($("#joule").val(), 10) * 9.4804 / Math.pow(10,9));
+        $("#british-therm-unit").val(parseFloat($("#joule").val(), 10) * 0.000947817);
+        $("#foot-pound").val(parseFloat($("#joule").val(), 10) * 0.737562);
+    });
+    $('#kilocalorie').keyup(function() { 
+        $("#kilojoule").val(parseFloat($("#kilocalorie").val(), 10) * 4.184);
+        $("#joule").val(parseFloat($("#kilocalorie").val(), 10) * 4184);
+        $("#gram-calorie").val(parseFloat($("#kilocalorie").val(), 10) * 1000);
+        $("#kilowatt-hour").val(parseFloat($("#kilocalorie").val(), 10) * 0.00116222);
+        $("#watt-hour").val(parseFloat($("#kilocalorie").val(), 10) * 1.16222);
+        $("#electronvolt").val(parseFloat($("#kilocalorie").val(), 10) * 2.611 * Math.pow(10,22));
+        $("#us-therm").val(parseFloat($("#kilocalorie").val(), 10) * 3.9666 / Math.pow(10,5));
+        $("#british-therm-unit").val(parseFloat($("#kilocalorie").val(), 10) * 3.96567);
+        $("#foot-pound").val(parseFloat($("#kilocalorie").val(), 10) * 3085.96);
+    });
+    $('#gram-calorie').keyup(function() { 
+        $("#kilojoule").val(parseFloat($("#gram-calorie").val(), 10) * 0.004184);
+        $("#joule").val(parseFloat($("#gram-calorie").val(), 10) * 4.184);
+        $("#kilocalorie").val(parseFloat($("#gram-calorie").val(), 10) * 0.001);
+        $("#kilowatt-hour").val(parseFloat($("#gram-calorie").val(), 10) * 1.1622 / Math.pow(10,6));
+        $("#watt-hour").val(parseFloat($("#gram-calorie").val(), 10) * 0.00116222);
+        $("#electronvolt").val(parseFloat($("#gram-calorie").val(), 10) * 2.611 * Math.pow(10,19));
+        $("#us-therm").val(parseFloat($("#gram-calorie").val(), 10) * 3.9666 / Math.pow(10,8));
+        $("#british-therm-unit").val(parseFloat($("#gram-calorie").val(), 10) * 0.00396567);
+        $("#foot-pound").val(parseFloat($("#gram-calorie").val(), 10) * 3.08596);
+    });
+    // continue
+    $('#kilowatt-hour').keyup(function() { 
+        $("#kilojoule").val(parseFloat($("#kilowatt-hour").val(), 10) * 0.004184);
+        $("#joule").val(parseFloat($("#kilowatt-hour").val(), 10) * 4.184);
+        $("#kilocalorie").val(parseFloat($("#kilowatt-hour").val(), 10) * 0.001);
+        $("#gram-calorie").val(parseFloat($("#kilowatt-hour").val(), 10) * 1.1622 / Math.pow(10,6));
+        $("#watt-hour").val(parseFloat($("#kilowatt-hour").val(), 10) * 0.00116222);
+        $("#electronvolt").val(parseFloat($("#kilowatt-hour").val(), 10) * 2.611 * Math.pow(10,19));
+        $("#us-therm").val(parseFloat($("#kilowatt-hour").val(), 10) * 3.9666 / Math.pow(10,8));
+        $("#british-therm-unit").val(parseFloat($("#kilowatt-hour").val(), 10) * 0.00396567);
+        $("#foot-pound").val(parseFloat($("#kilowatt-hour").val(), 10) * 3.08596);
+    });
 };
 $(document).ready(energy);
 
@@ -1010,6 +1075,11 @@ var digital_storage = function() {
 
 };
 $(document).ready(digital_storage);
+
+var data_transfer_rate = function() {
+
+};
+$(document).ready(data_transfer_rate);
 
 var frequency = function() {
     $('#hertz').keyup(function() { 
@@ -1062,13 +1132,25 @@ $(document).ready(fuel_economy);
 
 // Under Development
 
+var pressure = function() {
+
+};
+$(document).ready(pressure);
 
 var plane_angle = function() {
 
 };
 $(document).ready(plane_angle);
 
-var data_transfer_rate = function() {
+var favicon = function() {
+    $(".fa-th-large").click(function(){
+        $(".fa-th-large").attr("data","check");
+        $(".fa-th-list").attr("data","uncheck");
+    });
 
+    $(".fa-th-list").click(function(){
+        $(".fa-th-list").attr("data","check");
+        $(".fa-th-large").attr("data","uncheck");
+    });
 };
-$(document).ready(data_transfer_rate);
+$(document).ready(favicon)
