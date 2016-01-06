@@ -117,6 +117,7 @@ td, th, tr {
 }
 #bottom {
   position: fixed;
+  display: none;
   color: #fff;
   background-color: rgba(0,0,0,0.5);
   width: 100%;
