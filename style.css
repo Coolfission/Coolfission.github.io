@@ -59,6 +59,19 @@ body {
     background-color: rgba(0,0,0,0.4);
     padding: 2% 30%;
     border-radius: 10px;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease; 
+}
+#projects a:hover {
+    background-color: rgba(0,0,0,0.6);
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease; 
 }
 #projects a#codepen {
      background: none;
