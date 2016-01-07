@@ -12,7 +12,7 @@
 //  |_____| |   |   |    |       |            |__/   |     |  |       |__/   |_____|  |_____| | \  |    |
 //  |     | |       |    |       |            |  \   |     |  |       |  \   |     |  | \__   |  \ |    |
 //  |     | |       | ___|___    |            |   \  |_____|  |_____  |   \  |     |  |    \  |   \| ___|___   
-//
+//                                 
 //
 //
 //
@@ -30,10 +30,8 @@
 // Summary: This syntax tests when a key — includes mouse click — is released. 
 // In this case, it works on an input when clicked. The function after the 
 // keyup event specifies the action that the syntax will perform
-// 
-// 
-// 
-// Syntax for the action if condition is true
+
+// Syntax for the action if condition is true:
 // 
 //     $("#the-new-input-value").val(parseFloat($("#input-that-you-clicked-on").val() - 32, 10) * (5/9));
 //     |_______________________|     |_________|  |___________________________|         |________________|
@@ -41,25 +39,6 @@
             //                           value     input
 // 
 //  Summary: The syntax equation takes the value of the input you clicked on with parseInt, performs the calculations specified, and returns the new value in the new input
-// 
-// 
-// 
-//  The "use strict" function scans for any errors in the javascript document and will not perform any javascript function if there is an error. 
-// 
-// Confusing terms used:
-//    - jQuery = a library that can be added to the javascript language as shown in the html head section. The jQuery library can extend the
-//      javascript language by allowing better functionality -- event handlers -- when writing less code.
-//    - .val() = gets the value of a certain element. the default value is nothing — " " unless a user changes it
-//    - .keyup() = an event that is triggered when a key is released 
-//    - parseFloat() = takes the string(equation in this case) and returns a value
-//    - argument = the "stuff" inside the parenthesis that relate to the action or can change the action output
-//    - $ = a jquery variable
-//    - string = a set of letters or words that are inside quotes — "". They can usually be seen on an website
-
-// Improvements:
-//    - Finish list view -- accrodion style tables
-//    - Finish all tables including those under development
-//    - 
 
 
 
