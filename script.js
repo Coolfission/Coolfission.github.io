@@ -1,3 +1,19 @@
+
+"use strict";
+
+var typed = function() {
+  var options = {
+    strings: ["Building Webpages", "Devoloping Apps", "Learning C++"],
+    typeSpeed: 20,
+    startDelay: 500,
+    backSpeed: 20,
+    backDelay: 2000,
+    loop: true
+  }
+  $("#typed").typed(options);
+};
+$(document).ready(typed);
+
 var time = function() {
   var today = new Date();
   var hour = today.getHours();
