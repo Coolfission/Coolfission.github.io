@@ -46,10 +46,6 @@ span {
   text-decoration: none;
   color: #fff;
 }
-#index a:hover {
-  background-color: #333;
-  transition: all 500ms ease; 
-}
 .border-bottom {
   width: 100%;
   border: 1px solid #888;
