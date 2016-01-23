@@ -4,7 +4,7 @@ var about = function() {
   $("a[style='cursor: pointer']").click(function() {
     $("#about-closed").attr("id", "about");
     $("body").css({"background": "rgba(0,0,0,0.9)"});
-    $("nav, #projects").css({"opacity": "0"});
+    $("nav, #projects").css({"opacity": "0.15"});
   });
   $("i[class='fa fa-times-circle-o']").click(function() {
     $("#about").attr("id", "about-closed");
