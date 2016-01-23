@@ -56,7 +56,7 @@ body {
 }
 #about p {
     margin: auto;
-    width: 30%;
+    width: 50%;
     text-align: left;
 }
 #about i[class="fa fa-code"] {
