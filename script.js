@@ -1,6 +1,9 @@
 
 "use strict";
+var about = function() {
 
+};
+$(document).ready(about);
 var typed = function() {
   var options = {
     strings: ["Building Webpages", "Devoloping Apps", "Learning C++"],

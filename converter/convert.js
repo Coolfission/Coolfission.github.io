@@ -56,6 +56,8 @@ var basic = function() {
             return false;
         }
     } 
+
+    $("#accordion").accordion({collapsible: true, heightStyle: "content"});
 };
 $(document).ready(basic);
 

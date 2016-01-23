@@ -27,6 +27,15 @@ body {
     color: #fff;
 }
 
+#about {
+    background: rgba(0,0,0,0.9);
+    color: #fff;
+    position: fixed;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+}
+
 #topic {
     background-color: rgba(0,0,0,0.1);
     padding: 50px 0px;
