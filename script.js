@@ -1,11 +1,15 @@
 
 "use strict";
 var about = function() {
-  $("a[href='#about']").click(function() {
+  $("a[style='cursor: pointer']").click(function() {
     $("#about-closed").attr("id", "about");
+    $("body").css({"background": "rgba(0,0,0,0.9)"});
+    $("nav, #projects").css({"opacity": "0"});
   });
   $("i[class='fa fa-times-circle-o']").click(function() {
     $("#about").attr("id", "about-closed");
+    $("body").css({"background": "#ddd"});
+    $("nav, #projects").css({"opacity": "1"});
   });
 };
 $(document).ready(about);
