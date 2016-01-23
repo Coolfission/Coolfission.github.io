@@ -64,8 +64,9 @@ body {
 #about i[class="fa fa-times-circle-o"] {
   color: #999; 
   font-size: 3em; 
-  float: right;
-  margin: 10px 10px 0px 0px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
   cursor: pointer;
 }
 
