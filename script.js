@@ -1,9 +1,15 @@
 
 "use strict";
 var about = function() {
-
+  $("a[href='#about']").click(function() {
+    $("#about-closed").attr("id", "about");
+  });
+  $("i[class='fa fa-times-circle-o']").click(function() {
+    $("#about").attr("id", "about-closed");
+  });
 };
 $(document).ready(about);
+
 var typed = function() {
   var options = {
     strings: ["Building Webpages", "Devoloping Apps", "Learning C++"],
