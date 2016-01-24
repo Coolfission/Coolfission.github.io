@@ -50,6 +50,11 @@ $(document).ready(time);
 
 
 $(function() {
+
+  $("#context-menu__print").click(function() {
+    window.print();
+  });
+
   function clickInsideElement( e, className ) {
     var el = e.srcElement || e.target;
     
