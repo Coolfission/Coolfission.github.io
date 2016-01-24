@@ -50,6 +50,9 @@ legend {
   font-size: 20px;
   color: #ddd;
   font-weight: bold;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 .collapse {
     display: none;
