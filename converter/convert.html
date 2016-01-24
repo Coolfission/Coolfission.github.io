@@ -10,6 +10,7 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
   <script src="convert.js"></script>
 </head>
 
@@ -41,7 +42,7 @@
 </div>
 
 <fieldset id="temperature">
-<legend data-toggle="" data-target=".temperature-table">Temperature</legend>
+<legend data-toggle="" id="first-legend" data-target=".temperature-table">Temperature</legend>
 <table class="temperature-table" valign="top">
 <thead></thead>
 <tbody>
@@ -69,12 +70,11 @@
 </tbody>
 </table>
 </fieldset>
-<br><br>
 
 <!--Length-->
 <fieldset id="length">
-<legend>Length</legend>
-<table valign="top">
+<legend data-toggle="" id="second-legend" data-target=".length-table">Length</legend>
+<table class="length-table" valign="top">
 <thead></thead>
 <caption>
   <strong>US units</strong>
@@ -115,7 +115,7 @@
 </tbody>
 </table>
 
-<table valign="top">
+<table class="length-table" valign="top">
 <thead></thead>
 <caption>
   <strong>Metric units</strong>
@@ -162,12 +162,11 @@
 </tbody>
 </table>
 </fieldset>
-<br><br>
 
 <!--Mass-->
 <fieldset id="mass">
-<legend>Mass</legend>
-<table valign="top">
+<legend data-toggle="" id="third-legend" data-target=".mass-table">Mass</legend>
+<table class="mass-table" valign="top">
 <thead></thead>
 <caption>
   <strong>US units</strong>
@@ -203,7 +202,7 @@
 </tbody>
 </table>
 
-<table valign="top">
+<table class="mass-table" valign="top">
 <thead></thead>
 <caption>
   <strong>Imperial units</strong>
@@ -221,7 +220,7 @@
 </tbody>
 </table>
 
-<table valign="top">
+<table class="mass-table" valign="top">
 <thead></thead>
 <caption>
   <strong>Metric units</strong>
@@ -262,12 +261,11 @@
 </tbody>
 </table>
 </fieldset>
-<br><br>
 
 <!--Area-->
 <fieldset id="area">
-<legend>Area</legend>  
-<table valign="top">
+<legend data-toggle="" id="fourth-legend" data-target=".area-table">Area</legend>  
+<table class="area-table" valign="top">
 <thead></thead>
 <caption>
 <strong>US units</strong>
@@ -309,7 +307,7 @@
 </tbody>
 </table>
 
-<table valign="top">
+<table class="area-table" valign="top">
 <thead></thead>
 <caption>
 <strong>Metric units</strong>
@@ -339,12 +337,11 @@
 </tbody>
 </table>
 </fieldset>
-<br><br>
 
 <!--Volume-->
 <fieldset id="volume">
-<legend>Volume</legend>  
-<table valign="top">
+<legend data-toggle="" id="fifth-legend" data-target=".volume-table">Volume</legend>  
+<table class="volume-table" valign="top">
 <thead></thead>
 <caption>
 <strong>US units</strong>
@@ -410,7 +407,7 @@
 </tbody>
 </table>
 
-<table valign="top">
+<table class="volume-table" valign="top">
 <thead></thead>
 <caption>
   <strong>Imperial units</strong>
@@ -464,7 +461,7 @@
 </tbody>
 </table>
 
-<table valign="top">
+<table class="volume-table" valign="top">
 <thead></thead>
 <caption>
 <strong>Metric units</strong>
@@ -494,12 +491,11 @@
 </tbody>
 </table>
 </fieldset>
-<br><br>
 
 <!--Speed-->
 <fieldset id="speed">
-<legend>Speed</legend>  
-<table valign="top">
+<legend data-toggle="" id="sixth-legend" data-target=".speed-table">Speed</legend>  
+<table class="speed-table" valign="top">
 <thead></thead>
 <caption>
 <strong>US units</strong>
@@ -529,7 +525,7 @@
 </tbody>
 </table>
 
-<table valign="top">
+<table class="speed-table" valign="top">
 <caption>
    <strong>Metric Units</strong>
 </caption>
@@ -552,12 +548,11 @@
 </tbody>
 </table>
 </fieldset>
-<br><br>
 
 <!--Time-->
 <fieldset id="time">
-<legend>Time</legend>  
-<table valign="top">
+<legend data-toggle="" id="seventh-legend" data-target=".time-table">Time</legend>  
+<table class="time-table" valign="top">
 <thead></thead>
 <tbody>
   <td>
@@ -638,12 +633,11 @@
 </tbody>
 </table>
 </fieldset>
-<br><br>
 
 <!--Energy-->
 <fieldset id="energy">
-<legend>Energy</legend>  
-<table valign="top">
+<legend data-toggle="" id="eigth-legend" data-target=".energy-table">Energy</legend>  
+<table class="energy-table" valign="top">
 <thead></thead>
 <tbody>
   <td>
@@ -712,12 +706,11 @@
 </tbody>
 </table>
 </fieldset>
-<br><br>
 
 <!--Frequency-->
 <fieldset id="frequency">
-<legend>Frequency</legend>
-<table valign="top">
+<legend data-toggle="" id="ninth-legend" data-target=".frequency-table">Frequency</legend>
+<table class="frequency-table" valign="top">
 <thead></thead>
 <tbody>
   <td>
@@ -750,12 +743,11 @@
 </tbody>
 </table>  
 </fieldset>
-<br><br>
 
 <!--Fuel Economy-->
 <fieldset id="fuel_economy">
-<legend>Fuel Economy</legend>  
-<table valign="top">
+<legend data-toggle="" id="tenth-legend" data-target=".fuel_economy-table">Fuel Economy</legend>  
+<table class="fuel_economy-table" valign="top">
 <thead></thead>
 <caption>
   <strong>US units</strong>
@@ -779,7 +771,7 @@
 </tbody>
 </table>
 
-<table valign="top">
+<table class="fuel_economy-table" valign="top">
 <thead></thead>
 <caption>
   <strong>Metric units</strong>
@@ -803,7 +795,6 @@
 </tbody>
 </table>
 </fieldset>
-<br><br>
 
 <br><br><br><br><br><br><br><br><br><br><br>
 <div id="line"></div>

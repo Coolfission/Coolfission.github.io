@@ -1148,13 +1148,35 @@ var favicon = function() {
     $(".fa-th-large").click(function() {
         $(".fa-th-large").attr("data","check");
         $(".fa-th-list").attr("data","uncheck");
+        $("legend").attr("data-toggle", " ");    
+        $("legend").css({"cursor": "default"});
+            $($("#first-legend").data("target")).removeClass("collapse");
+            $($("#second-legend").data("target")).removeClass("collapse");
+            $($("#third-legend").data("target")).removeClass("collapse");
+            $($("#fourth-legend").data("target")).removeClass("collapse");
+            $($("#fifth-legend").data("target")).removeClass("collapse");
+            $($("#sixth-legend").data("target")).removeClass("collapse");
+            $($("#seventh-legend").data("target")).removeClass("collapse");
+            $($("#eigth-legend").data("target")).removeClass("collapse");
+            $($("#ninth-legend").data("target")).removeClass("collapse");
+            $($("#tenth-legend").data("target")).removeClass("collapse");
     });
 
     $(".fa-th-list").click(function() {
         $(".fa-th-list").attr("data","check");
         $(".fa-th-large").attr("data","uncheck");
-        $("legend").attr("data-toggle", "collapse");     
-        $($("legend").data("target")).addClass("collapse");
+        $("legend").attr("data-toggle", "collapse"); 
+        $("legend").css({"cursor": "pointer"});    
+            $($("#first-legend").data("target")).addClass("collapse");
+            $($("#second-legend").data("target")).addClass("collapse");
+            $($("#third-legend").data("target")).addClass("collapse");
+            $($("#fourth-legend").data("target")).addClass("collapse");
+            $($("#fifth-legend").data("target")).addClass("collapse");
+            $($("#sixth-legend").data("target")).addClass("collapse");
+            $($("#seventh-legend").data("target")).addClass("collapse");
+            $($("#eigth-legend").data("target")).addClass("collapse");
+            $($("#ninth-legend").data("target")).addClass("collapse");
+            $($("#tenth-legend").data("target")).addClass("collapse");
     });
 };
 $(document).ready(favicon)
