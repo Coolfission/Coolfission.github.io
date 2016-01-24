@@ -1,47 +1,3 @@
-// 
-//
-//
-//  Technology Fair 2016
-//
-//
-//  Created by...
-//
-//
-//   _____   _______  _______ _______                                         _____    _____         _______
-//  |     | |   |   |    |       |            |   /  |     |  |       |   /  |     |  |     | |\   |    |
-//  |_____| |   |   |    |       |            |__/   |     |  |       |__/   |_____|  |_____| | \  |    |
-//  |     | |       |    |       |            |  \   |     |  |       |  \   |     |  | \__   |  \ |    |
-//  |     | |       | ___|___    |            |   \  |_____|  |_____  |   \  |     |  |    \  |   \| ___|___   
-//                                 
-//
-//
-//
-//
-// JavaScript Explanation:
-//
-// Syntax for selecting an element after event:
-// 
-// $("#selector").keyup(function() {
-//                     
-//    do something    
-//                           
-// });  
-// 
-// Summary: This syntax tests when a key — includes mouse click — is released. 
-// In this case, it works on an input when clicked. The function after the 
-// keyup event specifies the action that the syntax will perform
-
-// Syntax for the action if condition is true:
-// 
-//     $("#the-new-input-value").val(parseFloat($("#input-that-you-clicked-on").val() - 32, 10) * (5/9));
-//     |_______________________|     |_________|  |___________________________|         |________________|
-            // The new value          Returns 1    Gets the value of the selected        The Calculation
-            //                           value     input
-// 
-//  Summary: The syntax equation takes the value of the input you clicked on with parseInt, performs the calculations specified, and returns the new value in the new input
-
-
-
 "use strict";
 
 var basic = function() {
@@ -57,7 +13,6 @@ var basic = function() {
         }
     } 
 
-    $("#accordion").accordion({collapsible: true, heightStyle: "content"});
 };
 $(document).ready(basic);
 
@@ -1198,6 +1153,8 @@ var favicon = function() {
     $(".fa-th-list").click(function() {
         $(".fa-th-list").attr("data","check");
         $(".fa-th-large").attr("data","uncheck");
+        $("legend").attr("data-toggle", "collapse");     
+        $($("legend").data("target")).addClass("collapse");
     });
 };
 $(document).ready(favicon)

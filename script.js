@@ -1,5 +1,5 @@
-
 "use strict";
+
 var about = function() {
   $("a[style='cursor: pointer']").click(function() {
     $("#about-closed").attr("id", "about");
