@@ -4,12 +4,14 @@ var about = function() {
   $("a[style='cursor: pointer']").click(function() {
     $("#about-closed").attr("id", "about");
     $("body").css({"background": "rgba(0,0,0,0.9)"});
-    $("nav, #projects").css({"opacity": "0.15"});
+    $("nav, #projects").css({"opacity": "0.2"});
+    $("#footer").css({"opacity": "0.5"});
   });
   $("i[class='fa fa-times-circle-o']").click(function() {
     $("#about").attr("id", "about-closed");
     $("body").css({"background": "#ddd"});
     $("nav, #projects").css({"opacity": "1"});
+    $("#footer").css({"opacity": "1"});
   });
 };
 $(document).ready(about);
