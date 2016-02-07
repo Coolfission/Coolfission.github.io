@@ -1,16 +1,26 @@
 "use strict";
 
 var about = function() {
+function open() {
+  $("#about-closed").attr("id", "about");
+      $("body").css({"background": "rgba(0,0,0,0.9)"});
+      $("body *").not("#about *").css({"color": "#000"});
+      $("#about").css({"color": "#fff"});
+}
   $("a[style='cursor: pointer']").click(function() {
-    $("#about-closed").attr("id", "about");
-        $("body").css({"background": "rgba(0,0,0,0.9)"});
-        $("body *").not("#about *").css({"color": "#000"});
-        $("#about").css({"color": "#fff"});
+    open();
+  });
+
+function close() {
+  $("#about").attr("id", "about-closed");
+      $("body").css({"background": "#ddd"});
+      $("body *").css({"color": ""});
+}
+  shortcut.add("Esc", function() {
+    close();
   });
   $("i[class='fa fa-times-circle-o']").click(function() {
-    $("#about").attr("id", "about-closed");
-        $("body").css({"background": "#ddd"});
-        $("body *").css({"color": ""});
+    close();
   });
 };
 $(document).ready(about);
