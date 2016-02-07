@@ -3,16 +3,14 @@
 var about = function() {
   $("a[style='cursor: pointer']").click(function() {
     $("#about-closed").attr("id", "about");
-      $("body").css({"background": "rgba(0,0,0,0.85)"});
-      $("#projects").css({"opacity": "0.3", "background": "rgba(0,0,0,0.3)"});
-      $("nav").css({"opacity": "0.2"});
-      $("#footer").css({"opacity": "0.7"});
+        $("body").css({"background": "rgba(0,0,0,0.9)"});
+        $("body *").not("#about *").css({"color": "#000"});
+        $("#about").css({"color": "#fff"});
   });
   $("i[class='fa fa-times-circle-o']").click(function() {
     $("#about").attr("id", "about-closed");
-      $("body").css({"background": "#ddd"});
-      $("#projects").css({"background": "none"});
-      $("nav, #projects, #footer").css({"opacity": "1"});
+        $("body").css({"background": "#ddd"});
+        $("body *").css({"color": ""});
   });
 };
 $(document).ready(about);
@@ -23,7 +21,7 @@ var typed = function() {
     typeSpeed: 20,
     startDelay: 500,
     backSpeed: 20,
-    backDelay: 2000,
+    backDelay: 3000,
     loop: true
   }
   $("#typed").typed(options);
