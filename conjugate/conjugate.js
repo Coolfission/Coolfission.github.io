@@ -1,4 +1,5 @@
-var language = function() {
+var irregular = function() {
+	//Etre
 	$("#suis").hover(function() {
 	    $("#suis").append("<b>&nbsp;| I am</b>");
 	}, function() {
@@ -29,5 +30,37 @@ var language = function() {
 	}, function() {
 		$(this).find("b:last").remove();
 	});
+	
+	//Faire
+	$("#fais").hover(function() {
+	    $(this).append("<b>&nbsp;| I am doing</b>");
+	}, function() {
+		$(this).find("b:last").remove();
+	});
+	$("#fais").hover(function() {
+	   (this).append("<b>&nbsp;| You are doing</b>");
+	}, function() {
+		$(this).find("b:last").remove();
+	});
+	$("#fait").hover(function() {
+	    (this).append("<b>&nbsp;| He/She is doing</b>");
+	}, function() {
+		$(this).find("b:last").remove();
+	});
+	$("#faisons").hover(function() {
+	    $((this).append("<b>&nbsp;| We are doing</b>");
+	}, function() {
+		$(this).find("b:last").remove();
+	});
+	$("#faites").hover(function() {
+	    $(this).append("<b>&nbsp;| You all are</b>");
+	}, function() {
+		$(this).find("b:last").remove();
+	});
+	$("#font").hover(function() {
+	    $(this).append("<b>&nbsp;| They are</b>");
+	}, function() {
+		$(this).find("b:last").remove();
+	});
 };
-$(document).ready(language);
+$(document).ready(irregular);
