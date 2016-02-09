@@ -32,12 +32,12 @@ var irregular = function() {
 	});
 	
 	//Faire
-	$("#fais").hover(function() {
+	$("#fais:nth-child(2)").hover(function() {
 	    $(this).append("<b>&nbsp;| I am doing</b>");
 	}, function() {
 		$(this).find("b:last").remove();
 	});
-	$("#fais").hover(function() {
+	$("#fais:nth-child(3)").hover(function() {
 	   (this).append("<b>&nbsp;| You are doing</b>");
 	}, function() {
 		$(this).find("b:last").remove();
@@ -53,12 +53,12 @@ var irregular = function() {
 		$(this).find("b:last").remove();
 	});
 	$("#faites").hover(function() {
-	    $(this).append("<b>&nbsp;| You all are</b>");
+	    $(this).append("<b>&nbsp;| You all are doing</b>");
 	}, function() {
 		$(this).find("b:last").remove();
 	});
 	$("#font").hover(function() {
-	    $(this).append("<b>&nbsp;| They are</b>");
+	    $(this).append("<b>&nbsp;| They are doing</b>");
 	}, function() {
 		$(this).find("b:last").remove();
 	});
