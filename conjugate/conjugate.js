@@ -43,7 +43,7 @@ var irregular = function() {
 		$(this).find("b:last").remove();
 	});
 	$("#fait").hover(function() {
-	    (this).append("<b>&nbsp;| He/She is doing</b>");
+	    $(this).append("<b>&nbsp;| He/She is doing</b>");
 	}, function() {
 		$(this).find("b:last").remove();
 	});
