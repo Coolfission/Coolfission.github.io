@@ -48,7 +48,7 @@ var irregular = function() {
 		$(this).find("b:last").remove();
 	});
 	$("#faisons").hover(function() {
-	    $((this).append("<b>&nbsp;| We are doing</b>");
+	    $(this).append("<b>&nbsp;| We are doing</b>");
 	}, function() {
 		$(this).find("b:last").remove();
 	});
