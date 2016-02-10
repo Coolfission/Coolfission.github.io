@@ -101,5 +101,37 @@ var irregular = function() {
 	}, function() {
 		$(this).text("Ils/Elles ont");
 	});
+	
+//Aller
+	$("#ai").hover(function() {
+		$(this).text("I have");
+	}, function() {
+		$(this).text("J'ai");
+	});
+	$("#as").hover(function() {
+		$(this).text("You have");
+	}, function() {
+		$(this).text("Tu as");
+	});
+	$("#a").hover(function() {
+		$(this).text("He/She have");
+	}, function() {
+		$(this).text("Il/Elle a");
+	});
+	$("#avons").hover(function() {
+		$(this).text("We have");
+	}, function() {
+		$(this).text("Nous avons");
+	});
+	$("#avez").hover(function() {
+		$(this).text("You all have");
+	}, function() {
+		$(this).text("Vous avez");
+	});
+	$("#ont").hover(function() {
+		$(this).text("They have");
+	}, function() {
+		$(this).text("Ils/Elles ont");
+	});
 };
 $(document).ready(irregular);
