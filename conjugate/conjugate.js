@@ -6,9 +6,27 @@ var irregular = function() {
 		$(this).css('color', '#ff0000');
 	});
 
+
+jQuery.fn.extend({
+    toggleText: function (a, b){
+        var that = this;
+            if (that.text() != a && that.text() != b){
+                that.text(a);
+            }
+            else
+            if (that.text() == a){
+                that.text(b);
+            }
+            else
+            if (that.text() == b){
+                that.text(a);
+            }
+        return this;
+    }
+});
 //Etre
 	$("#suis").click(function() {
-		$(this).toggle().text("I am");
+		$(this).toggleText("Test", "test2");
 	});
 	$("#es").hover(function() {
 		$(this).text("You are");
