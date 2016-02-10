@@ -10,7 +10,7 @@ var irregular = function() {
 	$("#suis").click(function() {
 		$(this).text("I am");
 	});
-	$("#suis").outside("click", function() {
+	$("#suis").outside("click", function(e) {
 		$(this).text("Je suis");
 	});
 	$("#es").hover(function() {
