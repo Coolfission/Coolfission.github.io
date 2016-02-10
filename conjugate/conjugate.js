@@ -32,7 +32,7 @@ jQuery.fn.extend({
 		$(this).toggleText("You are", "Tu es");
 	});
 	$("#est").click(function() {
-		$(this).toogleText("He/She is", "Il/Elle est");
+		$(this).toggleText("He/She is", "Il/Elle est");
 	});
 	$("#sommes").hover(function() {
 		$(this).text("We are");
