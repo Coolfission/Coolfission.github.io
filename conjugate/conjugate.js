@@ -1,5 +1,4 @@
 var irregular = function() {
-<<<<<<< HEAD
 //Basic
 	$("td").hover(function() {
 		$(this).css('color', '#0000FF');
@@ -8,9 +7,6 @@ var irregular = function() {
 	});
 
 //Etre
-=======
-	//Etre
->>>>>>> origin/master
 	$("#suis").hover(function() {
 		$(this).text("I am");
 	}, function() {
@@ -105,10 +101,6 @@ var irregular = function() {
 	}, function() {
 		$(this).text("Ils/Elles ont");
 	});
-<<<<<<< HEAD
-
-//Aller
-=======
 	
 	//Faire
 	$("#fais:first-child").hover(function() {
@@ -141,6 +133,5 @@ var irregular = function() {
 	}, function() {
 		$(this).find("b:last").remove();
 	});
->>>>>>> origin/master
 };
 $(document).ready(irregular);
