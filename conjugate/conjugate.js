@@ -28,13 +28,11 @@ jQuery.fn.extend({
 	$("#suis").click(function() {
 		$(this).toggleText("I am", "Je suis");
 	});
-	$("#es").hover(function() {
+	$("#es").click(function() {
 		$(this).toggleText("You are", "Tu es");
 	});
-	$("#est").hover(function() {
-		$(this).text("He/She is");
-	}, function() {
-		$(this).text("Il/Elle est");
+	$("#est").click(function() {
+		$(this).toogleText("He/She is", "Il/Elle est");
 	});
 	$("#sommes").hover(function() {
 		$(this).text("We are");
