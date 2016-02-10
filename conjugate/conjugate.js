@@ -26,12 +26,10 @@ jQuery.fn.extend({
 });
 //Etre
 	$("#suis").click(function() {
-		$(this).toggleText("Test", "test2");
+		$(this).toggleText("I am", "Je suis");
 	});
 	$("#es").hover(function() {
-		$(this).text("You are");
-	}, function() {
-		$(this).text("Tu es");
+		$(this).toggleText("You are", "Tu es");
 	});
 	$("#est").hover(function() {
 		$(this).text("He/She is");
