@@ -101,37 +101,5 @@ var irregular = function() {
 	}, function() {
 		$(this).text("Ils/Elles ont");
 	});
-	
-	//Faire
-	$("#fais:first-child").hover(function() {
-	    $(this).append("<b>&nbsp;| I am doing</b>");
-	}, function() {
-		$(this).find("b:last").remove();
-	});
-	$("#fais:nth-child(3)").hover(function() {
-	   (this).append("<b>&nbsp;| You are doing</b>");
-	}, function() {
-		$(this).find("b:last").remove();
-	});
-	$("#fait").hover(function() {
-	    $(this).append("<b>&nbsp;| He/She is doing</b>");
-	}, function() {
-		$(this).find("b:last").remove();
-	});
-	$("#faisons").hover(function() {
-	    $(this).append("<b>&nbsp;| We are doing</b>");
-	}, function() {
-		$(this).find("b:last").remove();
-	});
-	$("#faites").hover(function() {
-	    $(this).append("<b>&nbsp;| You all are doing</b>");
-	}, function() {
-		$(this).find("b:last").remove();
-	});
-	$("#font").hover(function() {
-	    $(this).append("<b>&nbsp;| They are doing</b>");
-	}, function() {
-		$(this).find("b:last").remove();
-	});
 };
 $(document).ready(irregular);
