@@ -8,10 +8,7 @@ var irregular = function() {
 
 //Etre
 	$("#suis").click(function() {
-		$(this).text("I am");
-	});
-	$("#suis").outside("click", function(e) {
-		$(this).text("Je suis");
+		$(this).toggle().text("I am");
 	});
 	$("#es").hover(function() {
 		$(this).text("You are");
