@@ -1,7 +1,7 @@
 var irregular = function() {
 //Basic
 jQuery.fn.extend({
-    toggleText: function (a, b, event){
+    toggleText: function (a, b) {
         var that = this;
             if (that.text() != a && that.text() != b){
                 that.text(a);
@@ -17,7 +17,6 @@ jQuery.fn.extend({
         return this;
     }
 });
-
 
 //Etre
 	$("#suis").click(function() {
@@ -80,23 +79,43 @@ jQuery.fn.extend({
 	});
 	
 //Aller
-	// $("#ai").click(function() {
-	// 	$(this).toggleText("I have");
-	// });
-	// $("#as").click(function() {
-	// 	$(this).toggleText("You have");
-	// });
-	// $("#a").click(function() {
-	// 	$(this).toggleText("He/She have");
-	// });
-	// $("#avons").click(function() {
-	// 	$(this).toggleText("We have");
-	// });
-	// $("#avez").click(function() {
-	// 	$(this).toggleText("You all have");
-	// });
-	// $("#ont").click(function() {
-	// 	$(this).toggleText("They have");
-	// });
+	$("#vais").click(function() {
+		$(this).toggleText("I go", "Je vais");
+	});
+	$("#vas").click(function() {
+		$(this).toggleText("You go", "Tu vas");
+	});
+	$("#va").click(function() {
+		$(this).toggleText("He/She go", "Il/Elle va");
+	});
+	$("#allons").click(function() {
+		$(this).toggleText("We go", "Nous allons");
+	});
+	$("#allez").click(function() {
+		$(this).toggleText("You all go", "Vous allez");
+	});
+	$("#vont").click(function() {
+		$(this).toggleText("They go", "Ils/Elles vont");
+	});
+
+//Venir
+	$("td[name='one-viens']").click(function() {
+		$(this).toggleText("I come", "Je viens");
+	});
+	$("td[name='two-viens']").click(function() {
+		$(this).toggleText("You come", "Tu viens");
+	});
+	$("#vient").click(function() {
+		$(this).toggleText("He/She come", "Il/Elle vient");
+	});
+	$("#venons").click(function() {
+		$(this).toggleText("We come", "Nous venons");
+	});
+	$("#venez").click(function() {
+		$(this).toggleText("You all come", "Vous venez");
+	});
+	$("#viennent").click(function() {
+		$(this).toggleText("They come", "Ils/Elles viennent");
+	});
 };
 $(document).ready(irregular);
