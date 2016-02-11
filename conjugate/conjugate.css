@@ -5,21 +5,23 @@ body {
 	padding: 0;
 	font-family: "Source Sans Pro", Arial;
 	text-align: center;
-	background-image: url("http://www.wallpapereast.com/static/images/6840652-pattern-wallpaper.jpg");
+/*	background-image: url("http://i.kinja-img.com/gawker-media/image/upload/s--kNBV2J_6--/18fs41bnvwyqvjpg.jpg");
 	background-repeat: repeat;
 	background-attachment: fixed;
-	background-size: 50% 50%;
+	background-size: 30%;*/
+	background-color: rgba(0,0,0,0.9);
 	color: #fff;
 	overflow-x: hidden;
 }
 select {
 	background-color: rgba(0,0,0,0.05);
+	border-color: orange;
 	color: #fff;
 	outline: none;
 	padding: 5px;
 }
 select * {
-	background-color: rgba(0,0,0,0.9);
+	background: rgba(0,0,0,0.8);
 }
 table {
 	display: inline-block;

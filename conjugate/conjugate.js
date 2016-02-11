@@ -44,93 +44,59 @@ jQuery.fn.extend({
 		$(this).toggleText("I am doing", "Je fais");
 	});
 	$("td[name='two-fais']").click(function() {
-		$(this).text("You are doing");
-	}, function() {
-		$(this).text("Tu fais");
+		$(this).toggleText("You are doing", "Tu fais");
 	});
 	$("#fait").click(function() {
-		$(this).text("He/She is doing");
-	}, function() {
-		$(this).text("Il/Elle fait");
+		$(this).toggleText("He/She is doing", "Il/Elle fait");
 	});
 	$("#faisons").click(function() {
-		$(this).text("We are doing");
-	}, function() {
-		$(this).text("Nous faisons");
+		$(this).toggleText("We are doing", "Nous faisons");
 	});
 	$("#faites").click(function() {
-		$(this).text("You all are doing");
-	}, function() {
-		$(this).text("Vous faites");
+		$(this).toggleText("You all are doing", "Vous faites");
 	});
 	$("#font").click(function() {
-		$(this).text("They are doing");
-	}, function() {
-		$(this).text("Ils/Elles font");
+		$(this).toggleText("They are doing", "Ils/Elles font");
 	});
 
 //Avoir
 	$("#ai").click(function() {
-		$(this).text("I have");
-	}, function() {
-		$(this).text("J'ai");
+		$(this).toggleText("I have", "J'ai");
 	});
 	$("#as").click(function() {
-		$(this).text("You have");
-	}, function() {
-		$(this).text("Tu as");
+		$(this).toggleText("You have", "Tu as");
 	});
 	$("#a").click(function() {
-		$(this).text("He/She have");
-	}, function() {
-		$(this).text("Il/Elle a");
+		$(this).toggleText("He/She have", "Il/Elle a");
 	});
 	$("#avons").click(function() {
-		$(this).text("We have");
-	}, function() {
-		$(this).text("Nous avons");
+		$(this).toggleText("We have", "Nous avons");
 	});
 	$("#avez").click(function() {
-		$(this).text("You all have");
-	}, function() {
-		$(this).text("Vous avez");
+		$(this).toggleText("You all have", "Vous avez");
 	});
 	$("#ont").click(function() {
-		$(this).text("They have");
-	}, function() {
-		$(this).text("Ils/Elles ont");
+		$(this).toggleText("They have", "Ils/Elles ont");
 	});
 	
 //Aller
-	$("#ai").click(function() {
-		$(this).text("I have");
-	}, function() {
-		$(this).text("J'ai");
-	});
-	$("#as").click(function() {
-		$(this).text("You have");
-	}, function() {
-		$(this).text("Tu as");
-	});
-	$("#a").click(function() {
-		$(this).text("He/She have");
-	}, function() {
-		$(this).text("Il/Elle a");
-	});
-	$("#avons").click(function() {
-		$(this).text("We have");
-	}, function() {
-		$(this).text("Nous avons");
-	});
-	$("#avez").click(function() {
-		$(this).text("You all have");
-	}, function() {
-		$(this).text("Vous avez");
-	});
-	$("#ont").click(function() {
-		$(this).text("They have");
-	}, function() {
-		$(this).text("Ils/Elles ont");
-	});
+	// $("#ai").click(function() {
+	// 	$(this).toggleText("I have");
+	// });
+	// $("#as").click(function() {
+	// 	$(this).toggleText("You have");
+	// });
+	// $("#a").click(function() {
+	// 	$(this).toggleText("He/She have");
+	// });
+	// $("#avons").click(function() {
+	// 	$(this).toggleText("We have");
+	// });
+	// $("#avez").click(function() {
+	// 	$(this).toggleText("You all have");
+	// });
+	// $("#ont").click(function() {
+	// 	$(this).toggleText("They have");
+	// });
 };
 $(document).ready(irregular);
