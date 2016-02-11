@@ -117,5 +117,85 @@ jQuery.fn.extend({
 	$("#viennent").click(function() {
 		$(this).toggleText("They come", "Ils/Elles viennent");
 	});
+
+//Acheter
+	$("td[name='one-achete']").click(function() {
+		$(this).toggleText("I buy", "J'achète");
+	});
+	$("td[name='two-achete']").click(function() {
+		$(this).toggleText("He/she buy", "Il/Elle achète");
+	});
+	$("#achetes").click(function() {
+		$(this).toggleText("You buy", "Tu achètes");
+	});
+	$("#achetons").click(function() {
+		$(this).toggleText("We buy", "Nous achetons");
+	});
+	$("#achetez").click(function() {
+		$(this).toggleText("You all buy", "Vous achetez");
+	});
+	$("#achetent").click(function() {
+		$(this).toggleText("They buy", "Ils/Elles achètent");
+	});
+
+//Preferer
+	$("td[name='one-prefere']").click(function() {
+		$(this).toggleText("I prefer", "Je préfère");
+	});
+	$("td[name='two-prefere']").click(function() {
+		$(this).toggleText("He/she prefer", "Il/Elle préfère");
+	});
+	$("#preferes").click(function() {
+		$(this).toggleText("You prefer", "Tu préfères");
+	});
+	$("#preferons").click(function() {
+		$(this).toggleText("We prefer", "Nous préférons");
+	});
+	$("#preferez").click(function() {
+		$(this).toggleText("You all prefer", "Vous préférez");
+	});
+	$("#preferent").click(function() {
+		$(this).toggleText("They prefer", "Ils/Elles préfèrent");
+	});
+
+//Esperer
+	$("td[name='one-espere']").click(function() {
+		$(this).toggleText("I hope", "J'espère");
+	});
+	$("td[name='two-espere']").click(function() {
+		$(this).toggleText("He/she hope", "Il/Elle espère");
+	});
+	$("#esperes").click(function() {
+		$(this).toggleText("You hope", "Tu espères");
+	});
+	$("#esperons").click(function() {
+		$(this).toggleText("We hope", "Nous espérons");
+	});
+	$("#esperez").click(function() {
+		$(this).toggleText("You all hope", "Vous espérez");
+	});
+	$("#esperent").click(function() {
+		$(this).toggleText("They hope", "Ils/Elles espèrent");
+	});
+
+//Amener
+	$("td[name='one-amene']").click(function() {
+		$(this).toggleText("I bring", "J'amène");
+	});
+	$("td[name='two-amene']").click(function() {
+		$(this).toggleText("He/she bring", "Il/Elle amène");
+	});
+	$("#amenes").click(function() {
+		$(this).toggleText("You bring", "Tu amènes");
+	});
+	$("#amenons").click(function() {
+		$(this).toggleText("We bring", "Nous amenons");
+	});
+	$("#amenez").click(function() {
+		$(this).toggleText("You all bring", "Vous amenez");
+	});
+	$("#amenent").click(function() {
+		$(this).toggleText("They bring", "Ils/Elles amènent");
+	});
 };
 $(document).ready(irregular);
