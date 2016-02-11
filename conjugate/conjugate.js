@@ -1,14 +1,7 @@
 var irregular = function() {
 //Basic
-	$("td").hover(function() {
-		$(this).css('color', '#0000FF');
-	}, function() {
-		$(this).css('color', '#ff0000');
-	});
-
-
 jQuery.fn.extend({
-    toggleText: function (a, b){
+    toggleText: function (a, b, event){
         var that = this;
             if (that.text() != a && that.text() != b){
                 that.text(a);
@@ -24,6 +17,8 @@ jQuery.fn.extend({
         return this;
     }
 });
+
+
 //Etre
 	$("#suis").click(function() {
 		$(this).toggleText("I am", "Je suis");
@@ -34,113 +29,105 @@ jQuery.fn.extend({
 	$("#est").click(function() {
 		$(this).toggleText("He/She is", "Il/Elle est");
 	});
-	$("#sommes").hover(function() {
-		$(this).text("We are");
-	}, function() {
-		$(this).text("Nous sommes");
+	$("#sommes").click(function() {
+		$(this).toggleText("We are", "Nous sommes");
 	});
-	$("#etes").hover(function() {
-		$(this).text("You all are");
-	}, function() {
-		$(this).text("Vous êtes");
+	$("#etes").click(function() {
+		$(this).toggleText("You all are", "Vous êtes");
 	});
-	$("#sont").hover(function() {
-		$(this).text("They are");
-	}, function() {
-		$(this).text("Ils/Elles sont");
+	$("#sont").click(function() {
+		$(this).toggleText("They are", "Ils/Elles sont");
 	});
 
 //Faire
-	$("td[name='one-fais']").hover(function() {
-		$(this).text("I am doing");
-	}, function() {
-		$(this).text("Je fais");
+	$("td[name='one-fais']").click(function() {
+		$(this).toggleText("I am doing", "Je fais");
 	});
-	$("td[name='two-fais']").hover(function() {
+	$("td[name='two-fais']").click(function() {
 		$(this).text("You are doing");
 	}, function() {
 		$(this).text("Tu fais");
 	});
-	$("#fait").hover(function() {
+	$("#fait").click(function() {
 		$(this).text("He/She is doing");
 	}, function() {
 		$(this).text("Il/Elle fait");
 	});
-	$("#faisons").hover(function() {
+	$("#faisons").click(function() {
 		$(this).text("We are doing");
 	}, function() {
 		$(this).text("Nous faisons");
 	});
-	$("#faites").hover(function() {
+	$("#faites").click(function() {
 		$(this).text("You all are doing");
 	}, function() {
 		$(this).text("Vous faites");
 	});
-	$("#font").hover(function() {
+	$("#font").click(function() {
 		$(this).text("They are doing");
 	}, function() {
 		$(this).text("Ils/Elles font");
 	});
 
 //Avoir
-	$("#ai").hover(function() {
+	$("#ai").click(function() {
 		$(this).text("I have");
 	}, function() {
 		$(this).text("J'ai");
 	});
-	$("#as").hover(function() {
+	$("#as").click(function() {
 		$(this).text("You have");
 	}, function() {
 		$(this).text("Tu as");
 	});
-	$("#a").hover(function() {
+	$("#a").click(function() {
 		$(this).text("He/She have");
 	}, function() {
 		$(this).text("Il/Elle a");
 	});
-	$("#avons").hover(function() {
+	$("#avons").click(function() {
 		$(this).text("We have");
 	}, function() {
 		$(this).text("Nous avons");
 	});
-	$("#avez").hover(function() {
+	$("#avez").click(function() {
 		$(this).text("You all have");
 	}, function() {
 		$(this).text("Vous avez");
 	});
-	$("#ont").hover(function() {
+	$("#ont").click(function() {
 		$(this).text("They have");
 	}, function() {
 		$(this).text("Ils/Elles ont");
 	});
 	
 //Aller
-	$("#ai").hover(function() {
+	$("#ai").click(function() {
 		$(this).text("I have");
 	}, function() {
 		$(this).text("J'ai");
 	});
-	$("#as").hover(function() {
+	$("#as").click(function() {
 		$(this).text("You have");
 	}, function() {
 		$(this).text("Tu as");
 	});
-	$("#a").hover(function() {
+	$("#a").click(function() {
 		$(this).text("He/She have");
 	}, function() {
 		$(this).text("Il/Elle a");
 	});
-	$("#avons").hover(function() {
+	$("#avons").click(function() {
 		$(this).text("We have");
 	}, function() {
 		$(this).text("Nous avons");
 	});
-	$("#avez").hover(function() {
+	$("#avez").click(function() {
 		$(this).text("You all have");
 	}, function() {
 		$(this).text("Vous avez");
 	});
-	$("#ont").hover(function() {
+	$("#ont").click(function() {
 		$(this).text("They have");
 	}, function() {
 		$(this).text("Ils/Elles ont");

@@ -5,15 +5,26 @@ body {
 	padding: 0;
 	font-family: "Source Sans Pro", Arial;
 	text-align: center;
+	background-image: url("http://www.wallpapereast.com/static/images/6840652-pattern-wallpaper.jpg");
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-size: 50% 50%;
+	color: #fff;
+	overflow-x: hidden;
 }
 select {
 	background-color: rgba(0,0,0,0.05);
+	color: #fff;
 	outline: none;
 	padding: 5px;
+}
+select * {
+	background-color: rgba(0,0,0,0.9);
 }
 table {
 	display: inline-block;
 	border-collapse: collapse;
+	border-style: solid;
 	font-size: 1.25em;
 	margin: 10px;
 }
@@ -23,10 +34,9 @@ th {
 td {
 	width: 10em;
 	height: 50px;
-	color: red;
 }
 #line {
-	background-color: #000;
 	width: 100%;
-	height: 1px;
+	height: 0.5px;
+	border: 1px dashed #fff;
 }
