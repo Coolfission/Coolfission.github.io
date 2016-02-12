@@ -1,23 +1,76 @@
-var irregular = function() {
-//Basic
-jQuery.fn.extend({
-    toggleText: function (a, b) {
-        var that = this;
-            if (that.text() != a && that.text() != b){
-                that.text(a);
-            }
-            else
-            if (that.text() == a){
-                that.text(b);
-            }
-            else
-            if (that.text() == b){
-                that.text(a);
-            }
-        return this;
-    }
-});
+"use strict";
 
+var basic = function() {
+	jQuery.fn.extend({
+	    toggleText: function (a, b) {
+	        var that = this;
+	            if (that.text() != a && that.text() != b){
+	                that.text(a);
+	            }
+	            else
+	            if (that.text() == a){
+	                that.text(b);
+	            }
+	            else
+	            if (that.text() == b){
+	                that.text(a);
+	            }
+	        return this;
+	    }
+	});
+
+	$("#regular-option").click(function() {
+		$("#irregular").attr("name", "none");
+		$("#regular").attr("name", "normal");
+	});
+	$("#irregular-option").click(function() {
+		$("#irregular").attr("name", "normal");
+		$("#regular").attr("name", "none");
+	});
+};
+$(document).ready(basic);
+
+var irregular = function() {
+//Aller
+	$("#vais").click(function() {
+		$(this).toggleText("I go", "Je vais");
+	});
+	$("#vas").click(function() {
+		$(this).toggleText("You go", "Tu vas");
+	});
+	$("#va").click(function() {
+		$(this).toggleText("He/She go", "Il/Elle va");
+	});
+	$("#allons").click(function() {
+		$(this).toggleText("We go", "Nous allons");
+	});
+	$("#allez").click(function() {
+		$(this).toggleText("You all go", "Vous allez");
+	});
+	$("#vont").click(function() {
+		$(this).toggleText("They go", "Ils/Elles vont");
+	});
+
+//Avoir
+	$("#ai").click(function() {
+		$(this).toggleText("I have", "J'ai");
+	});
+	$("#as").click(function() {
+		$(this).toggleText("You have", "Tu as");
+	});
+	$("#a").click(function() {
+		$(this).toggleText("He/She have", "Il/Elle a");
+	});
+	$("#avons").click(function() {
+		$(this).toggleText("We have", "Nous avons");
+	});
+	$("#avez").click(function() {
+		$(this).toggleText("You all have", "Vous avez");
+	});
+	$("#ont").click(function() {
+		$(this).toggleText("They have", "Ils/Elles ont");
+	});
+	
 //Etre
 	$("#suis").click(function() {
 		$(this).toggleText("I am", "Je suis");
@@ -56,47 +109,7 @@ jQuery.fn.extend({
 	});
 	$("#font").click(function() {
 		$(this).toggleText("They are doing", "Ils/Elles font");
-	});
-
-//Avoir
-	$("#ai").click(function() {
-		$(this).toggleText("I have", "J'ai");
-	});
-	$("#as").click(function() {
-		$(this).toggleText("You have", "Tu as");
-	});
-	$("#a").click(function() {
-		$(this).toggleText("He/She have", "Il/Elle a");
-	});
-	$("#avons").click(function() {
-		$(this).toggleText("We have", "Nous avons");
-	});
-	$("#avez").click(function() {
-		$(this).toggleText("You all have", "Vous avez");
-	});
-	$("#ont").click(function() {
-		$(this).toggleText("They have", "Ils/Elles ont");
-	});
-	
-//Aller
-	$("#vais").click(function() {
-		$(this).toggleText("I go", "Je vais");
-	});
-	$("#vas").click(function() {
-		$(this).toggleText("You go", "Tu vas");
-	});
-	$("#va").click(function() {
-		$(this).toggleText("He/She go", "Il/Elle va");
-	});
-	$("#allons").click(function() {
-		$(this).toggleText("We go", "Nous allons");
-	});
-	$("#allez").click(function() {
-		$(this).toggleText("You all go", "Vous allez");
-	});
-	$("#vont").click(function() {
-		$(this).toggleText("They go", "Ils/Elles vont");
-	});
+	});	
 
 //Venir
 	$("td[name='one-viens']").click(function() {
@@ -138,25 +151,25 @@ jQuery.fn.extend({
 		$(this).toggleText("They buy", "Ils/Elles achètent");
 	});
 
-//Preferer
-	$("td[name='one-prefere']").click(function() {
-		$(this).toggleText("I prefer", "Je préfère");
+//Amener
+	$("td[name='one-amene']").click(function() {
+		$(this).toggleText("I bring", "J'amène");
 	});
-	$("td[name='two-prefere']").click(function() {
-		$(this).toggleText("He/she prefer", "Il/Elle préfère");
+	$("td[name='two-amene']").click(function() {
+		$(this).toggleText("He/she bring", "Il/Elle amène");
 	});
-	$("#preferes").click(function() {
-		$(this).toggleText("You prefer", "Tu préfères");
+	$("#amenes").click(function() {
+		$(this).toggleText("You bring", "Tu amènes");
 	});
-	$("#preferons").click(function() {
-		$(this).toggleText("We prefer", "Nous préférons");
+	$("#amenons").click(function() {
+		$(this).toggleText("We bring", "Nous amenons");
 	});
-	$("#preferez").click(function() {
-		$(this).toggleText("You all prefer", "Vous préférez");
+	$("#amenez").click(function() {
+		$(this).toggleText("You all bring", "Vous amenez");
 	});
-	$("#preferent").click(function() {
-		$(this).toggleText("They prefer", "Ils/Elles préfèrent");
-	});
+	$("#amenent").click(function() {
+		$(this).toggleText("They bring", "Ils/Elles amènent");
+	});	
 
 //Esperer
 	$("td[name='one-espere']").click(function() {
@@ -178,24 +191,30 @@ jQuery.fn.extend({
 		$(this).toggleText("They hope", "Ils/Elles espèrent");
 	});
 
-//Amener
-	$("td[name='one-amene']").click(function() {
-		$(this).toggleText("I bring", "J'amène");
+//Preferer
+	$("td[name='one-prefere']").click(function() {
+		$(this).toggleText("I prefer", "Je préfère");
 	});
-	$("td[name='two-amene']").click(function() {
-		$(this).toggleText("He/she bring", "Il/Elle amène");
+	$("td[name='two-prefere']").click(function() {
+		$(this).toggleText("He/she prefer", "Il/Elle préfère");
 	});
-	$("#amenes").click(function() {
-		$(this).toggleText("You bring", "Tu amènes");
+	$("#preferes").click(function() {
+		$(this).toggleText("You prefer", "Tu préfères");
 	});
-	$("#amenons").click(function() {
-		$(this).toggleText("We bring", "Nous amenons");
+	$("#preferons").click(function() {
+		$(this).toggleText("We prefer", "Nous préférons");
 	});
-	$("#amenez").click(function() {
-		$(this).toggleText("You all bring", "Vous amenez");
+	$("#preferez").click(function() {
+		$(this).toggleText("You all prefer", "Vous préférez");
 	});
-	$("#amenent").click(function() {
-		$(this).toggleText("They bring", "Ils/Elles amènent");
+	$("#preferent").click(function() {
+		$(this).toggleText("They prefer", "Ils/Elles préfèrent");
 	});
+
 };
 $(document).ready(irregular);
+
+var regular = function() {
+
+};
+$(document).ready(regular);
