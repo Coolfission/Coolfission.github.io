@@ -4,12 +4,69 @@
 	<title>Conjugator</title>
 
 	<link rel="shortcut icon" href="data:image/x-icon;base64,R0lGODlhEAAQAPECAFFUV////wAAAAAAACH5BAkyAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAEBAQEBAAAAAAEBAAAAAAABAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJMgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" />
-	<link rel="stylesheet" type="text/css" href="conjugate.css" />
+
+	<style type="text/css">
+		@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: "Source Sans Pro", Arial;
+			text-align: center;
+			background-color: rgba(0,0,0,0.9);
+			color: #fff;
+			overflow-x: hidden;
+		}
+		b {
+			cursor: pointer;
+			color: orange;
+		}
+		table {
+			display: inline-block;
+			border: 1px solid #999;
+			border-collapse: collapse;
+			font-size: 1.25em;
+			margin: 10px;
+			border-radius: 2px;
+		}
+		table * {
+			border: 1px solid #999;
+		}
+		th {
+			height: 70px;
+		}
+		td {
+			width: 10em;
+			height: 50px;
+		}
+		#line {
+			width: 100%;
+			height: 0.1px;
+			border: 1px dashed #fff;
+		}
+		div[name="normal"] {
+			display: auto;
+		}
+		div[name="none"] {
+			display: none;
+		}
+	</style>
 
 	<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
-	<script src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js"></script>
-	<script src="conjugate.js"></script> 
+	<script type="text/javascript">
+		var basic = function() {
+			$("#regular-option").click(function() {
+				$("#irregular").attr("name", "none");
+				$("#regular").attr("name", "normal");
+			});
+			$("#irregular-option").click(function() {
+				$("#irregular").attr("name", "normal");
+				$("#regular").attr("name", "none");
+			});
+		};
+		$(document).ready(basic);
+	</script>
 </head>
 
 <body>
@@ -32,32 +89,32 @@
 	<table valign="top">
 	<th colspan="2">Aimer - To like</th>
 		<tr>
-			<td id="aime" name="one-aime">J'aime</td>
-			<td id="aimons">Nous aimons</td>
+			<td>J'aime</td>
+			<td>Nous aimons</td>
 		</tr>
 		<tr>
-			<td id="aimes">Tu aimes</td>
-			<td id="aimez">Vous aimez</td>
+			<td>Tu aimes</td>
+			<td>Vous aimez</td>
 		</tr>
 		<tr>
-			<td id="aime" name="two-aime">Il/Elle aime</td>
-			<td id="aiment">Ils/Elles aiment</td>
+			<td>Il/Elle aime</td>
+			<td>Ils/Elles aiment</td>
 		</tr>
 	</table>
 
 	<table valign="top">
 	<th colspan="2">Adore - To love</th>
 		<tr>
-			<td id="adore" name="one-adore">J'adore</td>
-			<td id="adorons">Nous adorons</td>
+			<td>J'adore</td>
+			<td>Nous adorons</td>
 		</tr>
 		<tr>
-			<td id="adores">Tu adores</td>
-			<td id="aimez">Vous adorez</td>
+			<td>Tu adores</td>
+			<td>Vous adorez</td>
 		</tr>
 		<tr>
-			<td id="adore" name="two-adore">Il/Elle adore</td>
-			<td id="adorent">Ils/Elles adorent</td>
+			<td>Il/Elle adore</td>
+			<td>Ils/Elles adorent</td>
 		</tr>
 	</table>
 
@@ -65,32 +122,32 @@
 	<table valign="top">
 	<th colspan="2">Apporter - To bring</th>
 		<tr>
-			<td id="apporte" name="one-apporte">J'apporte</td>
-			<td id="apportons">Nous apportons</td>
+			<td>J'apporte</td>
+			<td>Nous apportons</td>
 		</tr>
 		<tr>
-			<td id="apportes">Tu apportes</td>
-			<td id="apportez">Vous apportez</td>
+			<td>Tu apportes</td>
+			<td>Vous apportez</td>
 		</tr>
 		<tr>
-			<td id="apporte" name="two-apporte">Il/Elle apporte</td>
-			<td id="apportent">Ils/Elles apportent</td>
+			<td>Il/Elle apporte</td>
+			<td>Ils/Elles apportent</td>
 		</tr>
 	</table>
 
 	<table valign="top">
 	<th colspan="2">Arriver - To arrive</th>
 		<tr>
-			<td id="arrive" name="one-arrive">J'arrive</td>
-			<td id="arrivons">Nous arrivons</td>
+			<td>J'arrive</td>
+			<td>Nous arrivons</td>
 		</tr>
 		<tr>
-			<td id="arrives">Tu arrives</td>
-			<td id="arrivez">Vous arrivez</td>
+			<td>Tu arrives</td>
+			<td>Vous arrivez</td>
 		</tr>
 		<tr>
-			<td id="arrive" name="two-arrive">Il/Elle arrive</td>
-			<td id="arrivent">Ils/Elles arrivent</td>
+			<td>Il/Elle arrive</td>
+			<td>Ils/Elles arrivent</td>
 		</tr>
 	</table>
 
@@ -98,32 +155,32 @@
 	<table valign="top">
 	<th colspan="2">Chanter - To sing</th>
 		<tr>
-			<td id="chante" name="one-chante">Je chante</td>
-			<td id="chantons">Nous chantons</td>
+			<td>Je chante</td>
+			<td>Nous chantons</td>
 		</tr>
 		<tr>
-			<td id="chantes">Tu chantes</td>
-			<td id="chantez">Vous chantez</td>
+			<td>Tu chantes</td>
+			<td>Vous chantez</td>
 		</tr>
 		<tr>
-			<td id="chante" name="two-chante">Il/Elle chante</td>
-			<td id="chantent">Ils/Elles chantent</td>
+			<td>Il/Elle chante</td>
+			<td>Ils/Elles chantent</td>
 		</tr>
 	</table>
 
 	<table valign="top">
 	<th colspan="2">Chercher - To look</th>
 		<tr>
-			<td id="cherche" name="one-cherche">Je cherche</td>
-			<td id="cherchons">Nous cherchons</td>
+			<td>Je cherche</td>
+			<td>Nous cherchons</td>
 		</tr>
 		<tr>
-			<td id="cherches">Tu cheres</td>
-			<td id="cherchez">Vous cherchez</td>
+			<td>Tu cheres</td>
+			<td>Vous cherchez</td>
 		</tr>
 		<tr>
-			<td id="cherche" name="two-cherche">Il/Elle cherche</td>
-			<td id="cherchent">Ils/Elles cherchent</td>
+			<td>Il/Elle cherche</td>
+			<td>Ils/Elles cherchent</td>
 		</tr>
 	</table>
 
@@ -131,16 +188,65 @@
 	<table valign="top">
 	<th colspan="2">Commencer - To begin</th>
 		<tr>
-			<td id="commence" name="one-commence">Je commence</td>
-			<td id="commencons">Nous commencons</td>
+			<td>Je commence</td>
+			<td>Nous commencons</td>
 		</tr>
 		<tr>
-			<td id="commences">Tu commences</td>
-			<td id="commencez">Vous commencez</td>
+			<td>Tu commences</td>
+			<td>Vous commencez</td>
 		</tr>
 		<tr>
-			<td id="commence" name="two-commence">Il/Elle commence</td>
-			<td id="commencent">Ils/Elles commencent</td>
+			<td>Il/Elle commence</td>
+			<td>Ils/Elles commencent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Dancer - To dance</th>
+		<tr>
+			<td>Je danse</td>
+			<td>Nous dansons</td>
+		</tr>
+		<tr>
+			<td>Tu danses</td>
+			<td>Vous dansez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle danse</td>
+			<td>Ils/Elles dansent</td>
+		</tr>
+	</table>
+
+	<br/><br/>
+	<table valign="top">
+	<th colspan="2">Dancer - To dance</th>
+		<tr>
+			<td>Je danse</td>
+			<td>Nous dansons</td>
+		</tr>
+		<tr>
+			<td>Tu danses</td>
+			<td>Vous dansez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle danse</td>
+			<td>Ils/Elles dansent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Détester - To hate</th>
+		<tr>
+			<td>Je déteste</td>
+			<td>Nous détestons</td>
+		</tr>
+		<tr>
+			<td>Tu détestes</td>
+			<td>Vous détestez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle déteste</td>
+			<td>Ils/Elles détestent</td>
 		</tr>
 	</table>
 </div>
@@ -156,32 +262,32 @@
 	<table valign="top">
 	<th colspan="2">Aller - To go</th>
 		<tr>
-			<td id="vais">Je vais</td>
-			<td id="allons">Nous allons</td>
+			<td>Je vais</td>
+			<td>Nous allons</td>
 		</tr>
 		<tr>
-			<td id="vas">Tu vas</td>
-			<td id="allez">Vous allez</td>
+			<td>Tu vas</td>
+			<td>Vous allez</td>
 		</tr>
 		<tr>
-			<td id="va">Il/Elle va</td>
-			<td id="vont">Ils/Elles vont</td>
+			<td>Il/Elle va</td>
+			<td>Ils/Elles vont</td>
 		</tr>
 	</table>
 
 	<table valign="top">
 	<th colspan="2">Avoir - To have</th>
 		<tr>
-			<td id="ai">J'ai</td>
-			<td id="avons">Nous avons</td>
+			<td>J'ai</td>
+			<td>Nous avons</td>
 		</tr>
 		<tr>
-			<td id="as">Tu as</td>
-			<td id="avez">Vous avez</td>
+			<td>Tu as</td>
+			<td>Vous avez</td>
 		</tr>
 		<tr>
-			<td id="a">Il/Elle a</td>
-			<td id="ont">Ils/Elles ont</td>
+			<td>Il/Elle a</td>
+			<td>Ils/Elles ont</td>
 		</tr>
 	</table>
 
@@ -189,32 +295,32 @@
 	<table valign="top">
 	<th colspan="2">Être - To be</th>
 		<tr>
-			<td id="suis">Je suis</td>
-			<td id="sommes">Nous sommes</td>
+			<td>Je suis</td>
+			<td>Nous sommes</td>
 		</tr>
 		<tr>
-			<td id="es">Tu es</td>
-			<td id="etes">Vous êtes</td>
+			<td>Tu es</td>
+			<td>Vous êtes</td>
 		</tr>
 		<tr>
-			<td id="est">Il/Elle est</td>
-			<td id="sont">Ils/Elles sont</td>
+			<td>Il/Elle est</td>
+			<td>Ils/Elles sont</td>
 		</tr>
 	</table>
 
 	<table valign="top">
 	<th colspan="2">Faire - To do</th>
 		<tr>
-			<td id="fais" name="one-fais">Je fais</td>
-			<td id="faisons">Nous faisons</td>
+			<td>Je fais</td>
+			<td>Nous faisons</td>
 		</tr>
 		<tr>
-			<td id="fais" name="two-fais">Tu fais</td>
-			<td id="faites">Vous faites</td>
+			<td>Tu fais</td>
+			<td>Vous faites</td>
 		</tr>
 		<tr>
-			<td id="fait">Il/Elle fait</td>
-			<td id="font">Ils/Elles font</td>
+			<td>Il/Elle fait</td>
+			<td>Ils/Elles font</td>
 		</tr>
 	</table>
 
@@ -222,16 +328,16 @@
 	<table valign="top">
 	<th colspan="2">Venir - To come</th>
 		<tr>
-			<td id="viens" name="one-viens">Je viens</td>
-			<td id="venons">Nous venons</td>
+			<td>Je viens</td>
+			<td>Nous venons</td>
 		</tr>
 		<tr>
-			<td id="viens" name="two-viens">Tu viens</td>
-			<td id="venez">Vous venez</td>
+			<td>Tu viens</td>
+			<td>Vous venez</td>
 		</tr>
 		<tr>
-			<td id="vient">Il/Elle vient</td>
-			<td id="viennent">Ils/Elles viennent</td>
+			<td>Il/Elle vient</td>
+			<td>Ils/Elles viennent</td>
 		</tr>
 	</table>
 
@@ -245,32 +351,32 @@
 	<table valign="top">
 	<th colspan="2">Acheter - To buy</th>
 		<tr>
-			<td id="achete" name="one-achete">J'achète</td>
-			<td id="achetons">Nous achetons</td>
+			<td>J'achète</td>
+			<td>Nous achetons</td>
 		</tr>
 		<tr>
-			<td id="achetes">Tu achètes</td>
-			<td id="achetez">Vous achetez</td>
+			<td>Tu achètes</td>
+			<td>Vous achetez</td>
 		</tr>
 		<tr>
-			<td id="achete" name="two-achete">Il/Elle achète</td>
-			<td id="achetent">Ils/Elles achètent</td>
+			<td>Il/Elle achète</td>
+			<td>Ils/Elles achètent</td>
 		</tr>
 	</table>
 
 	<table valign="top">
 	<th colspan="2">Amener - to bring (a person)</th>
 		<tr>
-			<td id="amene" name="one-amene">J'amène</td>
-			<td id="amenons">Nous amenons</td>
+			<td>J'amène</td>
+			<td>Nous amenons</td>
 		</tr>
 		<tr>
-			<td id="amenes">Tu amènes</td>
-			<td id="amenez">Vous amenez</td>
+			<td>Tu amènes</td>
+			<td>Vous amenez</td>
 		</tr>
 		<tr>
-			<td id="amene" name="two-amene">Il/Elle amène</td>
-			<td id="amenent">Ils/Elles amènent</td>
+			<td>Il/Elle amène</td>
+			<td>Ils/Elles amènent</td>
 		</tr>
 	</table>
 
@@ -278,32 +384,32 @@
 	<table valign="top">
 	<th colspan="2">Espérer - to hope</th>
 		<tr>
-			<td id="espere" name="one-espere">J'espère</td>
-			<td id="esperons">Nous espérons</td>
+			<td>J'espère</td>
+			<td>Nous espérons</td>
 		</tr>
 		<tr>
-			<td id="esperes">Tu espères</td>
-			<td id="esperez">Vous espérez</td>
+			<td>Tu espères</td>
+			<td>Vous espérez</td>
 		</tr>
 		<tr>
-			<td id="espere" name="two-espere">Il/Elle espère</td>
-			<td id="esperent">Ils/Elles espèrent</td>
+			<td>Il/Elle espère</td>
+			<td>Ils/Elles espèrent</td>
 		</tr>
 	</table>
 
 	<table valign="top">
 	<th colspan="2">Préférer - to prefer</th>
 		<tr>
-			<td id="prefere" name="one-prefere">Je préfère</td>
-			<td id="preferons">Nous préférons</td>
+			<td>Je préfère</td>
+			<td>Nous préférons</td>
 		</tr>
 		<tr>
-			<td id="preferes">Tu préfères</td>
-			<td id="preferez">Vous préférez</td>
+			<td>Tu préfères</td>
+			<td>Vous préférez</td>
 		</tr>
 		<tr>
-			<td id="prefere" name="two-prefere">Il/Elle préfère</td>
-			<td id="preferent">Ils/Elles préfèrent</td>
+			<td>Il/Elle préfère</td>
+			<td>Ils/Elles préfèrent</td>
 		</tr>
 	</table>
 
