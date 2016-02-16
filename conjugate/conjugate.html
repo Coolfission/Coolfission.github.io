@@ -5,6 +5,7 @@
 
 	<link rel="shortcut icon" href="data:image/x-icon;base64,R0lGODlhEAAQAPECAFFUV////wAAAAAAACH5BAkyAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAEBAQEBAAAAAAEBAAAAAAABAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJMgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" />
 
+  	<link rel="stylesheet" type="text/css" href="https://rawgit.com/FortAwesome/Font-Awesome/master/css/font-awesome.css" />
 	<style type="text/css">
 		@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
@@ -16,6 +17,21 @@
 			background-color: rgba(0,0,0,0.9);
 			color: #fff;
 			overflow-x: hidden;
+		}
+		h1 {
+			font-size: 50px;
+		}
+		#info-close {
+			opacity: 0;
+			position: fixed;
+			font-size: 4em;
+			right: 10px;
+			top: 10px;
+			cursor: pointer;
+		}
+		span {
+			text-decoration: underline;
+			cursor: pointer;
 		}
 		b {
 			cursor: pointer;
@@ -39,6 +55,9 @@
 			width: 10em;
 			height: 50px;
 		}
+		u {
+			border: none;
+		}
 		#line {
 			width: 100%;
 			height: 0.1px;
@@ -54,6 +73,7 @@
 
 	<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+    <script src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js"></script>
 	<script type="text/javascript">
 		var basic = function() {
 			$("#regular-option").click(function() {
@@ -64,25 +84,33 @@
 				$("#irregular").attr("name", "normal");
 				$("#regular").attr("name", "none");
 			});
+
+			$("#info-enter").click(function() {
+				$("body, body *").css({"background": "rgba(0,0,0,1)", "color": "#000", "border-color": "#000"});
+				$("#info-close").css({"opacity": "1", "color": "#fff"});
+			});
+			$("#info-close").click(function() {
+				$("body, body *").css({"background": "", "color": "", "border-color": ""});
+				$("#info-close").css({"opacity": "0"});
+			});
+			shortcut.add("Esc", function() {
+				$("body, body *").css({"background": "", "color": "", "border-color": ""});
+				$("#info-close").css({"opacity": "0"});	
+			});
 		};
 		$(document).ready(basic);
 	</script>
 </head>
 
 <body>
-<h1>Basic French Conjugations</h1>
-
-<br/>
+<h1>Basic <span id="info-enter">French</span> Conjugations</h1>
+<i class="fa fa-times-circle-o" id="info-close"></i>
 
 <b id="regular-option">Regular</b> | <b id="irregular-option">Irregular</b>
 
+
+
 <br/><br/>
-
-
-
-
-
-
 
 <div id="regular" name="normal">
 
@@ -321,7 +349,7 @@
 	<th colspan="2">Manger - To eat</th>
 		<tr>
 			<td>Je mange</td>
-			<td>Nous mang<u>e</u>ons</td>
+			<td>Nous man<u>ge</u>ons</td>
 		</tr>
 		<tr>
 			<td>Tu manges</td>
@@ -332,6 +360,7 @@
 			<td>Ils/Elles mangent</td>
 		</tr>
 	</table>
+
 </div>
 
 
@@ -495,7 +524,6 @@
 			<td>Ils/Elles préfèrent</td>
 		</tr>
 	</table>
-
 </div>
 
 <br/><br/><br/>
