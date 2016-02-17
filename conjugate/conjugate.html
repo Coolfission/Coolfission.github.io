@@ -29,6 +29,13 @@
 			top: 10px;
 			cursor: pointer;
 		}
+		#info {
+			opacity: 0;		
+			position: absolute;
+			color: #fff;
+			right: 30px;
+			left: 30px;
+		}
 		span {
 			text-decoration: underline;
 			cursor: pointer;
@@ -86,16 +93,16 @@
 			});
 
 			$("#info-enter").click(function() {
-				$("body, body *").css({"background": "rgba(0,0,0,1)", "color": "#000", "border-color": "#000"});
-				$("#info-close").css({"opacity": "1", "color": "#fff"});
+				$("body, body *").css({"background": "rgba(0,0,0,1)", "color": "#000", "border-color": "#000", "user-select": "none"});
+				$("#info-close, #info, #info *").css({"opacity": "1", "color": "#fff", "user-select": "text"});
 			});
 			$("#info-close").click(function() {
-				$("body, body *").css({"background": "", "color": "", "border-color": ""});
-				$("#info-close").css({"opacity": "0"});
+				$("body, body *").css({"background": "", "color": "", "border-color": "", "user-select": ""});
+				$("#info-close, #info, #info *").css({"opacity": "0"});
 			});
 			shortcut.add("Esc", function() {
-				$("body, body *").css({"background": "", "color": "", "border-color": ""});
-				$("#info-close").css({"opacity": "0"});	
+				$("body, body *").css({"background": "", "color": "", "border-color": "", "user-select": ""});
+				$("#info-close, #info, #info *").css({"opacity": "0"});	
 			});
 		};
 		$(document).ready(basic);
@@ -108,7 +115,9 @@
 
 <b id="regular-option">Regular</b> | <b id="irregular-option">Irregular</b>
 
-
+<div id="info">
+<p>Under development</p>
+</div>
 
 <br/><br/>
 
