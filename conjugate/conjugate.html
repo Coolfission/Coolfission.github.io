@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,13 +22,16 @@
 		h1 {
 			font-size: 50px;
 		}
+
 		#info-close {
 			opacity: 0;
 			position: fixed;
 			font-size: 3.5em;
+			display: block;
 			right: 10px;
 			top: 10px;
 			cursor: pointer;
+			z-index: 2;
 		}
 		#info {
 			opacity: 0;		
@@ -35,7 +39,39 @@
 			color: #fff;
 			right: 30px;
 			left: 30px;
+			text-align: center;
 		}
+		#info h1 {
+			font-size: 3.5em;
+			text-align: center;
+			font-weight: bold;
+		}
+		#info li {
+			margin-left: 10%;
+			text-align: left;
+			display: inline-block;
+			list-style: square;
+			margin: 10px;
+			width: 50%;
+		}
+		#info legend {
+			background-color: #ddd !important;
+			border: 1px solid #fff !important;
+			color: #000 !important;
+			float: left;
+			margin-left: 24%;
+			border-radius: 5px;
+			width: 50%;
+			cursor: pointer;
+		}
+		fieldset {
+			border: 1px solid #fff;
+		}
+		legend {
+			background-color: #ddd;
+			padding: 10px;
+		}
+
 		span {
 			text-decoration: underline;
 			cursor: pointer;
@@ -94,20 +130,20 @@
 
 			$("#info-enter").click(function() {
 				$("body, body *").css({"background": "rgba(0,0,0,1)", "color": "#000", "border-color": "#000", "user-select": "none"});
-				$("#info-close, #info, #info *").css({"opacity": "1", "color": "#fff", "user-select": "text"});
+				$("#info-close, #info, #info *").css({"opacity": "1", "color": "#fff", "user-select": "text", "top": "0"});
 			});
 			shortcut.add("shift+enter", function() {
 				$("body, body *").css({"background": "rgba(0,0,0,1)", "color": "#000", "border-color": "#000", "user-select": "none"});
-				$("#info-close, #info, #info *").css({"opacity": "1", "color": "#fff", "user-select": "text"});
+				$("#info-close, #info, #info *").css({"opacity": "1", "color": "#fff", "user-select": "text", "top": "0"});
 			});
 
 			$("#info-close").click(function() {
 				$("body, body *").css({"background": "", "color": "", "border-color": "", "user-select": ""});
-				$("#info-close, #info, #info *").css({"opacity": "0"});
+				$("#info-close, #info, #info *").css({"opacity": "0", "top": ""});
 			});
 			shortcut.add("Esc", function() {
 				$("body, body *").css({"background": "", "color": "", "border-color": "", "user-select": ""});
-				$("#info-close, #info, #info *").css({"opacity": "0"});	
+				$("#info-close, #info, #info *").css({"opacity": "0", "top": ""});	
 			});
 		};
 		$(document).ready(basic);
@@ -121,7 +157,32 @@
 <b id="regular-option">Regular</b> | <b id="irregular-option">Irregular</b>
 
 <div id="info">
+<h1>Conjugating French Verbs</h1>
+	<li>Just like the English language, there are also verbs in French. However, the way these verbs are said and wrote are different. In French, verbs need to be conjugated, or changed according to whoever is speaking. </li>
+	<li>This website makes it easy to understand basic conjugations for French. </li>
+	<li>In French, there are two types of verbs, regular verbs and irreguar verbs. Regular verbs have a specific pattern for conjugating. While irregular verbs don't follow any pattern in particular. </li>
+	<li>Click to espand on each accordion to learn more.</li>
+	<br/><br/>
 
+	<fieldset>
+	<legend>Regular -er verbs</legend>
+<!-- 	<table>
+			<th colspan="2">Format for regular -er verbs </th>
+			<tr>
+				<td>Je <u>e</u></td>
+				<td>Nous <u>ons</u></td>
+			</tr>
+			<tr>
+				<td>Tu <u>es</u></td>
+				<td>Vous <u>ez</u></td>
+			</tr>
+			<tr>
+				<td>Il/Elle <u>e</u></td>
+				<td>Ils/Elles <u>ent</u></td>
+			</tr>
+	</table>
+		<small>*Note: You put the underlined at the end of the verb</small>  -->
+	</fieldset>
 </div>
 
 <br/><br/>
