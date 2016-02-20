@@ -62,6 +62,11 @@
 			width: 50%;
 			cursor: pointer;
 		}
+		#info table, #info table td, #info table tr, #info table th {
+			border: 1px solid #fff !important;
+			position: relative;
+			margin: auto;
+		}
 		fieldset {
 			border: 1px solid #fff;
 			margin: 10px;
@@ -136,30 +141,50 @@
 	<script src="http://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
     <script src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js"></script>
 	<script type="text/javascript">
+		"use strict";
+
 		var basic = function() {
 			$("#regular-option").click(function() {
-				$("#irregular").attr("name", "none");
-				$("#regular").attr("name", "normal");
-			});
-			$("#irregular-option").click(function() {
-				$("#irregular").attr("name", "normal");
-				$("#regular").attr("name", "none");
-			});
+			 	$("#irregular").attr("name", "none");
+			 	$("#regular").attr("name", "normal");
+			 });
+			 $("#irregular-option").click(function() {
+			 	$("#irregular").attr("name", "normal");
+			 	$("#regular").attr("name", "none");
+			 });
+
 			$("#info-enter").click(function() {
 				$("body, body *").css({"background": "rgba(0,0,0,1)", "color": "#000", "border-color": "#000", "user-select": "none"});
 				$("#info-close, #info, #info *").css({"opacity": "1", "color": "#fff", "user-select": "text", "top": "0"});
+
+				$("legend").attr("data-toggle", "collapse");
+					$($("#regular-legend").data("target")).addClass("collapse");
+					$($("#irregular-legend").data("target")).addClass("collapse");
 			});
 			shortcut.add("shift+enter", function() {
 				$("body, body *").css({"background": "rgba(0,0,0,1)", "color": "#000", "border-color": "#000", "user-select": "none"});
 				$("#info-close, #info, #info *").css({"opacity": "1", "color": "#fff", "user-select": "text", "top": "0"});
+
+				$("legend").attr("data-toggle", "collapse");
+					$($("#regular-legend").data("target")).addClass("collapse");
+					$($("#irregular-legend").data("target")).addClass("collapse");
 			});
+
 			$("#info-close").click(function() {
 				$("body, body *").css({"background": "", "color": "", "border-color": "", "user-select": ""});
 				$("#info-close, #info, #info *").css({"opacity": "0", "top": ""});
+
+				$("legend").attr("data-toggle", "");
+					$($("#regular-legend").data("target")).removeClass("collapse");
+					$($("#irregular-legend").data("target")).removeClass("collapse");
 			});
 			shortcut.add("Esc", function() {
 				$("body, body *").css({"background": "", "color": "", "border-color": "", "user-select": ""});
 				$("#info-close, #info, #info *").css({"opacity": "0", "top": ""});	
+
+				$("legend").attr("data-toggle", "");
+					$($("#regular-legend").data("target")).removeClass("collapse");
+					$($("#irregular-legend").data("target")).removeClass("collapse");
 			});
 		};
 		$(document).ready(basic);
@@ -173,16 +198,18 @@
 <b id="regular-option">Regular</b> | <b id="irregular-option">Irregular</b>
 
 <div id="info">
-<h1>Conjugating French Verbs</h1>
-	<li>Just like the English language, there are also verbs in French. However, the way these verbs are said and wrote are different. In French, verbs need to be conjugated, or changed according to whoever is speaking. </li>
-	<li>This website makes it easy to understand basic conjugations for French. </li>
-	<li>In French, there are two types of verbs, regular verbs and irreguar verbs. Regular verbs have a specific pattern for conjugating. While irregular verbs don't follow any pattern in particular. </li>
-	<li>Click to espand on each accordion to learn more.</li>
+	<h1>Conjugating French Verbs</h1>
+
+	<li>Just like the English language, there are also verbs in French. However, the way these verbs are said and wrote are different. In French, verbs need to be conjugated, or changed according to whoever is speaking.</li>
+	<li>This website makes it easy to understand basic conjugations for French.</li>
+	<li>In French, there are two types of verbs, regular verbs and irreguar verbs. Regular verbs have a specific pattern for conjugating. While irregular verbs don't follow any pattern in particular.</li>
+	<li>Click to expand on each accordion to learn more.</li>
 	<br/><br/>
 
 	<fieldset>
-	<legend data-toggle="" data-target="#regular">Regular -er verbs</legend>
-	<div id="regular">
+	<legend data-toggle="" data-target=".regular-toggle" id="regular-legend">Regular -er verbs</legend>
+	<div class="regular-toggle">
+	<br/><br/>
  	<table>
 			<th colspan="2">Format for regular -er verbs </th>
 			<tr>
@@ -198,12 +225,13 @@
 				<td>Ils/Elles <u>ent</u></td>
 			</tr>
 	</table>
+	<br/>
 		<small>*Note: You put the underlined at the end of the verb</small>  
 	</div>
 	</fieldset>
 	
 	<fieldset>
-	<legend data-toggle="" data-target="#irregular">Irregular verbs</legend>
+	<legend data-toggle="" data-target="#irregular-toggle" id="irregular-legend">Irregular verbs</legend>
 	</fieldset>
 </div>
 
