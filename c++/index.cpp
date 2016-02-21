@@ -2,6 +2,6 @@
 
 int main ()
 {
-  std::cout << 3+2 << std::endl;
+  std::cout << "hi" << std::endl;
   return 0;
 }
