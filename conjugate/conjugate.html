@@ -141,7 +141,7 @@
 	<script type="text/javascript">
 		"use strict";
 
-		var basic = function() {
+		var switch = function() {
 			$("#regular-option").click(function() {
 			 	$("#irregular").attr("name", "none");
 			 	$("#regular").attr("name", "normal");
@@ -150,7 +150,26 @@
 			 	$("#irregular").attr("name", "normal");
 			 	$("#regular").attr("name", "none");
 			 });
-
+		$(document).ready(switch);
+		
+		var info = function() {
+			jQuery.fn.extend({
+			    toggleText: function (a, b){
+			        var that = this;
+			            if (that.text() != a && that.text() != b){
+			                that.text(a);
+			            }
+			            else
+			            if (that.text() == a){
+			                that.text(b);
+			            }
+			            else
+			            if (that.text() == b){
+			                that.text(a);
+			            }
+			        return this;
+			    }
+			});
 			function open() {
 				$("body, body *").css({
 					"background": "rgba(0,0,0,1)", 
@@ -184,8 +203,9 @@
 			}
 				$("#info-close").click(function() {close();});
 				shortcut.add("Esc", function() {close();});
+				
 		};
-		$(document).ready(basic);
+		$(document).ready(info);
 	</script>
 </head>
 
@@ -212,16 +232,16 @@
  	<table>
 			<th colspan="2">Format for regular -er verbs </th>
 			<tr>
-				<td>Je <u>e</u></td>
-				<td>Nous <u>ons</u></td>
+				<td id="je">Je <u>e</u></td>
+				<td id="nous">Nous <u>ons</u></td>
 			</tr>
 			<tr>
-				<td>Tu <u>es</u></td>
-				<td>Vous <u>ez</u></td>
+				<td id="tu">Tu <u>es</u></td>
+				<td id="vous">Vous <u>ez</u></td>
 			</tr>
 			<tr>
-				<td>Il/Elle <u>e</u></td>
-				<td>Ils/Elles <u>ent</u></td>
+				<td id="il/elle">Il/Elle <u>e</u></td>
+				<td id="ils/elles">Ils/Elles <u>ent</u></td>
 			</tr>
 	</table>
 	<br/>
