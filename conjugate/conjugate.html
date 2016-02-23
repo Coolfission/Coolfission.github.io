@@ -209,6 +209,21 @@
 				shortcut.add("Esc", function() {close();});
 				
 			$("#je").click(function() {
+				$(this).toggleText('I (conjugate)', 'Je e');
+			});
+			$("#tu").click(function() {
+				$(this).toggleText('You (conjugate)', 'Tu es');
+			});
+			$("#il/elle").click(function() {
+				$(this).toggleText('He/She (conjugate)', 'Il/Elle e');
+			});
+			$("#nous").click(function() {
+				$(this).toggleText('We (conjugate)', 'Nous ont');
+			});
+			$("#vous").click(function() {
+				$(this).toggleText('You all', 'Je');
+			});
+			$("#je").click(function() {
 				$(this).toggleText('I', 'Je');
 			});
 				
