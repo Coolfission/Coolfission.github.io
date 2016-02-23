@@ -208,7 +208,9 @@
 				$("#info-close").click(function() {close();});
 				shortcut.add("Esc", function() {close();});
 				
-			$("#je").toggleText('I', 'Je');
+			$("#je").click(function() {
+				$(this).toggleText('I', 'Je');
+			});
 				
 		};
 		$(document).ready(info);
