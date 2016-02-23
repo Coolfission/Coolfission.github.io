@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +28,7 @@
 			right: 10px;
 			top: 10px;
 			cursor: pointer;
-			z-index: 2;
+			z-index: 3 !important;
 		}
 		#info {
 			opacity: 0;		
@@ -54,32 +53,29 @@
 		}
 		#info legend {
 			background-color: #ddd !important;
-			border: 1px solid #fff !important;
+			border: 1px solid #000 !important;
 			color: #000 !important;
-			float: left;
-			margin-left: 24%;
 			border-radius: 5px;
 			width: 50%;
 			cursor: pointer;
+			padding: 10px;
 		}
 		#info table, #info table td, #info table tr, #info table th {
-			border: 1px solid #fff !important;
+			border: 1px solid #999 !important;
 			position: relative;
 			margin: auto;
 		}
-		fieldset {
-			border: 1px solid #fff;
-			margin: 10px;
-		}
-		legend {
-			background-color: #ddd;
-			padding: 10px;
+		#info fieldset {
+			border: 2px solid #c4c4c4 !important;
+			margin: auto;
+			border-radius: 2px;
+			width: 65%;
 		}
 		.collapse {
 		    display: none;
 		}
 		.collapse.in {
-		    display: inline-block;
+		    display: block;
 		}
 		.collapsing {
 		    position: relative;
@@ -139,6 +135,7 @@
 
 	<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js"></script>
 	<script type="text/javascript">
 		"use strict";
@@ -153,39 +150,39 @@
 			 	$("#regular").attr("name", "none");
 			 });
 
-			$("#info-enter").click(function() {
-				$("body, body *").css({"background": "rgba(0,0,0,1)", "color": "#000", "border-color": "#000", "user-select": "none"});
-				$("#info-close, #info, #info *").css({"opacity": "1", "color": "#fff", "user-select": "text", "top": "0"});
+			function open() {
+				$("body, body *").css({
+					"background": "rgba(0,0,0,1)", 
+					"color": "#000", 
+					"border-color": "#000", 
+					"user-select": "none"});
 
-				$("legend").attr("data-toggle", "collapse");
-					$($("#regular-legend").data("target")).addClass("collapse");
-					$($("#irregular-legend").data("target")).addClass("collapse");
-			});
-			shortcut.add("shift+enter", function() {
-				$("body, body *").css({"background": "rgba(0,0,0,1)", "color": "#000", "border-color": "#000", "user-select": "none"});
-				$("#info-close, #info, #info *").css({"opacity": "1", "color": "#fff", "user-select": "text", "top": "0"});
+				$("#info-close, #info, #info *").css({
+					"opacity": "1", 
+					"color": "#fff", 
+					"user-select": "text", 
+					"top": "0", 
+					"z-index": "2"});
+			}
+				$("#info-enter").click(function() {open();});
+				shortcut.add("shift+enter", function() {open();});
 
-				$("legend").attr("data-toggle", "collapse");
-					$($("#regular-legend").data("target")).addClass("collapse");
-					$($("#irregular-legend").data("target")).addClass("collapse");
-			});
+			function close() {
+				$("body, body *").css({
+					"background": "",
+					"color": "",
+					"border-color": "", 
+					"user-select": "", 
+					"opacity": "1", 
+					"z-index": "1"});
 
-			$("#info-close").click(function() {
-				$("body, body *").css({"background": "", "color": "", "border-color": "", "user-select": ""});
-				$("#info-close, #info, #info *").css({"opacity": "0", "top": ""});
-
-				$("legend").attr("data-toggle", "");
-					$($("#regular-legend").data("target")).removeClass("collapse");
-					$($("#irregular-legend").data("target")).removeClass("collapse");
-			});
-			shortcut.add("Esc", function() {
-				$("body, body *").css({"background": "", "color": "", "border-color": "", "user-select": ""});
-				$("#info-close, #info, #info *").css({"opacity": "0", "top": ""});	
-
-				$("legend").attr("data-toggle", "");
-					$($("#regular-legend").data("target")).removeClass("collapse");
-					$($("#irregular-legend").data("target")).removeClass("collapse");
-			});
+				$("#info-close, #info, #info *").css({
+					"z-index": "-1",
+					"opacity": "0", 
+					"top": ""});
+			}
+				$("#info-close").click(function() {close();});
+				shortcut.add("Esc", function() {close();});
 		};
 		$(document).ready(basic);
 	</script>
@@ -198,6 +195,7 @@
 <b id="regular-option">Regular</b> | <b id="irregular-option">Irregular</b>
 
 <div id="info">
+<br/>
 	<h1>Conjugating French Verbs</h1>
 
 	<li>Just like the English language, there are also verbs in French. However, the way these verbs are said and wrote are different. In French, verbs need to be conjugated, or changed according to whoever is speaking.</li>
@@ -207,8 +205,8 @@
 	<br/><br/>
 
 	<fieldset>
-	<legend data-toggle="" data-target=".regular-toggle" id="regular-legend">Regular -er verbs</legend>
-	<div class="regular-toggle">
+	<legend data-toggle="collapse" data-target="#regular-toggle">Regular -er verbs</legend>
+	<div id="regular-toggle" class="collapse">
 	<br/><br/>
  	<table>
 			<th colspan="2">Format for regular -er verbs </th>
@@ -230,8 +228,12 @@
 	</div>
 	</fieldset>
 	
+	<br/><br/>
 	<fieldset>
-	<legend data-toggle="" data-target=".irregular-toggle" id="irregular-legend">Irregular verbs</legend>
+	<legend data-toggle="collapse" data-target="#irregular-toggle">Irregular verbs</legend>
+	<div id="irregular-toggle" class="collapse">
+		<p>Unlike regular verbs, irregular verbs in French follow no specific pattern </p>
+	</div>
 	</fieldset>
 </div>
 
