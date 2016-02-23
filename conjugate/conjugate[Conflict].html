@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conjugator</title>
+
+	<link rel="shortcut icon" href="data:image/x-icon;base64,R0lGODlhEAAQAPECAFFUV////wAAAAAAACH5BAkyAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAEBAQEBAAAAAAEBAAAAAAABAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJMgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" />
+
+  	<link rel="stylesheet" type="text/css" href="https://rawgit.com/FortAwesome/Font-Awesome/master/css/font-awesome.css" />
+	<style type="text/css">
+		@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: "Source Sans Pro", Arial;
+			text-align: center;
+			background-color: rgba(0,0,0,0.9);
+			color: #fff;
+			overflow-x: hidden;
+		}
+		h1 {
+			font-size: 50px;
+		}
+		#info-close {
+			opacity: 0;
+			position: fixed;
+			font-size: 3.5em;
+			display: block;
+			right: 10px;
+			top: 10px;
+			cursor: pointer;
+			z-index: 3 !important;
+		}
+		#info {
+			opacity: 0;		
+			position: absolute;
+			color: #fff;
+			right: 30px;
+			left: 30px;
+			text-align: center;
+		}
+		#info h1 {
+			font-size: 3.5em;
+			text-align: center;
+			font-weight: bold;
+		}
+		#info li {
+			margin-left: 10%;
+			text-align: left;
+			display: inline-block;
+			list-style: square;
+			margin: 10px;
+			width: 50%;
+		}
+		#info legend {
+			background-color: #ddd !important;
+			border: 1px solid #000 !important;
+			color: #000 !important;
+			border-radius: 5px;
+			width: 50%;
+			cursor: pointer;
+			padding: 10px;
+		}
+		#info table, #info table td, #info table tr, #info table th {
+			border: 1px solid #999 !important;
+			position: relative;
+			margin: auto;
+			-webkit-user-select: normal !important;
+			user-select: normal !important;
+		}
+		#info #regular-toggle p {
+			text-align: left !important;
+			width: 30%;
+		}
+		#info fieldset {
+			border: 2px solid #c4c4c4 !important;
+			margin: auto;
+			border-radius: 2px;
+			width: 50%;
+		}
+		.collapse {
+		    display: none;
+		}
+		.collapse.in {
+		    display: block;
+		    display: ;
+		}
+		.collapsing {
+		    position: relative;
+		    overflow: hidden;
+		    height: 0;
+		    -webkit-transition-timing-function: ease;
+		    -o-transition-timing-function: ease;
+		    transition-timing-function: ease;
+		    -webkit-transition-duration: .35s;
+		    -o-transition-duration: .35s;
+		    transition-duration: .35s;
+		    -webkit-transition-property: height,visibility;
+		    -o-transition-property: height,visibility;
+		    transition-property: height,visibility;
+		}
+		span {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		b {
+			cursor: pointer;
+			color: orange;
+		}
+		table {
+			display: inline-block;
+			border: 1px solid #999;
+			border-collapse: collapse;
+			font-size: 1.25em;
+			margin: 10px;
+			border-radius: 2px;
+		}
+		table * {
+			border: 1px solid #999;
+		}
+		th {
+			height: 70px;
+		}
+		td {
+			width: 10em;
+			height: 50px;
+		}
+		u {
+			border: none;
+		}
+		#line {
+			width: 100%;
+			height: 0.1px;
+			border: 1px dashed #fff;
+		}
+		div[name="normal"] {
+			display: auto;
+		}
+		div[name="none"] {
+			display: none;
+		}
+	</style>
+
+	<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js"></script>
+	<script type="text/javascript">
+		"use strict";
+
+		var toggle = function() {
+			 $("#regular-option").click(function() {
+			 	$("#irregular").attr("name", "none");
+			 	$("#regular").attr("name", "normal");
+			 });
+			 $("#irregular-option").click(function() {
+			 	$("#irregular").attr("name", "normal");
+			 	$("#regular").attr("name", "none");
+			 });
+		};
+		$(document).ready(toggle);
+		
+		var info = function() {
+			jQuery.fn.extend({
+			    toggleText: function (a, b){
+			        var that = this;
+			            if (that.text() != a && that.text() != b){
+			                that.text(a);
+			            }
+			            else
+			            if (that.text() == a){
+			                that.text(b);
+			            }
+			            else
+			            if (that.text() == b){
+			                that.text(a);
+			            }
+			        return this;
+			    }
+			});
+			
+			function open() {
+				$("body, body *").css({
+					"background": "rgba(0,0,0,1)", 
+					"color": "#000", 
+					"border-color": "#000", 
+					"user-select": "none"});
+
+				$("#info-close, #info, #info *").css({
+					"opacity": "1", 
+					"color": "#fff", 
+					"user-select": "text", 
+					"top": "0", 
+					"z-index": "2"});
+			}
+				$("#info-enter").click(function() {open();});
+				shortcut.add("shift+enter", function() {open();});
+
+			function close() {
+				$("body, body *").css({
+					"background": "",
+					"color": "",
+					"border-color": "", 
+					"user-select": "", 
+					"opacity": "1", 
+					"z-index": "1"});
+
+				$("#info-close, #info, #info *").css({
+					"z-index": "-1",
+					"opacity": "0", 
+					"top": ""});
+			}
+				$("#info-close").click(function() {close();});
+				shortcut.add("Esc", function() {close();});
+				
+			$("#je").click(function() {
+				$(this).toggleText('I (conjugate)', 'Je e');
+			});
+			$("#tu").click(function() {
+				$(this).toggleText('You (conjugate)', 'Tu es');
+			});
+			$("#il-elle").click(function() {
+				$(this).toggleText('He/She (conjugate)', 'Il/Elle e');
+			});
+			$("#nous").click(function() {
+				$(this).toggleText('We (conjugate)', 'Nous ont');
+			});
+			$("#vous").click(function() {
+				$(this).toggleText('You all (conjugate)', 'Vous ez');
+			});
+			$("#ils-elles").click(function() {
+				$(this).toggleText('They (conjugate)', 'Ils/Elles ent');
+			});
+				
+		};
+		$(document).ready(info);
+	</script>
+</head>
+
+<body>
+<h1>Basic <span id="info-enter">French</span> Conjugations</h1>
+<i class="fa fa-times-circle-o" id="info-close"></i>
+
+<b id="regular-option">Regular</b> | <b id="irregular-option">Irregular</b>
+
+<div id="info">
+<br/>
+	<h1>Conjugating French Verbs</h1>
+
+	<li>Just like the English language, there are also verbs in French. However, the way these verbs are said and wrote are different. In French, verbs need to be conjugated, or changed according to whoever is speaking.</li>
+	<li>This website makes it easy to understand basic conjugations for French.</li>
+	<li>In French, there are two types of verbs, regular verbs and irreguar verbs. Regular verbs have a specific pattern for conjugating. While irregular verbs don't follow any pattern in particular.</li>
+	<li>Click to expand on each accordion to learn more.</li>
+	<br/><br/>
+
+	<fieldset>
+	<legend data-toggle="collapse" data-target="#regular-toggle">Regular -er verbs</legend>
+	<div id="regular-toggle" class="collapse">
+	<br/><br/>
+ 	<table>
+		<th colspan="2">Format for regular -er verbs </th>
+		<tr>
+			<td id="je">Je e</td>
+			<td id="nous">Nous ons</td>
+		</tr>
+		<tr>
+			<td id="tu">Tu es</td>
+			<td id="vous">Vous ez</td>
+		</tr>
+		<tr>
+			<td id="il-elle">Il/Elle e</td>
+			<td id="ils-elles">Ils/Elles ent</td>
+		</tr>
+	</table>
+	<br/>
+		<small>*Note: You put the second word at the end of the conjugation</small>  
+	
+	<p>As you can see, </p>
+	<p>Exceptions:</p>
+	<ol>
+		<li>Any verb that have "ger" at the end unconjugated will have eons instead of ons for nous.</li>
+	</ol>
+	</div>
+	</fieldset>
+	
+	<br/><br/>
+	<fieldset>
+	<legend data-toggle="collapse" data-target="#irregular-toggle">Irregular verbs</legend>
+	<div id="irregular-toggle" class="collapse">
+		<p>Unlike regular verbs, irregular verbs in French follow no specific pattern </p>
+	</div>
+	</fieldset>
+</div>
+
+<br/><br/>
+
+<div id="regular" name="normal">
+
+	<table valign="top">
+	<th colspan="2">Aimer - To like</th>
+		<tr>
+			<td>J'aime</td>
+			<td>Nous aimons</td>
+		</tr>
+		<tr>
+			<td>Tu aimes</td>
+			<td>Vous aimez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle aime</td>
+			<td>Ils/Elles aiment</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Adore - To love</th>
+		<tr>
+			<td>J'adore</td>
+			<td>Nous adorons</td>
+		</tr>
+		<tr>
+			<td>Tu adores</td>
+			<td>Vous adorez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle adore</td>
+			<td>Ils/Elles adorent</td>
+		</tr>
+	</table>
+
+	<br/><br/>
+	<table valign="top">
+	<th colspan="2">Apporter - To bring</th>
+		<tr>
+			<td>J'apporte</td>
+			<td>Nous apportons</td>
+		</tr>
+		<tr>
+			<td>Tu apportes</td>
+			<td>Vous apportez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle apporte</td>
+			<td>Ils/Elles apportent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Arriver - To arrive</th>
+		<tr>
+			<td>J'arrive</td>
+			<td>Nous arrivons</td>
+		</tr>
+		<tr>
+			<td>Tu arrives</td>
+			<td>Vous arrivez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle arrive</td>
+			<td>Ils/Elles arrivent</td>
+		</tr>
+	</table>
+
+	<br/><br/>
+	<table valign="top">
+	<th colspan="2">Chanter - To sing</th>
+		<tr>
+			<td>Je chante</td>
+			<td>Nous chantons</td>
+		</tr>
+		<tr>
+			<td>Tu chantes</td>
+			<td>Vous chantez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle chante</td>
+			<td>Ils/Elles chantent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Chercher - To look</th>
+		<tr>
+			<td>Je cherche</td>
+			<td>Nous cherchons</td>
+		</tr>
+		<tr>
+			<td>Tu cheres</td>
+			<td>Vous cherchez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle cherche</td>
+			<td>Ils/Elles cherchent</td>
+		</tr>
+	</table>
+
+	<br/><br/>
+	<table valign="top">
+	<th colspan="2">Commencer - To begin</th>
+		<tr>
+			<td>Je commence</td>
+			<td>Nous commencons</td>
+		</tr>
+		<tr>
+			<td>Tu commences</td>
+			<td>Vous commencez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle commence</td>
+			<td>Ils/Elles commencent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Dancer - To dance</th>
+		<tr>
+			<td>Je danse</td>
+			<td>Nous dansons</td>
+		</tr>
+		<tr>
+			<td>Tu danses</td>
+			<td>Vous dansez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle danse</td>
+			<td>Ils/Elles dansent</td>
+		</tr>
+	</table>
+
+	<br/><br/>
+	<table valign="top">
+	<th colspan="2">Dancer - To dance</th>
+		<tr>
+			<td>Je danse</td>
+			<td>Nous dansons</td>
+		</tr>
+		<tr>
+			<td>Tu danses</td>
+			<td>Vous dansez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle danse</td>
+			<td>Ils/Elles dansent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Détester - To hate</th>
+		<tr>
+			<td>Je déteste</td>
+			<td>Nous détestons</td>
+		</tr>
+		<tr>
+			<td>Tu détestes</td>
+			<td>Vous détestez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle déteste</td>
+			<td>Ils/Elles détestent</td>
+		</tr>
+	</table>
+
+	<br/><br/>
+	<table valign="top">
+	<th colspan="2">Donner - To give</th>
+		<tr>
+			<td>Je donne</td>
+			<td>Nous donnons</td>
+		</tr>
+		<tr>
+			<td>Tu donnes</td>
+			<td>Vous donnez</td>
+		</tr>
+		<tr>
+			<td>Il/Ell donne</td>
+			<td>Ils/Elles donnent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Écouter - To listen</th>
+		<tr>
+			<td>J'écoute</td>
+			<td>Nous écoutons</td>
+		</tr>
+		<tr>
+			<td>Tu écoutes</td>
+			<td>Vous écoutez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle écoute</td>
+			<td>Ils/Elles écoutent</td>
+		</tr>
+	</table>
+
+	<br/><br/>
+	<table valign="top">
+	<th colspan="2">Étudier - To listen</th>
+		<tr>
+			<td>J'étudie</td>
+			<td>Nous édudions</td>
+		</tr>
+		<tr>
+			<td>Tu étudies</td>
+			<td>Vous étudiez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle étudie</td>
+			<td>Ils/Elles étudient</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Jouer - To play</th>
+		<tr>
+			<td>Je joue</td>
+			<td>Nous jouons</td>
+		</tr>
+		<tr>
+			<td>Tu joues</td>
+			<td>Vous jouez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle joue</td>
+			<td>Ils/Elles jouent</td>
+		</tr>
+	</table>
+
+	<br/><br/>
+	<table valign="top">
+	<th colspan="2">Manger - To eat</th>
+		<tr>
+			<td>Je mange</td>
+			<td>Nous man<u>ge</u>ons</td>
+		</tr>
+		<tr>
+			<td>Tu manges</td>
+			<td>Vous mangez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle mange</td>
+			<td>Ils/Elles mangent</td>
+		</tr>
+	</table>
+
+</div>
+
+
+
+
+
+
+
+<div id="irregular" name="none">
+
+	<table valign="top">
+	<th colspan="2">Aller - To go</th>
+		<tr>
+			<td>Je vais</td>
+			<td>Nous allons</td>
+		</tr>
+		<tr>
+			<td>Tu vas</td>
+			<td>Vous allez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle va</td>
+			<td>Ils/Elles vont</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Avoir - To have</th>
+		<tr>
+			<td>J'ai</td>
+			<td>Nous avons</td>
+		</tr>
+		<tr>
+			<td>Tu as</td>
+			<td>Vous avez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle a</td>
+			<td>Ils/Elles ont</td>
+		</tr>
+	</table>
+
+	<br/><br/>
+	<table valign="top">
+	<th colspan="2">Être - To be</th>
+		<tr>
+			<td>Je suis</td>
+			<td>Nous sommes</td>
+		</tr>
+		<tr>
+			<td>Tu es</td>
+			<td>Vous êtes</td>
+		</tr>
+		<tr>
+			<td>Il/Elle est</td>
+			<td>Ils/Elles sont</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Faire - To do</th>
+		<tr>
+			<td>Je fais</td>
+			<td>Nous faisons</td>
+		</tr>
+		<tr>
+			<td>Tu fais</td>
+			<td>Vous faites</td>
+		</tr>
+		<tr>
+			<td>Il/Elle fait</td>
+			<td>Ils/Elles font</td>
+		</tr>
+	</table>
+
+	<br/><br/>
+	<table valign="top">
+	<th colspan="2">Venir - To come</th>
+		<tr>
+			<td>Je viens</td>
+			<td>Nous venons</td>
+		</tr>
+		<tr>
+			<td>Tu viens</td>
+			<td>Vous venez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle vient</td>
+			<td>Ils/Elles viennent</td>
+		</tr>
+	</table>
+
+<br/><br/><br/>
+
+<div id="line"></div>
+<br/><br/>
+<h1>Boot Verbs</h1>
+
+	<br/><br/>
+	<table valign="top">
+	<th colspan="2">Acheter - To buy</th>
+		<tr>
+			<td>J'achète</td>
+			<td>Nous achetons</td>
+		</tr>
+		<tr>
+			<td>Tu achètes</td>
+			<td>Vous achetez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle achète</td>
+			<td>Ils/Elles achètent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Amener - to bring (a person)</th>
+		<tr>
+			<td>J'amène</td>
+			<td>Nous amenons</td>
+		</tr>
+		<tr>
+			<td>Tu amènes</td>
+			<td>Vous amenez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle amène</td>
+			<td>Ils/Elles amènent</td>
+		</tr>
+	</table>
+
+	<br/><br/>
+	<table valign="top">
+	<th colspan="2">Espérer - to hope</th>
+		<tr>
+			<td>J'espère</td>
+			<td>Nous espérons</td>
+		</tr>
+		<tr>
+			<td>Tu espères</td>
+			<td>Vous espérez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle espère</td>
+			<td>Ils/Elles espèrent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Préférer - to prefer</th>
+		<tr>
+			<td>Je préfère</td>
+			<td>Nous préférons</td>
+		</tr>
+		<tr>
+			<td>Tu préfères</td>
+			<td>Vous préférez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle préfère</td>
+			<td>Ils/Elles préfèrent</td>
+		</tr>
+	</table>
+</div>
+
+<br/><br/><br/>
+</body>
+</html>
