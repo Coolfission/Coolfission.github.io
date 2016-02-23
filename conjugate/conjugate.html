@@ -141,7 +141,7 @@
 	<script type="text/javascript">
 		"use strict";
 
-		var switch = function() {
+		var toggle = function() {
 			 $("#regular-option").click(function() {
 			 	$("#irregular").attr("name", "none");
 			 	$("#regular").attr("name", "normal");
@@ -151,7 +151,7 @@
 			 	$("#regular").attr("name", "none");
 			 });
 		};
-		$(document).ready(switch);
+		$(document).ready(toggle);
 		
 		var info = function() {
 			jQuery.fn.extend({
