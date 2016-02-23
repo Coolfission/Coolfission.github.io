@@ -155,24 +155,23 @@
 		
 		var info = function() {
 			jQuery.fn.extend({
-			    toggleText: function (a, b) {
+			    toggleText: function (a, b){
 			        var that = this;
-			            if (that.text() != a && that.text() != b) {
+			            if (that.text() != a && that.text() != b){
 			                that.text(a);
 			            }
 			            else
-			            if (that.text() == a) {
+			            if (that.text() == a){
 			                that.text(b);
 			            }
 			            else
-			            if (that.text() == b) {
+			            if (that.text() == b){
 			                that.text(a);
 			            }
 			        return this;
 			    }
 			});
 			
-			$("#je").toggleText('I', 'Je');
 			function open() {
 				$("body, body *").css({
 					"background": "rgba(0,0,0,1)", 
@@ -207,6 +206,8 @@
 				$("#info-close").click(function() {close();});
 				shortcut.add("Esc", function() {close();});
 				
+			$("#je").toggleText('I', 'Je');
+				
 		};
 		$(document).ready(info);
 	</script>
@@ -233,19 +234,19 @@
 	<div id="regular-toggle" class="collapse">
 	<br/><br/>
  	<table>
-			<th colspan="2">Format for regular -er verbs </th>
-			<tr>
-				<td><span id="je">Je</span> <u>e</u></td>
-				<td id="nous">Nous <u>ons</u></td>
-			</tr>
-			<tr>
-				<td id="tu">Tu <u>es</u></td>
-				<td id="vous">Vous <u>ez</u></td>
-			</tr>
-			<tr>
-				<td id="il/elle">Il/Elle <u>e</u></td>
-				<td id="ils/elles">Ils/Elles <u>ent</u></td>
-			</tr>
+		<th colspan="2">Format for regular -er verbs </th>
+		<tr>
+			<td><span id="je">Je</span> <u>e</u></td>
+			<td id="nous">Nous <u>ons</u></td>
+		</tr>
+		<tr>
+			<td id="tu">Tu <u>es</u></td>
+			<td id="vous">Vous <u>ez</u></td>
+		</tr>
+		<tr>
+			<td id="il/elle">Il/Elle <u>e</u></td>
+			<td id="ils/elles">Ils/Elles <u>ent</u></td>
+		</tr>
 	</table>
 	<br/>
 		<small>*Note: You put the underlined at the end of the verb</small>  
