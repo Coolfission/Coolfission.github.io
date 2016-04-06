@@ -215,22 +215,22 @@
 				$("#info-close").click(function() {close();});
 				shortcut.add("Esc", function() {close();});
 				
-			$("#je").click(function() {
+			$(".je").click(function() {
 				$(this).toggleText('I (conjugate)', 'Je e');
 			});
-			$("#tu").click(function() {
+			$(".tu").click(function() {
 				$(this).toggleText('You (conjugate)', 'Tu es');
 			});
-			$("#il-elle").click(function() {
+			$(".il-elle").click(function() {
 				$(this).toggleText('He/She (conjugate)', 'Il/Elle e');
 			});
-			$("#nous").click(function() {
+			$(".nous").click(function() {
 				$(this).toggleText('We (conjugate)', 'Nous ont');
 			});
-			$("#vous").click(function() {
+			$(".vous").click(function() {
 				$(this).toggleText('You all (conjugate)', 'Vous ez');
 			});
-			$("#ils-elles").click(function() {
+			$(".ils-elles").click(function() {
 				$(this).toggleText('They (conjugate)', 'Ils/Elles ent');
 			});
 				
@@ -252,6 +252,7 @@
 	<li>Just like the English language, there are also verbs in French. However, the way these verbs are said and wrote are different. In French, verbs need to be conjugated, or changed according to whoever is speaking.</li>
 	<li>This website makes it easy to understand basic conjugations for French.</li>
 	<li>In French, there are two types of verbs, regular verbs and irreguar verbs. Regular verbs have a specific pattern for conjugating. While irregular verbs don't follow any pattern in particular.</li>
+	<li>Each of these verbs can be subdivided into further categories</li>
 	<li>Click to expand on each accordion to learn more.</li>
 	<br/><br/>
 
@@ -262,16 +263,16 @@
  	<table>
 		<th colspan="2">Format for regular -er verbs </th>
 		<tr>
-			<td id="je">Je e</td>
-			<td id="nous">Nous ons</td>
+			<td claclass="je">Je -e</td>
+			<td claclass="nous">Nous -ons</td>
 		</tr>
 		<tr>
-			<td id="tu">Tu es</td>
-			<td id="vous">Vous ez</td>
+			<td claclass="tu">Tu -es</td>
+			<td claclass="vous">Vous -ez</td>
 		</tr>
 		<tr>
-			<td id="il-elle">Il/Elle e</td>
-			<td id="ils-elles">Ils/Elles ent</td>
+			<td claclass="il-elle">Il/Elle -e</td>
+			<td claclass="ils-elles">Ils/Elles -ent</td>
 		</tr>
 	</table>
 	<br/>
@@ -279,9 +280,22 @@
 	
 	<p>As you can see, </p>
 	<p>Exceptions:</p>
-	<ol>
-		<li>Any verb that have "ger" at the end unconjugated will have "eons" instead of "ons" for nous.</li>
-	</ol>
+	<table>
+		<th colspan="2">Format for regular -ir verbs </th>
+		<tr>
+			<td class="je">Je -is</td>
+			<td class="nous">Nous -issons</td>
+		</tr>
+		<tr>
+			<td class="tu">Tu -es</td>
+			<td class="vous">Vous -ez</td>
+		</tr>
+		<tr>
+			<td class="il-elle">Il/Elle -e</td>
+			<td class="ils-elles">Ils/Elles -ent</td>
+		</tr>
+	</table>
+	<br/>
 	</div>
 	</fieldset>
 	
