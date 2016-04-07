@@ -157,14 +157,17 @@
 		#index {
 		    position: relative;
 		    z-index: 1;
-		    background: rgba(0,0,0,0.5);
+		    background: rgba(0,0,0,0.7);
 		    height: 45px;
 		    left: 0;
 		    right: 0;
 		    top: 3;
 		}
+		#index ul {
+			margin: auto;
+		}
 		#index li {
-		    float: left;
+		    display: inline-block;
 		    list-style-type: none;
 		}
 		#index a, b {
@@ -185,7 +188,7 @@
 		#index b {
 			display: inline-block !important;
 			color: orange;
-			border-top: 2px solid rgba(0,0,0,0.5);
+			border-top: 3px solid rgba(0,0,0,0.5);
 		}
 		#index li.active a {
 		    border-top: 3px solid #fff;
@@ -338,11 +341,11 @@
 			$(window).scroll(function(e){ 
 			  var $el = $('#index'); 
 			  if ($(this).scrollTop() > 132 && $el.css('position') != 'fixed'){ 
-			    $('#index').css({'position': 'fixed', 'top': '0', 'height': '55px'}); 
+			    $('#index').css({'position': 'fixed', 'top': '0'}); 
 			  }
 			  if ($(this).scrollTop() < 132 && $el.css('position') == 'fixed')
 			  {
-			    $('#index').css({'position': 'relative', 'top': '3', 'height': '45px'}); 
+			    $('#index').css({'position': 'relative', 'top': '3'}); 
 			  } 
 			});
 
@@ -497,14 +500,10 @@
 			<li><b id="regular-option">Regular</b> | <b id="irregular-option">Irregular</b></li>
 			<br/>
 		</ul>
-
-		<ul>
-		
-		</ul>
 	</div>
 
 
-	<br/><a id="er-scroll">-ER Verbs</a><br/>
+	<!-- <br/><a id="er-scroll">-ER Verbs</a><br/> -->
 	<table valign="top">
 	<th colspan="2">Aimer - To like</th>
 		<tr>
@@ -761,7 +760,6 @@
 		</tr>
 	</table>
 	
-	<br/><br/>
 	<table valign="top">
 	<th colspan="2">Parler - To talk</th>
 		<tr>
@@ -907,8 +905,8 @@
 			<td>Ils/Elles choisissent</td>
 		</tr>
 	</table>
-<br/><a id="re-scroll">-RE Verbs</a><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<!-- <br/><a id="re-scroll">-RE Verbs</a><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> -->
 
 </div>
 
