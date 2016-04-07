@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,13 +61,6 @@
 			cursor: pointer;
 			padding: 10px;
 		}
-		#info table, #info table td, #info table tr, #info table th {
-			border: 1px solid #999 !important;
-			position: relative;
-			margin: auto;
-			-webkit-user-select: normal !important;
-			user-select: normal !important;
-		}
 		#info .line {
 			border: 0.5px dashed #fff !important; 
 			height: 1px; 
@@ -82,8 +76,16 @@
 			border-radius: 2px;
 			width: 50%;
 		}
-		#info table p {
-			width: 40%;
+		#info .information {
+			margin: auto;
+			width: 85% !important;
+		}
+		#info table, #info table td, #info table tr, #info table th {
+			border: 1px solid #999 !important;
+			position: relative;
+			margin: auto;
+			-webkit-user-select: normal !important;
+			user-select: normal !important;
 		}
 		.collapse {
 		    display: none;
@@ -221,23 +223,61 @@
 				$("#info-close").click(function() {close();});
 				shortcut.add("Esc", function() {close();});
 				
-			$(".je").click(function() {
-				$(this).toggleText('I (conjugate)', 'Je e');
+			$("#je-er").click(function() {
+				$(this).toggleText('I (conjugate)', 'Je -e');
 			});
-			$(".tu").click(function() {
-				$(this).toggleText('You (conjugate)', 'Tu es');
+			$("#tu-er").click(function() {
+				$(this).toggleText('You (conjugate)', 'Tu -es');
 			});
-			$(".il-elle").click(function() {
-				$(this).toggleText('He/She (conjugate)', 'Il/Elle e');
+			$("#il-elle-er").click(function() {
+				$(this).toggleText('He/She (conjugate)', 'Il/Elle -e');
 			});
-			$(".nous").click(function() {
-				$(this).toggleText('We (conjugate)', 'Nous ont');
+			$("#nous-er").click(function() {
+				$(this).toggleText('We (conjugate)', 'Nous -ont');
 			});
-			$(".vous").click(function() {
-				$(this).toggleText('You all (conjugate)', 'Vous ez');
+			$("#vous-er").click(function() {
+				$(this).toggleText('You all (conjugate)', 'Vous -ez');
 			});
-			$(".ils-elles").click(function() {
-				$(this).toggleText('They (conjugate)', 'Ils/Elles ent');
+			$("#ils-elles-er").click(function() {
+				$(this).toggleText('They (conjugate)', 'Ils/Elles -ent');
+			});
+
+			$("#je-ir").click(function() {
+				$(this).toggleText('I (conjugate)', 'Je -is');
+			});
+			$("#tu-ir").click(function() {
+				$(this).toggleText('You (conjugate)', 'Tu -is');
+			});
+			$("#il-elle-ir").click(function() {
+				$(this).toggleText('He/She (conjugate)', 'Il/Elle -it');
+			});
+			$("#nous-ir").click(function() {
+				$(this).toggleText('We (conjugate)', 'Nous -issons');
+			});
+			$("#vous-ir").click(function() {
+				$(this).toggleText('You all (conjugate)', 'Vous -issez');
+			});
+			$("#ils-elles-ir").click(function() {
+				$(this).toggleText('They (conjugate)', 'Ils/Elles -issent');
+			});
+
+			$("#je-re").click(function() {
+				$(this).toggleText('I (conjugate)', 'Je -s');
+			});
+			$("#tu-re").click(function() {
+				$(this).toggleText('You (conjugate)', 'Tu -s');
+			});
+			$("#il-elle-re").click(function() {
+				$(this).toggleText('He/She (conjugate)', 'Il/Elle -()');
+			});
+			$("#nous-re").click(function() {
+				$(this).toggleText('We (conjugate)', 'Nous -ont');
+			});
+			$("#vous-re").click(function() {
+				$(this).toggleText('You all (conjugate)', 'Vous -ez');
+			});
+			$("#ils-elles-re").click(function() {
+				$(this).toggleText('They (conjugate)', 'Ils/Elles -ent');
 			});
 				
 		};
@@ -270,37 +310,37 @@
  	<table>
 		<th colspan="2">Format for regular -er verbs </th>
 		<tr>
-			<td class="je">Je -e</td>
-			<td class="nous">Nous -ons</td>
+			<td id="je-er">Je -e</td>
+			<td id="nous-er">Nous -ons</td>
 		</tr>
 		<tr>
-			<td class="tu">Tu -es</td>
-			<td class="vous">Vous -ez</td>
+			<td id="tu-er">Tu -es</td>
+			<td id="vous-er">Vous -ez</td>
 		</tr>
 		<tr>
-			<td class="il-elle">Il/Elle -e</td>
-			<td class="ils-elles">Ils/Elles -ent</td>
+			<td id="il-elle-er">Il/Elle -e</td>
+			<td id="ils-elles-er">Ils/Elles -ent</td>
 		</tr>
 	</table>
-	<p>EXCEPTION: When a verb in its infinitive form as the root -ger (such as voyager), then the conjugation for nous will be -eons.</p>
-	<p>Regular -er verbs can be divided further into stem-changing verbs in which the conjugation is the same, but the accents are different based on if it is "inside/outside the boot".</p>
-	<p>In this case, the verbs outside the boot will have the same accent as the infinitive while those inside will have different accents.</p>
-	<p>The "boot" on the stem-changing verbs have been highlighted on this website to make it easy to identify.</p>
-	<div class="line"></div><br/>
+	<p class="information">EXCEPTION: When a verb in its infinitive form as the root -ger (such as voyager), then the conjugation for nous will be -eons.</p>
+	<p class="information">Regular -er verbs can be divided further into stem-changing verbs in which the conjugation is the same, but the accents are different based on if it is "inside/outside the boot".</p>
+	<p class="information">In this case, the verbs outside the boot will have the same accent as the infinitive while those inside will have different accents.</p>
+	<p class="information">The "boot" on the stem-changing verbs have been highlighted on this website to make it easy to identify.</p>
+	<br/><div class="line"></div><br/>
 	
 	<table>
 		<th colspan="2">Format for regular -ir verbs </th>
 		<tr>
-			<td class="je">Je -is</td>
-			<td class="nous">Nous -issons</td>
+			<td id="je-ir">Je -is</td>
+			<td id="nous-ir">Nous -issons</td>
 		</tr>
 		<tr>
-			<td class="tu">Tu -is</td>
-			<td class="vous">Vous -issez</td>
+			<td id="tu-ir">Tu -is</td>
+			<td id="vous-ir">Vous -issez</td>
 		</tr>
 		<tr>
-			<td class="il-elle">Il/Elle -it</td>
-			<td class="ils-elles">Ils/Elles -issent</td>
+			<td id="il-elle-ir">Il/Elle -it</td>
+			<td id="ils-elles-ir">Ils/Elles -issent</td>
 		</tr>
 	</table>
 	<br/><br/><div class="line"></div><br/>
@@ -308,16 +348,16 @@
 	<table>
 		<th colspan="2">Format for regular -re verbs </th>
 		<tr>
-			<td class="je">Je -s</td>
-			<td class="nous">Nous -ons</td>
+			<td id="je-re">Je -s</td>
+			<td id="nous-re">Nous -ons</td>
 		</tr>
 		<tr>
-			<td class="tu">Tu -is</td>
-			<td class="vous">Vous -ez</td>
+			<td id="tu-re">Tu -is</td>
+			<td id="vous-re">Vous -ez</td>
 		</tr>
 		<tr>
-			<td class="il-elle">Il/Elle -()</td>
-			<td class="ils-elles">Ils/Elles -ent</td>
+			<td id="il-elle-re">Il/Elle -()</td>
+			<td id="ils-elles-re">Ils/Elles -ent</td>
 		</tr>
 	</table>
 	<br/><br/>
@@ -328,8 +368,8 @@
 	<fieldset>
 	<legend data-toggle="collapse" data-target="#irregular-toggle">Irregular verbs</legend>
 	<div id="irregular-toggle" class="collapse">
-		<p>Unlike regular verbs, irregular verbs in French follow no specific pattern</p>
-		<p>Some example include the verbs être, faire, avoir, venir, or aller.</p>
+		<p class="information">Unlike regular verbs, irregular verbs in French follow no specific pattern</p>
+		<p class="information">Some example include the verbs être, faire, avoir, venir, or aller.</p>
 	</div>
 	</fieldset>
 	<br/>
