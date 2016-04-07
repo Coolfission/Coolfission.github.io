@@ -10,6 +10,8 @@
 	<style type="text/css">
 		@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 		body {
+			height: 100%;
+			width: 100%;
 			margin: 0;
 			padding: 0;
 			font-family: "Source Sans Pro", Arial;
@@ -17,9 +19,6 @@
 			background-color: rgba(0,0,0,0.9);
 			color: #fff;
 			overflow-x: hidden;
-		}
-		h1 {
-			font-size: 50px;
 		}
 		#info-close {
 			opacity: 0;
@@ -108,20 +107,13 @@
 		    -o-transition-property: height,visibility;
 		    transition-property: height,visibility;
 		}
-		span {
-			text-decoration: underline;
-			cursor: pointer;
-		}
-		b {
-			cursor: pointer;
-			color: orange;
-		}
 		table {
 			display: inline-block;
 			border: 1px solid #999;
 			border-collapse: collapse;
 			font-size: 1.25em;
 			margin: 10px;
+			position: relative;
 			border-radius: 2px;
 		}
 		table * {
@@ -147,6 +139,65 @@
 		}
 		div[name="none"] {
 			display: none;
+		}
+
+
+		h1 {
+			font-size: 50px;
+		}
+		span {
+			text-decoration: underline;
+			cursor: help;
+		}
+		b {
+			cursor: pointer;
+			color: orange;
+		}
+
+		#index {
+		    position: relative;
+		    z-index: 1;
+		    background: rgba(0,0,0,0.5);
+		    height: 45px;
+		    left: 0;
+		    right: 0;
+		    top: 3;
+		}
+		#index li {
+		    float: left;
+		    list-style-type: none;
+		}
+		#index a, b {
+		    display: block;
+		    padding: 5px 25px 7px 25px;
+		    width: 4em;
+		    text-align: center;
+		    -webkit-transition: .5s all ease-out;
+		    -moz-transition: .5s all ease-out;
+		    transition: .5s all ease-out;
+		    border-top: 3px solid #333;
+		    color: #aaa;
+		    text-decoration: none;
+		}
+		#index a:hover {
+		    color: #ddd;
+		}
+		#index b {
+			display: inline-block !important;
+			color: orange;
+			border-top: 2px solid rgba(0,0,0,0.5);
+		}
+		#index li.active a {
+		    border-top: 3px solid #fff;
+		    color: #fff;
+		}
+		#ir-scroll {
+		    position: absolute;
+		    top: 400px;
+		}
+		#er-scroll {
+		    position: absolute;
+		    top: 800px;
 		}
 	</style>
 
@@ -279,9 +330,63 @@
 			$("#ils-elles-re").click(function() {
 				$(this).toggleText('They (conjugate)', 'Ils/Elles -ent');
 			});
-				
 		};
 		$(document).ready(info);
+
+		var scroll = function() {
+
+			$(window).scroll(function(e){ 
+			  var $el = $('#index'); 
+			  if ($(this).scrollTop() > 132 && $el.css('position') != 'fixed'){ 
+			    $('#index').css({'position': 'fixed', 'top': '0', 'height': '55px'}); 
+			  }
+			  if ($(this).scrollTop() < 132 && $el.css('position') == 'fixed')
+			  {
+			    $('#index').css({'position': 'relative', 'top': '3', 'height': '45px'}); 
+			  } 
+			});
+
+			var lastId,
+			    topMenu = $("#index"),
+			    topMenuHeight = topMenu.outerHeight()+15,
+
+			    menuItems = topMenu.find("a"),
+
+			    scrollItems = menuItems.map(function(){
+			      var item = $($(this).attr("href"));
+			      if (item.length) { return item; }
+			    });
+
+			menuItems.click(function(e){
+			  var href = $(this).attr("href"),
+			      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+			  $('html, body').stop().animate({ 
+			      scrollTop: offsetTop
+			  }, 300);
+			  e.preventDefault();
+			});
+
+			$(window).scroll(function(){
+			   var fromTop = $(this).scrollTop()+topMenuHeight;
+			   
+			   var cur = scrollItems.map(function(){
+			     if ($(this).offset().top < fromTop)
+			       return this;
+			   });
+
+			   cur = cur[cur.length-1];
+			   var id = cur && cur.length ? cur[0].id : "";
+			   
+			   if (lastId !== id) {
+			       lastId = id;
+
+			       menuItems
+			         .parent().removeClass("active")
+			         .end().filter("[href='#"+id+"']").parent().addClass("active");
+			   }                   
+			});
+		}
+		$(document).ready(scroll);
 	</script>
 </head>
 
@@ -289,7 +394,6 @@
 <h1>Basic <span id="info-enter">French</span> Conjugations</h1>
 <i class="fa fa-times-circle-o" id="info-close"></i>
 
-<b id="regular-option">Regular</b> | <b id="irregular-option">Irregular</b>
 
 <div id="info">
 <br/>
@@ -297,7 +401,7 @@
 
 	<li>Just like the English language, there are also verbs in French. However, the way these verbs are said and wrote are different. In French, verbs need to be conjugated, or changed according to whoever is speaking.</li>
 	<li>This website makes it easy to understand basic conjugations for French.</li>
-	<li>In French, there are two types of verbs, regular verbs and irreguar verbs. Regular verbs have a specific pattern for conjugating. While irregular verbs don't follow any pattern in particular.</li>
+	<li>In French, there are two types of verbs, regular verbs and irregular verbs. Regular verbs have a specific pattern for conjugating. While irregular verbs don't follow any pattern in particular.</li>
 	<li>Each of these verbs can be subdivided into further categories</li>
 	<li>Click to expand on each accordion to learn more.</li><br/>
 	<small>IMPORTANT: This website doesn't show the conjugations in the past or future tense, only in the present for now.</small>
@@ -378,7 +482,29 @@
 
 
 <div id="regular" name="normal">
-	<br/><br/>
+
+	<div id="index">
+		<ul>
+			<li class="active">
+				<a href="#er-scroll">-ER Verbs</a>
+			</li>
+			<li>
+				<a href="#ir-scroll">-IR Verbs</a>
+			</li>
+			<li>
+				<a href="#re-scroll">-RE Verbs</a>
+			</li>
+			<li><b id="regular-option">Regular</b> | <b id="irregular-option">Irregular</b></li>
+			<br/>
+		</ul>
+
+		<ul>
+		
+		</ul>
+	</div>
+
+
+	<br/><a id="er-scroll">-ER Verbs</a><br/>
 	<table valign="top">
 	<th colspan="2">Aimer - To like</th>
 		<tr>
@@ -763,6 +889,27 @@
 			<td>Ils/Elles voyagent</td>
 		</tr>
 	</table>
+
+<br/><div class="line"></div><br/><br/>
+<!-- <br/><a id="ir-scroll">-IR Verbs</a><br/><br/><br/><br/><br/><br/><br/> -->
+	<table valign="top">
+	<th colspan="2">Choisir - to choose</th>
+		<tr>
+			<td>Je choisis</td>
+			<td>Nous choisissons</td>
+		</tr>
+		<tr>
+			<td>Tu choisis</td>
+			<td>Vous choisissez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle choisit</td>
+			<td>Ils/Elles choisissent</td>
+		</tr>
+	</table>
+<br/><a id="re-scroll">-RE Verbs</a><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
 </div>
 
 
@@ -944,3 +1091,7 @@
 <br/><br/><br/>
 </body>
 </html>
+
+<!-- Things to do on the website:
+- Make index menu that will highlight an item as the page scrolls
+- Make a search input - like ctrl + f function on chrome -->
