@@ -194,6 +194,26 @@
 		    border-top: 3px solid #fff;
 		    color: #fff;
 		}
+
+		.boot .je-boot {
+			border-right: 3px solid blue;
+			border-left: 3px solid blue;
+		}
+		.boot .tu-boot {
+			border-right: 3px solid blue;
+			border-left: 3px solid blue;
+		}
+		.boot .il-elle-boot {
+			border-left: 3px solid blue;
+			border-bottom: 3px solid blue;
+			border-radius: 2px;
+		}
+		.boot .ils-elles-boot {
+			border-right: 3px solid blue;
+			border-top: 3px solid blue;
+			border-bottom: 3px solid blue;
+			border-radius: 2px;
+		}
 	</style>
 
 	<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
@@ -269,6 +289,7 @@
 				$("#info-close").click(function() {close();});
 				shortcut.add("Esc", function() {close();});
 				
+			//ER
 			$("#je-er").click(function() {
 				$(this).toggleText('I (conjugate)', 'Je -e');
 			});
@@ -276,7 +297,7 @@
 				$(this).toggleText('You (conjugate)', 'Tu -es');
 			});
 			$("#il-elle-er").click(function() {
-				$(this).toggleText('He/She (conjugate)', 'Il/Elle -e');
+				$(this).toggleText('He/She (conjugate)', 'Il/Elle/On -e');
 			});
 			$("#nous-er").click(function() {
 				$(this).toggleText('We (conjugate)', 'Nous -ont');
@@ -288,6 +309,7 @@
 				$(this).toggleText('They (conjugate)', 'Ils/Elles -ent');
 			});
 
+			//IR
 			$("#je-ir").click(function() {
 				$(this).toggleText('I (conjugate)', 'Je -is');
 			});
@@ -295,7 +317,7 @@
 				$(this).toggleText('You (conjugate)', 'Tu -is');
 			});
 			$("#il-elle-ir").click(function() {
-				$(this).toggleText('He/She (conjugate)', 'Il/Elle -it');
+				$(this).toggleText('He/She (conjugate)', 'Il/Elle/On -it');
 			});
 			$("#nous-ir").click(function() {
 				$(this).toggleText('We (conjugate)', 'Nous -issons');
@@ -307,6 +329,7 @@
 				$(this).toggleText('They (conjugate)', 'Ils/Elles -issent');
 			});
 
+			//RE
 			$("#je-re").click(function() {
 				$(this).toggleText('I (conjugate)', 'Je -s');
 			});
@@ -314,15 +337,56 @@
 				$(this).toggleText('You (conjugate)', 'Tu -s');
 			});
 			$("#il-elle-re").click(function() {
-				$(this).toggleText('He/She (conjugate)', 'Il/Elle -()');
+				$(this).toggleText('He/She (conjugate)', 'Il/Elle/On -()');
 			});
 			$("#nous-re").click(function() {
-				$(this).toggleText('We (conjugate)', 'Nous -ont');
+				$(this).toggleText('We (conjugate)', 'Nous -ons');
 			});
 			$("#vous-re").click(function() {
 				$(this).toggleText('You all (conjugate)', 'Vous -ez');
 			});
 			$("#ils-elles-re").click(function() {
+				$(this).toggleText('They (conjugate)', 'Ils/Elles -ent');
+			});
+
+
+			//First Group
+			$("#je-pre").click(function() {
+				$(this).toggleText('I (conjugate)', 'Je -s');
+			});
+			$("#tu-pre").click(function() {
+				$(this).toggleText('You (conjugate)', 'Tu -s');
+			});
+			$("#il-elle-pre").click(function() {
+				$(this).toggleText('He/She (conjugate)', 'Il/Elle/On -t');
+			});
+			$("#nous-pre").click(function() {
+				$(this).toggleText('We (conjugate)', 'Nous -ons');
+			});
+			$("#vous-pre").click(function() {
+				$(this).toggleText('You all (conjugate)', 'Vous -ez');
+			});
+			$("#ils-elles-pre").click(function() {
+				$(this).toggleText('They (conjugate)', 'Ils/Elles -ent');
+			});
+
+			//Second Group
+			$("#je-af").click(function() {
+				$(this).toggleText('I (conjugate)', 'Je -e');
+			});
+			$("#tu-af").click(function() {
+				$(this).toggleText('You (conjugate)', 'Tu -es');
+			});
+			$("#il-elle-af").click(function() {
+				$(this).toggleText('He/She (conjugate)', 'Il/Elle/On -e');
+			});
+			$("#nous-af").click(function() {
+				$(this).toggleText('We (conjugate)', 'Nous -ons');
+			});
+			$("#vous-af").click(function() {
+				$(this).toggleText('You all (conjugate)', 'Vous -ez');
+			});
+			$("#ils-elles-af").click(function() {
 				$(this).toggleText('They (conjugate)', 'Ils/Elles -ent');
 			});
 		};
@@ -390,20 +454,30 @@
 <i class="fa fa-times-circle-o" id="info-close"></i>
 
 
+
+
+
+
+
+
+<!-- Info -->
+
+
+
 <div id="info">
 <br/>
 	<h1>Conjugating French Verbs</h1>
 
 	<li>Just like the English language, there are also verbs in French. However, the way these verbs are said and wrote are different. In French, verbs need to be conjugated, or changed according to whoever is speaking.</li>
 	<li>This website makes it easy to understand basic conjugations for French.</li>
-	<li>In French, there are two types of verbs, regular verbs and irregular verbs. Regular verbs have a specific pattern for conjugating. While irregular verbs don't follow any pattern in particular.</li>
-	<li>Each of these verbs can be subdivided into further categories</li>
+	<li>In French, there are two types of verbs, regular verbs and irregular verbs. The two differ on the way that they get conjugated.</li>
+	<li>Each of these verbs can also be subdivided into further categories</li>
 	<li>Click to expand on each accordion to learn more.</li><br/>
 	<small>IMPORTANT: This website doesn't show the conjugations in the past or future tense, only in the present for now.</small>
 	<br/><br/>
 
-	<fieldset>
-	<legend data-toggle="collapse" data-target="#regular-toggle">Regular verbs</legend>
+	<fieldset
+>	<legend data-toggle="collapse" data-target="#regular-toggle">Regular verbs</legend>
 	<div id="regular-toggle" class="collapse">
 	<br/><br/>
  	<table>
@@ -417,11 +491,11 @@
 			<td id="vous-er">Vous -ez</td>
 		</tr>
 		<tr>
-			<td id="il-elle-er">Il/Elle -e</td>
+			<td id="il-elle-er">Il/Elle/On -e</td>
 			<td id="ils-elles-er">Ils/Elles -ent</td>
 		</tr>
 	</table>
-	<p class="information">EXCEPTION: When a verb in its infinitive form as the root -ger (such as voyager), then the conjugation for nous will be -eons.</p>
+	<p class="information">EXCEPTION: When a verb in its infinitive form and has the root -ger (such as voyager), then the conjugation for nous will be -eons.</p>
 	<p class="information">Regular -er verbs can be divided further into stem-changing verbs in which the conjugation is the same, but the accents are different based on if it is "inside/outside the boot".</p>
 	<p class="information">In this case, the verbs outside the boot will have the same accent as the infinitive while those inside will have different accents.</p>
 	<p class="information">The "boot" on the stem-changing verbs have been highlighted on this website to make it easy to identify.</p>
@@ -438,7 +512,7 @@
 			<td id="vous-ir">Vous -issez</td>
 		</tr>
 		<tr>
-			<td id="il-elle-ir">Il/Elle -it</td>
+			<td id="il-elle-ir">Il/Elle/On -it</td>
 			<td id="ils-elles-ir">Ils/Elles -issent</td>
 		</tr>
 	</table>
@@ -455,7 +529,7 @@
 			<td id="vous-re">Vous -ez</td>
 		</tr>
 		<tr>
-			<td id="il-elle-re">Il/Elle -()</td>
+			<td id="il-elle-re">Il/Elle/On -()</td>
 			<td id="ils-elles-re">Ils/Elles -ent</td>
 		</tr>
 	</table>
@@ -467,8 +541,44 @@
 	<fieldset>
 	<legend data-toggle="collapse" data-target="#irregular-toggle">Irregular verbs</legend>
 	<div id="irregular-toggle" class="collapse">
-		<p class="information">Unlike regular verbs, irregular verbs in French follow no specific pattern</p>
-		<p class="information">Some example include the verbs être, faire, avoir, venir, or aller.</p>
+		<p class="information">Unlike regular verbs, some irregular verbs follow a pattern while others don't.</p>
+		<p class="information">There are two main groups that can be conjugated in the irregular verbs. The first group is a seperate conjugation, but the second group is conjugated exactly like how you conjugate regular -er verbs. </p><br/>
+
+		<table>
+			<th colspan="2">The first group</th>
+			<tr>
+				<td id="je-pre">Je -s</td>
+				<td id="nous-pre">Nous -ons</td>
+			</tr>
+			<tr>
+				<td id="tu-pre">Tu -s</td>
+				<td id="vous-pre">Vous -ez</td>
+			</tr>
+			<tr>
+				<td id="il-elle-pre">Il/Elle/On -t</td>
+				<td id="ils-elles-pre">Ils/Elles -ent</td>
+			</tr>
+		</table>
+		<br/><br/><div class="line"></div><br/>
+
+		<table>
+			<th colspan="2">The second group</th>
+			<tr>
+				<td id="je-af">Je -e</td>
+				<td id="nous-af">Nous -ons</td>
+			</tr>
+			<tr>
+				<td id="tu-af">Tu -es</td>
+				<td id="vous-af">Vous -ez</td>
+			</tr>
+			<tr>
+				<td id="il-elle-af">Il/Elle/On -e</td>
+				<td id="ils-elles-af">Ils/Elles -ent</td>
+			</tr>
+		</table>
+		<br/><div class="line"></div><br/>
+
+		<p>The rest of the irregular verbs don't have a specific way of conjugating, so it is essential for you to memorize it!</p>
 	</div>
 	</fieldset>
 	<br/>
@@ -476,7 +586,14 @@
 </div>
 
 
-<div id="regular" name="normal">
+
+
+
+
+
+
+
+
 
 	<div id="index">
 		<ul>
@@ -492,23 +609,26 @@
 			<li><b id="regular-option">Regular</b> | <b id="irregular-option">Irregular</b></li>
 			<br/>
 		</ul>
-	</div>
-	<br/>
+	</div><br/>
+
+
+<div id="regular" name="normal">
 
 	<h2 id="er-scroll">-ER Verbs</h2>
-	<table valign="top">
-	<th colspan="2">Aimer - To like</th>
+
+	<table class="boot" valign="top">
+	<th colspan="2" class="main-boot">Acheter - To buy</th>
 		<tr>
-			<td>J'aime</td>
-			<td>Nous aimons</td>
+			<td class="je-boot">J'achète</td>
+			<td>Nous achetons</td>
 		</tr>
 		<tr>
-			<td>Tu aimes</td>
-			<td>Vous aimez</td>
+			<td class="tu-boot">Tu achètes</td>
+			<td>Vous achetez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle aime</td>
-			<td>Ils/Elles aiment</td>
+			<td class="il-elle-boot">Il/Elle/On achète</td>
+			<td class="ils-elles-boot">Ils/Elles achètent</td>
 		</tr>
 	</table>
 
@@ -523,8 +643,40 @@
 			<td>Vous adorez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle adore</td>
+			<td>Il/Elle/On adore</td>
 			<td>Ils/Elles adorent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Aimer - To like</th>
+		<tr>
+			<td>J'aime</td>
+			<td>Nous aimons</td>
+		</tr>
+		<tr>
+			<td>Tu aimes</td>
+			<td>Vous aimez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On aime</td>
+			<td>Ils/Elles aiment</td>
+		</tr>
+	</table>
+
+	<table class="boot" valign="top">
+	<th colspan="2" class="main-boot">Amener - to bring (a person)</th>
+		<tr>
+			<td class="je-boot">J'amène</td>
+			<td>Nous amenons</td>
+		</tr>
+		<tr>
+			<td class="tu-boot">Tu amènes</td>
+			<td>Vous amenez</td>
+		</tr>
+		<tr>
+			<td class="il-elle-boot">Il/Elle/On amène</td>
+			<td class="ils-elles-boot">Ils/Elles amènent</td>
 		</tr>
 	</table>
 
@@ -539,7 +691,7 @@
 			<td>Vous apportez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle apporte</td>
+			<td>Il/Elle/on apporte</td>
 			<td>Ils/Elles apportent</td>
 		</tr>
 	</table>
@@ -555,7 +707,7 @@
 			<td>Vous arrivez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle arrive</td>
+			<td>Il/Elle/on arrive</td>
 			<td>Ils/Elles arrivent</td>
 		</tr>
 	</table>
@@ -571,7 +723,7 @@
 			<td>Vous chantez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle chante</td>
+			<td>Il/Elle/on chante</td>
 			<td>Ils/Elles chantent</td>
 		</tr>
 	</table>
@@ -587,7 +739,7 @@
 			<td>Vous cherchez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle cherche</td>
+			<td>Il/Elle/on cherche</td>
 			<td>Ils/Elles cherchent</td>
 		</tr>
 	</table>
@@ -603,7 +755,7 @@
 			<td>Vous commencez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle commence</td>
+			<td>Il/Elle/on commence</td>
 			<td>Ils/Elles commencent</td>
 		</tr>
 	</table>
@@ -619,7 +771,7 @@
 			<td>Vous dansez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle danse</td>
+			<td>Il/Elle/on danse</td>
 			<td>Ils/Elles dansent</td>
 		</tr>
 	</table>
@@ -635,7 +787,7 @@
 			<td>Vous demandez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle demande</td>
+			<td>Il/Elle/on demande</td>
 			<td>Ils/Elles demandent</td>
 		</tr>
 	</table>
@@ -651,7 +803,7 @@
 			<td>Vous détestez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle déteste</td>
+			<td>Il/Elle/On déteste</td>
 			<td>Ils/Elles détestent</td>
 		</tr>
 	</table>
@@ -667,7 +819,7 @@
 			<td>Vous donnez</td>
 		</tr>
 		<tr>
-			<td>Il/Ell donne</td>
+			<td>Il/Elle/On donne</td>
 			<td>Ils/Elles donnent</td>
 		</tr>
 	</table>
@@ -683,7 +835,7 @@
 			<td>Vous écoutez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle écoute</td>
+			<td>Il/Elle/On écoute</td>
 			<td>Ils/Elles écoutent</td>
 		</tr>
 	</table>
@@ -699,8 +851,24 @@
 			<td>Vous étudiez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle étudie</td>
+			<td>Il/Elle/On étudie</td>
 			<td>Ils/Elles étudient</td>
+		</tr>
+	</table>
+
+	<table class="boot" valign="top">
+	<th colspan="2" class="main-boot">Espérer - to hope</th>
+		<tr>
+			<td class="je-boot">J'espère</td>
+			<td>Nous espérons</td>
+		</tr>
+		<tr>
+			<td class="tu-boot">Tu espères</td>
+			<td>Vous espérez</td>
+		</tr>
+		<tr>
+			<td class="il-elle-boot">Il/Elle/On espère</td>
+			<td class="ils-elles-boot">Ils/Elles espèrent</td>
 		</tr>
 	</table>
 
@@ -715,7 +883,7 @@
 			<td>Vous jouez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle joue</td>
+			<td>Il/Elle/On joue</td>
 			<td>Ils/Elles jouent</td>
 		</tr>
 	</table>
@@ -731,7 +899,7 @@
 			<td>Vous mangez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle mange</td>
+			<td>Il/Elle/On mange</td>
 			<td>Ils/Elles mangent</td>
 		</tr>
 	</table>
@@ -747,7 +915,7 @@
 			<td>Vous nangez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle nange</td>
+			<td>Il/Elle/On nange</td>
 			<td>Ils/Elles nangent</td>
 		</tr>
 	</table>
@@ -763,7 +931,7 @@
 			<td>Vous parlez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle parle</td>
+			<td>Il/Elle/On parle</td>
 			<td>Ils/Elles parlent</td>
 		</tr>
 	</table>
@@ -779,7 +947,7 @@
 			<td>Vous pensez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle pense</td>
+			<td>Il/Elle/On pense</td>
 			<td>Ils/Elles pensent</td>
 		</tr>
 	</table>
@@ -795,11 +963,27 @@
 			<td>Vous portez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle porte</td>
+			<td>Il/Elle/On porte</td>
 			<td>Ils/Elles portent</td>
 		</tr>
 	</table>
-	
+
+	<table class="boot" valign="top">
+	<th colspan="2" class="main-boot">Préférer - to prefer</th>
+		<tr>
+			<td class="je-boot">Je préfère</td>
+			<td>Nous préférons</td>
+		</tr>
+		<tr>
+			<td class="tu-boot">Tu préfères</td>
+			<td>Vous préférez</td>
+		</tr>
+		<tr>
+			<td class="il-elle-boot">Il/Elle/On préfère</td>
+			<td class="ils-elles-boot">Ils/Elles préfèrent</td>
+		</tr>
+	</table>
+
 	<table valign="top">
 	<th colspan="2">Regarder - to watch</th>
 		<tr>
@@ -811,7 +995,7 @@
 			<td>Vous regardez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle regarde</td>
+			<td>Il/Elle/On regarde</td>
 			<td>Ils/Elles regardent</td>
 		</tr>
 	</table>
@@ -827,7 +1011,7 @@
 			<td>Vous travaillez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle travaille</td>
+			<td>Il/Elle/On travaille</td>
 			<td>Ils/Elles travaillent</td>
 		</tr>
 	</table>
@@ -843,7 +1027,7 @@
 			<td>Vous trouvez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle trouve</td>
+			<td>Il/Elle/On trouve</td>
 			<td>Ils/Elles trouvent</td>
 		</tr>
 	</table>
@@ -859,7 +1043,7 @@
 			<td>Vous visitez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle visite</td>
+			<td>Il/Elle/On visite</td>
 			<td>Ils/Elles visitent</td>
 		</tr>
 	</table>
@@ -875,7 +1059,7 @@
 			<td>Vous voyagez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle voyage</td>
+			<td>Il/Elle/On voyage</td>
 			<td>Ils/Elles voyagent</td>
 		</tr>
 	</table>
@@ -895,15 +1079,36 @@
 			<td>Vous choisissez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle choisit</td>
+			<td>Il/Elle/On choisit</td>
 			<td>Ils/Elles choisissent</td>
 		</tr>
-	</table><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	</table>
 
+	<table valign="top">
+	<th colspan="2">Maigrir - to gain weight</th>
+		<tr>
+			<td>Je maigris</td>
+			<td>Nous maigrissons</td>
+		</tr>
+		<tr>
+			<td>Tu maigris</td>
+			<td>Vous maigrissez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On maigrit</td>
+			<td>Ils/Elles maigrissent</td>
+		</tr>
+	</table>
 
-	<h2 id="re-scroll">-RE Verbs</h2><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><h2 id="re-scroll">-RE Verbs</h2><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 </div>
+
+
+
+
+
+
 
 
 
@@ -924,7 +1129,7 @@
 			<td>Vous allez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle va</td>
+			<td>Il/Elle/On va</td>
 			<td>Ils/Elles vont</td>
 		</tr>
 	</table>
@@ -940,7 +1145,7 @@
 			<td>Vous avez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle a</td>
+			<td>Il/Elle/On a</td>
 			<td>Ils/Elles ont</td>
 		</tr>
 	</table>
@@ -956,7 +1161,7 @@
 			<td>Vous êtes</td>
 		</tr>
 		<tr>
-			<td>Il/Elle est</td>
+			<td>Il/Elle/On est</td>
 			<td>Ils/Elles sont</td>
 		</tr>
 	</table>
@@ -972,7 +1177,7 @@
 			<td>Vous faites</td>
 		</tr>
 		<tr>
-			<td>Il/Elle fait</td>
+			<td>Il/Elle/On fait</td>
 			<td>Ils/Elles font</td>
 		</tr>
 	</table>
@@ -988,7 +1193,7 @@
 			<td>Vous mettez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle met</td>
+			<td>Il/Elle/On met</td>
 			<td>Ils/Elles mettent</td>
 		</tr>
 	</table>
@@ -1004,80 +1209,10 @@
 			<td>Vous venez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle vient</td>
+			<td>Il/Elle/On vient</td>
 			<td>Ils/Elles viennent</td>
 		</tr>
 	</table>
-
-<br/><br/><br/>
-
-<div id="line"></div>
-<h1>Boot Verbs</h1>
-<br/><br/>
-	<table class="boot" valign="top">
-	<th colspan="2">Acheter - To buy</th>
-		<tr>
-			<td>J'achète</td>
-			<td>Nous achetons</td>
-		</tr>
-		<tr>
-			<td>Tu achètes</td>
-			<td>Vous achetez</td>
-		</tr>
-		<tr>
-			<td>Il/Elle achète</td>
-			<td>Ils/Elles achètent</td>
-		</tr>
-	</table>
-
-	<table class="boot" valign="top">
-	<th colspan="2">Amener - to bring (a person)</th>
-		<tr>
-			<td>J'amène</td>
-			<td>Nous amenons</td>
-		</tr>
-		<tr>
-			<td>Tu amènes</td>
-			<td>Vous amenez</td>
-		</tr>
-		<tr>
-			<td>Il/Elle amène</td>
-			<td>Ils/Elles amènent</td>
-		</tr>
-	</table>
-
-	<table class="boot" valign="top">
-	<th colspan="2">Espérer - to hope</th>
-		<tr>
-			<td>J'espère</td>
-			<td>Nous espérons</td>
-		</tr>
-		<tr>
-			<td>Tu espères</td>
-			<td>Vous espérez</td>
-		</tr>
-		<tr>
-			<td>Il/Elle espère</td>
-			<td>Ils/Elles espèrent</td>
-		</tr>
-	</table>
-
-	<table class="boot" valign="top">
-	<th colspan="2">Préférer - to prefer</th>
-		<tr>
-			<td>Je préfère</td>
-			<td>Nous préférons</td>
-		</tr>
-		<tr>
-			<td>Tu préfères</td>
-			<td>Vous préférez</td>
-		</tr>
-		<tr>
-			<td>Il/Elle préfère</td>
-			<td>Ils/Elles préfèrent</td>
-		</tr>
-	</table>
-
 
 </div>
 
