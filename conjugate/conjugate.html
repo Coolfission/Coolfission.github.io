@@ -107,10 +107,12 @@
 		    -o-transition-property: height,visibility;
 		    transition-property: height,visibility;
 		}
+
+
 		table {
 			display: inline-block;
 			border: 1px solid #999;
-			border-collapse: collapse;
+			border-spacing: 0;
 			font-size: 1.25em;
 			margin: 10px;
 			position: relative;
@@ -140,8 +142,6 @@
 		div[name="none"] {
 			display: none;
 		}
-
-
 		h1 {
 			font-size: 50px;
 		}
@@ -153,7 +153,6 @@
 			cursor: pointer;
 			color: orange;
 		}
-
 		#index {
 		    position: relative;
 		    z-index: 1;
@@ -196,23 +195,26 @@
 		}
 
 		.boot .je-boot {
-			border-right: 3px solid blue;
-			border-left: 3px solid blue;
+			border-right: 1px solid cyan;
+			border-left: 1px solid cyan;
+			border-top: 1px solid cyan;
+
 		}
 		.boot .tu-boot {
-			border-right: 3px solid blue;
-			border-left: 3px solid blue;
+			border-right: 1px solid cyan;
+			border-left: 1px solid cyan;
+			/*border-radius: 2px;*/
 		}
 		.boot .il-elle-boot {
-			border-left: 3px solid blue;
-			border-bottom: 3px solid blue;
-			border-radius: 2px;
+			border-left: 1px solid cyan;
+			border-bottom: 1px solid cyan;
+			/*border-radius: 2px;*/
 		}
 		.boot .ils-elles-boot {
-			border-right: 3px solid blue;
-			border-top: 3px solid blue;
-			border-bottom: 3px solid blue;
-			border-radius: 2px;
+			border-right: 1px solid cyan;
+			border-top: 1px solid cyan;
+			border-bottom: 1px solid cyan;
+			/*border-radius: 2px;*/
 		}
 	</style>
 
@@ -617,7 +619,7 @@
 	<h2 id="er-scroll">-ER Verbs</h2>
 
 	<table class="boot" valign="top">
-	<th colspan="2" class="main-boot">Acheter - To buy</th>
+	<th colspan="2">Acheter - To buy</th>
 		<tr>
 			<td class="je-boot">J'achète</td>
 			<td>Nous achetons</td>
@@ -665,7 +667,7 @@
 	</table>
 
 	<table class="boot" valign="top">
-	<th colspan="2" class="main-boot">Amener - to bring (a person)</th>
+	<th colspan="2">Amener - to bring (a person)</th>
 		<tr>
 			<td class="je-boot">J'amène</td>
 			<td>Nous amenons</td>
@@ -857,7 +859,7 @@
 	</table>
 
 	<table class="boot" valign="top">
-	<th colspan="2" class="main-boot">Espérer - to hope</th>
+	<th colspan="2">Espérer - to hope</th>
 		<tr>
 			<td class="je-boot">J'espère</td>
 			<td>Nous espérons</td>
@@ -969,7 +971,7 @@
 	</table>
 
 	<table class="boot" valign="top">
-	<th colspan="2" class="main-boot">Préférer - to prefer</th>
+	<th colspan="2">Préférer - to prefer</th>
 		<tr>
 			<td class="je-boot">Je préfère</td>
 			<td>Nous préférons</td>
