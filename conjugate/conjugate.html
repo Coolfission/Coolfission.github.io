@@ -229,11 +229,22 @@
 			 $("#regular-option").click(function() {
 			 	$("#irregular").attr("name", "none");
 			 	$("#regular").attr("name", "normal");
+			 	// window.location.hash = "regular";
 			 });
 			 $("#irregular-option").click(function() {
 			 	$("#irregular").attr("name", "normal");
 			 	$("#regular").attr("name", "none");
+			 	// window.location.hash = "irregular";
 			 });
+
+			 // if(window.location.hash === "regular") {
+			 // 	$("#irregular").attr("name", "none");
+			 // 	$("#regular").attr("name", "normal");	
+			 // }
+			 // else if (window.location.hash === "irregular") {
+			 // 	$("#irregular").attr("name", "normal");
+			 // 	$("#regular").attr("name", "none");	
+			 // }
 			 $("<br/><br/>").insertAfter("table:even");
 		};
 		$(document).ready(toggle);
@@ -613,6 +624,13 @@
 		</ul>
 	</div>
 
+<!-- 
+	_____   _____    
+   |       |     |  
+   |_____  |_____|   
+   |       |	 \  
+   |_____  |      \  
+-->
 
 <div id="regular" name="normal">
 
@@ -1132,10 +1150,30 @@
 
 <br/><div class="line"></div><br/><br/>
 
+<!--______   _____   
+      |     |     |  
+      |     |_____|  
+      |     |     \ 
+    __|___  |      \    
+-->
 
-
-<!-- IR VERBS -->
 	<h2 id="ir-scroll">-IR Verbs</h2>
+
+	<table valign="top">
+	<th colspan="2">Abolir - to abolish</th>
+		<tr>
+			<td>Je abolis</td>
+			<td>Nous abolissons</td>
+		</tr>
+		<tr>
+			<td>Tu abolis</td>
+			<td>Vous abolissez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On abolit</td>
+			<td>Ils/Elles abolissent</td>
+		</tr>
+	</table>
 
 	<table valign="top">
 	<th colspan="2">Bâtir - to build</th>
@@ -1312,8 +1350,16 @@
 			<td>Ils/Elles rougissent</td>
 		</tr>
 	</table>
+	<br/><div class="line"></div><br/><br/>
 
-	<br/><br/><h2 id="re-scroll">-RE Verbs</h2>
+<!-- _____     _____
+    |     |   |
+    |_____|   |_____
+    |     \   |
+    |      \  |_____ 
+-->
+
+	<h2 id="re-scroll">-RE Verbs</h2>
 	
 	<table valign="top">
 	<th colspan="2">Attendre - to wait</th>
@@ -1328,6 +1374,70 @@
 		<tr>
 			<td>Il/Elle/On attend</td>
 			<td>Ils/Elles attendent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Correspondre - to correspond</th>
+		<tr>
+			<td>Je corresponds</td>
+			<td>Nous correspondons</td>
+		</tr>
+		<tr>
+			<td>Tu corresponds</td>
+			<td>Vous correspondez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On correspond</td>
+			<td>Ils/Elles correspondent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Défendre - to defend</th>
+		<tr>
+			<td>Je défends</td>
+			<td>Nous défendons</td>
+		</tr>
+		<tr>
+			<td>Tu défends</td>
+			<td>Vous défendez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On défend</td>
+			<td>Ils/Elles défendent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Dépendre - to depend</th>
+		<tr>
+			<td>Je dépends</td>
+			<td>Nous dépendons</td>
+		</tr>
+		<tr>
+			<td>Tu dépends</td>
+			<td>Vous dépendez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On dépend</td>
+			<td>Ils/Elles dépendent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Descendre - to descend</th>
+		<tr>
+			<td>Je descends</td>
+			<td>Nous descendons</td>
+		</tr>
+		<tr>
+			<td>Tu descends</td>
+			<td>Vous descendez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On descend</td>
+			<td>Ils/Elles descendent</td>
 		</tr>
 	</table>
 
@@ -1347,6 +1457,38 @@
 		</tr>
 	</table>
 	
+	<table valign="top">
+	<th colspan="2">Fordre - to melt</th>
+		<tr>
+			<td>Je fords</td>
+			<td>Nous fordons</td>
+		</tr>
+		<tr>
+			<td>Tu fords</td>
+			<td>Vous fordez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On ford</td>
+			<td>Ils/Elles fordent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Mordre - to belt</th>
+		<tr>
+			<td>Je mords</td>
+			<td>Nous mordons</td>
+		</tr>
+		<tr>
+			<td>Tu mords</td>
+			<td>Vous mordez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On mord</td>
+			<td>Ils/Elles mordent</td>
+		</tr>
+	</table>
+
 	<table valign="top">
 	<th colspan="2">Perdre - To lose</th>
 		<tr>
@@ -1380,21 +1522,37 @@
 	</table>
 	
 	<table valign="top">
-	<th colspan="2">Réspondre - To answer</th>
+	<th colspan="2">Répondre - To answer</th>
 		<tr>
-			<td>Je résponds</td>
-			<td>Nous réspondons</td>
+			<td>Je réponds</td>
+			<td>Nous répondons</td>
 		</tr>
 		<tr>
-			<td>Tu résponds</td>
-			<td>Vous réspondez</td>
+			<td>Tu réponds</td>
+			<td>Vous répondez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle/On réspond</td>
-			<td>Ils/Elles réspondent</td>
+			<td>Il/Elle/On répond</td>
+			<td>Ils/Elles répondent</td>
 		</tr>
 	</table>
-	
+
+	<table valign="top">
+	<th colspan="2">Tendre - To tend</th>
+		<tr>
+			<td>Je tends</td>
+			<td>Nous tendons</td>
+		</tr>
+		<tr>
+			<td>Tu tends</td>
+			<td>Vous tendez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On tend</td>
+			<td>Ils/Elles tendent</td>
+		</tr>
+	</table>
+
 	<table valign="top">
 	<th colspan="2">Vendre - To sell</th>
 		<tr>
@@ -1413,6 +1571,17 @@
 </div>
 
 
+
+
+
+
+
+<!-- _____	 _____    _____    _____  _____  _     _  _        _____    _____
+	   |	|     |  |     |  |      |       |     |  |       |     |  |     |
+	   |	|_____|  |_____|  |_____ |_____  |     |  |       |_____|  |_____|
+	   |	|     \  |     \  |      |     | |     |  |       |     |  |     \
+	 __|__  |      \ |      \ |_____ |_____| |_____|  |_____  |     |  |      \ 
+ -->
 
 
 
@@ -1544,5 +1713,5 @@
 </html>
 
 <!-- Things to do on the website:
-- Make index menu that will highlight an item as the page scrolls
+- Create hashes so a user won't have to go back to the option when the page is refreshed
 - Make a search input - like ctrl + f function on chrome -->
