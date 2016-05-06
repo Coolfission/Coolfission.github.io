@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,469 +7,18 @@
 	<link rel="shortcut icon" href="data:image/x-icon;base64,R0lGODlhEAAQAPECAFFUV////wAAAAAAACH5BAkyAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAEBAQEBAAAAAAEBAAAAAAABAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJMgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" />
 
   	<link rel="stylesheet" type="text/css" href="https://rawgit.com/FortAwesome/Font-Awesome/master/css/font-awesome.css" />
-	<style type="text/css">
-		@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
-		body {
-			height: 100%;
-			width: 100%;
-			margin: 0;
-			padding: 0;
-			font-family: "Source Sans Pro", Arial;
-			text-align: center;
-			background-color: rgba(0,0,0,0.9);
-			color: #fff;
-			overflow-x: hidden;
-		}
-		#info-close {
-			opacity: 0;
-			position: fixed;
-			font-size: 3.5em;
-			display: block;
-			right: 10px;
-			top: 10px;
-			cursor: pointer;
-			z-index: 3 !important;
-		}
-		#info {
-			opacity: 0;		
-			position: absolute;
-			color: #fff;
-			right: 30px;
-			left: 30px;
-			text-align: center;
-		}
-		#info h1 {
-			font-size: 3.5em;
-			text-align: center;
-			font-weight: bold;
-		}
-		#info li, small {
-			margin-left: 10%;
-			text-align: left;
-			display: inline-block;
-			list-style: square;
-			margin: 10px;
-			width: 50%;
-		}
-		#info legend {
-			background-color: #ddd !important;
-			border: 1px solid #000 !important;
-			color: #000 !important;
-			border-radius: 5px;
-			width: 50%;
-			cursor: pointer;
-			padding: 10px;
-		}
-		#info .line {
-			border: 0.5px dashed #fff !important; 
-			height: 1px; 
-			width: 100%;
-		}
-		#info #regular-toggle p {
-			text-align: left !important;
-			width: 30%;
-		}
-		#info fieldset {
-			border: 2px solid #c4c4c4 !important;
-			margin: auto;
-			border-radius: 2px;
-			width: 50%;
-		}
-		#info .information {
-			margin: auto;
-			width: 85% !important;
-			text-align: left;
-		}
-		#info table, #info table td, #info table tr, #info table th {
-			border: 1px solid #999 !important;
-			position: relative;
-			margin: auto;
-			-webkit-user-select: normal !important;
-			user-select: normal !important;
-		}
-		.collapse {
-		    display: none;
-		}
-		.collapse.in {
-		    display: block;
-		    display: ;
-		}
-		.collapsing {
-		    position: relative;
-		    overflow: hidden;
-		    height: 0;
-		    -webkit-transition-timing-function: ease;
-		    -o-transition-timing-function: ease;
-		    transition-timing-function: ease;
-		    -webkit-transition-duration: .35s;
-		    -o-transition-duration: .35s;
-		    transition-duration: .35s;
-		    -webkit-transition-property: height,visibility;
-		    -o-transition-property: height,visibility;
-		    transition-property: height,visibility;
-		}
-
-
-		table {
-			display: inline-block;
-			border: 1px solid #999;
-			border-spacing: 0;
-			font-size: 1.25em;
-			margin: 10px;
-			position: relative;
-			border-radius: 2px;
-		}
-		table * {
-			border: 1px solid #999;
-		}
-		th {
-			height: 70px;
-		}
-		td {
-			width: 10em;
-			height: 50px;
-		}
-		u {
-			border: none;
-		}
-		#line {
-			width: 100%;
-			height: 0.1px;
-			border: 1px dashed #fff;
-		}
-		div[name="normal"] {
-			display: auto;
-		}
-		div[name="none"] {
-			display: none;
-		}
-		h1 {
-			font-size: 50px;
-		}
-		span {
-			text-decoration: underline;
-			cursor: help;
-		}
-		b {
-			cursor: pointer;
-			color: orange;
-		}
-		#index {
-		    position: relative;
-		    z-index: 1;
-		    background: rgba(0,0,0,0.8);
-		    height: 45px;
-		    left: 0;
-		    right: 0;
-		    top: 3;
-		}
-		#index ul {
-			margin: auto;
-		}
-		#index li {
-		    display: inline-block;
-		    list-style-type: none;
-		}
-		#index a, b {
-		    display: block;
-		    padding: 5px 25px 7px 25px;
-		    width: 4em;
-		    text-align: center;
-		    -webkit-transition: .5s all ease-out;
-		    -moz-transition: .5s all ease-out;
-		    transition: .5s all ease-out;
-		    border-top: 3px solid #333;
-		    color: #aaa;
-		    text-decoration: none;
-		}
-		#index a:hover {
-		    color: #ddd;
-		}
-		#index b {
-			display: inline-block !important;
-			color: orange;
-			border-top: 3px solid rgba(0,0,0,0.5);
-		}
-		#index li.active a {
-		    border-top: 3px solid #fff;
-		    color: #fff;
-		}
-
-		.boot .je-boot {
-			border-right: 1px solid cyan;
-			border-left: 1px solid cyan;
-			border-top: 1px solid cyan;
-
-		}
-		.boot .tu-boot {
-			border-right: 1px solid cyan;
-			border-left: 1px solid cyan;
-			/*border-radius: 2px;*/
-		}
-		.boot .il-elle-boot {
-			border-left: 1px solid cyan;
-			border-bottom: 1px solid cyan;
-			/*border-radius: 2px;*/
-		}
-		.boot .ils-elles-boot {
-			border-right: 1px solid cyan;
-			border-top: 1px solid cyan;
-			border-bottom: 1px solid cyan;
-			/*border-radius: 2px;*/
-		}
-	</style>
+  	<link rel="stylesheet" type="text/css" href="conjugate.css" />
 
 	<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js"></script>
-	<script type="text/javascript">
-		"use strict";
-
-		var toggle = function() {
-			 $("#regular-option").click(function() {
-			 	$("#irregular").attr("name", "none");
-			 	$("#regular").attr("name", "normal");
-			 	// window.location.hash = "regular";
-			 });
-			 $("#irregular-option").click(function() {
-			 	$("#irregular").attr("name", "normal");
-			 	$("#regular").attr("name", "none");
-			 	// window.location.hash = "irregular";
-			 });
-
-			 // if(window.location.hash === "regular") {
-			 // 	$("#irregular").attr("name", "none");
-			 // 	$("#regular").attr("name", "normal");	
-			 // }
-			 // else if (window.location.hash === "irregular") {
-			 // 	$("#irregular").attr("name", "normal");
-			 // 	$("#regular").attr("name", "none");	
-			 // }
-			 $("<br/><br/>").insertAfter("table:even");
-		};
-		$(document).ready(toggle);
-		
-		var info = function() {
-			jQuery.fn.extend({
-			    toggleText: function (a, b){
-			        var that = this;
-			            if (that.text() != a && that.text() != b){
-			                that.text(a);
-			            }
-			            else
-			            if (that.text() == a){
-			                that.text(b);
-			            }
-			            else
-			            if (that.text() == b){
-			                that.text(a);
-			            }
-			        return this;
-			    }
-			});
-			
-			function open() {
-				$("body, body *").css({
-					"background": "rgba(0,0,0,1)", 
-					"color": "#000", 
-					"border-color": "#000", 
-					"user-select": "none"});
-
-				$("#info-close, #info, #info *").css({
-					"opacity": "1", 
-					"color": "#fff", 
-					"user-select": "text", 
-					"top": "0", 
-					"z-index": "2"});
-			}
-				$("#info-enter").click(function() {open();});
-				shortcut.add("shift+enter", function() {open();});
-
-			function close() {
-				$("body, body *").css({
-					"background": "",
-					"color": "",
-					"border-color": "", 
-					"user-select": "", 
-					"opacity": "1", 
-					"z-index": "1"});
-
-				$("#info-close, #info, #info *").css({
-					"z-index": "-1",
-					"opacity": "0", 
-					"top": ""});
-			}
-				$("#info-close").click(function() {close();});
-				shortcut.add("Esc", function() {close();});
-				
-			//ER
-			$("#je-er").click(function() {
-				$(this).toggleText('I (conjugate)', 'Je -e');
-			});
-			$("#tu-er").click(function() {
-				$(this).toggleText('You (conjugate)', 'Tu -es');
-			});
-			$("#il-elle-er").click(function() {
-				$(this).toggleText('He/She (conjugate)', 'Il/Elle/On -e');
-			});
-			$("#nous-er").click(function() {
-				$(this).toggleText('We (conjugate)', 'Nous -ont');
-			});
-			$("#vous-er").click(function() {
-				$(this).toggleText('You all (conjugate)', 'Vous -ez');
-			});
-			$("#ils-elles-er").click(function() {
-				$(this).toggleText('They (conjugate)', 'Ils/Elles -ent');
-			});
-
-			//IR
-			$("#je-ir").click(function() {
-				$(this).toggleText('I (conjugate)', 'Je -is');
-			});
-			$("#tu-ir").click(function() {
-				$(this).toggleText('You (conjugate)', 'Tu -is');
-			});
-			$("#il-elle-ir").click(function() {
-				$(this).toggleText('He/She (conjugate)', 'Il/Elle/On -it');
-			});
-			$("#nous-ir").click(function() {
-				$(this).toggleText('We (conjugate)', 'Nous -issons');
-			});
-			$("#vous-ir").click(function() {
-				$(this).toggleText('You all (conjugate)', 'Vous -issez');
-			});
-			$("#ils-elles-ir").click(function() {
-				$(this).toggleText('They (conjugate)', 'Ils/Elles -issent');
-			});
-
-			//RE
-			$("#je-re").click(function() {
-				$(this).toggleText('I (conjugate)', 'Je -s');
-			});
-			$("#tu-re").click(function() {
-				$(this).toggleText('You (conjugate)', 'Tu -s');
-			});
-			$("#il-elle-re").click(function() {
-				$(this).toggleText('He/She (conjugate)', 'Il/Elle/On -()');
-			});
-			$("#nous-re").click(function() {
-				$(this).toggleText('We (conjugate)', 'Nous -ons');
-			});
-			$("#vous-re").click(function() {
-				$(this).toggleText('You all (conjugate)', 'Vous -ez');
-			});
-			$("#ils-elles-re").click(function() {
-				$(this).toggleText('They (conjugate)', 'Ils/Elles -ent');
-			});
-
-
-			//First Group
-			$("#je-pre").click(function() {
-				$(this).toggleText('I (conjugate)', 'Je -s');
-			});
-			$("#tu-pre").click(function() {
-				$(this).toggleText('You (conjugate)', 'Tu -s');
-			});
-			$("#il-elle-pre").click(function() {
-				$(this).toggleText('He/She (conjugate)', 'Il/Elle/On -t');
-			});
-			$("#nous-pre").click(function() {
-				$(this).toggleText('We (conjugate)', 'Nous -ons');
-			});
-			$("#vous-pre").click(function() {
-				$(this).toggleText('You all (conjugate)', 'Vous -ez');
-			});
-			$("#ils-elles-pre").click(function() {
-				$(this).toggleText('They (conjugate)', 'Ils/Elles -ent');
-			});
-
-			//Second Group
-			$("#je-af").click(function() {
-				$(this).toggleText('I (conjugate)', 'Je -e');
-			});
-			$("#tu-af").click(function() {
-				$(this).toggleText('You (conjugate)', 'Tu -es');
-			});
-			$("#il-elle-af").click(function() {
-				$(this).toggleText('He/She (conjugate)', 'Il/Elle/On -e');
-			});
-			$("#nous-af").click(function() {
-				$(this).toggleText('We (conjugate)', 'Nous -ons');
-			});
-			$("#vous-af").click(function() {
-				$(this).toggleText('You all (conjugate)', 'Vous -ez');
-			});
-			$("#ils-elles-af").click(function() {
-				$(this).toggleText('They (conjugate)', 'Ils/Elles -ent');
-			});
-		};
-		$(document).ready(info);
-
-		var scroll = function() {
-
-			$(window).scroll(function(e){ 
-			  var $el = $('#index'); 
-			  if ($(this).scrollTop() > 132 && $el.css('position') != 'fixed'){ 
-			    $('#index').css({'position': 'fixed', 'top': '0'}); 
-			  }
-			  if ($(this).scrollTop() < 132 && $el.css('position') == 'fixed')
-			  {
-			    $('#index').css({'position': 'relative', 'top': '3'}); 
-			  } 
-			});
-
-			var lastId,
-			    topMenu = $("#index"),
-			    topMenuHeight = topMenu.outerHeight()+15,
-
-			    menuItems = topMenu.find("a"),
-
-			    scrollItems = menuItems.map(function(){
-			      var item = $($(this).attr("href"));
-			      if (item.length) { return item; }
-			    });
-
-			menuItems.click(function(e){
-			  var href = $(this).attr("href"),
-			      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-			  $('html, body').stop().animate({ 
-			      scrollTop: offsetTop
-			  }, 300);
-			  e.preventDefault();
-			});
-
-			$(window).scroll(function(){
-			   var fromTop = $(this).scrollTop()+topMenuHeight;
-			   
-			   var cur = scrollItems.map(function(){
-			     if ($(this).offset().top < fromTop)
-			       return this;
-			   });
-
-			   cur = cur[cur.length-1];
-			   var id = cur && cur.length ? cur[0].id : "";
-			   
-			   if (lastId !== id) {
-			       lastId = id;
-
-			       menuItems
-			         .parent().removeClass("active")
-			         .end().filter("[href='#"+id+"']").parent().addClass("active");
-			   }                   
-			});
-		}
-		$(document).ready(scroll);
-	</script>
+	<script src="conjugate.js" type="text/javascript"></script>
 </head>
 
 <body>
 <h1>Basic <span id="info-enter">French</span> Conjugations</h1>
 <i class="fa fa-times-circle-o" id="info-close"></i>
-
-
-
-
 
 
 
@@ -639,16 +189,16 @@
 	<table class="boot" valign="top">
 	<th colspan="2">Acheter - To buy</th>
 		<tr>
-			<td class="je-boot">J'achète</td>
+			<td class="je-boot">J'achÃ¨te</td>
 			<td>Nous achetons</td>
 		</tr>
 		<tr>
-			<td class="tu-boot">Tu achètes</td>
+			<td class="tu-boot">Tu achÃ¨tes</td>
 			<td>Vous achetez</td>
 		</tr>
 		<tr>
-			<td class="il-elle-boot">Il/Elle/On achète</td>
-			<td class="ils-elles-boot">Ils/Elles achètent</td>
+			<td class="il-elle-boot">Il/Elle/On achÃ¨te</td>
+			<td class="ils-elles-boot">Ils/Elles achÃ¨tent</td>
 		</tr>
 	</table>
 
@@ -687,16 +237,16 @@
 	<table class="boot" valign="top">
 	<th colspan="2">Amener - to bring (a person)</th>
 		<tr>
-			<td class="je-boot">J'amène</td>
+			<td class="je-boot">J'amÃ¨ne</td>
 			<td>Nous amenons</td>
 		</tr>
 		<tr>
-			<td class="tu-boot">Tu amènes</td>
+			<td class="tu-boot">Tu amÃ¨nes</td>
 			<td>Vous amenez</td>
 		</tr>
 		<tr>
-			<td class="il-elle-boot">Il/Elle/On amène</td>
-			<td class="ils-elles-boot">Ils/Elles amènent</td>
+			<td class="il-elle-boot">Il/Elle/On amÃ¨ne</td>
+			<td class="ils-elles-boot">Ils/Elles amÃ¨nent</td>
 		</tr>
 	</table>
 
@@ -813,18 +363,18 @@
 	</table>
 
 	<table valign="top">
-	<th colspan="2">Détester - To hate</th>
+	<th colspan="2">DÃ©tester - To hate</th>
 		<tr>
-			<td>Je déteste</td>
-			<td>Nous détestons</td>
+			<td>Je dÃ©teste</td>
+			<td>Nous dÃ©testons</td>
 		</tr>
 		<tr>
-			<td>Tu détestes</td>
-			<td>Vous détestez</td>
+			<td>Tu dÃ©testes</td>
+			<td>Vous dÃ©testez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle/On déteste</td>
-			<td>Ils/Elles détestent</td>
+			<td>Il/Elle/On dÃ©teste</td>
+			<td>Ils/Elles dÃ©testent</td>
 		</tr>
 	</table>
 
@@ -845,50 +395,50 @@
 	</table>
 
 	<table valign="top">
-	<th colspan="2">Écouter - To listen</th>
+	<th colspan="2">Ã‰couter - To listen</th>
 		<tr>
-			<td>J'écoute</td>
-			<td>Nous écoutons</td>
+			<td>J'Ã©coute</td>
+			<td>Nous Ã©coutons</td>
 		</tr>
 		<tr>
-			<td>Tu écoutes</td>
-			<td>Vous écoutez</td>
+			<td>Tu Ã©coutes</td>
+			<td>Vous Ã©coutez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle/On écoute</td>
-			<td>Ils/Elles écoutent</td>
+			<td>Il/Elle/On Ã©coute</td>
+			<td>Ils/Elles Ã©coutent</td>
 		</tr>
 	</table>
 
 	<table valign="top">
-	<th colspan="2">Étudier - To study</th>
+	<th colspan="2">Ã‰tudier - To study</th>
 		<tr>
-			<td>J'étudie</td>
-			<td>Nous édudions</td>
+			<td>J'Ã©tudie</td>
+			<td>Nous Ã©dudions</td>
 		</tr>
 		<tr>
-			<td>Tu étudies</td>
-			<td>Vous étudiez</td>
+			<td>Tu Ã©tudies</td>
+			<td>Vous Ã©tudiez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle/On étudie</td>
-			<td>Ils/Elles étudient</td>
+			<td>Il/Elle/On Ã©tudie</td>
+			<td>Ils/Elles Ã©tudient</td>
 		</tr>
 	</table>
 
 	<table class="boot" valign="top">
-	<th colspan="2">Espérer - to hope</th>
+	<th colspan="2">EspÃ©rer - to hope</th>
 		<tr>
-			<td class="je-boot">J'espère</td>
-			<td>Nous espérons</td>
+			<td class="je-boot">J'espÃ¨re</td>
+			<td>Nous espÃ©rons</td>
 		</tr>
 		<tr>
-			<td class="tu-boot">Tu espères</td>
-			<td>Vous espérez</td>
+			<td class="tu-boot">Tu espÃ¨res</td>
+			<td>Vous espÃ©rez</td>
 		</tr>
 		<tr>
-			<td class="il-elle-boot">Il/Elle/On espère</td>
-			<td class="ils-elles-boot">Ils/Elles espèrent</td>
+			<td class="il-elle-boot">Il/Elle/On espÃ¨re</td>
+			<td class="ils-elles-boot">Ils/Elles espÃ¨rent</td>
 		</tr>
 	</table>
 
@@ -1053,18 +603,18 @@
 	</table>
 
 	<table class="boot" valign="top">
-	<th colspan="2">Préférer - to prefer</th>
+	<th colspan="2">PrÃ©fÃ©rer - to prefer</th>
 		<tr>
-			<td class="je-boot">Je préfère</td>
-			<td>Nous préférons</td>
+			<td class="je-boot">Je prÃ©fÃ¨re</td>
+			<td>Nous prÃ©fÃ©rons</td>
 		</tr>
 		<tr>
-			<td class="tu-boot">Tu préfères</td>
-			<td>Vous préférez</td>
+			<td class="tu-boot">Tu prÃ©fÃ¨res</td>
+			<td>Vous prÃ©fÃ©rez</td>
 		</tr>
 		<tr>
-			<td class="il-elle-boot">Il/Elle/On préfère</td>
-			<td class="ils-elles-boot">Ils/Elles préfèrent</td>
+			<td class="il-elle-boot">Il/Elle/On prÃ©fÃ¨re</td>
+			<td class="ils-elles-boot">Ils/Elles prÃ©fÃ¨rent</td>
 		</tr>
 	</table>
 
@@ -1176,18 +726,18 @@
 	</table>
 
 	<table valign="top">
-	<th colspan="2">Bâtir - to build</th>
+	<th colspan="2">BÃ¢tir - to build</th>
 		<tr>
-			<td>Je bâtis</td>
-			<td>Nous bâtissons</td>
+			<td>Je bÃ¢tis</td>
+			<td>Nous bÃ¢tissons</td>
 		</tr>
 		<tr>
-			<td>Tu bâtis</td>
-			<td>Vous bâtissez</td>
+			<td>Tu bÃ¢tis</td>
+			<td>Vous bÃ¢tissez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle/On bâtit</td>
-			<td>Ils/Elles bâtissent</td>
+			<td>Il/Elle/On bÃ¢tit</td>
+			<td>Ils/Elles bÃ¢tissent</td>
 		</tr>
 	</table>
 
@@ -1272,18 +822,18 @@
 	</table>
 
 	<table valign="top">
-	<th colspan="2">Obéir - to obey</th>
+	<th colspan="2">ObÃ©ir - to obey</th>
 		<tr>
-			<td>Je obéis</td>
-			<td>Nous obéissons</td>
+			<td>Je obÃ©is</td>
+			<td>Nous obÃ©issons</td>
 		</tr>
 		<tr>
-			<td>Tu obéis</td>
-			<td>Vous obéissez</td>
+			<td>Tu obÃ©is</td>
+			<td>Vous obÃ©issez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle/On obéit</td>
-			<td>Ils/Elles obéissent</td>
+			<td>Il/Elle/On obÃ©it</td>
+			<td>Ils/Elles obÃ©issent</td>
 		</tr>
 	</table>
 
@@ -1320,18 +870,18 @@
 	</table>
 
 	<table valign="top">
-	<th colspan="2">Réussir - to succeed; to pass</th>
+	<th colspan="2">RÃ©ussir - to succeed; to pass</th>
 		<tr>
-			<td>Je réussis</td>
-			<td>Nous réussissons</td>
+			<td>Je rÃ©ussis</td>
+			<td>Nous rÃ©ussissons</td>
 		</tr>
 		<tr>
-			<td>Tu réussis</td>
-			<td>Vous réussissew</td>
+			<td>Tu rÃ©ussis</td>
+			<td>Vous rÃ©ussissew</td>
 		</tr>
 		<tr>
-			<td>Il/Elle/On réussit</td>
-			<td>Ils/Elles réussissent</td>
+			<td>Il/Elle/On rÃ©ussit</td>
+			<td>Ils/Elles rÃ©ussissent</td>
 		</tr>
 	</table>
 
@@ -1394,34 +944,34 @@
 	</table>
 
 	<table valign="top">
-	<th colspan="2">Défendre - to defend</th>
+	<th colspan="2">DÃ©fendre - to defend</th>
 		<tr>
-			<td>Je défends</td>
-			<td>Nous défendons</td>
+			<td>Je dÃ©fends</td>
+			<td>Nous dÃ©fendons</td>
 		</tr>
 		<tr>
-			<td>Tu défends</td>
-			<td>Vous défendez</td>
+			<td>Tu dÃ©fends</td>
+			<td>Vous dÃ©fendez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle/On défend</td>
-			<td>Ils/Elles défendent</td>
+			<td>Il/Elle/On dÃ©fend</td>
+			<td>Ils/Elles dÃ©fendent</td>
 		</tr>
 	</table>
 
 	<table valign="top">
-	<th colspan="2">Dépendre - to depend</th>
+	<th colspan="2">DÃ©pendre - to depend</th>
 		<tr>
-			<td>Je dépends</td>
-			<td>Nous dépendons</td>
+			<td>Je dÃ©pends</td>
+			<td>Nous dÃ©pendons</td>
 		</tr>
 		<tr>
-			<td>Tu dépends</td>
-			<td>Vous dépendez</td>
+			<td>Tu dÃ©pends</td>
+			<td>Vous dÃ©pendez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle/On dépend</td>
-			<td>Ils/Elles dépendent</td>
+			<td>Il/Elle/On dÃ©pend</td>
+			<td>Ils/Elles dÃ©pendent</td>
 		</tr>
 	</table>
 
@@ -1522,18 +1072,18 @@
 	</table>
 	
 	<table valign="top">
-	<th colspan="2">Répondre - To answer</th>
+	<th colspan="2">RÃ©pondre - To answer</th>
 		<tr>
-			<td>Je réponds</td>
-			<td>Nous répondons</td>
+			<td>Je rÃ©ponds</td>
+			<td>Nous rÃ©pondons</td>
 		</tr>
 		<tr>
-			<td>Tu réponds</td>
-			<td>Vous répondez</td>
+			<td>Tu rÃ©ponds</td>
+			<td>Vous rÃ©pondez</td>
 		</tr>
 		<tr>
-			<td>Il/Elle/On répond</td>
-			<td>Ils/Elles répondent</td>
+			<td>Il/Elle/On rÃ©pond</td>
+			<td>Ils/Elles rÃ©pondent</td>
 		</tr>
 	</table>
 
@@ -1645,14 +1195,14 @@
 	</table>
 
 	<table valign="top">
-	<th colspan="2">Être - To be</th>
+	<th colspan="2">ÃŠtre - To be</th>
 		<tr>
 			<td>Je suis</td>
 			<td>Nous sommes</td>
 		</tr>
 		<tr>
 			<td>Tu es</td>
-			<td>Vous êtes</td>
+			<td>Vous Ãªtes</td>
 		</tr>
 		<tr>
 			<td>Il/Elle/On est</td>
