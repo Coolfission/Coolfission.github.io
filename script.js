@@ -19,6 +19,9 @@ function open() {
     else if(lastPart === "") {
       close();
     }
+    else {
+      close();
+    }
 
 function close() {
   $("#about").attr("id", "about-closed");
