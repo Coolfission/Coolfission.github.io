@@ -4,22 +4,11 @@
 			 $("#regular-option").click(function() {
 			 	$("#irregular").attr("name", "none");
 			 	$("#regular").attr("name", "normal");
-			 	// window.location.hash = "regular";
 			 });
 			 $("#irregular-option").click(function() {
 			 	$("#irregular").attr("name", "normal");
 			 	$("#regular").attr("name", "none");
-			 	// window.location.hash = "irregular";
 			 });
-
-			 // if(window.location.hash === "regular") {
-			 // 	$("#irregular").attr("name", "none");
-			 // 	$("#regular").attr("name", "normal");	
-			 // }
-			 // else if (window.location.hash === "irregular") {
-			 // 	$("#irregular").attr("name", "normal");
-			 // 	$("#regular").attr("name", "none");	
-			 // }
 			 $("<br/><br/>").insertBefore("table:even");
 		};
 		$(document).ready(toggle);
