@@ -79,11 +79,12 @@ body {
 }
 #topic p {
     text-align: center;
+    font-weight:;
     margin: 15px;
 }
 
 #projects {
-    border: 1px solid #000;
+    border: 3px solid #000;
     width: 80%;
     margin: auto;
     text-align: center;
@@ -99,6 +100,8 @@ body {
     text-decoration: none;
     color: #fff;
     z-index: 1;
+    font-weight: bold;
+    font-style: italic;
     background-color: rgba(0,0,0,0.4);
     padding: 2% 30%;
     border-radius: 10px;
