@@ -29,44 +29,44 @@ $(document).ready(index);
 
 var temperature = function() {
     $("#fahrenheit").keyup(function() {
-        $("#celsius").val(parseFloat($("#fahrenheit").val() - 32, 10) * (5/9));
-        $("#kelvin").val(parseFloat($("#fahrenheit").val() - 32, 10) / 1.8000 + 273.15);
+        $("#celsius").val(parseFloat($(this).val() - 32, 10) * (5/9));
+        $("#kelvin").val(parseFloat($(this).val() - 32, 10) / 1.8000 + 273.15);
     });
     $("#celsius").keyup(function() {
-        $("#fahrenheit").val(parseFloat($("#celsius").val(), 10) * 9/5 + 32);
-        $("#kelvin").val(parseFloat($("#celsius").val(), 10) + 273.15);
+        $("#fahrenheit").val(parseFloat($(this).val(), 10) * 9/5 + 32);
+        $("#kelvin").val(parseFloat($(this).val(), 10) + 273.15);
     });
     $("#kelvin").keyup(function() {
-        $("#fahrenheit").val(parseFloat($("#kelvin").val(), 10) * 9/5 - 459.67);
-        $("#celsius").val(parseFloat($("#kelvin").val(), 10) - 273.15);
+        $("#fahrenheit").val(parseFloat($(this).val(), 10) * 9/5 - 459.67);
+        $("#celsius").val(parseFloat($(this).val(), 10) - 273.15);
     });
 };
 $(document).ready(temperature);
 
 var length = function() {
     $('#mile').keyup(function() { 
-        $("#yard").val(parseFloat($("#mile").val(), 10) * 1760);
-        $("#foot").val(parseFloat($("#mile").val(), 10) * 5280);
-        $("#inch").val(parseFloat($("#mile").val(), 10) * 63360);
-        $("#nautical-mile").val(parseFloat($("#mile").val(), 10) * 0.868976);
-        $("#kilometer").val(parseFloat($("#mile").val(), 10) * 1.60934);
-        $("#meter").val(parseFloat($("#mile").val(), 10) * 1609.34);
-        $("#centimeter").val(parseFloat($("#mile").val(), 10) * 160934);
-        $("#millimeter").val(parseFloat($("#mile").val(), 10) * 1.609 * Math.pow(10, 6));
-        $("#micrometer").val(parseFloat($("#mile").val(), 10) * 1.609 * Math.pow(10, 9));
-        $("#nanometer").val(parseFloat($("#mile").val(), 10) * 1.609 * Math.pow(10, 12));
+        $("#yard").val(parseFloat($(this).val(), 10) * 1760);
+        $("#foot").val(parseFloat($(this).val(), 10) * 5280);
+        $("#inch").val(parseFloat($(this).val(), 10) * 63360);
+        $("#nautical-mile").val(parseFloat($(this).val(), 10) * 0.868976);
+        $("#kilometer").val(parseFloat($(this).val(), 10) * 1.60934);
+        $("#meter").val(parseFloat($(this).val(), 10) * 1609.34);
+        $("#centimeter").val(parseFloat($(this).val(), 10) * 160934);
+        $("#millimeter").val(parseFloat($(this).val(), 10) * 1.609 * Math.pow(10, 6));
+        $("#micrometer").val(parseFloat($(this).val(), 10) * 1.609 * Math.pow(10, 9));
+        $("#nanometer").val(parseFloat($(this).val(), 10) * 1.609 * Math.pow(10, 12));
     });
     $('#yard').keyup(function() {
-        $("#mile").val(parseFloat($("#yard").val(), 10) * 0.000568182);
-        $("#foot").val(parseFloat($("#yard").val(), 10) * 3);
-        $("#inch").val(parseFloat($("#yard").val(), 10) * 36);
-        $("#nautical-mile").val(parseFloat($("#yard").val(), 10) * 0.000493737);
-        $("#kilometer").val(parseFloat($("#yard").val(), 10) * 0.0009144);
-        $("#meter").val(parseFloat($("#yard").val(), 10) * 0.9144);
-        $("#centimeter").val(parseFloat($("#yard").val(), 10) * 91.44);
-        $("#millimeter").val(parseFloat($("#yard").val(), 10) * 914.4);
-        $("#micrometer").val(parseFloat($("#yard").val(), 10) * 914400);
-        $("#nanometer").val(parseFloat($("#yard").val(), 10) * 9.144 * Math.pow(10, 8));   
+        $("#mile").val(parseFloat($(this).val(), 10) * 0.000568182);
+        $("#foot").val(parseFloat($(this).val(), 10) * 3);
+        $("#inch").val(parseFloat($(this).val(), 10) * 36);
+        $("#nautical-mile").val(parseFloat($(this).val(), 10) * 0.000493737);
+        $("#kilometer").val(parseFloat($(this).val(), 10) * 0.0009144);
+        $("#meter").val(parseFloat($(this).val(), 10) * 0.9144);
+        $("#centimeter").val(parseFloat($(this).val(), 10) * 91.44);
+        $("#millimeter").val(parseFloat($(this).val(), 10) * 914.4);
+        $("#micrometer").val(parseFloat($(this).val(), 10) * 914400);
+        $("#nanometer").val(parseFloat($(this).val(), 10) * 9.144 * Math.pow(10, 8));   
     });
     $('#foot').keyup(function() {
         $("#mile").val(parseFloat($("#foot").val(), 10) * 0.000189394);
