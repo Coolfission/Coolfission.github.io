@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function time() {
+    var today = new Date();
+    var hour = today.getHours();
+    var minute = today.getMinutes();
+    var second = today.getSeconds();
+    var millisecond = today.getMilliseconds();
+    document.getElementById('clock').innerHTML =
+    hour + ":" + minute + ":" + second + ":" + millisecond;
+    var timeRefresh = setTimeout(time, 1);
+}
+
+
+function date() {
+    var date = new Date()
+    var year = date.getYear()
+    var month = date.getMonth();
+    // var day = date.getDay();
+    if(year < 1000){
+        year += 1900
+    }
+    document.getElementById('calendar').innerHTML =  month + " / " + year;
+
+    // var monthArray = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+    // confirm(monthArray[date.getMonth()] + " " + date.getDate() + ", " + year);
+    var dateRefresh = setTimeout(date, 1);
+}
+</script>
+</head>
+
+<body onload="time(); date();">
+    <div id="clock" style="font-weight: bold; font-family: Calibri; font-size: 100px; text-align: center"></div>
+    <div id="calendar" style="text-align: center"></div>
+</body>
+</html>
