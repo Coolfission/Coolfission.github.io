@@ -7,9 +7,8 @@ function time() {
     var hour = today.getHours();
     var minute = today.getMinutes();
     var second = today.getSeconds();
-    var millisecond = today.getMilliseconds();
     document.getElementById('clock').innerHTML =
-    hour + ":" + minute + ":" + second + ":" + millisecond;
+    hour + ":" + minute + ":" + second;
     var timeRefresh = setTimeout(time, 1);
 }
 
@@ -18,11 +17,12 @@ function date() {
     var date = new Date()
     var year = date.getYear()
     var month = date.getMonth();
+    var day = date.getDay();
     // var day = date.getDay();
     if(year < 1000){
         year += 1900
     }
-    document.getElementById('calendar').innerHTML =  month + " / " + year;
+    document.getElementById('calendar').innerHTML =  day + " / " month + " / " + year;
 
     // var monthArray = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
     // confirm(monthArray[date.getMonth()] + " " + date.getDate() + ", " + year);
