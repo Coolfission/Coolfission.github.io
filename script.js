@@ -42,7 +42,9 @@ var about = function() {
 
 $(document).ready(about);
 
+
 var typed = function() {
+
   var options = {
     strings: ["Building Webpages", "Devoloping Apps", "Learning C++"],
     typeSpeed: 20,
@@ -50,10 +52,11 @@ var typed = function() {
     backSpeed: 20,
     backDelay: 3000,
     loop: true
-  }
+  };
+//  var type = new Typed("#typed", options);
   $("#typed").typed(options);
 };
-$(document).ready(typed);
+$(document).ready(typed); 
 
 var time = function() {
   var today = new Date();
@@ -75,3 +78,19 @@ var time = function() {
   changeTime.innerHTML = greeting;
 };
 $(document).ready(time);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

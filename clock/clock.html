@@ -10,6 +10,7 @@ function time() {
     document.getElementById('clock').innerHTML =
     hour + ":" + minute + ":" + second;
     var timeRefresh = setTimeout(time, 1);
+
 }
 
 
@@ -18,14 +19,10 @@ function date() {
     var year = date.getFullYear()
     var month = date.getMonth();
     var day = date.getDate();
-    // var day = date.getDay();
     if(year < 1000){
         year += 1900
     }
     document.getElementById('calendar').innerHTML =  day + "/" + month + "/" + year;
-
-    // var monthArray = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-    // confirm(monthArray[date.getMonth()] + " " + date.getDate() + ", " + year);
     var dateRefresh = setTimeout(date, 1);
 }
 </script>
