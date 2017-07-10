@@ -46,7 +46,7 @@ $(document).ready(about);
 var typed = function() {
 
   var options = {
-    strings: ["Building Webpages", "Devoloping Apps", "Learning C++"],
+    strings: ["Building Webpages", "Developing Apps", "Fixing Bugs"],
     typeSpeed: 20,
     startDelay: 500,
     backSpeed: 20,
