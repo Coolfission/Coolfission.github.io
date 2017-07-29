@@ -156,6 +156,9 @@ body {
     text-decoration: none;
     color: black;
 }
+#contacts a:hover {
+    color: navy;
+}
 /*
 .typed-cursor {
     opacity: 1;
