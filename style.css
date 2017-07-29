@@ -152,7 +152,11 @@ body {
     text-decoration: none;
     color: navy;
 }
-
+#contacts a {
+    text-decoration: none;
+    color: black;
+}
+/*
 .typed-cursor {
     opacity: 1;
     -webkit-animation: blink 1.5s infinite;
@@ -173,4 +177,4 @@ body {
     0% {opacity: 1;}
     50% {opacity: 0;}
     100% {opacity: 1;}
-}
+}*/
