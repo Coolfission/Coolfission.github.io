@@ -8,21 +8,23 @@ function time() {
     var minute = today.getMinutes();
     var second = today.getSeconds();
     document.getElementById('clock').innerHTML =
-    hour + ":" + minute + ":" + second;
+    hour + ":" + "0" + minute + ":" + "0" + second;
     var timeRefresh = setTimeout(time, 1);
-
+    
+ /*   if(second < 10) {
+        document.innerHTML("0" + second);
+    } */
 }
 
-
 function date() {
-    var date = new Date()
-    var year = date.getFullYear()
-    var month = date.getMonth();
+    var date = new Date();
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
     var day = date.getDate();
-    if(year < 1000){
-        year += 1900
+    if(year < 1000) {
+        year += 1900;
     }
-    document.getElementById('calendar').innerHTML =  day + "/" + month + "/" + year;
+    document.getElementById('calendar').innerHTML =  month + "/" + day + "/" + year;
     var dateRefresh = setTimeout(date, 1);
 }
 </script>
