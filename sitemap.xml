@@ -3,18 +3,23 @@
 
 <url>
   <loc>http://coolfission.github.io/</loc>
+  <priority>1.0</priority>
 </url>
 <url>
   <loc>http://coolfission.github.io/clock/clock.html</loc>
+  <priority>0.0</priority>
 </url>
 <url>
   <loc>http://coolfission.github.io/calculator/calculate.html</loc>
+  <priority>0.3</priority>
 </url>
 <url>
   <loc>http://coolfission.github.io/converter/convert.html</loc>
+  <priority>0.4</priority>
 </url>
 <url>
   <loc>http://coolfission.github.io/conjugate/conjugate.html</loc>
+  <priority>0.5</priority>
 </url>
 
 </urlset>
