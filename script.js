@@ -34,7 +34,7 @@ var about = function() {
     location.hash = "";
   });
 
-  $("i[class='fa fa-times-circle-o']").click(function() {
+  $("i[class='far fa-times-circle']").click(function() {
     close();
   });
 
