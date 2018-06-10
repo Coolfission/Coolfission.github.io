@@ -9,7 +9,7 @@
     position: relative; 
     margin: auto;
     border-radius: 10px;
-    background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQeut_wOzhNCh1D5fKg42scc6ojdbGJSTZiLFRJjKg49EYNi2U2");
+    background: #000;
     font-family: Arial;
     -webkit-user-select: none;         
     -moz-user-select: none; 
@@ -115,10 +115,10 @@ a#equals:active {
     top: 4px; 
 }      
 a#clear, a#clearall {
-    background-color: rgb(0, 0, 178);
+    background-color: #ddd;
 }
 a#clear:hover, a#clearall:hover {
-    background-color: #000080;
+    background-color: #333;
 }
 #total {
     height: 60px;
@@ -132,7 +132,7 @@ a#clear:hover, a#clearall:hover {
     border-radius: 4px;
     overflow-x: scroll;
     overflow-y: hidden;
-    background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSsTIciUf-hD1tA2bUpm3WUZuURN77sS36gLbAVmh6dgY04LxBG");
+    background-color: cyan;
     background-repeat: no-repeat;
     background-size: cover;
 }
