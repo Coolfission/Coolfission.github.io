@@ -2,16 +2,32 @@
 <html>
 <head>
 <title>/c/clock</title>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
   <meta name="description" content="A simple clock and date utility">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="simplest javascript clock ever made, amit kulkarni clock, coolfission clock">
 <script>
 function time() {
     var today = new Date();
     var hour = today.getHours();
     var minute = today.getMinutes();
     var second = today.getSeconds();
+    // var millisecond = today.getMilliseconds();
+
+    if (hour.toString().length == 1) {
+        hour = "0" + hour;
+    }
+    else if (minute.toString().length == 1) {
+        minute = "0" + minute;
+    }
+    else if (second.toString().length == 1) {
+        second = "0" + second;
+    }
     document.getElementById('clock').innerHTML =
-    hour + ":" + "0" + minute + ":" + "0" + second;
+    hour + ":" + minute + ":" + second;
     var timeRefresh = setTimeout(time, 1);
     
  /*   if(second < 10) {
