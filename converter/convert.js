@@ -1167,7 +1167,10 @@ var favicon = function() {
         $(".fa-th-large").attr("data","uncheck");
         $("legend").attr("data-toggle", "collapse");
         $("legend").css({"cursor": "pointer"});
-            $($("#first-legend").data("target")).addClass("collapse");
+            // $($("#first-legend").data("target")).addClass("collapse");
+            $("#first-legend").collapse({
+                toggle:true
+            })
             $($("#second-legend").data("target")).addClass("collapse");
             $($("#third-legend").data("target")).addClass("collapse");
             $($("#fourth-legend").data("target")).addClass("collapse");
@@ -1180,3 +1183,6 @@ var favicon = function() {
     });
 };
 $(document).ready(favicon)
+
+
+

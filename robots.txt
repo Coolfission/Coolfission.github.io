@@ -1,4 +1,0 @@
-User-agent: Googlebot
-User-agent: Bingbot
-User-agent: *
-Sitemap: http://coolfission.github.io/sitemap.xml
