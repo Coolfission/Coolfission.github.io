@@ -1,0 +1,76 @@
+<html>
+<head>
+  <title>The Blog</title>
+  <link rel="shortcut icon" href="../assets/code_symbol.png " />
+  <link rel="stylesheet" type="text/css" href="blogassets/blogstyle.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://kit.fontawesome.com/2ac335b7fb.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+    $(document).scroll(function () {
+      var $nav = $(".navbar-fixed-top");
+      $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
+
+    var load = function() {
+        $('.navbar-fixed-top').load('/assets/header.html', function() {
+          $("#blog").addClass("selected");
+        });
+        $('#blogList').load('blogassets/bloglist.html', function() {
+          $("#welcome").addClass("currentBlog");
+        }); 
+        $('#out-foot').load('/assets/footer.html');
+    }
+    $(document).ready(load);
+  </script>
+
+</head>
+<body>
+
+<div class="top">
+
+  <nav class="navbar-fixed-top"></nav><br/><br/><br/>
+
+  <div id="intro">
+    <span id="name">The Blog</span><br/><br/>
+    <p> </p>
+  </div><span id="anchor"></span><br/><br/>
+
+</div><br/><br/>
+
+<div id="blogs">
+    
+    <div id="blogList"></div>  
+
+    <div id="blogMain">
+        <div id="blogTitle">
+            <h1 id="blogheading">Welcome!</h1>
+            <h4 id="author">By Amit Kulkarni</h4>
+            <h4 id="date">Posted on December 12, 2020</h4>
+        </div>
+        <p>Welcome to my blog! Now, you may be wondering why I'm developing my own blog instead of using other services like blogger, wordpress, etc.. And the short tl;dr reason is because I want to try something new.</p>
+        <p>However, there are a few other benefits of just writing my own blog. Here are a list of reasons of why I'm doing so:</p>
+        <ol>
+            <li>There's no limit to the number of words I want to write</li>
+            <li>No ads</li>
+            <li>I can directly put it on my home page without embedding it from another website</li>
+            <li>I can add more formatting or add exteral scripts for fancy animations</li>
+            <li>So that I can practice coding</li>
+            <li>'Cause it's cooler, you know?</li>
+        </ol>
+
+        <p>For now, I will be updating this blog in basic HTML and CSS. However, I will  eventually implement PHP so that I can create dynamic pages and edit my blogs directly on the website instead of hardcoding it. I also know that I need to make the website more mobile-friendly and I will do so as I get time.</p> 
+        <p>As you can tell, this project is going to take a while to develop but I will make some update every now and then.</p>
+        <p>Thanks for reading!</p>
+
+    </div>
+
+</div><br/><br/><br/><br/>
+
+
+<div id="out-foot"></div>
+
+</body>

@@ -5,109 +5,163 @@
  |     | |   |   |    |       |            |   /  |     |  |       |   /  |     |  |     | |\   |    |
  |_____| |   |   |    |       |            |__/   |     |  |       |__/   |_____|  |_____| | \  |    |
  |     | |       |    |       |            |  \   |     |  |       |  \   |     |  | \__   |  \ |    |
- |     | |       | ___|___    |            |   \  |_____|  |_____  |   \  |     |  |    \  |   \| ___|___
+ |     | |       | ___|___    |            |   \  |_____|  |_____  |   \  |     |  |    \_ |   \| ___|___
 
  -->
 
 <html class="task">
 <head>
-   <title>Amit Kulkarni</title>
-   <link rel="shortcut icon" href="data:image/x-icon;base64,R0lGODlhEAAQAPECAFFUV////wAAAAAAACH5BAkyAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAEBAQEBAAAAAAEBAAAAAAABAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJMgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" />
-  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Amit Kulkarni</title>
+  <link rel="shortcut icon" href="assets/code_symbol.png " />
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 
+
+  <script src="https://kit.fontawesome.com/2ac335b7fb.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-  <!-- jQuery touch pound if you want to use it -->
+
+  <!-- jQuery UI isn't needed -->
+  <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> -->
+
+  <!-- jQuery touch punch if you want to use it -->
   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script> -->
-  
+
   <!-- BACKUP ONLY
   <script src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js"></script>
   <script src="javascript/jquerymin.js"></script>
   <script src="javascript/jquerymin-ui.js"></script> -->
-  
+
   <script src="javascript/keystroke.js"></script>
   <script src="javascript/typed.js"></script>
-  <script src="script.js"></script>
 
-  <meta name="description" content="Hello World, my name is Amit Kulkarni. I started coding in 6th grade and I currently attend Alpharetta High School. Be sure to visit this site frequently for new changes.">
+  <!-- Bootstrap -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+
+  <script>
+    var scrollNav = function() {
+      $(document).scroll(function () {
+        var $nav = $(".navbar-fixed-top");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+      });
+    };
+    $(document).ready(scrollNav);
+
+    var load = function() {
+      $('.navbar-fixed-top').load('/assets/header.html', function() {
+        $("#home").addClass("selected");
+      });
+        $('#out-foot').load('/assets/footer.html');
+        
+    }
+    $(document).ready(load);  
+  </script>
+
+  <meta name="description" content="Hello World, my name is Amit Kulkarni. I started coding in 8th grade and I currently attend Alpharetta High School. Be sure to visit this site frequently for new changes.">
   <meta name="keywords" content="coolfission, amit kulkarni, amit kulkarni alpharetta, amit kulkarni alpharetta high school, amit kulkarni github, amit kulkarni webb bridge middle school, amit kulkarni fulton county schools, amit kulkarni fcs">
   <meta name="author" content="Amit Kulkarni">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noarchive, noindex, nofollow">
+
+
+
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", arial;
+    }
+
+    .top {
+        background-image: url('assets/homewallpaper.jpg');
+    }
+    #intro {
+        padding: 4em 0px;
+        color: white;
+        text-align: center;
+    }
+    #intro span {
+        font-weight: bold;
+        font-size: 80px;
+        color: rgb(84, 219, 240);
+    }
+    #intro p {
+        font-weight:;
+        margin: 15px;
+    }
+
+    /*PROJECTS */
+    #projects {
+        border: 3px solid #000;
+        width: 65%;
+        margin: auto;
+        text-align: center;
+    }
+    #projects legend {
+        margin: auto;
+        padding: 5px 10px;
+        background-color: rgba(0,0,0,0.6);
+        color: #fff;
+        border-radius: 10px;
+    }
+    .project-links {
+        font-weight: bold;
+        font-style: italic;
+        background-color: rgba(0,0,0,0.4);
+        border-radius: 5px;
+        padding: 10px 0px;
+        width: 80%;
+        height: 35px;
+        line-height: 35px;
+        margin: auto;
+        text-align: center;
+    }
+    .project-links:hover {
+        background-color: rgba(0,0,0,0.6);
+        cursor: pointer;
+    }
+    #projects a:not(#others) {
+      text-decoration: none;
+      color: #fff;
+    }
+  </style>
 </head>
 
 <body>
 
-<div id="about">
-  <a href="#"><i class="far fa-times-circle"></i></a>
-  <h1>About</h1>
-  <p class="tabIndent">Hello World, my name is Amit Kulkarni. I started programming in 6th grade and continue to do so today. As of now, I currently attend Alpharetta High School.</p> <p class="tabIndent">I do most of my work on the web with HTML, CSS, PHP, and JavaScript. To publish the site, I use Github (view the repository on the bottom of the page), since I don't have my own domain yet. Make sure to also see my other profiles on other websites.</p> <i class="fa fa-code"></i><p class="tabIndent">In the future, I am going to learn Swift, Java, and C++ to develop mobile apps and desktop apps. In addition, I am currently experimenting with node.js and php in order to create cookies and login pages.</p> <p class="tabIndent">In essence, thanks for visiting my website! Please email me your feedback or suggestions that I can do to improve this website.</p><br/><small>Press esc or click on the X button on the upper right corner to exit out of this dialog box.</small></p>
+
+<div class="top">
+
+
+  <nav class="navbar-fixed-top"></nav><br/><br/><br/>
+
+  <div id="intro">
+    <span id="name">Amit Kulkarni</span><br/><br/>
+    <p></p>
+  </div><br/><br/>
+
 </div>
 
-<nav id="top">
-  <a href="clock/clock.html" id="time" target="_blank">Welcome!</a>
-  <a href="https://www.dropbox.com/s/vj60uslij0021n3/Resume.docx?dl=0" target="_blank">Resume</a>
-  <a href="mailto:amitkulkarni181@gmail.com?subject=From Anonymous User" target="_blank">Email</a>
-  <a href="#about" style="cursor: pointer">About</a>
-</nav><br/><br/><br/><br/>
-
-<div id="topic">
-  <h1 id="name">Amit Kulkarni |
-    <span id="typed"></span><span class="typed-cursor">_</span>
-  </h1>
-
-  <p>Hello and welcome to my home page! Here you can view my projects, learn more about me, or contact me</p>
-
-  <noscript>
-    <p style="font-size: 20px; color: blue"><strong>It's better to view this page with JavaScript. Please use a newer browser that supports JavaScript or enable JavaScript in your browser's settings. Thanks!</strong></p>
-    <style>
-      #about {
-        display: none;
-      }
-    </style>
-  </noscript>
-
-</div><br/><br/></br/>
-
-
+<h3 style="text-align: center; margin: 50px 0">Hello and welcome to my home page! Here you can view my projects, learn more about me, or contact me</h3>
 <fieldset id="projects">
-<legend>My Projects</legend>
-  <br/><br/><a href="academics/academics.html" target="_blank"><div class="project-links">Academics</div></a>
+<legend>My Projects</legend> 
 
-  <br/><br/><a href="music/music.html" target="_blank"><div class="project-links">Band Music</div></a>
+  <br/><br/><a href="agenda/agenda.php"><div class="project-links">Agenda</div></a>
 
- <!-- <br/><br/><a href="calculator/calculate.html" target="_blank"><div class="project-links">Calculator</div></a>
+  <br/><br/><a href="music/music.html"><div class="project-links">Band Music</div></a>
 
-  <br/><br/><a href="conjugate/conjugate.html" target="_blank"><div class="project-links">Conjugator</div></a> -->
+  <br/><br/><a href="clock/clock.html"><div class="project-links">Clock</div></a> 
 
-  <br/><br/><a href="converter/convert.html" target="_blank"><div class="project-links">Converter</div></a>
+  <br/><br/><a href="converter/convert.html"><div class="project-links">Converter</div></a> 
 
-<br/><br/><p>You can view more of my projects on <a id="codepen" href="http://codepen.io/TechnoForced/" target="_blank">Codepen</a></p>
+
+<br/><br/><p>You can also view more of my projects on <a id="others" href="other" target="_blank">others</a></p>
 </fieldset><br/><br/><br/><br/><br/>
 
-<div id="out-foot">
-  <div id="footer">
-    <h1>The Bottom</h1>
-    <p>Thanks for visiting my website!</p>
-    <p>Feel free to email me at <strong><a href="mailto:amitkulkarni181@gmail.com?subject=From Anonymous User" target="_blank">amitkulkarni181@gmail.com</a></strong></p>
-    <br/>
-    <div id="line"></div>
- <br/>
-
-<div id="contacts">
-  <a href="https://github.com/coolfission" target="_blank"><i class="fab fa-github fa-2x fa-fw"></i></a>
-  <a href="https://stackoverflow.com/users/5771345/amit-kulkarni?tab=profile" target="_blank"><i class="fab fa-stack-overflow fa-2x fa-fw"></i></a>
-  <a href="https://codepen.io/TechnoForced/" target="_blank"><i class="fab fa-codepen fa-2x fa-fw"></i></a>
-  <a href="https://plus.google.com/100694261350428742043" target="_blank"><i class="fab fa-google-plus-g fa-2x fa-fw"></i></a>
-  <a href="http://www.snapchat.com/add/technoforce" target="_blank"><i class="fab fa-snapchat-ghost fa-2x fab-fw"></i></a>
-</div>
-
-<!--<i class="fa fa-twitter fa-2x fa-fw"></i>
-<i class="fa fa-reddit-alien fa-2x fa-fw"></i>-->
-
-
-  </div>
-</div>
+<div id="out-foot"></div>
 
 
 </body>

@@ -1,0 +1,1342 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>/c/conjugator</title>
+
+	<link rel="shortcut icon" href="data:image/x-icon;base64,R0lGODlhEAAQAPECAFFUV////wAAAAAAACH5BAkyAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAEBAQEBAAAAAAEBAAAAAAABAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJMgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" />
+
+  	<link rel="stylesheet" type="text/css" href="https://rawgit.com/FortAwesome/Font-Awesome/master/css/font-awesome.css" />
+  	<link rel="stylesheet" type="text/css" href="conjugate.css" />
+
+	<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js"></script>
+	<script src="conjugate.js" type="text/javascript"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+</head>
+
+<body>
+
+<noscript>
+<div id="noscript">
+	<p id="scriptMessage">Sorry, some features may not be able without Javascript. If you still want to continue to use the conjugator with the correct conjugations, then please click this link: <a href="">Blank Page</a>. <br/><br/>
+</div>
+</noscript>
+
+<h1>Basic <span id="info-enter"><a href="#info">French</a></span> Conjugations</h1>
+<i class="fa fa-times-circle-o" id="info-close"></i>
+
+
+<!-- Info -->
+
+
+
+<div id="info">
+<br/>
+	<h1>Conjugating French Verbs</h1>
+
+	<li>Just like the English language, there are also verbs in French. However, the way these verbs are said and wrote are different. In French, verbs need to be conjugated, or changed according to whoever is speaking.</li>
+	<li>This website makes it easy to understand basic conjugations for French.</li>
+	<li>In French, there are two types of verbs, regular verbs and irregular verbs. The two differ on the way that they get conjugated.</li>
+	<li>Each of these verbs can also be subdivided into further categories</li>
+	<li>Click to expand on each accordion to learn more.</li><br/>
+	<small>IMPORTANT: This website doesn't show the conjugations in the past or future tense, only in the present for now.</small>
+	<br/><br/>
+
+	<fieldset
+>	<legend data-toggle="collapse" data-target="#regular-toggle">Regular verbs</legend>
+	<div id="regular-toggle" class="collapse">
+	<br/><br/>
+ 	<table>
+		<th colspan="2">Format for regular -er verbs </th>
+		<tr>
+			<td id="je-er">Je -e</td>
+			<td id="nous-er">Nous -ons</td>
+		</tr>
+		<tr>
+			<td id="tu-er">Tu -es</td>
+			<td id="vous-er">Vous -ez</td>
+		</tr>
+		<tr>
+			<td id="il-elle-er">Il/Elle/On -e</td>
+			<td id="ils-elles-er">Ils/Elles -ent</td>
+		</tr>
+	</table>
+<!-- 	<p class="information">EXCEPTION: When a verb in its infinitive form and has the root -ger (such as voyager), then the conjugation for nous will be -eons.</p>
+	<p class="information">Regular -er verbs can be divided further into stem-changing verbs in which the conjugation is the same, but the accents are different based on if it is "inside/outside the boot".</p>
+	<p class="information">In this case, the verbs outside the boot will have the same accent as the infinitive while those inside will have different accents.</p>
+	<p class="information">The "boot" on the stem-changing verbs have been highlighted on this website to make it easy to identify.</p> -->
+	<br/><div class="line"></div><br/>
+
+	<br/>
+ 	<table>
+		<th colspan="2">Format for regular -yer verbs </th>
+		<tr>
+			<td id="je-yer">Je -ie</td>
+			<td id="nous-yer">Nous -yons</td>
+		</tr>
+		<tr>
+			<td id="tu-yer">Tu -ies</td>
+			<td id="vous-yer">Vous -yez</td>
+		</tr>
+		<tr>
+			<td id="il-elle-yer">Il/Elle/On -ie</td>
+			<td id="ils-elles-yer">Ils/Elles -ient</td>
+		</tr>
+	</table>
+
+	<table>
+		<th colspan="2">Format for regular -ir verbs </th>
+		<tr>
+			<td id="je-ir">Je -is</td>
+			<td id="nous-ir">Nous -issons</td>
+		</tr>
+		<tr>
+			<td id="tu-ir">Tu -is</td>
+			<td id="vous-ir">Vous -issez</td>
+		</tr>
+		<tr>
+			<td id="il-elle-ir">Il/Elle/On -it</td>
+			<td id="ils-elles-ir">Ils/Elles -issent</td>
+		</tr>
+	</table>
+	<br/><br/><div class="line"></div><br/>
+
+	<table>
+		<th colspan="2">Format for regular -re verbs </th>
+		<tr>
+			<td id="je-re">Je -s</td>
+			<td id="nous-re">Nous -ons</td>
+		</tr>
+		<tr>
+			<td id="tu-re">Tu -is</td>
+			<td id="vous-re">Vous -ez</td>
+		</tr>
+		<tr>
+			<td id="il-elle-re">Il/Elle/On -()</td>
+			<td id="ils-elles-re">Ils/Elles -ent</td>
+		</tr>
+	</table>
+	<br/><br/>
+	</div>
+	</fieldset>
+
+	<br/><br/>
+	<fieldset>
+	<legend data-toggle="collapse" data-target="#irregular-toggle">Irregular verbs</legend>
+	<div id="irregular-toggle" class="collapse">
+		<p class="information">Unlike regular verbs, some irregular verbs follow a pattern while others don't.</p>
+		<p class="information">There are two main groups that can be conjugated in the irregular verbs. The first group is a seperate conjugation, but the second group is conjugated exactly like how you conjugate regular -er verbs. </p><br/>
+
+		<table>
+			<th colspan="2">The first group</th>
+			<tr>
+				<td id="je-pre">Je -s</td>
+				<td id="nous-pre">Nous -ons</td>
+			</tr>
+			<tr>
+				<td id="tu-pre">Tu -s</td>
+				<td id="vous-pre">Vous -ez</td>
+			</tr>
+			<tr>
+				<td id="il-elle-pre">Il/Elle/On -t</td>
+				<td id="ils-elles-pre">Ils/Elles -ent</td>
+			</tr>
+		</table>
+		<br/><br/><div class="line"></div><br/>
+
+		<table>
+			<th colspan="2">The second group</th>
+			<tr>
+				<td id="je-af">Je -e</td>
+				<td id="nous-af">Nous -ons</td>
+			</tr>
+			<tr>
+				<td id="tu-af">Tu -es</td>
+				<td id="vous-af">Vous -ez</td>
+			</tr>
+			<tr>
+				<td id="il-elle-af">Il/Elle/On -e</td>
+				<td id="ils-elles-af">Ils/Elles -ent</td>
+			</tr>
+		</table>
+		<br/><div class="line"></div><br/>
+
+		<p>The rest of the irregular verbs don't have a specific way of conjugating, so it is essential for you to memorize it!</p>
+	</div>
+	</fieldset>
+	<br/>
+	<li>For more information, you can go to <a href="https://www.french.about.com" target="_blank">french.about.com</a></li>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+	<div id="index">
+		<ul>
+			<li class="active">
+				<a href="#er-scroll">-ER Verbs</a>
+			</li>
+			<li>
+				<a href="#ir-scroll">-IR Verbs</a>
+			</li>
+			<li>
+				<a href="#re-scroll">-RE Verbs</a>
+			</li>
+			<li><b id="regular-option">Regular</b> | <b id="irregular-option">Irregular</b></li>
+			<br/>
+		</ul>
+	</div>
+
+<!--
+	_____   _____
+   |       |     |
+   |_____  |_____|
+   |       |	 \
+   |_____  |      \
+-->
+
+<div id="regular" name="normal">
+	<p style="margin: 2% 5%; text-align: left">Note: This project is no longer being updated as we have learned too many verbs and tenses for me to keep up. I also understand that the accents are not being loaded properly for some verbs, but it will take long to fix it.</p>
+	<h2 id="er-scroll">-ER Verbs</h2>
+
+	<table class="boot" valign="top">
+	<th colspan="2">Acheter - To buy</th>
+		<tr>
+			<td class="je-boot">J'achète</td>
+			<td>Nous achetons</td>
+		</tr>
+		<tr>
+			<td class="tu-boot">Tu achètes</td>
+			<td>Vous achetez</td>
+		</tr>
+		<tr>
+			<td class="il-elle-boot">Il/Elle/On achète</td>
+			<td class="ils-elles-boot">Ils/Elles achètent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Adore - To love</th>
+		<tr>
+			<td>J'adore</td>
+			<td>Nous adorons</td>
+		</tr>
+		<tr>
+			<td>Tu adores</td>
+			<td>Vous adorez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On adore</td>
+			<td>Ils/Elles adorent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Aimer - To like</th>
+		<tr>
+			<td>J'aime</td>
+			<td>Nous aimons</td>
+		</tr>
+		<tr>
+			<td>Tu aimes</td>
+			<td>Vous aimez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On aime</td>
+			<td>Ils/Elles aiment</td>
+		</tr>
+	</table>
+
+	<table class="boot" valign="top">
+	<th colspan="2">Amener - to bring (a person)</th>
+		<tr>
+			<td class="je-boot">J'amÃ¨ne</td>
+			<td>Nous amenons</td>
+		</tr>
+		<tr>
+			<td class="tu-boot">Tu amÃ¨nes</td>
+			<td>Vous amenez</td>
+		</tr>
+		<tr>
+			<td class="il-elle-boot">Il/Elle/On amÃ¨ne</td>
+			<td class="ils-elles-boot">Ils/Elles amÃ¨nent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Apporter - To bring</th>
+		<tr>
+			<td>J'apporte</td>
+			<td>Nous apportons</td>
+		</tr>
+		<tr>
+			<td>Tu apportes</td>
+			<td>Vous apportez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/on apporte</td>
+			<td>Ils/Elles apportent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Arriver - To arrive</th>
+		<tr>
+			<td>J'arrive</td>
+			<td>Nous arrivons</td>
+		</tr>
+		<tr>
+			<td>Tu arrives</td>
+			<td>Vous arrivez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/on arrive</td>
+			<td>Ils/Elles arrivent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Chanter - To sing</th>
+		<tr>
+			<td>Je chante</td>
+			<td>Nous chantons</td>
+		</tr>
+		<tr>
+			<td>Tu chantes</td>
+			<td>Vous chantez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/on chante</td>
+			<td>Ils/Elles chantent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Chercher - To look</th>
+		<tr>
+			<td>Je cherche</td>
+			<td>Nous cherchons</td>
+		</tr>
+		<tr>
+			<td>Tu cheres</td>
+			<td>Vous cherchez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/on cherche</td>
+			<td>Ils/Elles cherchent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Commencer - To begin</th>
+		<tr>
+			<td>Je commence</td>
+			<td>Nous commencons</td>
+		</tr>
+		<tr>
+			<td>Tu commences</td>
+			<td>Vous commencez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/on commence</td>
+			<td>Ils/Elles commencent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Dancer - To dance</th>
+		<tr>
+			<td>Je danse</td>
+			<td>Nous dansons</td>
+		</tr>
+		<tr>
+			<td>Tu danses</td>
+			<td>Vous dansez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/on danse</td>
+			<td>Ils/Elles dansent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Demander - To demand</th>
+		<tr>
+			<td>Je demande</td>
+			<td>Nous demandons</td>
+		</tr>
+		<tr>
+			<td>Tu demandes</td>
+			<td>Vous demandez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/on demande</td>
+			<td>Ils/Elles demandent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">DÃ©tester - To hate</th>
+		<tr>
+			<td>Je dÃ©teste</td>
+			<td>Nous dÃ©testons</td>
+		</tr>
+		<tr>
+			<td>Tu dÃ©testes</td>
+			<td>Vous dÃ©testez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On dÃ©teste</td>
+			<td>Ils/Elles dÃ©testent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Donner - To give</th>
+		<tr>
+			<td>Je donne</td>
+			<td>Nous donnons</td>
+		</tr>
+		<tr>
+			<td>Tu donnes</td>
+			<td>Vous donnez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On donne</td>
+			<td>Ils/Elles donnent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Ã‰couter - To listen</th>
+		<tr>
+			<td>J'Ã©coute</td>
+			<td>Nous Ã©coutons</td>
+		</tr>
+		<tr>
+			<td>Tu Ã©coutes</td>
+			<td>Vous Ã©coutez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On Ã©coute</td>
+			<td>Ils/Elles Ã©coutent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Ã‰tudier - To study</th>
+		<tr>
+			<td>J'Ã©tudie</td>
+			<td>Nous Ã©dudions</td>
+		</tr>
+		<tr>
+			<td>Tu Ã©tudies</td>
+			<td>Vous Ã©tudiez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On Ã©tudie</td>
+			<td>Ils/Elles Ã©tudient</td>
+		</tr>
+	</table>
+
+	<table class="boot" valign="top">
+	<th colspan="2">EspÃ©rer - to hope</th>
+		<tr>
+			<td class="je-boot">J'espÃ¨re</td>
+			<td>Nous espÃ©rons</td>
+		</tr>
+		<tr>
+			<td class="tu-boot">Tu espÃ¨res</td>
+			<td>Vous espÃ©rez</td>
+		</tr>
+		<tr>
+			<td class="il-elle-boot">Il/Elle/On espÃ¨re</td>
+			<td class="ils-elles-boot">Ils/Elles espÃ¨rent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Jouer - To play</th>
+		<tr>
+			<td>Je joue</td>
+			<td>Nous jouons</td>
+		</tr>
+		<tr>
+			<td>Tu joues</td>
+			<td>Vous jouez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On joue</td>
+			<td>Ils/Elles jouent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Manger - To eat</th>
+		<tr>
+			<td>Je mange</td>
+			<td>Nous man<u>ge</u>ons</td>
+		</tr>
+		<tr>
+			<td>Tu manges</td>
+			<td>Vous mangez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On mange</td>
+			<td>Ils/Elles mangent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Marcher - To walk</th>
+		<tr>
+			<td>Je marche</td>
+			<td>Nous marchons</td>
+		</tr>
+		<tr>
+			<td>Tu marches</td>
+			<td>Vous marchez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On marche</td>
+			<td>Ils/Elles marchent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Nager - To swim</th>
+		<tr>
+			<td>Je nage</td>
+			<td>Nous na<u>ge</u>ons</td>
+		</tr>
+		<tr>
+			<td>Tu nanges</td>
+			<td>Vous nangez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On nange</td>
+			<td>Ils/Elles nangent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Oublier - To forget</th>
+		<tr>
+			<td>J'oublie</td>
+			<td>Nous oublions</td>
+		</tr>
+		<tr>
+			<td>Tu oublies</td>
+			<td>Vous oubliez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On oublient</td>
+			<td>Ils/Elles oublie</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Parler - To talk</th>
+		<tr>
+			<td>Je parle</td>
+			<td>Nous parlons</td>
+		</tr>
+		<tr>
+			<td>Tu parles</td>
+			<td>Vous parlez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On parle</td>
+			<td>Ils/Elles parlent</td>
+		</tr>
+	</table>
+
+	<table class="boot" valign="top">
+	<th colspan="2">Payer - To pay</th>
+		<tr>
+			<td class="je-boot">Je paie</td>
+			<td>Nous payons</td>
+		</tr>
+		<tr>
+			<td class="tu-boot">Tu paies</td>
+			<td>Vous payez</td>
+		</tr>
+		<tr>
+			<td class="il-elle-boot">Il/Elle/On paie</td>
+			<td class="ils-elles-boot">Ils/Elles paient</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Penser - to think</th>
+		<tr>
+			<td>Je pense</td>
+			<td>Nous pensons</td>
+		</tr>
+		<tr>
+			<td>Tu penses</td>
+			<td>Vous pensez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On pense</td>
+			<td>Ils/Elles pensent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Porter - to wear</th>
+		<tr>
+			<td>Je porte</td>
+			<td>Nous portons</td>
+		</tr>
+		<tr>
+			<td>Tu portes</td>
+			<td>Vous portez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On porte</td>
+			<td>Ils/Elles portent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Pouvoir - to be able (can)</th>
+		<tr>
+			<td>Je peux</td>
+			<td>Nous pouvons</td>
+		</tr>
+		<tr>
+			<td>Tu peux</td>
+			<td>Vous pouvez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On peut</td>
+			<td>Ils/Elles peuvent</td>
+		</tr>
+	</table>
+
+	<table class="boot" valign="top">
+	<th colspan="2">PrÃ©fÃ©rer - to prefer</th>
+		<tr>
+			<td class="je-boot">Je prÃ©fÃ¨re</td>
+			<td>Nous prÃ©fÃ©rons</td>
+		</tr>
+		<tr>
+			<td class="tu-boot">Tu prÃ©fÃ¨res</td>
+			<td>Vous prÃ©fÃ©rez</td>
+		</tr>
+		<tr>
+			<td class="il-elle-boot">Il/Elle/On prÃ©fÃ¨re</td>
+			<td class="ils-elles-boot">Ils/Elles prÃ©fÃ¨rent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Regarder - to watch</th>
+		<tr>
+			<td>Je regarde</td>
+			<td>Nous regardons</td>
+		</tr>
+		<tr>
+			<td>Tu regardes</td>
+			<td>Vous regardez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On regarde</td>
+			<td>Ils/Elles regardent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Travailler - to work</th>
+		<tr>
+			<td>Je travaille</td>
+			<td>Nous travaillons</td>
+		</tr>
+		<tr>
+			<td>Tu travailles</td>
+			<td>Vous travaillez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On travaille</td>
+			<td>Ils/Elles travaillent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Trouver - to find</th>
+		<tr>
+			<td>Je trouve</td>
+			<td>Nous trouvons</td>
+		</tr>
+		<tr>
+			<td>Tu trouves</td>
+			<td>Vous trouvez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On trouve</td>
+			<td>Ils/Elles trouvent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Visiter - to visit</th>
+		<tr>
+			<td>Je visite</td>
+			<td>Nous visitons</td>
+		</tr>
+		<tr>
+			<td>Tu visites</td>
+			<td>Vous visitez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On visite</td>
+			<td>Ils/Elles visitent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Voyager - to travel</th>
+		<tr>
+			<td>Je voyage</td>
+			<td>Nous voya<u>ge</u>ons</td>
+		</tr>
+		<tr>
+			<td>Tu voyages</td>
+			<td>Vous voyagez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On voyage</td>
+			<td>Ils/Elles voyagent</td>
+		</tr>
+	</table>
+
+<br/><div class="line"></div><br/><br/>
+
+<!--______   _____
+      |     |     |
+      |     |_____|
+      |     |     \
+    __|___  |      \
+-->
+
+	<h2 id="ir-scroll">-IR Verbs</h2>
+
+	<table valign="top">
+	<th colspan="2">Abolir - to abolish</th>
+		<tr>
+			<td>Je abolis</td>
+			<td>Nous abolissons</td>
+		</tr>
+		<tr>
+			<td>Tu abolis</td>
+			<td>Vous abolissez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On abolit</td>
+			<td>Ils/Elles abolissent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">BÃ¢tir - to build</th>
+		<tr>
+			<td>Je bÃ¢tis</td>
+			<td>Nous bÃ¢tissons</td>
+		</tr>
+		<tr>
+			<td>Tu bÃ¢tis</td>
+			<td>Vous bÃ¢tissez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On bÃ¢tit</td>
+			<td>Ils/Elles bÃ¢tissent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Blanchir - to turn white</th>
+		<tr>
+			<td>Je blanchis</td>
+			<td>Nous blanchissons</td>
+		</tr>
+		<tr>
+			<td>Tu blanchis</td>
+			<td>Vous blanchissez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On blanchit</td>
+			<td>Ils/Elle blanchissent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Brunir - to turn brown</th>
+		<tr>
+			<td>Je brunis</td>
+			<td>Nous brunissons</td>
+		</tr>
+		<tr>
+			<td>Tu brunis</td>
+			<td>Vous brunissez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On brunit</td>
+			<td>Ils/Elles brunissent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Choisir - to choose</th>
+		<tr>
+			<td>Je choisis</td>
+			<td>Nous choisissons</td>
+		</tr>
+		<tr>
+			<td>Tu choisis</td>
+			<td>Vous choisissez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On choisit</td>
+			<td>Ils/Elles choisissent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Finir - to finish</th>
+		<tr>
+			<td>Je finis</td>
+			<td>Nous finissons</td>
+		</tr>
+		<tr>
+			<td>Tu finis</td>
+			<td>Vous finissez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On finit</td>
+			<td>Ils/Elles finissent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Grossir - to gain weight</th>
+		<tr>
+			<td>Je grossis</td>
+			<td>Nous grossissons</td>
+		</tr>
+		<tr>
+			<td>Tu grossis</td>
+			<td>Vous grossissez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On grossit</td>
+			<td>Ils/Elles grossissent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">ObÃ©ir - to obey</th>
+		<tr>
+			<td>Je obÃ©is</td>
+			<td>Nous obÃ©issons</td>
+		</tr>
+		<tr>
+			<td>Tu obÃ©is</td>
+			<td>Vous obÃ©issez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On obÃ©it</td>
+			<td>Ils/Elles obÃ©issent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Maigrir - to lose weight</th>
+		<tr>
+			<td>Je maigris</td>
+			<td>Nous maigrissons</td>
+		</tr>
+		<tr>
+			<td>Tu maigris</td>
+			<td>Vous maigrissez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On maigrit</td>
+			<td>Ils/Elles maigrissent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Remplir - to fill</th>
+		<tr>
+			<td>Je remplis</td>
+			<td>Nous remplissons</td>
+		</tr>
+		<tr>
+			<td>Tu remplis</td>
+			<td>Vous remplissez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On remplit</td>
+			<td>Ils/Elles remplissent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">RÃ©ussir - to succeed; to pass</th>
+		<tr>
+			<td>Je rÃ©ussis</td>
+			<td>Nous rÃ©ussissons</td>
+		</tr>
+		<tr>
+			<td>Tu rÃ©ussis</td>
+			<td>Vous rÃ©ussissew</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On rÃ©ussit</td>
+			<td>Ils/Elles rÃ©ussissent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Rougir - to turn red</th>
+		<tr>
+			<td>Je rougis</td>
+			<td>Nous rougissons</td>
+		</tr>
+		<tr>
+			<td>Tu rougis</td>
+			<td>Vous rougissez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On rougit</td>
+			<td>Ils/Elles rougissent</td>
+		</tr>
+	</table>
+	<br/><div class="line"></div><br/><br/>
+
+<!-- _____     _____
+    |     |   |
+    |_____|   |_____
+    |     \   |
+    |      \  |_____
+-->
+
+	<h2 id="re-scroll">-RE Verbs</h2>
+
+	<table valign="top">
+	<th colspan="2">Attendre - to wait</th>
+		<tr>
+			<td>J'attends</td>
+			<td>Nous attendons</td>
+		</tr>
+		<tr>
+			<td>Tu attends</td>
+			<td>Vous attendez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On attend</td>
+			<td>Ils/Elles attendent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Correspondre - to correspond</th>
+		<tr>
+			<td>Je corresponds</td>
+			<td>Nous correspondons</td>
+		</tr>
+		<tr>
+			<td>Tu corresponds</td>
+			<td>Vous correspondez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On correspond</td>
+			<td>Ils/Elles correspondent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">DÃ©fendre - to defend</th>
+		<tr>
+			<td>Je dÃ©fends</td>
+			<td>Nous dÃ©fendons</td>
+		</tr>
+		<tr>
+			<td>Tu dÃ©fends</td>
+			<td>Vous dÃ©fendez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On dÃ©fend</td>
+			<td>Ils/Elles dÃ©fendent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">DÃ©pendre - to depend</th>
+		<tr>
+			<td>Je dÃ©pends</td>
+			<td>Nous dÃ©pendons</td>
+		</tr>
+		<tr>
+			<td>Tu dÃ©pends</td>
+			<td>Vous dÃ©pendez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On dÃ©pend</td>
+			<td>Ils/Elles dÃ©pendent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Descendre - to descend</th>
+		<tr>
+			<td>Je descends</td>
+			<td>Nous descendons</td>
+		</tr>
+		<tr>
+			<td>Tu descends</td>
+			<td>Vous descendez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On descend</td>
+			<td>Ils/Elles descendent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Entendre - to hear</th>
+		<tr>
+			<td>J'entends</td>
+			<td>Nous entendons</td>
+		</tr>
+		<tr>
+			<td>Tu entends</td>
+			<td>Vous entendez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On entend</td>
+			<td>Ils/Elles entendent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Fordre - to melt</th>
+		<tr>
+			<td>Je fords</td>
+			<td>Nous fordons</td>
+		</tr>
+		<tr>
+			<td>Tu fords</td>
+			<td>Vous fordez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On ford</td>
+			<td>Ils/Elles fordent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Mordre - to belt</th>
+		<tr>
+			<td>Je mords</td>
+			<td>Nous mordons</td>
+		</tr>
+		<tr>
+			<td>Tu mords</td>
+			<td>Vous mordez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On mord</td>
+			<td>Ils/Elles mordent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Perdre - To lose</th>
+		<tr>
+			<td>Je perds</td>
+			<td>Nous perdons</td>
+		</tr>
+		<tr>
+			<td>Tu perds</td>
+			<td>Vous perdez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On perd</td>
+			<td>Ils/Elles perdent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Rendre - To return</th>
+		<tr>
+			<td>Je rends</td>
+			<td>Nous rendons</td>
+		</tr>
+		<tr>
+			<td>Tu rends</td>
+			<td>Vous rendez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On rend</td>
+			<td>Ils/Elles rendent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">RÃ©pondre - To answer</th>
+		<tr>
+			<td>Je rÃ©ponds</td>
+			<td>Nous rÃ©pondons</td>
+		</tr>
+		<tr>
+			<td>Tu rÃ©ponds</td>
+			<td>Vous rÃ©pondez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On rÃ©pond</td>
+			<td>Ils/Elles rÃ©pondent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Tendre - To tend</th>
+		<tr>
+			<td>Je tends</td>
+			<td>Nous tendons</td>
+		</tr>
+		<tr>
+			<td>Tu tends</td>
+			<td>Vous tendez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On tend</td>
+			<td>Ils/Elles tendent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Vendre - To sell</th>
+		<tr>
+			<td>Je vends</td>
+			<td>Nous vendons</td>
+		</tr>
+		<tr>
+			<td>Tu vends</td>
+			<td>Vous vendez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On vend</td>
+			<td>Ils/Elles vendent</td>
+		</tr>
+	</table>
+</div>
+
+
+
+
+
+
+
+<!-- _____	 _____    _____    _____  _____  _     _  _        _____    _____
+	   |	|     |  |     |  |      |       |     |  |       |     |  |     |
+	   |	|_____|  |_____|  |_____ |_____  |     |  |       |_____|  |_____|
+	   |	|     \  |     \  |      |     | |     |  |       |     |  |     \
+	 __|__  |      \ |      \ |_____ |_____| |_____|  |_____  |     |  |      \
+ -->
+
+
+
+
+
+
+
+
+
+
+
+<div id="irregular" name="none">
+<br/>
+
+	<table valign="top">
+	<th colspan="2">Admettre - To admit</th>
+		<tr>
+			<td>Je admets</td>
+			<td>Nous admettons</td>
+		</tr>
+		<tr>
+			<td>Tu admets</td>
+			<td>Vous admettez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On admet</td>
+			<td>Ils/Elles admettent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Aller - To go</th>
+		<tr>
+			<td>Je vais</td>
+			<td>Nous allons</td>
+		</tr>
+		<tr>
+			<td>Tu vas</td>
+			<td>Vous allez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On va</td>
+			<td>Ils/Elles vont</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Avoir - To have</th>
+		<tr>
+			<td>J'ai</td>
+			<td>Nous avons</td>
+		</tr>
+		<tr>
+			<td>Tu as</td>
+			<td>Vous avez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On a</td>
+			<td>Ils/Elles ont</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">ÃŠtre - To be</th>
+		<tr>
+			<td>Je suis</td>
+			<td>Nous sommes</td>
+		</tr>
+		<tr>
+			<td>Tu es</td>
+			<td>Vous Ãªtes</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On est</td>
+			<td>Ils/Elles sont</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Faire - To do</th>
+		<tr>
+			<td>Je fais</td>
+			<td>Nous faisons</td>
+		</tr>
+		<tr>
+			<td>Tu fais</td>
+			<td>Vous faites</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On fait</td>
+			<td>Ils/Elles font</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Mettre - To put</th>
+		<tr>
+			<td>Je mets</td>
+			<td>Nous mettons</td>
+		</tr>
+		<tr>
+			<td>Tu mets</td>
+			<td>Vous mettez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On met</td>
+			<td>Ils/Elles mettent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Permettre - To permet</th>
+		<tr>
+			<td>Je permets</td>
+			<td>Nous permettons</td>
+		</tr>
+		<tr>
+			<td>Tu permets</td>
+			<td>Vous permettez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On permet</td>
+			<td>Ils/Elles permettent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Promettre - To promise</th>
+		<tr>
+			<td>Je promets</td>
+			<td>Nous promettons</td>
+		</tr>
+		<tr>
+			<td>Tu promets</td>
+			<td>Vous promettez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On promet</td>
+			<td>Ils/Elles promettent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Venir - To come</th>
+		<tr>
+			<td>Je viens</td>
+			<td>Nous venons</td>
+		</tr>
+		<tr>
+			<td>Tu viens</td>
+			<td>Vous venez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On vient</td>
+			<td>Ils/Elles viennent</td>
+		</tr>
+	</table>
+
+	<table valign="top">
+	<th colspan="2">Vouloir - To want</th>
+		<tr>
+			<td>Je veux</td>
+			<td>Nous voulons</td>
+		</tr>
+		<tr>
+			<td>Tu veux</td>
+			<td>Vous voulez</td>
+		</tr>
+		<tr>
+			<td>Il/Elle/On veut</td>
+			<td>Ils/Elles veulent</td>
+		</tr>
+	</table>
+</div>
+
+<br/><br/><br/>
+
+</body>
+</html>
+
+<!-- Things to do on the website:
+- Create hashes so a user won't have to go back to the option when the page is refreshed
+- Make a search input - like ctrl + f function on chrome -->

@@ -1,0 +1,85 @@
+<html>
+<head>
+	<style>
+		nav {
+	        width: 100%;
+	        background-color: rgba(0,0,0,0.3);
+	        position: fixed;
+	        font-weight: bold;
+	        height: 55px;
+	    }
+	    nav a {
+	    	/*background-color: blue;*/
+	        padding: 16.725px 0;
+	        text-decoration: none;
+	        color: white;
+	        margin-left: 30px;
+	        display: inline-block;
+	    }
+	    nav a:hover {
+	        color: orange;
+	    }
+	    nav #logo {
+	        float: left;
+	        font-style: italic;
+	    }
+	    nav a:not(#logo){
+	        float: right;
+	    }
+	    .selected {
+	        color: orange;
+	    }
+	    .navbar-fixed-top.scrolled {
+	      background-color: rgba(0, 0, 0, 0.9) !important;
+	      transition: background-color 200ms linear !important;
+	    }
+	    #dropdown {
+	    	display: none;
+	    	font-size: 30px;
+	    	color: white;
+	    	position: absolute;
+	    	right: 0;
+	    	margin-top: 12px;
+	    }
+	    .content {
+	      display: inline-block !important;
+		  height: 55px;
+		  width: 100%;
+		  position: fixed;
+		  background-color: rgba(0, 0, 0, 0.8);
+		  margin-top: 54px;
+		  /*transition: max-height 0.2s ease-out;*/
+		}
+
+
+	  </style>
+
+	  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	  <script>
+	  	if(screen.width < 384) {
+	  		$('#left').css({"margin": "auto", "background-color": "red", "width": "80%", "position": "relative"});
+	  		$('#logo').css({"position": "absolute", "left": "0", "margin-left": "0"});
+	  		$("#right").css({"display": "none"});
+	  		$("#dropdown").css({"display": "inline-block"});
+
+	  		//Toggles showing and hiding additional nav buttons
+	  		$("#dropdown").click(function() {
+	  			$("#right").toggleClass("content");
+	  		});
+	  	}
+	  </script>
+<body>
+	<div id="left">
+  		<a href="/index.html" id="logo">Amit Kulkarni</a>
+  		<i id="dropdown" class="fas fa-bars"></i>
+  	</div>
+
+  	<div id="right">
+	    <a href="/blog/blog.html" style="margin-right: 30px" id="blog">Blogs</a>
+	    <a href="/about.html" id="about">About</a>
+	    <a href="/index.html" id="home">Home</a>
+	</div>	
+
+	
+</body>
+</html>
