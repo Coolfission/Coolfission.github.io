@@ -87,6 +87,9 @@
     #blogMain {
         width: 70%;
         float: left;
+        line-height: 1.5;
+        margin: 30px 0;
+        font-size: 17px;
     }
     #blogheading {
         text-decoration: underline;
@@ -96,10 +99,5 @@
     }
     #date {
         color: red;
-    }
-    #blogMain p {
-      margin: 30px 0;
-      font-size: 1.2em !important;
-      font-family: Arial;
     }
     
