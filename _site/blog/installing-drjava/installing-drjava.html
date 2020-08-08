@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Installing DrJava on Mac</title>
+  <link rel="shortcut icon" href="../../assets/code_symbol.png " />
+  <link rel="stylesheet" type="text/css" href="../blogassets/blogstyle.css" />
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://kit.fontawesome.com/2ac335b7fb.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+    $(document).scroll(function () {
+      var $nav = $(".navbar-fixed-top");
+      $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
+
+    var load = function() {
+        $('#blogList').load('../blogassets/bloglist.html', function() {
+          $("#blog_drjava").addClass("currentBlog");
+        }); 
+        $('.navbar-fixed-top').load('/assets/header.html', function() {
+          $("#blog").addClass("selected");
+        });
+        $('#out-foot').load('/assets/footer.html');
+    }
+    $(document).ready(load);
+  </script>
+</head>
+
+<body>
+<div class="top">
+
+  <nav class="navbar-fixed-top"></nav><br/><br/><br/>
+
+  <div id="intro">
+    <span id="name">The Blog</span><br/><br/>
+    <p> </p>
+  </div><br/><br/>
+
+</div><span id="anchor"></span><br/><br/>
+
+
+<div id="blogs">
+    
+  <div id="blogList"></div> 
+
+  <div id="blogMain">
+    <div id="blogTitle">
+      <h1 id="blogheading">Installing DrJava on Mac</h1>
+      <h4 id="author">By Amit Kulkarni</h4>
+      <h4 id="date">Posted on December 25, 2019</h4>
+    </div>
+    <p>Throughout my AP CS A class, I was required to use an IDE called DrJava to write and compile my programs. My teacher told us that we would be using DrJava because of its simplicity, especially since most of us were new to coding. Although the program was easy to install on Windows, I had a bit of trouble installing it on macOS. In this post, I will go over how to install DrJava on macOS.</p>
+
+    <p>First, you need to check what macOS version you have. To do this, just click the apple logo on the top left of your desktop and then click About This Mac. You should then be able to see your Mac's version in a dialog box that pops up. After noting down the version scroll down to get the tutorial for your macOS version.</p>
+
+    <h2>macOS Mojave (Version 10.14) and older</h2>
+
+    <p>First, go to this <a href="https://sourceforge.net/projects/drjava/files/1.%20DrJava%20Stable%20Releases/" target="_blank">link</a> and install the osx.tar.gz file that was modified on 2014-08-26. If you need to, you can also install a newer version of DrJava. I recommend installing the osx.tar.gz file because it's the most recent one that can be extracted into a full application. If you need the newer version, then make sure to download the .jar file.</p>
+    <p>Now, in order to actually grant access for DrJava to open, you need to enter a single command into terminal. You can open terminal by searching "terminal" in spotlight search (open spotlight search by pressing cmd+space) or you can open finder and navigate to Applications > Utilities > Terminal.app. Once you get terminal opened up, you need to enter the following command:</p>
+    <code>sudo spctl --master-disable</code>
+    <p>Next, if you try opening the file, you may get a message saying that you need to install Java in order to actually compile any files. Because this version of DrJava relies on an older version of Java (Java 6.0), you need to install an Java 6.0 for the IDE to actually be able to compile. As a result, go to Oracle's website and install the Java version that is needed for your IDE. </p>
+
+    
+
+    <h2>macOS Catalina (Version 10.15) and newer</h2>
+    <p>Installing DrJava on newer versions of macOS is much harder to do every since Apple has removed 32-bit app support in their newer machines (such a dumb move imo). As a result, many applications stopped working on newer macOS versions. Nevertheless, it is still possible to install DrJava on Version 10.15+.</p>
+    <p>So first, I recommend you go through the instructions of how to install DrJava on Version 10.14 or lower. After following those instructions you may get the following message after opening DrJava:</p>
+    <img src="legacy-runtime.png" style="height: 30%; width: 50%"/> 
+    <p>Go ahead and click More Info, and click Download.</p>
+    <img src="download.png" style="height: 95%; width: 100%"/>
+    <p>After downloading the file and clicking open, you will see that you can't actually proceed any further because 32-bit applications can't be installed on macOS Catalina or newer. However, don't worry! There is a workaround which you can read about <a href="https://www.harrisgeospatial.com/Support/Self-Help-Tools/Help-Articles/Help-Articles-Detail/ArtMID/10220/ArticleID/23780/macOS-Catalina-1015-ENVIIDL-and-Legacy-Java-6-Dependencies" target="_blank">here.</a> </p>
+
+    <p>After following those instructions, you should be able to install the Java SE Runtime Environment needed for DrJava to work.</p> 
+
+
+    <h2>Any additional problems:</h2>
+    <p>If you have dark mode enabled, DrJava will look completely black because it's not optimized for dark mode yet. Enter this command to force DrJava to run in light mode:</p>
+    <code>defaults write edu.rice.cs.drjava.DrJava NSRequiresAquaSystemAppearance 1</code>
+
+    <p>Also if DrJava seems to look pixelated when you open it, then I suggest downloading this app called <a href="http://retinizer.mikelpr.com/" target="_blank"> Retinizer</a>. After downloading, go ahead and drag and drop DrJava into Retinizer and it will optimize DrJava for retina display screens.</p>
+
+    <p>Please email me if you have any other difficulties getting DrJava to work on your Mac. Happy coding!</p>
+</div>
+
+</div><br/><br/><br/><br/>
+
+<div id="out-foot"></div>
+</body>
+</html>

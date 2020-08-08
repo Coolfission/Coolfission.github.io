@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--
+  _____   _______  _______ _______                                         _____    _____         _______
+ |     | |   |   |    |       |            |   /  |     |  |       |   /  |     |  |     | |\   |    |
+ |_____| |   |   |    |       |            |__/   |     |  |       |__/   |_____|  |_____| | \  |    |
+ |     | |       |    |       |            |  \   |     |  |       |  \   |     |  | \__   |  \ |    |
+ |     | |       | ___|___    |            |   \  |_____|  |_____  |   \  |     |  |    \_ |   \| ___|___
+
+ -->
+
+<html class="task">
+<head>
+  <title>Amit Kulkarni</title>
+  <link rel="shortcut icon" href="assets/code_symbol.png " />
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+
+
+  <script src="https://kit.fontawesome.com/2ac335b7fb.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <!-- jQuery UI isn't needed -->
+  <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> -->
+
+  <!-- jQuery touch punch if you want to use it -->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script> -->
+
+  <!-- BACKUP ONLY
+  <script src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js"></script>
+  <script src="javascript/jquerymin.js"></script>
+  <script src="javascript/jquerymin-ui.js"></script> -->
+
+  <script src="javascript/keystroke.js"></script>
+  <script src="javascript/typed.js"></script>
+
+  <!-- Bootstrap -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+
+  <script>
+    var scrollNav = function() {
+      $(document).scroll(function () {
+        var $nav = $(".navbar-fixed-top");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+      });
+    };
+    $(document).ready(scrollNav);
+
+    var load = function() {
+      $('.navbar-fixed-top').load('/assets/header.html', function() {
+        $("#home").addClass("selected");
+      });
+        $('#out-foot').load('/assets/footer.html');
+        
+    }
+    $(document).ready(load);  
+  </script>
+
+  <meta name="description" content="Hello World, my name is Amit Kulkarni. I started coding in 8th grade and I currently attend Alpharetta High School. Be sure to visit this site frequently for new changes.">
+  <meta name="keywords" content="coolfission, amit kulkarni, amit kulkarni alpharetta, amit kulkarni alpharetta high school, amit kulkarni github, amit kulkarni webb bridge middle school, amit kulkarni fulton county schools, amit kulkarni fcs">
+  <meta name="author" content="Amit Kulkarni">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noarchive, noindex, nofollow">
+
+
+
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", arial;
+    }
+
+    .top {
+        background-image: url('assets/homewallpaper.jpg');
+    }
+    #intro {
+        padding: 4em 0px;
+        color: white;
+        text-align: center;
+    }
+    #intro span {
+        font-weight: bold;
+        font-size: 80px;
+        color: rgb(84, 219, 240);
+    }
+    #intro p {
+        font-weight:;
+        margin: 15px;
+    }
+
+    /*PROJECTS */
+    #projects {
+        border: 3px solid #000;
+        width: 65%;
+        margin: auto;
+        text-align: center;
+    }
+    #projects legend {
+        margin: auto;
+        padding: 5px 10px;
+        background-color: rgba(0,0,0,0.6);
+        color: #fff;
+        border-radius: 10px;
+    }
+    .project-links {
+        font-weight: bold;
+        font-style: italic;
+        background-color: rgba(0,0,0,0.4);
+        border-radius: 5px;
+        padding: 10px 0px;
+        width: 80%;
+        height: 35px;
+        line-height: 35px;
+        margin: auto;
+        text-align: center;
+    }
+    .project-links:hover {
+        background-color: rgba(0,0,0,0.6);
+        cursor: pointer;
+    }
+    #projects a:not(#others) {
+      text-decoration: none;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+
+<div class="top">
+
+
+  <nav class="navbar-fixed-top"></nav><br/><br/><br/>
+
+  <div id="intro">
+    <span>Home</span>
+    <span id="name">amit kulkarni</span><br/><br/>
+    <p></p>
+  </div><br/><br/>
+
+</div>
+
+<h3 style="text-align: center; margin: 50px 0">Hello and welcome to my home page! Here you can view my projects, learn more about me, or contact me</h3>
+<fieldset id="projects">
+<legend>My Projects</legend> 
+
+  <!-- <br/><br/><a href="agenda/agenda.php"><div class="project-links">Agenda</div></a> -->
+
+  <br/><br/><a href="music/music.html"><div class="project-links">Band Music</div></a>
+
+  <br/><br/><a href="clock/clock.html"><div class="project-links">Clock</div></a> 
+
+  <br/><br/><a href="converter/convert.html"><div class="project-links">Converter</div></a> 
+
+
+<br/><br/><p>You can also view more of my projects on <a id="others" href="other" target="_blank">others</a></p>
+</fieldset><br/><br/><br/><br/><br/>
+
+<div id="out-foot"></div>
+
+
+</body>
+</html>
