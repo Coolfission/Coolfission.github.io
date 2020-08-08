@@ -6,7 +6,7 @@ First of all, US COVID cases are up and there isn't a single sign that it is goi
 
 Yet even after all of this, what I find really disapointing is the response of our leaders. Now, I'll admit, I really hate talking about politics, but people are really making the current situation a political thing and it really fills me up with anger seeing President Trump and Brian Kemp downplaying the virus as if it's nothing. 
 
-I still remember Trump saying/doing things like:
+For example, in the past few months, Trump said/did things like:
 * "It's only a couple of people coming from China"
 * "One day, the virus is going to disappear like magic"
 * Defunding the WHO
@@ -17,9 +17,7 @@ I still remember Trump saying/doing things like:
 And more recently, in response to the 150k deaths, he said:
 * "It is what it is"
 
-I guarantee you that for any person who has no idea who President Trump is, they would not think that these quotes are coming from the mouth of the President of the United States. Even after hearing all of this from the news, I can't believe that these were the things that the President has said. I bet even a 3rd grader can lead the nation better than that.
-
-Now, I'll admit, from my previous blog post, I also kind of thought that that people are overreacting about the coronavirus. However, I was saying this only because back in early April when I wrote that post, countries around the world were already making a smooth and steady recovery form the virus. Places like South Korea, New Zealand and most European countries like France were already passed their peak and declining in cases ***within*** a matter of 2 months. I can't believe that the countries behind the US (which is considered a well-developed country) in number of COVID cases are Brazil and India, which both have poor healthcare systems and a large population living in condensed areas. 
+Now, I'll admit, from my previous blog post, I also kind of thought that that people are overreacting about the coronavirus. However, I was saying this only because back in early April when I wrote that post, countries around the world were starting to make a steady recovery form the virus. Places like South Korea, New Zealand and most European countries like France were already passed their peak and declining in cases ***within*** a matter of 2 months. I can't believe that the countries behind the US (which is considered a well-developed country) in number of COVID cases are Brazil and India, which both have poor healthcare systems and a large population living in condensed areas. 
 
 What I've noticed especially in these countries that have successfully combated the virus is that they acted quickly and placed strict orders. For example, there was a federal mask mandate put in place, social distancing was enforced, and lockdowns were actually happened. Speaking of lockdowns, I remember in Georgia, we had a lockdown that only occurred for about 2 weeks. And not going to lie, it was a complete utter joke. Even though most businesses were closed, I still saw people going and hanging out with a large number of people, not caring about social distancing or wearing a mask. Moreover, it didn't feel like anyone was enforcing the lockdown either. 
 
@@ -29,10 +27,8 @@ And just like that, Georgia started opening up and was probably the first state 
 
 What I really want to criticize in Kemp's actions though is definitely something he prohibited. Recently, Atlanta mayor Keisha Bottoms wanted to make masks mandatory, especially after she caught COVID-19 herself. However, the Governor, for some really weird reason, decided that making masks mandatory is too much and decided to sue anyone in Georgia who tries to make masks mandatory. When I heard about this, I thought I was hearing a joke or something. Literally, the governor of Georgia doesn't want to make a scientifically **PROVEN** and easy method of preventing transmission of coronavirus mandatory? More than that, he's trying to **SUE** people for making it mandatory? That's definitely one of the most foolish and illogical things that I've heard during this entire pandemic. 
 
-I'm also really full of anger of the other actions of the President. Some things include forcefully steering away BLM protestors in order to take a photo-op in front of a church, repeatedly criticizing the BLM movement but supporting anti-maskers and confederacy advocates, and removing about 100 environmental policies. He and his campaign have also sent the most hate-filled messages on Twitter and Facebook recently. Speaking of these two platforms, I'm really glad that they're both starting to censor and mark some of his tweets as misleading and spreading fake news. Even as a president, he needs to still abide the rules of these platforms and should be given no exception. 
-
 Wow, so 2020 really hasn't been a great year for anyone. It's crazy how many things have happened in these past few months and how much of the year is still left. The only good thing that's happening is that I'm actually going college tomorrow! Even though right now isn't exactly a safe time to reopen schools and universities, I'm happy that I'll at least be able to start the next chapter of my life. I'm definitely worried about COVID-19 transmission and I know that I'm taking a risk by going to campus, but I believe that if I take the appropriate precautions and undergo frequent testing, I should be safe. 
 
-So in essence, especially in these trying times, please remember to use trustworthy sources to get your information. Use websites like CDC for COVID-19 advice and for tips to stay safe. Listen to infectious disease experts like Anthony Fauci, who has **YEARS** of experience in this field. And now more than ever, don't listen to politicians like Trump or Kemp: they're only focusing on their re-election. 
+So in essence, especially in these trying times, please remember to use trustworthy sources to get your information. Use websites like CDC for COVID-19 advice and for tips to stay safe. Listen to infectious disease experts like Anthony Fauci, who has **YEARS** of experience in this field. And now more than ever, don't listen to politicians like Trump or Kemp: they're only focusing on their re-election and making money. 
 
 And lastly, please remember to wear your PPE, remember to vote, and stay safe. 
