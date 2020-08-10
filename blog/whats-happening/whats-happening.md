@@ -2,7 +2,7 @@ Well, it's finally the beginning of August.
 
 And wow! Things have not gotten better at all. 2020 has definitely been a crazy year.
 
-First of all, US COVID cases are up and there isn't a single sign that it is going to decrease anytime soon. I still can't believe that we're in August and we're still battling the virus. It's really a shame that even after 6 months, the number of cases aren't decreasing or even remaining stable. In fact, cases are still increasing and the death rate is also starting to increase again. 
+First of all, US COVID cases are up and there isn't a single sign that it is going to decrease anytime soon. I still can't believe that we're in August and we're still battling the virus. It's really a shame that even after 5 months, the number of cases aren't decreasing or even remaining stable. In fact, cases are still increasing and the death rate is also starting to increase again. 
 
 Yet even after all of this, what I find really disapointing is the response of our leaders. Now, I'll admit, I really hate talking about politics, but people are really making the current situation a political thing and it really fills me up with anger seeing leaders like Donald Trump and Brian Kemp downplaying the virus as if it's nothing to worry about. 
 
