@@ -57,13 +57,13 @@
     }
     #blogs {
         margin: auto;
-        overflow: auto;
-        width: 85%;
+        /* overflow: auto; */
+        width: 70%;
         /*border: 2px solid black;*/
         font-family: "Arial";
-        /*background-color: rgba(0,0,0,0.09);*/
+        /* background-color: rgba(0,0,0,0.09); */
         padding: 20px;
-        border-radius: 5px;
+        /* border-radius: 5px; */
     }
     #blogList {
         background-color: rgba(237,247,235,1);
@@ -82,9 +82,6 @@
     }
     .currentBlog, #blogList a:hover {
         color: red !important;
-    }
-    #blogs {
-        width: 70%;
     }
     #blogMain {
         /* width: 70%; */
