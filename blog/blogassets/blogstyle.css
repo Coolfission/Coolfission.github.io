@@ -100,4 +100,7 @@
     #date {
         color: red;
     }
+    .iframe_style {
+        position: relative; width: 80%; height: 20em; display: block; margin: auto; z-index: -1 !important
+    }
     
